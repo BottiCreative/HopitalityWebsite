@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="btNavigationPro">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+		<field name="orderBy" type="C" size="255">
+			<descr></descr>
+			<default value="alpha_asc" />
+		</field>
+		<field name="displayPages" type="C" size="255">
+			<descr>was enum('top','current','above','below','custom')</descr>
+			<default value="top" />
+		</field>
+		<field name="displayPagesCID" type="I">
+			<unsigned />
+			<notnull />
+			<default value="1" />
+		</field>
+		<field name="displayPagesIncludeSelf" type="I1">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="displaySubPages" type="C" size="255">
+			<descr>was enum('none','all','relevant','relevant_breadcrumb')</descr>
+			<default value="none" />
+		</field>
+		<field name="displaySubPageLevels" type="C" size="255">
+			<descr>was enum('all','none','enough','enough_plus1','custom')</descr>
+			<default value="none" />
+		</field>
+		<field name="displaySubPageLevelsNum" type="I2">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="displayUnavailablePages" type="I1">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="typewnav" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="widthsize" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="swidthsize" type="I">
+			<unsigned />
+			<notnull />
+			<default value="100" />
+		</field>
+		<field name="searchres" type="I">
+			<unsigned />
+			<notnull />
+			<default value="1" />
+		</field>
+		<field name="customnav" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="fontsize" type="I">
+			<unsigned />
+			<notnull />
+			<default value="12" />
+		</field>
+		<field name="fontstyle" type="C" size="255">
+			<descr></descr>
+			<default value="normal" />
+		</field>
+		<field name="fontcolor" 		type="C" size="255"></field>
+		<field name="fontcolorh" 		type="C" size="255"></field>
+		<field name="bgcolor" 			type="C" size="255"></field>
+		<field name="bgtabcolor" 		type="C" size="255"></field>
+		<field name="bgtabcolorh" 		type="C" size="255"></field>
+		<field name="sfontsize" type="I">
+			<unsigned />
+			<notnull />
+			<default value="12" />
+		</field>
+		<field name="sfontstyle" type="C" size="255">
+			<descr></descr>
+			<default value="normal" />
+		</field>
+		<field name="sfontcolor" 		type="C" size="255"></field>
+		<field name="sfontcolorh" 		type="C" size="255"></field>
+		<field name="sbgcolor" 			type="C" size="255"></field>
+		<field name="sbgtabcolor" 		type="C" size="255"></field>
+		<field name="sbgtabcolorh" 		type="C" size="255"></field>
+		<field name="fontsize_c" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="fontstyle_c" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="fontcolor_c" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="fontcolorh_c" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="bgcolor_c" 	type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="bgtabcolor_c" 	type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="bgtabcolorh_c" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="sfontsize_c" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="sfontstyle_c" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="sfontcolor_c" 	type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="sfontcolorh_c" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="sbgcolor_c" 	type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="sbgtabcolor_c" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="sbgtabcolorh_c" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="responsive" type="C" size="255">			
+		</field>
+	</table>
+</schema>

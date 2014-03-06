@@ -1,0 +1,95 @@
+
+
+.swp-downloads-list {
+
+	padding-top: 10px;
+
+	padding-bottom: 10px;
+
+}
+
+.swp-download-columns {
+
+	background-color: #cfcfcf;
+
+}
+
+.swp-download-columns  {
+
+	padding-top: 3px;
+
+	padding-bottom: 3px;
+
+}
+
+.swp-download-columns, .swp-download-item {
+
+	padding-left: 5px;
+
+	padding-right: 5px;
+
+}
+
+.swp-download-item {
+
+	padding-top: 2px;
+
+	padding-bottom: 2px;
+
+}
+
+.swp-even {
+
+	background-color: #f0f0ff;
+
+}
+
+.swp-download-link {
+
+	float: left;
+
+}
+
+.swp-download-filesize, .swp-download-count, .swp-download-update {
+
+	float: right;
+
+	text-align: right;
+
+	padding-right: 5px;
+
+}
+
+.swp-download-filesize {
+
+	width: 60px;
+
+}
+
+.swp-download-count {
+
+	width: 75px;
+
+}
+
+.swp-download-update {
+
+	width: 134px;
+
+}
+
+.swp-clear {
+
+	clear: both;
+
+	height: 1px;
+
+	overflow: hidden;
+
+}
+
+.swp-downloads-list-pages {
+
+	padding-top: 5px;
+
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="btSwpDownloadsList">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+		<field name="fileset" type="I">
+			<default value="0" />
+		</field>
+		<field name="display_columns" type="C" size="1">
+			<default value="N" />
+		</field>
+		<field name="display_date" type="C" size="1">
+			<default value="N" />
+		</field>
+		<field name="display_downloads_count" type="C" size="1">
+			<default value="N" />
+		</field>
+		<field name="display_filesize" type="C" size="1">
+			<default value="N" />
+		</field>
+		<field name="all_files" type="C" size="1">
+			<default value="N" />
+		</field>
+		<field name="attr_filters" type="X">
+			<default value="" />
+		</field>
+		<field name="sortBy" type="C" size="255">
+			<default value="default" />
+		</field>
+		<field name="items_per_page" type="I">
+			<unsigned />
+			<default value="0" />
+		</field>
+		<field name="paginate" type="C" size="1">
+			<default value="N" />
+		</field>
+	</table>
+</schema>

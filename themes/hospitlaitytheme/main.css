@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Colours - green #84b400;*/
+
+*{ padding: 0; margin: 0;}
+
+body { font-family: 'Open Sans', sans-serif; color: #444; font-weight: 300; font-style: normal;}
+
+h3{ font-family: 'Open Sans', sans-serif; color: #444; font-weight: 700; font-style: normal;}
+
+a { text-decoration:none}
+
+.fullwidthnav { width:100%; background:#424251; padding:10px 0; -webkit-box-shadow: 0 3px 3px 1px rgba(0,0,0,.3);
+box-shadow: 0 3px 3px 1px rgba(0,0,0,.3);  }
+
+p{ padding: 6px 0;}
+
+.rowWide{width: 100%;}
+
+.logo { margin:12px 0 0 0; border-right:1px #84B400 solid}
+
+a.loginLink{ background: #84b400; color: #fff; width: 100%; display: block; text-align: center;}
+
+.nav { background:none}
+ul.nav { list-style-type:none!important; padding:10px 0px px 0px; text-align:left}
+.nav li { display:inline; text-align:left; padding:10px 35px 0 0}
+.nav a { display:inline-block; color:#fff}
+.nav a:hover { color:#84B400; }
+
+.login a { background:#84B400}
+
+.fullwidthheader { width:100%; background:#f00; margin:0}
+
+.header{ }
+
+.button { margin:200px 0 0 480px}
+.button h1 { color:#84B400; font-size:66px; padding:0; margin:0}
+.button p { font-size:20px; padding:0; margin:10px 0 40px 0}
+.button a { background:#FFFFFF; border-radius:7px; padding:15px 40px; text-decoration:none; color:#3F3F3F; font-size:26px}
+
+.name { color:#FFFFFF; margin:250px 0 0 0 }
+
+.fullwidthform { width:100%; background:#84B400; margin:0 0 25px 0; padding:10px 0}
+.form h2 { color:#FFFFFF; font-size:36px; padding:10px 0 0 0; margin:0}
+.form p {color:#FFFFFF; font-size:14px }
+.form  a { background:#424251; color:#FFFFFF; border-radius:7px; padding:10px 55px}
+
+.bulk { text-align:center}
+.bulk h3 { font-size:36px; color:#84B400}
+.bulk p { padding:0 65px }
+
+.cluboffer { padding:10px 0}
+.sache { background:url(images/offerribbon.png) no-repeat top left; position:absolute; top:0; left:0; width:338px; height:333px}
+.offerbox { background:#424251; padding:10px 0}
+.offerinfo p{ color:#FFFFFF; text-align:left!important; padding:0}
+.offerprice { background:url(images/offerprice.png) no-repeat left top; width:66px; height:47px}
+.offerpricetwo { background:url(images/offerpricetwo.png) no-repeat left top; width:66px; height:47px}
+.offerpricethree { background:url(images/offerpricethree.png) no-repeat left top; width:66px; height:47px}
+.offerpricefour { background:url(images/offerpricefour.png) no-repeat left top; width:66px; height:47px}
+.offerpricefive { background:url(images/offerpricefive.png) no-repeat left top; width:66px; height:47px}
+.offerpricesix { background:url(images/offerpricesix.png) no-repeat left top; width:66px; height:47px}
+
+.fullwidthtest { width:100%; background:#eeeeee}
+.test { color:#6C6C72; background:#FFFFFF; border-radius:7px; margin:50px 0; -webkit-box-shadow: 0 2px 10px 1px rgba(122,122,122,122);
+box-shadow: 0 2px 10px 1px rgba(122,122,122,122); padding:20px 30px}
+.testbottom { background: url(images/testpoint.png) no-repeat left; position:absolute; top:338px; left:70px; width:47px; height:28px}
+.testimage { margin-bottom:30px}
+
+.blog { margin:50px 0}
+.blog h4 { color:#84B400; font-size:28px; margin:20px 0 0 0}
+
+.partners { text-align:center; }
+.partners h3 { color:#84B400; font-size:38px; line-height:24px}
+.partners h3 span { font-size:18px; }
+.partners p { padding:0 70px}
+.partlogos { margin:25px 0; padding:10px 150px}
+
+.fullwidthmembers { width:100%; background: url(images/membersbg.png) repeat-x top center}
+.members { text-align:center; color:#FFFFFF;}
+.members h4 {}
+
+.membersbox {background:#FFFFFF; color:#6C6C72; border-radius:7px; -webkit-box-shadow: 0 2px 10px 1px rgba(122,122,122,122);
+box-shadow: 0 2px 10px 1px rgba(122,122,122,122); padding: 30px 0; }
+.membersbox p, .membersbox h3  { text-align:left; padding-left:0}
+.membersbox ol { text-align:left; text-decoration:none; margin:0; padding:15px; list-style-type:}
+.membersbox li { padding:3px 0}
+.freetrial ul { list-style-type:none; text-align:left; margin:0; padding: 10px 0 0 20px}
+
+.membersbox table{ background: #ccc; width: 100%;}
+.membersbox table td{ width: 25%;}
+.membersbox table td{ font-weight: 700; padding: 5px 0; font-size: 16px;}
+
+.membersWide{ padding: 30px 50px;}
+.membersWide h3{ padding: 30px 0px; color: #84B400; }
+
+td.MemberHead{ background: #000; }
+
+
+.memberstop { background:url(images/memberstop.png) no-repeat top center; left:0; top:0; color:#FFFFFF; padding:10px 0 0 0}
+
+.fullwidthfooter { border-top:50px #84B400 solid; margin:80px 0 }
+.logofooter { padding:20px 0 0 0}
+.logofooter p { padding:5px 130px 20px 0}
+.logofooter p span { font-size:10px}
+
+.intouch img {margin:5px 15px 5px 0 }
+.intouch a { margin:120px 0!important; padding:20px 0}
+.intouch h4, .social h4 { color:#84B400; font-size:19px; padding:10px 0 0 0}
+
+.social a{ width: 32px; height: 32px; display: block; float: left; background: url(images/socialsprite.png) no-repeat; margin: 0px 0 0 5px;}
+.social a.fbLink{background-position: 0 0;}
+.social a.twitLink{background-position: -32px 0px;}
+.social a.inLink{background-position: -64px 0;}
+
+
+
+
+/*ECOMMERCE STYLES*/
+
+.productListprodHolder{padding: 10px; background: #333; margin: 0 0 20px 0;}
+
+.ccm-core-commerce-add-to-cart-submit.btn.ccm-input-submit{ background: #84B400!important; color: #fff; }
+
+a.ccm-productListImage{ color: #84B400; font-size: 22px;}
+
+.price.ccm-core-commerce-add-to-cart-product-price{ color: #fff;}
+.btn.ccm-input-submit{ background: #84B400!important; color: #fff; border: none; padding: 8px 15px; cursor: pointer; }
+
+
+
+/*BLOG STYLES*/
+
+.nopad{ padding: 0!important;}
+.nopadLeft{ padding-left: 0!important;}
+
+/*FORM STYLES*/
+
+.nopad{ padding: 0;}
+
+.resourceNav{ width: 100%; background: #ccc; text-align: right; padding: 20px 0;}
+
+.resourceNav a{ padding: 0 0 0 20px;}
+
+.membersSignUp{ background: #333; padding: 20px; margin: 30px 0; color: #fff; }
+
+a.signButt{background: #84b400; color: #fff; width: 100%; padding: 5px; border-radius: 5px;}
+
+
+@media only screen and (max-width: 400px) {
+	
+a.loginLink{ margin: 0 5%; width: 90%;}
+
+
+
+}
