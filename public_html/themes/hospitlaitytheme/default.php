@@ -3,7 +3,7 @@ defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php'); ?>
 	
 
-		<div class="row">
+		<div class="row topRowPad">
         	<div class="grid-8 columns">
 			<?php  
 			$a = new Area('Main');

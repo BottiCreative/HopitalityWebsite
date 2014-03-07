@@ -7,7 +7,7 @@ $this->inc('elements/members_header.php'); ?>
 
 
 
-<div class="row">
+<div class="row topRowPad">
 	
     	<div class="grid-8 columns">
         	<?php  

@@ -9,6 +9,11 @@ body { font-family: 'Open Sans', sans-serif; color: #444; font-weight: 300; font
 
 h3{ font-family: 'Open Sans', sans-serif; color: #444; font-weight: 700; font-style: normal;}
 
+h3.home { font-size:46px; color:#84B400; text-align:center; font-weight:300; margin:30px 0 20px 0; line-height:46px; }
+h3.home span { font-weight:700; display:block;}
+.centered { text-align:center;}
+.textPad { padding:0 100px; margin:0 0 30px 0;}
+
 a { text-decoration:none}
 
 .topRowPad{ padding: 120px 0 0 0;}
@@ -36,10 +41,7 @@ ul.nav { list-style-type:none!important; padding:10px 0px px 0px; text-align:lef
 
 .homeIntro{min-height: 500px;  position: relative; padding-top: 100px; }
 
-.fullwidthheader { width:100%; background:#f00; margin:0; position: relative; min-height: 670px;    }
-
-
-
+.fullwidthheader { width:100%; margin:0; position: relative;}
 
 .fullwidthheader img{ position: absolute; top: 72px;}
 
@@ -63,7 +65,7 @@ right: 0; padding: 50px 0 0 0;}
 
 .name { color:#FFFFFF; margin:250px 0 0 0 }
 
-.fullwidthform { width:100%; background:#84B400; margin:0 0 25px 0; padding:10px 0}
+.fullwidthform { width:100%; background:#84B400; margin:0 0 25px 0; padding:10px 0; float:left;}
 .Homeform{padding: 20px 0;}
 .Homeform h2 { color:#FFFFFF; font-size:36px; padding:10px 0 0 0; margin:0}
 .Homeform p {color:#FFFFFF; font-size:14px }
@@ -71,9 +73,6 @@ right: 0; padding: 50px 0 0 0;}
 .guideForm{ padding: 30px 0 0 0;}
 .formIntro{ padding: 0!important;}
 .guideForm{padding-right: 0!important;}
-
-h3.memberTitle{ color: #84b400; font-size: 40px; padding: 20px 0; color: #84b400;}
-p.memberIntro { font-size: 18px; padding: 0 0 20px 0; }
 
 .bulk { text-align:center}
 .bulk h3 { font-size:36px; color:#84B400}
@@ -90,7 +89,7 @@ p.memberIntro { font-size: 18px; padding: 0 0 20px 0; }
 .offerpricefive { background:url(images/offerpricefive.png) no-repeat left top; width:66px; height:47px}
 .offerpricesix { background:url(images/offerpricesix.png) no-repeat left top; width:66px; height:47px}
 
-.fullwidthtest { width:100%; background:#eeeeee}
+.fullwidthtest { width:100%; background:#eeeeee; margin:50px 0;}
 .test { color:#6C6C72; background:#FFFFFF; border-radius:7px; margin:50px 0; -webkit-box-shadow: 0 2px 10px 1px rgba(122,122,122,122);
 box-shadow: 0 2px 10px 1px rgba(122,122,122,122); padding:20px 30px}
 .testbottom { background: url(images/testpoint.png) no-repeat left; position:absolute; top:338px; left:70px; width:47px; height:28px}
@@ -100,28 +99,32 @@ box-shadow: 0 2px 10px 1px rgba(122,122,122,122); padding:20px 30px}
 .blog h4 { color:#84B400; font-size:28px; margin:20px 0 0 0}
 
 .partners { text-align:center; }
-.partners h3 { color:#84B400; font-size:38px; line-height:24px}
-.partners h3 span { font-size:18px; }
+.partners h3 { font-size:46px; color:#84B400; text-align:center; font-weight:300; margin:30px 0 20px 0; line-height:46px}
+.partners h3 span { font-weight:700; display:block; }
 .partners p { padding:0 70px}
-.partlogos { margin:25px 0; padding:10px 150px}
+.partlogos { margin:25px 0; padding:10px 150px;}
 
-.fullwidthmembers { width:100%; background: url(images/membersbg.png) repeat-x top center}
+.fullwidthmembers { width:100%; background: url(images/membersbg.png) repeat-x top center; margin:50px 0;}
 .members { text-align:center; color:#FFFFFF;}
-.members h4 {}
+h3.memberTitle { color:#fff; font-weight:700; font-size:40px;}
+p.memberIntro { color:#fff; margin:20px 0;}
+p.memberIntro span { font-weight:700; color:#84B400;}
 
-.membersbox {background:#FFFFFF; color:#6C6C72; border-radius:7px; -webkit-box-shadow: 0 2px 10px 1px rgba(122,122,122,122);
+.membersbox {background:url(images/member-table-top.gif) no-repeat top center #FFFFFF; color:#6C6C72; border-radius:7px; -webkit-box-shadow: 0 2px 10px 1px rgba(122,122,122,122);
 box-shadow: 0 2px 10px 1px rgba(122,122,122,122); padding: 30px 0; }
 .membersbox p, .membersbox h3  { text-align:left; padding-left:0}
-.membersbox ol { text-align:left; text-decoration:none; margin:0; padding:15px; list-style-type:}
-.membersbox li { padding:3px 0}
+.membersbox ol { text-align:left; text-decoration:none; margin:0; padding:15px; list-style-type:none; padding:20px 0 0 0;}
+.membersbox li { padding:15px 0 15px 30px;}
 .freetrial ul { list-style-type:none; text-align:left; margin:0; padding: 10px 0 0 20px}
+
+span.memberList { font-weight:26px; font-weight:700; color:#444; float:left;}
 
 .membersbox table{ background: #fff; width: 100%;}
 .membersbox table td{ width: 25%;}
-.membersbox table td{ font-weight: 700; padding: 5px 0; font-size: 16px;}
+.membersbox table td{ font-weight: 700; padding: 20px 0; font-size: 16px;}
 
 .membersWide{ padding: 30px 50px;}
-.membersWide h3{ padding: 30px 0px; color: #84B400; }
+.membersWide h3{ padding: 30px 0px; color: #84B400; font-weight:700;}
 
 td.MemberHead{ background: #000; }
 
