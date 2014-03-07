@@ -116,7 +116,7 @@ box-shadow: 0 2px 10px 1px rgba(122,122,122,122); padding: 30px 0; }
 .membersbox li { padding:3px 0}
 .freetrial ul { list-style-type:none; text-align:left; margin:0; padding: 10px 0 0 20px}
 
-.membersbox table{ background: #ccc; width: 100%;}
+.membersbox table{ background: #fff; width: 100%;}
 .membersbox table td{ width: 25%;}
 .membersbox table td{ font-weight: 700; padding: 5px 0; font-size: 16px;}
 
