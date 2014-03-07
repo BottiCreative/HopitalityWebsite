@@ -5,11 +5,9 @@ $this->inc('elements/header.php'); ?>
 
 		
         
-        <div class="row">
-        
-        
-        
-			<div class="grid-12 columns">
+        <div class="row topRowPad">
+
+		<div class="grid-12 columns">
             
         <?php  
         	$a = new GlobalArea('Resources Header');
@@ -26,6 +24,17 @@ $this->inc('elements/header.php'); ?>
         	<div class="grid-12 columns">
 			<?php  
 			$a = new Area('Main');
+			$a->display($c);
+			?>
+            </div>
+        </div>
+        
+        
+        
+        <div class="row">
+        	<div class="grid-12 columns">
+			<?php  
+			$a = new Area('MainFull');
 			$a->display($c);
 			?>
             </div>

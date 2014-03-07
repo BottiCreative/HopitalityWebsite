@@ -11,13 +11,15 @@
 
 <link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('main.css')?>" />
 <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/foundation.css"/>
+<link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/reveal-modal.css"/>
 <script src="<?php  echo $this->getThemePath(); ?>/js/modernizr.js"></script>
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
 </head>
 
-<body>
+<body class="fitvid">
+
 
 <div class="fullwidthnav">
 	<div class="row">

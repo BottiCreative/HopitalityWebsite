@@ -15,8 +15,10 @@ $this->inc('elements/header.php'); ?>
     </div>
 </div>
 
+
+
 <div class="fullwidthform">
-	<div class="row form">
+	<div class="row Homeform">
     	<?php  
 			$a = new Area('wideform');
 			$a->display($c);

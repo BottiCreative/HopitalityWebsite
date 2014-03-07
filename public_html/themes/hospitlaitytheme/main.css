@@ -11,6 +11,10 @@ h3{ font-family: 'Open Sans', sans-serif; color: #444; font-weight: 700; font-st
 
 a { text-decoration:none}
 
+.topRowPad{ padding: 120px 0 0 0;}
+
+.shareSocial{ border-top: solid 1px #333; border-bottom: solid 1px #333; padding: 10px 0; marging: 10px 0; text-align: center; }
+
 .fullwidthnav { width:100%; background:#333; padding:10px 0; -webkit-box-shadow: 0 3px 3px 1px rgba(0,0,0,.3);
 box-shadow: 0 3px 3px 1px rgba(0,0,0,.3); position: fixed; z-index: 20;  }
 
@@ -30,15 +34,25 @@ ul.nav { list-style-type:none!important; padding:10px 0px px 0px; text-align:lef
 
 .login a { background:#84B400}
 
-.homeIntro{min-height: 500px;  position: relative; background: #ccc; padding-top: 100px; }
+.homeIntro{min-height: 500px;  position: relative; padding-top: 100px; }
 
 .fullwidthheader { width:100%; background:#f00; margin:0; position: relative; min-height: 670px;   }
 
+
+
+
 .fullwidthheader img{ position: absolute; top: 72px;}
 
-.IntroTextHolder{ position: absolute; z-index: 10; width: 400px; height: 300px; background: #000; text-align: right; right: 0;}
+.IntroTextHolder{ position: absolute; z-index: 10; width: 400px; height: 300px; text-align: right;
+right: 0; padding: 50px 0 0 0;}
+
+.IntroTextHolder h2{ color: #84b400; font-size: 60px; }
+.IntroTextHolder p{ font-size: 20px; padding: 20px 0;}
+.IntroTextHolder a.video{ background: #fff; padding: 10px 20px; margin: 20px 0 0 0; }
 
 
+
+.reveal-modal{ max-width: 853px;}
 
 .header{ }
 
@@ -50,9 +64,16 @@ ul.nav { list-style-type:none!important; padding:10px 0px px 0px; text-align:lef
 .name { color:#FFFFFF; margin:250px 0 0 0 }
 
 .fullwidthform { width:100%; background:#84B400; margin:0 0 25px 0; padding:10px 0}
-.form h2 { color:#FFFFFF; font-size:36px; padding:10px 0 0 0; margin:0}
-.form p {color:#FFFFFF; font-size:14px }
-.form  a { background:#424251; color:#FFFFFF; border-radius:7px; padding:10px 55px}
+.Homeform{padding: 20px 0;}
+.Homeform h2 { color:#FFFFFF; font-size:36px; padding:10px 0 0 0; margin:0}
+.Homeform p {color:#FFFFFF; font-size:14px }
+.formSubmitButton { background:#424251; color:#FFFFFF; border-radius:7px; padding:10px 0; width: 100%; display: block; cursor: pointer; border: none;}
+.guideForm{ padding: 30px 0 0 0;}
+.formIntro{ padding: 0!important;}
+.guideForm{padding-right: 0!important;}
+
+h3.memberTitle{ color: #84b400; font-size: 40px; padding: 20px 0; color: #84b400;}
+p.memberIntro { font-size: 18px; padding: 0 0 20px 0; }
 
 .bulk { text-align:center}
 .bulk h3 { font-size:36px; color:#84B400}
@@ -104,19 +125,33 @@ box-shadow: 0 2px 10px 1px rgba(122,122,122,122); padding: 30px 0; }
 
 td.MemberHead{ background: #000; }
 
+.membPrice{ font-size: 60px;}
+
+p.membPrice span{font-size: 13px;}
 
 .memberstop { background:url(images/memberstop.png) no-repeat top center; left:0; top:0; color:#FFFFFF; padding:10px 0 0 0}
 
-.fullwidthfooter { border-top:50px #84B400 solid; margin:80px 0 }
+.fullwidthfooter { border-top:1px #ccc solid; margin:80px 0; padding: 50px 0; }
 .logofooter { padding:20px 0 0 0}
-.logofooter p { padding:5px 130px 20px 0}
+.logofooter p {}
 .logofooter p span { font-size:10px}
+
+.FootLinks{ padding: 0!important;}
+.FootLinks ul{ list-style: none; float: left; padding: 10px 5px 0 0; }
+.FootLinks li{  font-size: 13px; }
+.FootLinks li a{ color: #666;}
+.FootLinks li a.headLink { font-weight: 700;}
+
+.footCopy{ font-size: 13px; padding: 20px 0 0 0;}
+
+.nopadRight{ padding-right: 0!important;}
 
 .intouch img {margin:5px 15px 5px 0 }
 .intouch a { margin:120px 0!important; padding:20px 0}
 .intouch h4, .social h4 { color:#84B400; font-size:19px; padding:10px 0 0 0}
 
-.social a{ width: 32px; height: 32px; display: block; float: left; background: url(images/socialsprite.png) no-repeat; margin: 0px 0 0 5px;}
+.social{ width: auto; padding: 0px 0 0 0; float: right;  }
+.social a{ width: 32px; height: 32px; display: block; float: left; text-align: right; background: url(images/socialsprite.png) no-repeat; margin: 0px 0 0 5px;}
 .social a.fbLink{background-position: 0 0;}
 .social a.twitLink{background-position: -32px 0px;}
 .social a.inLink{background-position: -64px 0;}
