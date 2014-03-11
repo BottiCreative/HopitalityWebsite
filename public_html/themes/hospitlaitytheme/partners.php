@@ -4,6 +4,7 @@ $this->inc('elements/header.php'); ?>
 	
 <div class="mainContainer">
 		<div class="row topRowPad">
+        
         	<div class="grid-8 columns">
 			<?php  
 			$a = new Area('Main');
@@ -18,6 +19,16 @@ $this->inc('elements/header.php'); ?>
 			$a->display($c);
 			?>
 		</div>	
+        
+          <div class="grid-12 columns partnerFull">
+
+                     	<?php  
+			$a = new Area('Full Wide');
+			$a->display($c);
+			?>
+
+		</div>     
+        
 	</div>
     </div>
 	

@@ -3,7 +3,7 @@ defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php'); ?>
 
 
-
+<div class="mainContainer">
 <div class="fullwidthheader">
 	<div class="rowWide header">
 
@@ -40,14 +40,14 @@ $this->inc('elements/header.php'); ?>
 
 <div class="fullwidthtest">
 	<div class="row">
-    	<div class="grid-8 columns">
+    	<div class="grid-7 columns testimonial">
         <?php  
 			$a = new Area('testimonial');
 			$a->display($c);
 			?>
             </div>
             
-        <div class="grid-4 columns blog">
+        <div class="grid-5 columns blog">
         	<?php  
 			$a = new Area('blog');
 			$a->display($c);
@@ -93,7 +93,7 @@ $this->inc('elements/header.php'); ?>
         Test 1
         </div>
         </div>
-
+</div>
 
 
 <?php  $this->inc('elements/footer.php'); ?>

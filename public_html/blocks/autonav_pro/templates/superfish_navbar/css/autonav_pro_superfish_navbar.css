@@ -130,8 +130,8 @@ div#main-container  .pro_navbar ul.pronav_list li a.nav-path-selected, div#main-
 .autonav_pro_disable{width:100%;min-height:20px;background:#999999;padding:10px;text-align:center;color:#fff}
 .pro_navbar {
 	min-height: 40px;
-	padding-right: 20px;
-	padding-left: 20px;
+	padding-right: 5px;
+	padding-left: 5px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;	
