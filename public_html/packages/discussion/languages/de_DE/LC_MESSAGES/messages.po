@@ -1,0 +1,993 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Discussion Deutsch\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-01 14:45+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Johannes Link <mail@johanneslink.de>\n"
+"Language-Team: Johannes Link <mail@johanneslink.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../../\n"
+"X-Poedit-KeywordsList: t\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: controller.php:3
+#: blocks/bbcode/add.php:2
+#: blocks/bbcode/controller.php:2
+#: blocks/bbcode/edit.php:2
+#: blocks/bbcode/form_setup_html.php:1
+#: blocks/bbcode/view.php:1
+#: blocks/discussion_categories/add.php:1
+#: blocks/discussion_categories/controller.php:2
+#: blocks/discussion_categories/edit.php:1
+#: blocks/discussion_categories/view.php:1
+#: blocks/discussion_guestbook/add.php:1
+#: blocks/discussion_guestbook/controller.php:7
+#: blocks/discussion_guestbook/edit.php:1
+#: blocks/discussion_guestbook/view.php:1
+#: blocks/discussion_post_list/add.php:1
+msgid "Access Denied."
+msgstr "Zugang verboten"
+
+#: controller.php:12
+msgid "Adds a forum and discussion system to your website."
+msgstr "Fügt Foren- und Diskussions-Beiträge zur Website hinzu."
+
+#: controller.php:16
+#: controller.php:35
+msgid "Discussion"
+msgstr "Diskussion"
+
+#: controller.php:39
+msgid "Discussion Post"
+msgstr "Diskussionsbeitrag"
+
+#: controller.php:43
+msgid "Discussion Image"
+msgstr "Diskussions-Bild"
+
+#: controller.php:44
+msgid "Discussion Post is Pinned"
+msgstr "Diskussionsbeitrag gepinned."
+
+#: controller.php:45
+msgid "Discussion is Closed"
+msgstr "Diskussion ist geschlossen"
+
+#: controller.php:46
+msgid "Discussion Mode"
+msgstr "Diskussions-Modus"
+
+#: controller.php:47
+msgid "Flat"
+msgstr "Flach"
+
+#: controller.php:48
+msgid "Threaded"
+msgstr "Hierarchisch"
+
+#: controller.php:53
+#: controller.php:214
+msgid "Discussion Post is not Displayed"
+msgstr "Diskussionsbeitrag wird nicht dargestellt"
+
+#: controller.php:57
+#: controller.php:221
+msgid "Discussion Moderation"
+msgstr "Diskussions-Moderation"
+
+#: controller.php:58
+#: controller.php:222
+msgid "All Posts"
+msgstr "Alle Beiträge"
+
+#: controller.php:60
+#: controller.php:224
+msgid "Only Posts by Anonymous Users"
+msgstr "Nur Beiträge von anonymen Nutzern"
+
+#: controller.php:62
+#: controller.php:226
+msgid "Don't Moderate Any Posts"
+msgstr "Keine Beiträge moderieren"
+
+#: controller.php:68
+#: controller.php:232
+msgid "Discussion Anonymous Posting"
+msgstr "Diskussion anonymer Beitrag"
+
+#: controller.php:69
+#: controller.php:233
+msgid "Enable Anonymous Posting (new posts)"
+msgstr "Anonyme Beiträge erlauben (für neue Beiträge)"
+
+#: controller.php:71
+#: controller.php:235
+msgid "Enable Anonymous Replies"
+msgstr "Anonyme Antworten erlauben"
+
+#: controller.php:73
+#: controller.php:237
+msgid "Solving Captcha is Required to Post"
+msgstr "Captcha-Lösung erforderlich"
+
+#: controller.php:75
+#: controller.php:239
+msgid "Allow Anonymous Posters To Attach Files"
+msgstr "Anonyme Nutzer dürfen Dateien anhängen"
+
+#: controller.php:80
+msgid "Total Posts"
+msgstr "Beiträge insgesamt"
+
+#: controller.php:155
+msgid "Forums"
+msgstr "Foren"
+
+#: controller.php:166
+msgid "Announcements"
+msgstr "Ankündigungen"
+
+#: controller.php:170
+msgid "General Chat"
+msgstr "Allgemeines"
+
+#: controller.php:184
+#: controller.php:246
+msgid "Allowed to post to discussion forums regardless of moderation"
+msgstr "Darf ohne Moderation Diskussions-/Foren-Beiträge veröffentlichen"
+
+#: controller.php:258
+msgid "Gold"
+msgstr "Gold"
+
+#: controller.php:258
+msgid "Exceptional Achievement"
+msgstr "Herausragende Leistung"
+
+#: controller.php:259
+msgid "Silver"
+msgstr "Silber"
+
+#: controller.php:259
+msgid "Great Achievement"
+msgstr "GroÃartige Leistung"
+
+#: blocks/bbcode/controller.php:17
+msgid "BBCode"
+msgstr "BBCode"
+
+#: blocks/bbcode/controller.php:21
+msgid "A text area that supports Bulletin Board tags."
+msgstr "Ein mehrzeiliges Textfeld das BBCode Tags unterstützt."
+
+#: blocks/bbcode/form_setup_html.php:21
+msgid "Show BB Tags Reference"
+msgstr "BBCode Referenz zeigen"
+
+#: blocks/discussion_categories/add.php:42
+#: blocks/discussion_categories/edit.php:42
+msgid "Display Order"
+msgstr "Darstellungs-Reihenfolge"
+
+#: blocks/discussion_categories/add.php:43
+#: blocks/discussion_categories/edit.php:43
+msgid "Date of Activity (Descending)"
+msgstr "Zuletzt aktiv (absteigend)"
+
+#: blocks/discussion_categories/add.php:44
+msgid "Date of Activity (Acending)"
+msgstr "Zulsetzt aktiv (aufsteigend)"
+
+#: blocks/discussion_categories/controller.php:14
+msgid "Display discussion categories on your website."
+msgstr "Diskussions-Kategorien auf der Webseite anzeigen."
+
+#: blocks/discussion_categories/controller.php:18
+msgid "Discussion Categories"
+msgstr "Diskussions-Kategorien"
+
+#: blocks/discussion_categories/edit.php:44
+msgid "Date of Activity (Ascending)"
+msgstr "Zuletzt aktiv (aufsteigend)"
+
+#: blocks/discussion_categories/view.php:8
+msgid "Categories"
+msgstr "Kategorien"
+
+#: blocks/discussion_categories/view.php:9
+msgid "Last Post"
+msgstr "Ältester Beitrag"
+
+#: blocks/discussion_categories/view.php:10
+msgid "Topics"
+msgstr "Themen"
+
+#: blocks/discussion_categories/view.php:11
+msgid "Messages"
+msgstr "Beiträge"
+
+#: blocks/discussion_categories/view.php:42
+#: blocks/discussion_categories/view.php:44
+msgid "By"
+msgstr "Von"
+
+#: blocks/discussion_categories/view.php:47
+msgid "on"
+msgstr "am"
+
+#: blocks/discussion_categories/view.php:63
+msgid "No discussions available."
+msgstr "Keine Diskussionen vorhanden."
+
+#: blocks/discussion_guestbook/add.php:4
+#: blocks/discussion_guestbook/edit.php:4
+msgid "Title"
+msgstr "Überschrift"
+
+#: blocks/discussion_guestbook/add.php:5
+msgid "Comments"
+msgstr "Kommentare"
+
+#: blocks/discussion_guestbook/add.php:7
+#: blocks/discussion_guestbook/edit.php:7
+msgid "Posting New Responses is Enabled?"
+msgstr "Antworten möglich?"
+
+#: blocks/discussion_guestbook/add.php:8
+#: blocks/discussion_guestbook/edit.php:8
+msgid "Yes"
+msgstr "Ja"
+
+#: blocks/discussion_guestbook/add.php:9
+#: blocks/discussion_guestbook/edit.php:9
+msgid "No"
+msgstr "Nein"
+
+#: blocks/discussion_guestbook/controller.php:19
+msgid "Adds blog-style comments (a guestbook) to your page, but uses the discussion backend to create posts."
+msgstr "Fügt Kommentare (ähnlich einem Blog) hinzu, benutzt aber das Diskussions-Backend für Beiträge."
+
+#: blocks/discussion_guestbook/controller.php:23
+msgid "Discussion Guestbook"
+msgstr "Diskussions Gästebuch"
+
+#: blocks/discussion_guestbook/controller.php:130
+msgid "You must be logged in to post."
+msgstr "Anmeldung erforderlich."
+
+#: blocks/discussion_guestbook/controller.php:134
+msgid "Posting is disabled."
+msgstr "Keine neuen Beiträge möglich."
+
+#: blocks/discussion_guestbook/controller.php:138
+msgid "Your comment is empty."
+msgstr "Das Kommentarfeld ist leer."
+
+#: blocks/discussion_guestbook/view.php:18
+msgid "Comments:"
+msgstr "Kommentare:"
+
+#: blocks/discussion_guestbook/view.php:63
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: blocks/discussion_guestbook/view.php:69
+msgid "Are you sure you would like to remove this comment?"
+msgstr "Diesen Kommentar wirklich endgültig löschen?"
+
+#: blocks/discussion_guestbook/view.php:69
+msgid "Remove"
+msgstr "Löschen"
+
+#: blocks/discussion_guestbook/view.php:76
+msgid "Promote to Page"
+msgstr "In Webseite konvertieren"
+
+#: blocks/discussion_guestbook/view.php:101
+msgid "Your comment has been posted."
+msgstr "Der Kommentar wurde veröffentlicht."
+
+#: blocks/discussion_guestbook/view.php:107
+msgid "You must be logged in to leave a reply."
+msgstr "Zum Antworten ist eine Anmeldung erforderlich."
+
+#: blocks/discussion_guestbook/view.php:107
+msgid "Login"
+msgstr "Anmelden"
+
+#: blocks/discussion_guestbook/view.php:116
+#, php-format
+msgid "You are currently logged in as %s"
+msgstr "Angemeldet als %s"
+
+#: blocks/discussion_guestbook/view.php:118
+msgid "Leave a Reply"
+msgstr "Antworten"
+
+#: blocks/discussion_guestbook/view.php:121
+msgid "Post Comment"
+msgstr "Kommentieren"
+
+#: blocks/discussion_post_list/controller.php:17
+msgid "List Discussion posts and replies."
+msgstr "Diskussionsbeiträge und Antworten anzeigen"
+
+#: blocks/discussion_post_list/controller.php:21
+msgid "Discussion Post List"
+msgstr "Liste der Diskussionsbeiträge"
+
+#: blocks/discussion_post_list/post_list_form.php:4
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: blocks/discussion_post_list/post_list_form.php:5
+msgid "Preview"
+msgstr "Vorschau"
+
+#: blocks/discussion_post_list/post_list_form.php:11
+msgid "Number of Posts"
+msgstr "Beiträge"
+
+#: blocks/discussion_post_list/post_list_form.php:12
+msgid "Display"
+msgstr "Anzeige"
+
+#: blocks/discussion_post_list/post_list_form.php:14
+msgid "Posts"
+msgstr "Beiträge"
+
+#: blocks/discussion_post_list/post_list_form.php:36
+msgid "Location in Website"
+msgstr "Position in der Website"
+
+#: blocks/discussion_post_list/post_list_form.php:37
+msgid "Display posts that are located"
+msgstr "Beiträge mit dieser Position anzeigen"
+
+#: blocks/discussion_post_list/post_list_form.php:41
+msgid "everywhere"
+msgstr "überall"
+
+#: blocks/discussion_post_list/post_list_form.php:45
+msgid "beneath this page"
+msgstr "dieser Seite untergeordnet"
+
+#: blocks/discussion_post_list/post_list_form.php:49
+msgid "beneath another page"
+msgstr "einer anderen Seite untergeordnet"
+
+#: blocks/discussion_post_list/post_list_form.php:64
+msgid "Post Info"
+msgstr "Beitrags-Details"
+
+#: blocks/discussion_post_list/post_list_form.php:66
+msgid "Display post info (user posted by and date posted)"
+msgstr "Beitrags-Details anzeigen (Benutzername und Datum)"
+
+#: blocks/discussion_post_list/post_list_form.php:69
+msgid "Pagination"
+msgstr "Seitenzahlen"
+
+#: blocks/discussion_post_list/post_list_form.php:71
+msgid "Display pagination interface if more items are available than are displayed."
+msgstr "Seitenzahlen anzeigen, wenn mehr Beiträge vorhanden sind als dargestellt werden."
+
+#: blocks/discussion_post_list/post_list_form.php:93
+msgid "Truncate Summaries"
+msgstr "Zusammenfassung kürzen"
+
+#: blocks/discussion_post_list/post_list_form.php:96
+msgid "Truncate descriptions after"
+msgstr "Beschreibung kürzen nach"
+
+#: blocks/discussion_post_list/post_list_form.php:98
+msgid "characters"
+msgstr "Zeichen"
+
+#: blocks/discussion_post_list/post_list_form.php:105
+msgid "Preview Pane"
+msgstr "Vorschau-Fenster"
+
+#: blocks/discussion_post_list/view.php:41
+msgid "Total Posts:"
+msgstr "Beiträge insgesamt"
+
+#: blocks/discussion_post_list/view.php:42
+msgid "Joined:"
+msgstr "Mitglied seit:"
+
+#: blocks/discussion_topics/add.php:40
+#: blocks/discussion_topics/edit.php:40
+msgid "Inherit from global settings."
+msgstr "Von globalen Einstellungen vererben."
+
+#: blocks/discussion_topics/add.php:41
+#: blocks/discussion_topics/edit.php:41
+msgid "Override global settings."
+msgstr "Globale Einstellungen überschreiben."
+
+#: blocks/discussion_topics/add.php:45
+#: blocks/discussion_topics/edit.php:45
+msgid "Topic Name"
+msgstr "Themen-Name"
+
+#: blocks/discussion_topics/add.php:46
+#: blocks/discussion_topics/edit.php:46
+msgid "Topic Date"
+msgstr "Themen-Datum"
+
+#: blocks/discussion_topics/add.php:47
+#: blocks/discussion_topics/edit.php:47
+msgid "Latest Reply"
+msgstr "Neueste Antwort"
+
+#: blocks/discussion_topics/add.php:48
+#: blocks/discussion_topics/edit.php:48
+#: blocks/discussion_topics/view.php:11
+msgid "Views"
+msgstr "Aufrufe"
+
+#: blocks/discussion_topics/add.php:49
+#: blocks/discussion_topics/edit.php:49
+#: blocks/discussion_topics/view.php:12
+msgid "Replies"
+msgstr "Antworten"
+
+#: blocks/discussion_topics/add.php:58
+#: blocks/discussion_topics/edit.php:58
+msgid "Ascending"
+msgstr "Aufsteigend"
+
+#: blocks/discussion_topics/add.php:58
+#: blocks/discussion_topics/edit.php:58
+msgid "Descending"
+msgstr "Absteigend"
+
+#: blocks/discussion_topics/controller.php:14
+msgid "Displays topics in a discussion page type."
+msgstr "Zeigt Themen im Stil einer Diskussions-Seite"
+
+#: blocks/discussion_topics/controller.php:18
+msgid "Discussion Topics"
+msgstr "Foren Themen"
+
+#: blocks/discussion_topics/view.php:9
+msgid "Original Post"
+msgstr "Originalbeitrag"
+
+#: blocks/discussion_topics/view.php:38
+#: blocks/discussion_topics/view.php:47
+#, php-format
+msgid "%s on<br/> %s at<br/> %s"
+msgstr "%s am<br/> %s um<br/> %s"
+
+#: blocks/discussion_topics/view.php:55
+msgid "There are no topics in this discussion"
+msgstr "Es gibt keine Beiträge in dieser Diskussion"
+
+#: blocks/users_online/view.php:2
+msgid "Who is Online"
+msgstr "Wer ist Online"
+
+#: blocks/users_online/view.php:4
+msgid "No registered users are currently online."
+msgstr "Im Moment sind keine registrierten Benutzer online."
+
+#: blocks/users_online/view.php:6
+msgid "The following registered users are online"
+msgstr "Folgende registrierten Nutzer sind online"
+
+#: blocks/users_online/view.php:18
+msgid "Most users ever online was"
+msgstr "Maximale Besucheranzahl bisher"
+
+#: blocks/user_badges/add.php:7
+msgid "Display Badges of which user?"
+msgstr "Abzeichen dieser Benutzer anzeigen"
+
+#: blocks/user_badges/add.php:9
+msgid "This block is being added to the user profile page. It will show the badges of the profile being viewed."
+msgstr "Dieser Block wird zum Nutzerprofil hinzugefügt. Er zeigt die Abzeichen des Benutzerprofils an."
+
+#: blocks/user_badges/controller.php:13
+msgid "Display the badges of a certain user."
+msgstr "Abzeichen eines bestimmten Nutzers anzeigen."
+
+#: blocks/user_badges/controller.php:17
+msgid "User Badges"
+msgstr "Benutzer Abzeichen"
+
+#: blocks/user_badges/edit.php:8
+msgid "This block appears on the user profile page. It will show the badges of the profile being viewed."
+msgstr "Dieser Block wird zum Nutzerprofil hinzugefügt. Er zeigt die Abzeichen des Benutzerprofils an."
+
+#: blocks/user_badges/view.php:10
+msgid "Badges"
+msgstr "Abzeichen"
+
+#: blocks/user_badges/view.php:16
+msgid "This user hasn't earned any badges yet."
+msgstr "Dieser Nutzer hat noch keine Abzeichen."
+
+#: blocks/user_posts/add.php:7
+#: blocks/user_posts/edit.php:6
+msgid "Display Posts by User"
+msgstr "Beiträge nach Nutzer sortiert anzeigen"
+
+#: blocks/user_posts/add.php:9
+msgid "This block is being added to the user profile page. It will show the posts of the profile being viewed."
+msgstr "Dieser Block wird zum Nutzerprofil hinzugefügt. Er zeigt die Beiträge des Benutzers an."
+
+#: blocks/user_posts/controller.php:14
+msgid "Display all discussion posts by a certain user."
+msgstr "Alle Diskussions-Beiträge eines bestimmten Nutzers anzeigen."
+
+#: blocks/user_posts/controller.php:18
+msgid "User Posts"
+msgstr "Benutzer-Beiträge"
+
+#: blocks/user_posts/edit.php:8
+msgid "This block appears on the user profile page. It will show the posts of the profile being viewed."
+msgstr "Dieser Block wird zum Nutzerprofil hinzugefügt. Er zeigt die Beiträge des Benutzers an."
+
+#: blocks/user_posts/view.php:26
+msgid "No posts found."
+msgstr "Keine Beiträge vorhanden."
+
+#: blocks/user_posts/view.php:44
+msgid "Attachments"
+msgstr "Anhänge"
+
+#: controllers/dashboard/discussion/badges.php:22
+msgid "Name Required"
+msgstr "Titel erforderlich"
+
+#: controllers/dashboard/discussion/badges.php:25
+#: controllers/dashboard/discussion/badges.php:48
+msgid "Description Required"
+msgstr "Beschreibung erforderlich"
+
+#: controllers/dashboard/discussion/badges.php:29
+msgid "Image Required"
+msgstr "Bild erforderlich"
+
+#: controllers/dashboard/discussion/badges.php:34
+msgid "The badge has been added successfully"
+msgstr "Das Abzeichen wurde hinzugefügt"
+
+#: controllers/dashboard/discussion/badges.php:51
+msgid "The badge has been updated successfully"
+msgstr "Das Abzeichen wurde aktualisiert"
+
+#: controllers/dashboard/discussion/badges.php:63
+msgid "The badge has been deleted"
+msgstr "Das Abzeichen wurde gelöscht"
+
+#: controllers/dashboard/discussion/moderation.php:70
+msgid "posts deleted"
+msgstr "Beiträge gelöscht"
+
+#: controllers/dashboard/discussion/moderation.php:93
+msgid " posts approved"
+msgstr "Beiträge freigegeben"
+
+#: controllers/dashboard/discussion/moderation.php:96
+msgid "Invalid action specified."
+msgstr "Ungültige Aktion."
+
+#: controllers/dashboard/discussion/settings.php:25
+msgid "Settings Updated."
+msgstr "Einstellungen aktualisiert."
+
+#: controllers/page_types/discussion.php:116
+msgid "Incorrect captcha code"
+msgstr "Falsche CAPTCHA-Zeichen eingegeben"
+
+#: elements/discussion_filter_form.php:9
+msgid "Between"
+msgstr "Zwischen"
+
+#: elements/discussion_filter_form.php:11
+msgid "and"
+msgstr "und"
+
+#: elements/discussion_filter_form.php:16
+msgid "Sort By"
+msgstr "Sortieren nach"
+
+#: elements/discussion_filter_form.php:20
+msgid "Most Recent Post"
+msgstr "Neuester Beitrag"
+
+#: elements/discussion_filter_form.php:21
+msgid "Most Recent Topic"
+msgstr "Neuestes Thema"
+
+#: elements/discussion_filter_form.php:22
+msgid "Unanswered"
+msgstr "Unbeantwortet"
+
+#: elements/discussion_filter_form.php:27
+#: elements/moderation/search.php:39
+msgid "Search"
+msgstr "Suche"
+
+#: elements/discussion_messages.php:70
+#, php-format
+msgid "Posted on %s at %s"
+msgstr "Geschrieben am %s um %s"
+
+#: elements/discussion_messages.php:82
+#: elements/discussion_messages_threaded.php:77
+#: elements/discussion_messages_threaded.php:154
+#: elements/moderation/search_results.php:20
+msgid "Delete"
+msgstr "Löschen"
+
+#: elements/discussion_pending.php:2
+msgid "Your post has been saved and will be published after approval by the forum moderator."
+msgstr "Die Nachricht wurde gespeichert, aber sie wird erst nach Prüfung durch den Moderator veröffentlicht."
+
+#: elements/discussion_popup_form.php:47
+#: elements/discussion_reply_popup_form.php:49
+msgid "Check Spelling"
+msgstr "Rechtschreibprüfung"
+
+#: elements/discussion_popup_form.php:66
+#: elements/discussion_popup_form.php:73
+#: elements/discussion_reply_popup_form.php:80
+#: elements/discussion_reply_popup_form.php:86
+msgid "remove"
+msgstr "Löschen"
+
+#: elements/discussion_popup_form.php:77
+#: elements/discussion_reply_popup_form.php:89
+msgid "Attach a file"
+msgstr "Datei anhängen"
+
+#: elements/discussion_popup_form.php:82
+#: elements/discussion_reply_popup_form.php:94
+msgid "Monitor this Post"
+msgstr "Beitrag beobachten"
+
+#: elements/discussion_popup_form.php:82
+#: elements/discussion_reply_popup_form.php:94
+msgid "(receive an email each time a reply is posted)"
+msgstr "(bei jeder Antwort per E-Mail benachrichtigen)"
+
+#: elements/discussion_popup_form.php:86
+#: elements/discussion_reply_popup_form.php:98
+msgid "Please type the letters and numbers shown in the image."
+msgstr "Bitte die Buchstaben und Zahlen im Bild eingeben."
+
+#: elements/discussion_replies_bar.php:13
+msgid "Display Messages"
+msgstr "Beiträge anzeigen"
+
+#: elements/discussion_replies_bar.php:25
+msgid "Reply"
+msgstr "Antworten"
+
+#: elements/discussion_track.php:3
+#, php-format
+msgid "&quot;%s&quot; is now being monitored."
+msgstr "&quot;%s&quot; wird jetzt beobachtet"
+
+#: elements/discussion_track.php:4
+#: elements/discussion_track.php:7
+msgid "Close Window"
+msgstr "Fenster schlieÃen"
+
+#: elements/discussion_track.php:6
+#, php-format
+msgid "&quot;%s&quot; is no longer being monitored."
+msgstr "&quot;%s&quot; wird nicht mehr beobachtet"
+
+#: elements/discussion_track.php:10
+#, php-format
+msgid "Are you sure you would like to un-monitor &quot;%s&quot;?"
+msgstr "Beobachtung von &quot;%s&quot; wirklich beenden?"
+
+#: elements/discussion_track.php:11
+msgid "You will no longer receive any emails related to this item."
+msgstr "Sie erhalten jetzt keine E-Mails mehr zu diesem Beitrag"
+
+#: elements/discussion_track.php:14
+#, php-format
+msgid "Are you sure you would like to monitor &quot;%s&quot;?"
+msgstr "Wollen Sie wirklich den Beitrag &quot;%s&quot; beobachten?"
+
+#: elements/discussion_track.php:15
+msgid "You will receive an email when any responses are posted."
+msgstr "Sie werden jetzt bei neuen Antworten eine E-Mail erhalten"
+
+#: elements/moderation/search.php:9
+msgid "Fields"
+msgstr "Felder"
+
+#: elements/moderation/search.php:10
+msgid "Created Between"
+msgstr "Erstellt zwischen"
+
+#: elements/moderation/search.php:23
+msgid "to"
+msgstr "bis"
+
+#: elements/moderation/search.php:47
+msgid "Keywords"
+msgstr "Stichwörter"
+
+#: elements/moderation/search.php:57
+msgid "Results Per Page"
+msgstr "Ergebnisse pro Seite"
+
+#: elements/moderation/search.php:81
+msgid "Select Search Field."
+msgstr "Suchfeld wählen."
+
+#: elements/moderation/search_results.php:19
+msgid "Approve"
+msgstr "Freigeben"
+
+#: elements/moderation/search_results.php:24
+msgid "Post"
+msgstr "Beitrag"
+
+#: elements/moderation/search_results.php:25
+msgid "Username"
+msgstr "Nutzername"
+
+#: elements/moderation/search_results.php:26
+msgid "Date Posted"
+msgstr "Beitrags-Datum"
+
+#: elements/moderation/search_results.php:68
+msgid "No Posts found."
+msgstr "Keine Beiträge gefunden."
+
+#: libraries/datetime_compat.php:51
+msgid "Default"
+msgstr "Standard"
+
+#: mail/moderation_required.php:2
+msgid "A new message requires moderation"
+msgstr "Ein neuer Beitrag muss geprüft werden"
+
+#: mail/moderation_required.php:3
+msgid "follow the link below to review pending discussion posts"
+msgstr "Zur Moderation von zu prüfenden Diskussionsbeiträgen diesen Link klicken"
+
+#: models/anonymous_user.php:13
+msgid "Anonymous"
+msgstr "Gast"
+
+#: models/discussion_badge.php:54
+msgid "Manage Badges"
+msgstr "Abzeichen verwalten"
+
+#: page_types/discussion.php:21
+#: page_types/discussion_post.php:19
+msgid "Stop Monitoring"
+msgstr "Beobachtung stoppen"
+
+#: page_types/discussion.php:21
+#: page_types/discussion_post.php:19
+msgid "Monitor"
+msgstr "Beobachten"
+
+#: page_types/discussion.php:27
+msgid "Start Discussion"
+msgstr "Diskussion erstellen"
+
+#: single_pages/dashboard/discussion/badges.php:6
+msgid "Edit Badge"
+msgstr "Abzeichen bearbeiten"
+
+#: single_pages/dashboard/discussion/badges.php:6
+#: single_pages/dashboard/discussion/badges.php:102
+msgid "required field"
+msgstr "Pflichtfeld"
+
+#: single_pages/dashboard/discussion/badges.php:15
+#: single_pages/dashboard/discussion/badges.php:111
+msgid "Group"
+msgstr "Gruppe"
+
+#: single_pages/dashboard/discussion/badges.php:21
+#: single_pages/dashboard/discussion/badges.php:120
+msgid "Description"
+msgstr "Beschreibung"
+
+#: single_pages/dashboard/discussion/badges.php:27
+#: single_pages/dashboard/discussion/badges.php:126
+msgid "Image"
+msgstr "Bild"
+
+#: single_pages/dashboard/discussion/badges.php:35
+msgid "Update"
+msgstr "Aktualisierung"
+
+#: single_pages/dashboard/discussion/badges.php:44
+#: single_pages/dashboard/discussion/badges.php:56
+msgid "Delete Badge"
+msgstr "Abzeichen löschen"
+
+#: single_pages/dashboard/discussion/badges.php:47
+msgid "Are you sure you want to permanently remove this badge?"
+msgstr "Dieses Abzeichen wirklich unwiderruflich löschen?"
+
+#: single_pages/dashboard/discussion/badges.php:83
+msgid "No groups found."
+msgstr "Keine Gruppen gefunden."
+
+#: single_pages/dashboard/discussion/badges.php:102
+msgid "Add Badge"
+msgstr "Abzeichen hinzufügen"
+
+#: single_pages/dashboard/discussion/badges.php:116
+msgid "Select Group"
+msgstr "Gruppe wählen"
+
+#: single_pages/dashboard/discussion/badges.php:116
+msgid "Select Existing Group"
+msgstr "Existierende Gruppe wählen"
+
+#: single_pages/dashboard/discussion/moderation.php:2
+msgid "Are you sure?"
+msgstr "Ganz sicher?"
+
+#: single_pages/dashboard/discussion/moderation.php:4
+msgid "Moderated Posts"
+msgstr "Moderierte Beiträge"
+
+#: single_pages/dashboard/discussion/settings.php:9
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: single_pages/dashboard/discussion/settings.php:13
+msgid "Default Display"
+msgstr "Standard Darstellung"
+
+#: single_pages/dashboard/discussion/settings.php:15
+msgid "Mode"
+msgstr "Modus"
+
+#: single_pages/dashboard/discussion/settings.php:16
+msgid "Flat."
+msgstr "Flach"
+
+#: single_pages/dashboard/discussion/settings.php:17
+msgid "Threaded."
+msgstr "Hierarchisch"
+
+#: single_pages/dashboard/discussion/settings.php:20
+msgid "Topic Sorting"
+msgstr "Themensortierung"
+
+#: single_pages/dashboard/discussion/settings.php:37
+msgid "Display badges overlay when hovering over user avatars."
+msgstr "Abzeichen-Overlay anzeigen beim Mouse-Over über Nutzer-Avatare."
+
+#: single_pages/dashboard/discussion/settings.php:38
+msgid "Display badges on user profiles (User profiles must be enabled.)"
+msgstr "Abzeichen in Benutzerprofil anzeigen (Benutzerprofile müssen aktiviert sein.)"
+
+#: single_pages/dashboard/discussion/settings.php:50
+msgid "Posting"
+msgstr "Beitrag"
+
+#: single_pages/dashboard/discussion/settings.php:53
+msgid "Anonymous Posting"
+msgstr "Anonymer Beitrag"
+
+#: single_pages/dashboard/discussion/settings.php:54
+msgid "Posting Method Form"
+msgstr "Beitrags-Formular Typ"
+
+#: single_pages/dashboard/discussion/settings.php:66
+msgid "Overlay."
+msgstr "Overlay"
+
+#: single_pages/dashboard/discussion/settings.php:67
+msgid "Within the page."
+msgstr "In der Seite"
+
+#: single_pages/dashboard/discussion/settings.php:73
+msgid "Moderation"
+msgstr "Moderation"
+
+#: single_pages/dashboard/discussion/settings.php:78
+msgid "Posts by users in the following groups will not be moderated: Administrators, No_Moderation"
+msgstr "Beiträge von Benutzern folgender Gruppen werden nicht moderiert: Administrators, No_Moderation"
+
+#: single_pages/dashboard/discussion/settings.php:80
+msgid "Moderator Email"
+msgstr "Moderator E-Mail"
+
+#: single_pages/dashboard/discussion/settings.php:82
+msgid "Email will be sent to moderator when posts requiring moderation are submitted, leave blank for no notification."
+msgstr "E-Mail zur Benachrichtigung des Moderators über freizugebende Beiträge. Leer lassen wenn keine Benachrichtigung erfolgen soll."
+
+#: single_pages/dashboard/discussion/settings.php:86
+msgid "Content Filtering"
+msgstr "Inhalts-Filterung"
+
+#: single_pages/dashboard/discussion/settings.php:87
+msgid "Disallow posts that contain words in the banned words file."
+msgstr "Beiträge unterdrücken, die Begriffe aus der \"banned words\" Datei enthalten."
+
+#: single_pages/dashboard/discussion/settings.php:88
+msgid "Do not check posts for banned content."
+msgstr "Beiträge nicht nach unerlaubten Begriffen überprüfen."
+
+#: single_pages/dashboard/discussion/settings.php:91
+msgid "Typical location of this file:"
+msgstr "Typischer Ort dieser Datei:"
+
+#: single_pages/dashboard/discussion/settings.php:94
+msgid "Save"
+msgstr "Speichern"
+
+#: tools/change_post_to_page.php:23
+msgid "Post to be Promoted"
+msgstr "Zu bewerbender Beitrag"
+
+#: tools/change_post_to_page.php:27
+msgid "New Parent Page"
+msgstr "Neue übergeordnete Seite"
+
+#: tools/change_post_to_page.php:30
+msgid "Page Type"
+msgstr "Seitentyp"
+
+#: tools/change_post_to_page.php:41
+msgid "Move or Copy?"
+msgstr "Verschieben oder Kopieren?"
+
+#: tools/change_post_to_page.php:42
+msgid "Move (Remove Old Post after Creating Page)"
+msgstr "Verschieben (Alten Beitrag nach Seitenerstellung löschen)"
+
+#: tools/change_post_to_page.php:43
+msgid "Copy and Retain Existing Discussion"
+msgstr "Kopieren und bestehende Diskussion beibehalten"
+
+#: tools/change_post_to_page.php:44
+msgid "Copy and Create New Discussion"
+msgstr "Kopieren und neue Diskussion erstellen"
+
+#: tools/change_post_to_page.php:47
+msgid "Change Post"
+msgstr "Beiträg editieren"
+
+#: tools/change_post_to_page.php:56
+msgid "You must specify a parent page for the new page you want to create."
+msgstr "Es muss eine übergeordnete Seite für die neu zu erstellende Seite angegeben werden."
+
+#: tools/get_badges_content.php:33
+msgid "View Profile"
+msgstr "Benutzerprofil anzeigen"
+
+#: tools/manage_badges.php:31
+msgid "User's Badges"
+msgstr "Abzeichen des Benutzers"
+
+#: tools/manage_badges.php:36
+msgid "Badges saved!  Refreshing page."
+msgstr "Abzeichen gespeichert! Seite wird neu geladen."
+
+#: tools/manage_badges.php:61
+msgid "Save Changes"
+msgstr "Ãnderungen speichern"
+

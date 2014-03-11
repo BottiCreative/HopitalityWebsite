@@ -1,0 +1,132 @@
+For help and or assistance, please refer to 
+
+http://www.concrete5.org/marketplace/addons/problog/documentation/
+
+
+THINGS YOU NEED TO FAMILIARIZE YOURSELF WITH BEFORE YOU START
+
+Custom Block Views
+Page Properties
+watch this video on PageType Defaults(starting @2min 30sec): http://www.concrete5.org/documentation/general-topics/scrapbooks
+watch this video on a theme's view.php working with ProBlog: https://vimeo.com/35407334
+
+
+GETTING STARTED
+
+1. go to your pages and theme, page_types area, and edit the page_type "defaults" for the pb_post page type.
+
+2. make sure the proper elements are in place, and that any and all blocks you would like represented on each post are present. If you don't see the preset blocks shown below, this would meAn that your theme's view.php file is set up incorrectly or not present at all. Contact your theme developer for further help before moving forward.
+
+ 
+
+3. There are two ways to style your pb_post page types to fit nicely into your theme.  Either way, you need to make sure that you copy the provided pb_post page type into your root->page_types folder(create one if you don't have one).  The first way,  you can edit the containing content div to match that of your theme by renaming the div's and classes to correspond.  Remember, this view will use your theme's view.php file, which means that there is no need for any header or footer includes.  Of important note here, is that there are FIVE sperate content areas needed for ProBlog: Main, Blog Post Trackback, Blog Post More, & Blog Post Footer for the primary content area, and then Sidebar for the sidebar area.  The second way, is to simply copy the css->page_types->pb_post.css file and tweek accordingly. 
+
+ 
+
+4. Lastly, you want to set any pertinent Blog settings in the ProBlog App by going to your dashboard->proBlog->settings tab, and setting any desired social links, thumb sizes and colors.  Most importantly, you want to set the search location that the tags and categories point to for search results.  This page simply needs to be any page that contains the standard C5 search block.
+
+
+
+
+ASSIGNING USERS AS BLOG EDITORS
+
+ProBlog version 9 introduces stronger integration with C5's user groups system.  
+
+Go to your dashboard users area, and search for the desired user to allow blog posting
+edit the user and add them to the "blog editor" group
+ 
+
+CREATING NEW BLOG SECTIONS IN YOUR SITE
+
+click on the section page in your site map (or create new one)
+select properties
+chose the "Custom Properties" tab
+from the pull down, select the "Blog Section" attribute
+make sure it is checked and save
+all done.  you will now see this page as a post location when adding a post in ProBlog
+ 
+
+ABOUT THE PINGBACK BLOCK
+
+for Pingback to work, any post you desire to be "Pingable" must have the "trackback" block on the page.
+if you have updated to v5, the pb_post pagetype has changed and added a new area type. make sure you add that to any root/theme level overrides for the pb_post page_type. 
+If you have updated to v5, you will need to go to the pb_post page_type defaults and "push to children" the new "Trackback" block.
+if you wish to have Pingback scraping, but NOT have manual Ping requests from your posts, simply edit the page_type defaults for the pb_post and change the custom view to "No Manual Option" view.
+ 
+
+EMBEDDING VIDEO CONTENT USING THE "ADD EMBED" OPTION
+
+in a new browser tab, go to your Youtube or Vimeo video, and click on the "embed" option normal on or near the video.
+click in the code field (it should auto highlight) and press "ctrl-C" on PC or "cmd-C" on Mac to copy that code.  Some video service have a "copy" button that will do the same thing.
+tab back over to your blog post page.
+Edit or Add a post, and click in the text area where you desire to add your embed code.
+Now click on the "add embed" link to the right of "add image" link that is just above the WYZIWYG text functions in the Concrete5 functions bar.
+press "ctrl-V" on PC or "cmd-V" on Mac to paste the code into that embed box.
+click to add
+* you can also simply past the code while in HTML edit mode
+
+ 
+
+USING CODE HIGHLIGHTING
+
+Code highlighting is very easy in ProBlog v5.5.
+
+while making your Blog post, click in the editor where you intend to "insert" your code.
+click on "Add Embed" in the Blog Editor.
+Go through and replace all "<" and ">" with "&lt;" and "&gt;" respectively using find & replace in your favorite ide/text editor. then select it all and ctrl+C /cmd-C - copy
+Now add <pre class="prettyprint linenums:4"> in the line before your code. with linenums:4 being the starting line number. Do not replace the <> symbols.
+paste your code into the embed popup. ctrl-V/cmd-V - paste
+Finally add </pre> to the line after your code. Do not replace the <> symbols.
+  
+
+IMPORTING YOUR WORDPRESS BLOG
+
+download the problog_importer from GitHub.
+unzip and remove "-master" from the folder name.
+upload/move to your sites "packages" folder and install.
+in your WP dashboard, head to tools and export your site as an XML file.
+download and instal the WP importer from HERE to you Concrete5 target site
+go the importer app under ProBlog, and upload/select your XML wordpress file
+select "choose import options"
+Select "Blog" as your target page for posts
+Select "ProBlog Post" as the page type for posts
+Select "Start Importer"
+all done!
+
+there may be some cleanup to do...but all in all, this is a great tool Scott, Ryan, and Jeremy did a great job on it.
+
+  
+
+I ADDED PROBLOG TO MY EXISTING C5 BLOG BUT IT DOESN'T LOOK RIGHT!
+
+Existing blog posts will not have the correct ProBlog page_type as it previously did not exist. You can go to each page and edit the "Design" and change each post to the ProBlog Post page_type.
+  
+
+HAVING A "BLOG" STYLED SEARCH BLOCK
+
+go to your search page in your site and put it in edit mode
+click on the block and select "custom template"
+select "Blog Search"
+  
+
+HOW DO I SET UP PROBLOG MOBILE?
+
+ 
+
+ProBLog's mobile app publishes to a fixed location "/mobile". Think of this as a "container" for mobile posted blogs.
+
+ 
+
+To include these posts in your blog lists, simply set your problog_list block on your main blog page to search "everywhere", and to filter by the ProBlog Post page_type.  While editing, you may want to change the list custom block view to "mobile" or "micro blog".
+
+ 
+
+You also need to make sure that your root->files folder has a folder called "incoming" that is chmod'd to 777.
+
+ 
+
+lastly, make sure that the user you want to post with is set as a "blog editor" by editing that users profile and making sure that it is "checked"
+
+ 
+
+That's it!  Blog away on the go!

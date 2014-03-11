@@ -1,0 +1,10 @@
+1.0 - Initial Release
+1.1
+- Added ability for website admin to filter files by Boolean attributes
+- added ability for website admin to define sort order
+1.2
+- Added method "getSearchableContent" to make the block contents be indexed with concrete5 search engine
+1.3
+- Added option to limit the number of downloads displayed at a page and
+1.4
+- Minor update to make it compatible with concrete 5.5.x

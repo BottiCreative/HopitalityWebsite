@@ -1,0 +1,28 @@
+#pb_sidebar{
+	margin-top: 20px;
+	float: left!important;
+	width: 200px;
+
+}
+
+#pb_body{
+	width: 550px;
+	padding: 0 20px 15px 20px;
+	float: left;
+}
+
+.ubp_sidebar{
+	margin-top: 20px;
+	float: left!important;
+	width: 200px;
+
+}
+
+.ubp_body{
+	width: 550px!important;
+	padding: 0 20px 15px 20px;
+	float: right;
+}
+
+.ccm-next-previous-previouslink{float: left;}
+.ccm-next-previous-nextlink{float: right;}

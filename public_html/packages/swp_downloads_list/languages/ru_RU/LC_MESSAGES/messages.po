@@ -1,0 +1,149 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Downloads List addon for concrete5 CMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-12 00:53+0300\n"
+"PO-Revision-Date: 2010-11-12 00:59+0300\n"
+"Last-Translator: Denis Vlasov <lifeseo@gmail.com>\n"
+"Language-Team: Smart Web Projects <support@smartwebprojects.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: t\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: ../../../.\n"
+
+#: ../../.././controller.php:2
+#: ../../.././blocks/swp_downloads_list/add.php:2
+#: ../../.././blocks/swp_downloads_list/controller.php:2
+#: ../../.././blocks/swp_downloads_list/edit.php:2
+#: ../../.././blocks/swp_downloads_list/view.php:1
+msgid "Access Denied."
+msgstr "В доступе отказано."
+
+#: ../../.././controller.php:11
+msgid "Display all download links from a certain file set in a single block.<br />By <a href=\"http://www.smartwebprojects.net/\" target=\"_blank\">Smart Web Projects</a>"
+msgstr "Отображает все ссылки для скачивания файлов из определённого набора в едином блоке.<br />От <a href=\"http://www.smartwebprojects.net/\" target=\"_blank\">Smart Web Projects</a>"
+
+#: ../../.././controller.php:15
+#: ../../.././blocks/swp_downloads_list/controller.php:21
+msgid "Downloads List"
+msgstr "Список загрузок"
+
+#: ../../.././blocks/swp_downloads_list/controller.php:17
+msgid "For adding list of download links from a certain file set."
+msgstr "Для добавления ссылок для скачивания на основе определённого набора файлов."
+
+#: ../../.././blocks/swp_downloads_list/edit.php:6
+msgid "File Set"
+msgstr "Набор файлов"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:7
+msgid "Filters"
+msgstr "Фильтры"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:8
+msgid "Display Options"
+msgstr "Опции отображения"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:23
+msgid "All files (file set filter is not applied)"
+msgstr "Все файлы (фильтр по набору файлов не применяется)"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:29
+msgid "<strong>File set filter is not applied.</strong> It means that ALL files from your filemanager will be displayed unless you define some attribute filter(s). Make sure that you define correct filters (see Filters tab)"
+msgstr "<strong>Фильтр по набору файлов не применяется</strong> Это означает, что ВСЕ файлы из вашего менеджера файлов будут показаны, если только вы не зададите какой-нибудь фильтр по атрибутам. Убедитесь, что вы настроили фильтры правильно (смотрите вкладку Фильтры)"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:35
+msgid "Select file set:"
+msgstr "Выберите набор файлов:"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:39
+#, php-format
+msgid "No file sets found. Create a new one in %sFile Manager</a> <em>(link will open in new window)</em>"
+msgstr "Наборы файлов не найдены. Создайте новый %sМенеджере Файлов</a> <em>(ссылка откроется в новом окне)</em>"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:68
+msgid "No file attributes of boolean type (checkbox) found."
+msgstr "Не найдено атрибутов типа Флажки"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:71
+msgid "Here you can define which attributes of boolean type (checkbox) the files should have switched to YES."
+msgstr "Здесь вы можете определить какие атрибуты должны быть отмечены у файлов галочкой."
+
+#: ../../.././blocks/swp_downloads_list/edit.php:112
+msgid "Display column names (&quot;Filename&quot; and other)"
+msgstr "Отображать названия колонок (&quot;Имя файла&quot; и др.)"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:116
+msgid "Display date and time of the latest update"
+msgstr "Показывать дату и время последнего обновления"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:120
+msgid "Display number of downloads"
+msgstr "Показывать количество скачиваний"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:124
+msgid "Display file size"
+msgstr "Показывать размер файла"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:133
+msgid "Sort List By:"
+msgstr "Сортировать список по:"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:137
+msgid "Date: newest first"
+msgstr "Дата: сначала новые"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:138
+msgid "Date: oldest first"
+msgstr "Дата: сначала старые"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:139
+#: ../../.././blocks/swp_downloads_list/view.php:16
+msgid "Filename"
+msgstr "Имя файла"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:140
+msgid "File size: largest first"
+msgstr "Размер файла: сначала большие"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:141
+msgid "File size: smallest first"
+msgstr "Размер файла: сначала маленькие"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:142
+msgid "Number of downloads"
+msgstr "Количество скачиваний"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:147
+msgid "Attribute"
+msgstr "Атрибут"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:163
+msgid "Ascending"
+msgstr "По возрастанию"
+
+#: ../../.././blocks/swp_downloads_list/edit.php:167
+msgid "Descending"
+msgstr "По убыванию"
+
+#: ../../.././blocks/swp_downloads_list/view.php:7
+msgid "No downloads available at the moment."
+msgstr "Загрузки в данный момент не доступны."
+
+#: ../../.././blocks/swp_downloads_list/view.php:22
+msgid "Date"
+msgstr "Дата"
+
+#: ../../.././blocks/swp_downloads_list/view.php:29
+msgid "Downloads"
+msgstr "Скачано"
+
+#: ../../.././blocks/swp_downloads_list/view.php:36
+msgid "Size"
+msgstr "Размер"
+

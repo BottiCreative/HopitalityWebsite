@@ -1,0 +1,133 @@
+.content-sbBlog-wrap{
+	margin-top: 5px;
+	margin-bottom: 15px;
+	float: left;
+	clear: left;
+	width: 100%;
+}
+
+.content-sbBlog-date{
+	float: left;
+	padding-top: 4px;
+	padding-left: 11px;
+	height: 200px;
+	width: 67px;
+	background-repeat: no-repeat;
+	/*background-image: url(images/cal_babyblue.png);*/
+}
+
+.content-sbBlog-month{
+	color: white;
+}
+
+.content-sbBlog-day{
+	line-height: 25px;
+	letter-spacing: -2px;
+	font-size: 38px;
+	padding-left: 2px;
+	padding-top: 2px;
+	color: white;
+}
+
+.content-sbBlog-contain{
+float: left;
+width: 100%;
+}
+
+.addthis_toolbox, addthis_default_style{
+	float: left;
+	margin-top: 30px;
+	margin-left: -11px;
+	width: 63px;
+}
+
+.content-sbBlog-commentcount{
+	margin-right: 10px;
+	margin-top: 15px;
+	line-height: 25px;
+	text-align: center;
+	height: 25px;
+	width: 200px;
+	float: right;
+}
+
+.content-sbBlog-title{
+	font-size: 30px;
+	line-height: 40px;
+	border-bottom-color: .cccccc;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	margin-left: 80px;
+	margin-right: 10px;`
+	}
+
+.content-sbBlog-contain {
+}
+.content-sbBlog-wrap h1{
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 30px;
+}
+
+
+.content-sbBlog-wrap .thumbnail, .content-sbBlog-wrap .thumbnail img{
+	float: left; 
+	padding-right: 5px;
+	padding-bottom: 2px;
+	padding-top: 5px;
+}
+
+
+.content-sbBlog-post{
+	margin-right: 10px;
+	margin-left: 80px;
+	padding: 12px 0px;
+}
+
+.content-sbBlog-feed{
+	padding-right: 25px;
+	float: left;
+	clear: left;
+	width: 100%;
+}
+
+.pagination{
+
+	text-align: right;
+	float: right;
+
+}
+
+.rssfeed{
+	width: 120px;
+	line-height: 18px;
+	float: left;
+	clear: left;
+}
+
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+.tags{
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-left: 83px;
+}
+
+.tags a{
+	margin-right: 3px;
+}
+
+.content-sbBlog-title h3{
+	margin-top: 0px;
+	font-size: 30px;
+}
+
+.chicklets{margin-bottom: 5px; padding-left: 10px!important;}
+
+.backlink{float: right; font-size: 9px}
+

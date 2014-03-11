@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="btTrackback">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+		<field name="stupid" type="C" size="255">
+		</field>
+	</table>
+	<table name="btTrackbackUrls">
+		<field name="tbID" type="I">
+			<key />
+			<unsigned />
+		</field>
+		<field name="url" type="C" size="255">
+		</field>
+		<field name="post_title" type="C" size="255">
+		</field>
+		<field name="exerpt" type="X2">
+		</field>
+		<field name="blog_name" type="C" size="255">
+		</field>
+	</table>
+</schema>

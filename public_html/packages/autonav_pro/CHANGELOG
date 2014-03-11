@@ -1,0 +1,27 @@
+1.5.1
+JS fix for multiple superfish templates on the same page
+
+1.5
+Updated jQuery Superfish Menu Plugin to v1.7.4
+Updated FontAwesome to v4.0.3
+Added custom template Bootstrap Sidenav Right
+Redesigned FontAwesome Generator
+
+1.4
+Added custom template Bootstrap Side Nav
+Added custom attribute Exclude From Auto-Nav Pro
+
+1.3
+
+Added support for LivIcons
+
+1.2
+
+CSS adjustments
+
+1.1
+
+Removed CSS filters for more consistent IE display
+Added 2 custom templates with superfish functionality (hover drop)
+
+1.0 - Initial release

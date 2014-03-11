@@ -1,0 +1,4 @@
+.bbEditorToolbar{ position:relative; width:100%; height: auto; left:0px; top:0px }
+.bbEditorToolbar img.bbEditorButton{ cursor:pointer }
+.bbEditorEmoticonSelector{ position:absolute; width: 100px; height:auto; right:20px; top: 25px; background:#f1f1f1; border:1px solid #999; padding:4px; display:none }
+.bbEditorEmoticonSelector img.bbEditorEmoticon{ margin:0px 4px !important; cursor: pointer }

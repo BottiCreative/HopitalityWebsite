@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="btDiscussionGuestBook">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+		<field name="cParentID" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="enableAnonymous" type="I1">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="captchaChoice" type="I2">
+			<unsigned />
+			<notnull />
+			<default value="4" />
+		</field>
+		<field name="anonymousPostChoice" type="I2">
+			<unsigned />
+			<notnull />
+			<default value="3" />
+		</field>
+		<field name="cThis" type="I1">
+			<unsigned />
+			<notnull />
+			<default value="1" />
+		</field>
+		<field name="title" type="C" size="100">
+			<default value="Comments"/>
+		</field>
+		<field name="displayGuestBookForm" type="i">
+			<default value="1"/>
+		</field>
+
+	</table>
+</schema>

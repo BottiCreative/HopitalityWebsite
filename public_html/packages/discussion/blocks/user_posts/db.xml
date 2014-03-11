@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="btDiscussionUserPosts">
+		<field name="bID" type="I">
+			<key />
+			<unsigned />
+		</field>
+		<field name="byUserID" type="I">
+			<unsigned />
+			<notnull />
+			<default value="0" />
+		</field>
+		<field name="sortMode" type="C" size="64">
+			<default value="" />
+		</field>
+		<field name="sortModeDir" type="C" size="5">
+			<default value="" />
+		</field>
+		<field name="num" type="I">
+			<default value="20" />
+		</field>		
+	</table>
+</schema>

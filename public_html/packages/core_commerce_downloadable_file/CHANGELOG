@@ -1,0 +1,24 @@
+1.2.2
+	- Fixed install issue with 5.6.2
+	- Corrected download URL for websites that do not use site root.
+
+1.2.1
+	- Set email FROM address to be the same as the email specified in eCommerce
+	- corrected format of order number introduced in 1.2
+	
+1.2
+	- Fixed order number mismatch
+	- Updated url structure in download email
+	
+
+1.1
+	- minor change in download url for concrete5.5
+
+1.0.3
+	- Including the name of the attribute in the download list, so you can have multiple attributes assigned to a product and they'll make sense, for different versions of files, etc...
+
+1.0.2
+	- Better handling of orders when a previous order could not be found (should fix issues with Paypal Website Payments Standard and perhaps other gateways.)
+
+1.0.1
+	- Initial Version

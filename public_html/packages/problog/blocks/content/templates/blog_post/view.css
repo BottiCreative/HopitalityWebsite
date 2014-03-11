@@ -1,0 +1,90 @@
+#sbBlog {
+	margin-bottom: 7px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	border-bottom-color: #e4e4e4;
+	border-bottom-style: dotted;
+	border-bottom-width: thin;
+}
+
+#sbBlog H1{
+       font-size: 26px;
+}
+
+
+#sbBlog #titlehead {
+        width: 100%;
+}
+
+#sbBlog #sbtitle {
+	padding-top: 10px;
+}
+#sbBlog #date {
+	margin-top: 15px;
+	padding-top: 20px;
+	font-size: 12px;
+}
+
+#sbBlog #deswrap {
+	
+}
+
+#sbBlog #description {
+	width: 100%;
+}
+
+#sbBlog #datespan {
+	padding-right: 15px;
+	font-size: 14px;
+}
+
+#bio {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+#bio #avatar{
+	margin-bottom: 10px;
+	padding-right: 8px;
+	padding-bottom: 8px;
+	float: left:
+}
+
+#bio #bioInfo{
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+	border-color: #adadad;
+	border-width: 1px;
+	border-style: dotted;
+	background-color: #f0f0f0;
+	display: block;
+	width: 300px;
+}
+
+#tagpostlist{
+	float: right;
+	width: 400px;
+	font-style: italic;
+	margin-top: -45px;
+	text-align: right;
+}
+
+#twee{
+	margin-top: 7px;
+}
+
+.addthis_toolbox, addthis_default_style{
+	margin: 5px 0px 10px 0px;
+	width: 100%;
+}
+.blog-attributes{
+
+}
+.lightweightBlogNextPrevious_nextLink{
+	float: right;
+}
+.lightweightBlogNextPrevious_previousLink{
+	float: left;
+}
+#gPlus{ margin-right: -23px; float: left; display: block;}

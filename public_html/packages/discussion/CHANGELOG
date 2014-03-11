@@ -1,0 +1,134 @@
+1.8.6
+	- Fix threading issue where parent cID was not being passed from post form. 
+	- Topic tags are no longer deleted upon first reply. 
+	- Client side validation support for posting  
+
+1.8.5
+	- Fix 5.6 issue with not displaying posts under another page
+	- Fix minor issues with tags and loose matching.
+
+1.8.4
+	- Fixed failing uninstalls with c5.5->c5.5.3.
+	- Add 5.6 support (adding post problem, failing discussion moderation)
+	- Fixed post to page promotion
+
+1.8.3
+	- Fixes for concrete 5.6.0a1
+	- Fixed start discussion post form when discussions are set to post-in-page.
+
+1.8.2
+   	- removed js debuging code that was causing IE to crash.
+
+1.8.1
+	- Added mutable date formats
+	- fixed sorting of discussion posts by various criteria
+
+1.8
+	- Added optional integration with multilingual package that flags posts with languages if they were not posted in default locale (beta feature)
+	- Modified user_badges block to show more accurate profile information according to Johnthefish's suggestion
+	- Fixed Post form issues
+	- Added threaded vs flat to session
+
+1.7.4
+ 	- added ability to define number of posts per page to user posts block + reformatted for 5.5
+ 	- fixed js errors in discussion guestbook block that were causing 5.5+ to lose edit bar
+ 	- fixed js errors when clicking monitory un-monitor links on threads
+
+1.7.3
+	- Updated Dashboard UI for concrete5.5
+
+1.7.2
+	- Users that are monitoring discussions will not get monitor emails if they
+	no longer have rights to view those discussions
+	- Added Ryan's moderation_permissions model.  Allows checking permissions
+	for users that are not logged in.
+
+
+1.7
+	- Discussion guestbook block now allows anonymous posting, moderation and captcha to be set at the block level or inherit global settings.
+	- Pre-populate discussion reply with RE: [post name]
+
+1.6.7
+	- Fixed changed discussion tracking to not string mulitple "to" addresses in one email with the Loader::helper in concrete5.4.2
+
+1.6.6
+	- Fixed bug in the discussion post block's db.xml file.
+
+1.6.5
+	- Added tags to discussion posts
+	- Added tag filtering options to discussion post list block
+	- Added ability to post to a particular forum from a post list block
+
+1.6.2
+	- Fixed bug where users were recieving e-mails of replies in moderated
+	discussions.
+
+1.6.1
+	- Added the Dutch translation
+
+1.6
+	- Fixed bug where manage badges wouldn't for certain badge names
+
+1.5.9
+	- Added the French translation
+
+1.5.8
+	- fixed error where users_online block would always display today as the most users ever online
+	- Fixed bug where discussion post list block didn't return any messages
+
+1.5.7
+	- Fixed errors in User Posts and User Badges blocks that would throw php errors when added to pages outside of the profile section.
+	- prepopulated reply subjects with: re: [post subject]
+	- Restored post & reply buttons linking to login/register page when anon posting is disabled and user is not logged in.
+	- Changed discussion tracking so tracking is allways tied to the top level post as apposed to the post/reply that was immediately above the current post
+
+
+1.5.6
+	- More localization fixes
+	- If profiles aren't on, then user profile links won't appear in the mail templates.
+	- Fixed bug where monitored discussion guestbooks would sometimes not contain the correct URLs.
+	- Better anchor links to discussions from monitor mailings
+	- Fixed issue with discussion post counts sometimes not incrementing properly.
+	- Fixed issue where monitored discussions, when they were promoted into pages, didn't maintain their monitoring correctly.
+1.5.5
+	- The discussion add-on is now available in German. Simply specify your LOCALE as de_DE in config/site.php. (NOTE: Requires concrete 5.4 or greater.)
+1.5.4
+	- More localization fixes
+
+1.5.3
+	- Localization fixes
+
+1.5.2
+	- Fixed bug that caused reply & post count errors when moderated posts were deleted
+	- stripped javascript: from bbcode output
+
+1.5.1
+	- Fixed bug that caused errors when editing page defaults for Discussion and Discussion Post page types.
+
+1.5
+	- Added an option for anonymous posting in forums, which can require a captcha.
+	- Added moderation option which can be turned on for forums, and overridden at the forum level.
+
+1.2
+	- Added discussion post block.
+
+1.0.4
+	- Fixing bug that led to total posts not showing correctly on the frontend.
+	- Fixed Posted On date bug when using older versions of concrete5
+	- Discussion Posts Block Added
+
+1.0.3
+	- Fixed a bug that led to posting not working properly in IE7 and IE8.
+
+1.0.2
+	- Fixed ordering bug in topic list when dealing with pinned messages
+	- Fixed error adding discussion topics block and choosing "under this page."
+
+1.0.1
+	- Bug fix: if you edit a message, close that, and reply to a message, you instead get the edited message's text, and if you submit, you update the old message instead.
+	- Bug fix: if you have your site setup to use the in-page posting form, edits were still taking place in the overlay.
+	- Bug fix: Attachments weren't showing up in threaded view.
+	- Bug Fix: Cannot switch display mode from threaded to flat
+	- Bug Fix: Cannot edit defaults in discussion post page type
+
+1.0 - Initial Version

@@ -1,0 +1,1088 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-07-31 09:43-0700\n"
+"PO-Revision-Date: 2011-05-18 11:38+0100\n"
+"Last-Translator: Mark <mark@mark.nl>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: discussion//blocks/bbcode/add.php:2
+#: discussion//blocks/bbcode/controller.php:2
+#: discussion//blocks/bbcode/edit.php:2
+#: discussion//blocks/bbcode/form_setup_html.php:1
+#: discussion//blocks/bbcode/view.php:1
+#: discussion//blocks/discussion_categories/add.php:1
+#: discussion//blocks/discussion_categories/controller.php:2
+#: discussion//blocks/discussion_categories/edit.php:1
+#: discussion//blocks/discussion_categories/view.php:1
+#: discussion//blocks/discussion_guestbook/add.php:1
+#: discussion//blocks/discussion_guestbook/controller.php:7
+#: discussion//blocks/discussion_guestbook/edit.php:1
+#: discussion//blocks/discussion_guestbook/view.php:1
+#: discussion//blocks/discussion_post_list/add.php:1
+#: discussion//blocks/discussion_post_list/controller.php:3
+#: discussion//blocks/discussion_post_list/edit.php:1
+#: discussion//blocks/discussion_post_list/post_list_form.php:1
+#: discussion//blocks/discussion_post_list/templates/simple.php:2
+#: discussion//blocks/discussion_post_list/tools/preview_pane.php:2
+#: discussion//blocks/discussion_post_list/view.php:2
+#: discussion//blocks/discussion_topics/add.php:1
+#: discussion//blocks/discussion_topics/controller.php:2
+#: discussion//blocks/discussion_topics/edit.php:1
+#: discussion//blocks/discussion_topics/view.php:1
+#: discussion//blocks/user_badges/add.php:1
+#: discussion//blocks/user_badges/controller.php:2
+#: discussion//blocks/user_badges/edit.php:1
+#: discussion//blocks/user_badges/view.php:1
+#: discussion//blocks/user_posts/add.php:1
+#: discussion//blocks/user_posts/controller.php:1
+#: discussion//blocks/user_posts/edit.php:1
+#: discussion//blocks/user_posts/view.php:1
+#: discussion//blocks/users_online/controller.php:2
+#: discussion//blocks_disabled/discussion_content/view.php:2
+#: discussion//controller.php:3
+#: discussion//controllers/dashboard/discussion/badges.php:2
+#: discussion//elements/discussion_messages.php:1
+#: discussion//elements/discussion_messages_threaded.php:1
+#: discussion//elements/moderation/search.php:1
+#: discussion//elements/moderation/search_results.php:1
+#: discussion//libraries/mail/importers/discussion_post_reply.php:3
+#: discussion//models/discussion_badge.php:2
+#: discussion//single_pages/dashboard/discussion/badges.php:2
+#: discussion//tools/moderation/search_results.php:2
+#: discussion//tools/moderation/search_results.php:6
+msgid "Access Denied."
+msgstr "Toegang geweigerd"
+
+#: discussion//blocks/bbcode/controller.php:17
+msgid "BBCode"
+msgstr "BBCode"
+
+#: discussion//blocks/bbcode/controller.php:21
+msgid "A text area that supports Bulletin Board tags."
+msgstr "Een textgedeelte dat Bulletin Boards tags ondersteund."
+
+#: discussion//blocks/bbcode/form_setup_html.php:21
+msgid "Show BB Tags Reference"
+msgstr "Toon BB Tags referentie"
+
+#: discussion//blocks/discussion_categories/add.php:42
+#: discussion//blocks/discussion_categories/edit.php:42
+msgid "Display Order"
+msgstr "Toon sortering"
+
+#: discussion//blocks/discussion_categories/add.php:43
+#: discussion//blocks/discussion_categories/edit.php:43
+msgid "Date of Activity (Descending)"
+msgstr "Datum van activiteit (aflopend)"
+
+#: discussion//blocks/discussion_categories/add.php:44
+msgid "Date of Activity (Acending)"
+msgstr "Datum van activiteit (oplopend)"
+
+#: discussion//blocks/discussion_categories/controller.php:14
+msgid "Display discussion categories on your website."
+msgstr "Toon discussiecategorieeen in de website."
+
+#: discussion//blocks/discussion_categories/controller.php:18
+msgid "Discussion Categories"
+msgstr "Discussie categorieën"
+
+#: discussion//blocks/discussion_categories/edit.php:44
+msgid "Date of Activity (Ascending)"
+msgstr "Datum van activiteit (aflopend)"
+
+#: discussion//blocks/discussion_categories/view.php:8
+msgid "Categories"
+msgstr "Categorieën "
+
+#: discussion//blocks/discussion_categories/view.php:9
+#: discussion//blocks/discussion_topics/view.php:10
+msgid "Last Post"
+msgstr "Laatste reactie"
+
+#: discussion//blocks/discussion_categories/view.php:10
+#: discussion//blocks/discussion_topics/view.php:8
+msgid "Topics"
+msgstr "Discussies"
+
+#: discussion//blocks/discussion_categories/view.php:11
+msgid "Messages"
+msgstr "Berichten"
+
+#: discussion//blocks/discussion_categories/view.php:42
+#: discussion//blocks/discussion_categories/view.php:44
+msgid "By"
+msgstr "Door"
+
+#: discussion//blocks/discussion_categories/view.php:47
+msgid "on"
+msgstr "op"
+
+#: discussion//blocks/discussion_categories/view.php:63
+msgid "No discussions available."
+msgstr "Geen discussies beschikbaar"
+
+#: discussion//blocks/discussion_guestbook/add.php:4
+#: discussion//blocks/discussion_guestbook/edit.php:4
+msgid "Title"
+msgstr "Titel"
+
+#: discussion//blocks/discussion_guestbook/add.php:5
+msgid "Comments"
+msgstr "Reacties"
+
+#: discussion//blocks/discussion_guestbook/add.php:7
+#: discussion//blocks/discussion_guestbook/edit.php:7
+msgid "Posting New Responses is Enabled?"
+msgstr "Posten van nieuwe reacties toegestaan?"
+
+#: discussion//blocks/discussion_guestbook/add.php:8
+#: discussion//blocks/discussion_guestbook/edit.php:8
+#: discussion//elements/discussion_track.php:12
+#: discussion//elements/discussion_track.php:16
+msgid "Yes"
+msgstr "Ja"
+
+#: discussion//blocks/discussion_guestbook/add.php:9
+#: discussion//blocks/discussion_guestbook/edit.php:9
+msgid "No"
+msgstr "Nee"
+
+#: discussion//blocks/discussion_guestbook/controller.php:19
+msgid "Adds blog-style comments (a guestbook) to your page, but uses the discussion backend to create posts."
+msgstr "Voegt een blog-style gastenboek toe aan uw pagina, maar gebruikt de discussiebackend om posts toe te voegen."
+
+#: discussion//blocks/discussion_guestbook/controller.php:23
+msgid "Discussion Guestbook"
+msgstr "Discussiegastenboek"
+
+#: discussion//blocks/discussion_guestbook/controller.php:130
+msgid "You must be logged in to post."
+msgstr "U dient ingelogd te zijn om een discussie te starten."
+
+#: discussion//blocks/discussion_guestbook/controller.php:134
+msgid "Posting is disabled."
+msgstr "Reacties achterlaten is uitgeschakeld"
+
+#: discussion//blocks/discussion_guestbook/controller.php:138
+msgid "Your comment is empty."
+msgstr "Uw reactie is leeg."
+
+#: discussion//blocks/discussion_guestbook/view.php:18
+msgid "Comments:"
+msgstr "Reacties."
+
+#: discussion//blocks/discussion_guestbook/view.php:63
+#: discussion//blocks/discussion_post_list/post_list_form.php:4
+#: discussion//elements/discussion_messages.php:75
+#: discussion//elements/discussion_messages_threaded.php:71
+#: discussion//elements/discussion_messages_threaded.php:149
+msgid "Edit"
+msgstr "Bewerk"
+
+#: discussion//blocks/discussion_guestbook/view.php:69
+msgid "Are you sure you would like to remove this comment?"
+msgstr "Weet u zeker dat u deze reactie wilt verwijderen?"
+
+#: discussion//blocks/discussion_guestbook/view.php:69
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: discussion//blocks/discussion_guestbook/view.php:76
+#: discussion//elements/discussion_messages.php:89
+#: discussion//elements/discussion_messages_threaded.php:84
+#: discussion//elements/discussion_messages_threaded.php:162
+msgid "Promote to Page"
+msgstr "Aanmaken als pagina"
+
+#: discussion//blocks/discussion_guestbook/view.php:101
+msgid "Your comment has been posted."
+msgstr "Uw reactie is gewijzigd"
+
+#: discussion//blocks/discussion_guestbook/view.php:107
+msgid "You must be logged in to leave a reply."
+msgstr "U dient ingelogd te zijn om een reactie achter te laten."
+
+#: discussion//blocks/discussion_guestbook/view.php:107
+msgid "Login"
+msgstr "Inloggen"
+
+#: discussion//blocks/discussion_guestbook/view.php:116
+#, php-format
+msgid "You are currently logged in as %s"
+msgstr "U bent ingelogd als %s"
+
+#: discussion//blocks/discussion_guestbook/view.php:118
+msgid "Leave a Reply"
+msgstr "Laat een reactie achter"
+
+#: discussion//blocks/discussion_guestbook/view.php:121
+msgid "Post Comment"
+msgstr "Plaats reactie"
+
+#: discussion//blocks/discussion_post_list/controller.php:17
+msgid "List Discussion posts and replies."
+msgstr "Lijst van discussies en reacties"
+
+#: discussion//blocks/discussion_post_list/controller.php:21
+msgid "Discussion Post List"
+msgstr "Discussielijst"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:4
+#: discussion//single_pages/dashboard/discussion/badges.php:132
+msgid "Add"
+msgstr "Voeg toe"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:5
+msgid "Preview"
+msgstr "Voorproef"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:11
+msgid "Number of Posts"
+msgstr "Aantal discussies"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:12
+msgid "Display"
+msgstr "Toon"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:14
+#: discussion//blocks/user_posts/view.php:16
+msgid "Posts"
+msgstr "Discussies"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:36
+msgid "Location in Website"
+msgstr "Locatie in de website"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:37
+msgid "Display posts that are located"
+msgstr "Toon discussies die plaatst vinden"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:41
+msgid "everywhere"
+msgstr "overal"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:45
+msgid "beneath this page"
+msgstr "onder deze pagina"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:49
+msgid "beneath another page"
+msgstr "onder een andere pagina"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:64
+msgid "Post Info"
+msgstr "Discussie informatie"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:66
+msgid "Display post info (user posted by and date posted)"
+msgstr "Toon discussie informatie (geplaatst door gebruiker en datum van discussie)"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:69
+msgid "Pagination"
+msgstr "Paginering"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:71
+msgid "Display pagination interface if more items are available than are displayed."
+msgstr "Toon paginering wanneer er meer discussies beschikbaar zijn dan er worden getoond."
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:93
+msgid "Truncate Summaries"
+msgstr "Verkort samenvattingen"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:96
+msgid "Truncate descriptions after"
+msgstr "Verkort omschrijvingen na"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:98
+msgid "characters"
+msgstr "karakters"
+
+#: discussion//blocks/discussion_post_list/post_list_form.php:105
+msgid "Preview Pane"
+msgstr "Voorproef overzicht"
+
+#: discussion//blocks/discussion_post_list/view.php:41
+#: discussion//elements/discussion_messages.php:49
+msgid "Total Posts:"
+msgstr "Reacties:"
+
+#: discussion//blocks/discussion_post_list/view.php:42
+#: discussion//elements/discussion_messages.php:50
+msgid "Joined:"
+msgstr "Geregistreerd op:"
+
+#: discussion//blocks/discussion_topics/add.php:40
+#: discussion//blocks/discussion_topics/edit.php:40
+msgid "Inherit from global settings."
+msgstr "Neem over van globale instellingen."
+
+#: discussion//blocks/discussion_topics/add.php:41
+#: discussion//blocks/discussion_topics/edit.php:41
+msgid "Override global settings."
+msgstr "Overschrijf globale instellingen"
+
+#: discussion//blocks/discussion_topics/add.php:45
+#: discussion//blocks/discussion_topics/edit.php:45
+#: discussion//single_pages/dashboard/discussion/settings.php:24
+msgid "Topic Name"
+msgstr "Discussienaam"
+
+#: discussion//blocks/discussion_topics/add.php:46
+#: discussion//blocks/discussion_topics/edit.php:46
+#: discussion//single_pages/dashboard/discussion/settings.php:25
+msgid "Topic Date"
+msgstr "Discussiedatum"
+
+#: discussion//blocks/discussion_topics/add.php:47
+#: discussion//blocks/discussion_topics/edit.php:47
+#: discussion//single_pages/dashboard/discussion/settings.php:26
+msgid "Latest Reply"
+msgstr "Laatste reactie"
+
+#: discussion//blocks/discussion_topics/add.php:48
+#: discussion//blocks/discussion_topics/edit.php:48
+#: discussion//blocks/discussion_topics/view.php:11
+#: discussion//single_pages/dashboard/discussion/settings.php:27
+msgid "Views"
+msgstr "Bekeken"
+
+#: discussion//blocks/discussion_topics/add.php:49
+#: discussion//blocks/discussion_topics/edit.php:49
+#: discussion//blocks/discussion_topics/view.php:12
+#: discussion//elements/discussion_replies_bar.php:27
+#: discussion//single_pages/dashboard/discussion/settings.php:28
+msgid "Replies"
+msgstr "Reacties"
+
+#: discussion//blocks/discussion_topics/add.php:58
+#: discussion//blocks/discussion_topics/edit.php:58
+#: discussion//single_pages/dashboard/discussion/settings.php:32
+msgid "Ascending"
+msgstr "Oplopend"
+
+#: discussion//blocks/discussion_topics/add.php:58
+#: discussion//blocks/discussion_topics/edit.php:58
+#: discussion//single_pages/dashboard/discussion/settings.php:32
+msgid "Descending"
+msgstr "Aflopend"
+
+#: discussion//blocks/discussion_topics/controller.php:14
+msgid "Displays topics in a discussion page type."
+msgstr "Toon forums in een discussie pagina type."
+
+#: discussion//blocks/discussion_topics/controller.php:18
+msgid "Discussion Topics"
+msgstr "Discussies"
+
+#: discussion//blocks/discussion_topics/view.php:9
+msgid "Original Post"
+msgstr "Originele discussie"
+
+#: discussion//blocks/discussion_topics/view.php:38
+#: discussion//blocks/discussion_topics/view.php:47
+#, php-format
+msgid "%s on<br/> %s at<br/> %s"
+msgstr "%s op<br/> %s om %s"
+
+#: discussion//blocks/discussion_topics/view.php:55
+msgid "There are no topics in this discussion"
+msgstr "Er zijn geen discussies in dit forum"
+
+#: discussion//blocks/user_badges/add.php:7
+#: discussion//blocks/user_badges/edit.php:6
+msgid "Display Badges of which user?"
+msgstr "Toont badges van welke gebruiker?"
+
+#: discussion//blocks/user_badges/add.php:9
+msgid "This block is being added to the user profile page. It will show the badges of the profile being viewed."
+msgstr "Dit block zal op de gebruikers pagina te zien zijn. Het toont de badges van het profiel dat op dat moment bekeken wordt."
+
+#: discussion//blocks/user_badges/controller.php:13
+msgid "Display the badges of a certain user."
+msgstr "Toont de badges van een bepaalde gebruiker."
+
+#: discussion//blocks/user_badges/controller.php:17
+msgid "User Badges"
+msgstr "Gebruikers badges"
+
+#: discussion//blocks/user_badges/edit.php:8
+msgid "This block appears on the user profile page. It will show the badges of the profile being viewed."
+msgstr "Dit block zal op de gebruikers pagina te zien zijn. Het toont de badges van het profiel dat op dat moment bekeken wordt."
+
+#: discussion//blocks/user_badges/view.php:15
+#: discussion//single_pages/dashboard/discussion/badges.php:62
+#: discussion//single_pages/dashboard/discussion/settings.php:36
+msgid "Badges"
+msgstr "Badges"
+
+#: discussion//blocks/user_badges/view.php:20
+msgid "This user hasn't earned any badges yet."
+msgstr "De gebruiker heeft nog geen badges verdient."
+
+#: discussion//blocks/user_posts/add.php:7
+#: discussion//blocks/user_posts/edit.php:6
+msgid "Display Posts by User"
+msgstr "Toon gestartte discussies door gebruiker"
+
+#: discussion//blocks/user_posts/add.php:9
+msgid "This block is being added to the user profile page. It will show the posts of the profile being viewed."
+msgstr "Dit block zal toegevoegd worden aan de profiel pagina. Het zal berichten laten zien van het profiel dat op dat moment bekeken wordt."
+
+#: discussion//blocks/user_posts/controller.php:13
+msgid "Display all discussion posts by a certain user."
+msgstr "Toon alle discussies van een bepaalde gebruiker"
+
+#: discussion//blocks/user_posts/controller.php:17
+msgid "User Posts"
+msgstr "Discussies van gebruiker"
+
+#: discussion//blocks/user_posts/edit.php:8
+msgid "This block appears on the user profile page. It will show the posts of the profile being viewed."
+msgstr "Dit block zal getoond worden op het gebruikersprofiel en zal alle discussies tonen van het profiel dat bekeken wordt."
+
+#: discussion//blocks/user_posts/view.php:29
+msgid "No posts found."
+msgstr "Geen discussies gevonden"
+
+#: discussion//blocks/user_posts/view.php:47
+#: discussion//elements/discussion_messages.php:65
+#: discussion//elements/discussion_messages_threaded.php:46
+#: discussion//elements/discussion_messages_threaded.php:123
+#: discussion//elements/discussion_popup_form.php:51
+#: discussion//elements/discussion_reply_popup_form.php:65
+#: discussion//elements/moderation/search_results.php:51
+msgid "Attachments"
+msgstr "Bijlages"
+
+#: discussion//blocks/users_online/view.php:2
+msgid "Who is Online"
+msgstr "Wie is er online"
+
+#: discussion//blocks/users_online/view.php:4
+msgid "No registered users are currently online."
+msgstr "Momenteel zijn er geen geregistreerde gebruikers online"
+
+#: discussion//blocks/users_online/view.php:6
+msgid "The following registered users are online"
+msgstr "De volgende geregistreerde gebruikers zijn online"
+
+#: discussion//blocks/users_online/view.php:18
+msgid "Most users ever online was"
+msgstr "Het grootste aantal gebruikers online was"
+
+#: discussion//controller.php:12
+msgid "Adds a forum and discussion system to your website."
+msgstr "Voegt een forum en discussie systeem aan uw website toe."
+
+#: discussion//controller.php:16
+#: discussion//controller.php:35
+msgid "Discussion"
+msgstr "Discussies"
+
+#: discussion//controller.php:39
+msgid "Discussion Post"
+msgstr "Discussies Post"
+
+#: discussion//controller.php:43
+msgid "Discussion Image"
+msgstr "Discussieafbeelding"
+
+#: discussion//controller.php:44
+msgid "Discussion Post is Pinned"
+msgstr "Discussies staat vast "
+
+#: discussion//controller.php:45
+msgid "Discussion is Closed"
+msgstr "Discussie is gesloten"
+
+#: discussion//controller.php:46
+msgid "Discussion Mode"
+msgstr "Discussiemode"
+
+#: discussion//controller.php:47
+#: discussion//elements/discussion_replies_bar.php:17
+msgid "Flat"
+msgstr "Plat"
+
+#: discussion//controller.php:48
+#: discussion//elements/discussion_replies_bar.php:15
+msgid "Threaded"
+msgstr "Bedraad"
+
+#: discussion//controller.php:53
+#: discussion//controller.php:214
+msgid "Discussion Post is not Displayed"
+msgstr "Discussie wordt niet getoond."
+
+#: discussion//controller.php:57
+#: discussion//controller.php:221
+msgid "Discussion Moderation"
+msgstr "Discussiebeheer"
+
+#: discussion//controller.php:58
+#: discussion//controller.php:222
+#: discussion//helpers/discussion_config.php:109
+#: discussion//single_pages/dashboard/discussion/settings.php:74
+msgid "All Posts"
+msgstr "Alle discussies"
+
+#: discussion//controller.php:60
+#: discussion//controller.php:224
+#: discussion//helpers/discussion_config.php:112
+#: discussion//single_pages/dashboard/discussion/settings.php:75
+msgid "Only Posts by Anonymous Users"
+msgstr "Alleen discussies die gestart zijn door anonieme gebruikers"
+
+#: discussion//controller.php:62
+#: discussion//controller.php:226
+#: discussion//helpers/discussion_config.php:115
+#: discussion//single_pages/dashboard/discussion/settings.php:76
+msgid "Don't Moderate Any Posts"
+msgstr "Beheer geen enkele discussie"
+
+#: discussion//controller.php:68
+#: discussion//controller.php:232
+msgid "Discussion Anonymous Posting"
+msgstr "Anonieme discussies"
+
+#: discussion//controller.php:69
+#: discussion//controller.php:233
+#: discussion//helpers/discussion_config.php:53
+#: discussion//helpers/discussion_config.php:59
+#: discussion//single_pages/dashboard/discussion/settings.php:58
+msgid "Enable Anonymous Posting (new posts)"
+msgstr "Laat anoniemen bezoekers toe om nieuwe discussies te openen"
+
+#: discussion//controller.php:71
+#: discussion//controller.php:235
+#: discussion//helpers/discussion_config.php:23
+#: discussion//helpers/discussion_config.php:29
+#: discussion//single_pages/dashboard/discussion/settings.php:59
+msgid "Enable Anonymous Replies"
+msgstr "Laat anoniemen bezoekers toe om reacties en discussies achter te laten"
+
+#: discussion//controller.php:73
+#: discussion//controller.php:237
+#: discussion//helpers/discussion_config.php:82
+#: discussion//helpers/discussion_config.php:88
+#: discussion//single_pages/dashboard/discussion/settings.php:61
+msgid "Solving Captcha is Required to Post"
+msgstr "Captcha oplossen is verplicht om een discussie of reactie te plaatsen"
+
+#: discussion//controller.php:75
+#: discussion//controller.php:239
+#: discussion//helpers/discussion_config.php:136
+#: discussion//helpers/discussion_config.php:142
+#: discussion//single_pages/dashboard/discussion/settings.php:62
+msgid "Allow Anonymous Posters To Attach Files"
+msgstr "Sta toe anonieme bezoekers bijlages toe te voegen"
+
+#: discussion//controller.php:80
+msgid "Total Posts"
+msgstr "Totale discussies"
+
+#: discussion//controller.php:155
+msgid "Forums"
+msgstr "Forums"
+
+#: discussion//controller.php:166
+msgid "Announcements"
+msgstr "Mededelingen"
+
+#: discussion//controller.php:170
+msgid "General Chat"
+msgstr "Algemene chat"
+
+#: discussion//controller.php:184
+#: discussion//controller.php:246
+msgid "Allowed to post to discussion forums regardless of moderation"
+msgstr "Toegestaan om discussies te plaatsen zonder daarvoor beheerd te worden"
+
+#: discussion//controller.php:258
+msgid "Gold"
+msgstr "Goud"
+
+#: discussion//controller.php:258
+msgid "Exceptional Achievement"
+msgstr "Uitzonderlijke prestatie"
+
+#: discussion//controller.php:259
+msgid "Silver"
+msgstr "Zilver"
+
+#: discussion//controller.php:259
+msgid "Great Achievement"
+msgstr "Goede prestatie"
+
+#: discussion//controllers/dashboard/discussion/badges.php:22
+msgid "Name Required"
+msgstr "Naam is verplicht"
+
+#: discussion//controllers/dashboard/discussion/badges.php:25
+#: discussion//controllers/dashboard/discussion/badges.php:48
+msgid "Description Required"
+msgstr "Omschrijving is verplicht"
+
+#: discussion//controllers/dashboard/discussion/badges.php:29
+msgid "Image Required"
+msgstr "Afbeelding is verplicht"
+
+#: discussion//controllers/dashboard/discussion/badges.php:34
+msgid "The badge has been added successfully"
+msgstr "De badge is succesvol toegevoegd"
+
+#: discussion//controllers/dashboard/discussion/badges.php:51
+msgid "The badge has been updated successfully"
+msgstr "De badge is succesvol aangepast."
+
+#: discussion//controllers/dashboard/discussion/badges.php:63
+msgid "The badge has been deleted"
+msgstr "De bagde is verwijderd"
+
+#: discussion//controllers/dashboard/discussion/moderation.php:70
+msgid "posts deleted"
+msgstr "discussies verwijderd"
+
+#: discussion//controllers/dashboard/discussion/moderation.php:93
+msgid " posts approved"
+msgstr " discussies goedgekeurd"
+
+#: discussion//controllers/dashboard/discussion/moderation.php:96
+msgid "Invalid action specified."
+msgstr "Ongeldige actie opgegeven."
+
+#: discussion//controllers/dashboard/discussion/settings.php:25
+msgid "Settings Updated."
+msgstr "Instellingen geupdate."
+
+#: discussion//controllers/page_types/discussion.php:116
+#: discussion//controllers/page_types/discussion_post.php:170
+msgid "Incorrect captcha code"
+msgstr "Ongeldige captcha code"
+
+#: discussion//elements/discussion_filter_form.php:9
+msgid "Between"
+msgstr "Tussen"
+
+#: discussion//elements/discussion_filter_form.php:11
+msgid "and"
+msgstr "en"
+
+#: discussion//elements/discussion_filter_form.php:16
+msgid "Sort By"
+msgstr "Sorteer via"
+
+#: discussion//elements/discussion_filter_form.php:20
+msgid "Most Recent Post"
+msgstr "Meest recente reactie"
+
+#: discussion//elements/discussion_filter_form.php:21
+msgid "Most Recent Topic"
+msgstr "Meest recente discussie"
+
+#: discussion//elements/discussion_filter_form.php:22
+msgid "Unanswered"
+msgstr "Onbeantwoord"
+
+#: discussion//elements/discussion_filter_form.php:27
+#: discussion//elements/moderation/search.php:39
+msgid "Search"
+msgstr "Zoeken"
+
+#: discussion//elements/discussion_messages.php:71
+#, php-format
+msgid "Posted on %s at %s"
+msgstr "Geplaatst op %s om %s"
+
+#: discussion//elements/discussion_messages.php:83
+#: discussion//elements/discussion_messages_threaded.php:77
+#: discussion//elements/discussion_messages_threaded.php:155
+#: discussion//elements/moderation/search_results.php:20
+#: discussion//tools/delete_post.php:22
+msgid "Delete"
+msgstr "Verwijder"
+
+#: discussion//elements/discussion_pending.php:2
+msgid "Your post has been saved and will be published after approval by the forum moderator."
+msgstr "Uw posts is opgeslagen en zal worden gepubliceerd wanneer een beheerder deze heeft goedgekeurd."
+
+#: discussion//elements/discussion_popup_form.php:18
+#: discussion//elements/discussion_reply_popup_form.php:17
+msgid "Subject"
+msgstr "Onderwerp"
+
+#: discussion//elements/discussion_popup_form.php:25
+#: discussion//elements/discussion_reply_popup_form.php:24
+msgid "Message"
+msgstr "bericht"
+
+#: discussion//elements/discussion_popup_form.php:47
+#: discussion//elements/discussion_reply_popup_form.php:49
+msgid "Check Spelling"
+msgstr "Controleer spelling"
+
+#: discussion//elements/discussion_popup_form.php:66
+#: discussion//elements/discussion_popup_form.php:73
+#: discussion//elements/discussion_reply_popup_form.php:80
+#: discussion//elements/discussion_reply_popup_form.php:86
+msgid "remove"
+msgstr "verwijder"
+
+#: discussion//elements/discussion_popup_form.php:77
+#: discussion//elements/discussion_reply_popup_form.php:89
+msgid "Attach a file"
+msgstr "Voeg bestand toe"
+
+#: discussion//elements/discussion_popup_form.php:82
+#: discussion//elements/discussion_reply_popup_form.php:94
+msgid "Monitor this Post"
+msgstr "Hou deze discussie in de gaten"
+
+#: discussion//elements/discussion_popup_form.php:82
+#: discussion//elements/discussion_reply_popup_form.php:94
+msgid "(receive an email each time a reply is posted)"
+msgstr "(ontvang een email wanneer er een reactie wordt geplaatst)"
+
+#: discussion//elements/discussion_popup_form.php:86
+#: discussion//elements/discussion_reply_popup_form.php:98
+msgid "Please type the letters and numbers shown in the image."
+msgstr "Neem te letters en nummers over die in de afbeelding worden getoond."
+
+#: discussion//elements/discussion_popup_form.php:92
+#: discussion//elements/discussion_reply_popup_form.php:104
+#: discussion//elements/moderation/search_results.php:24
+msgid "Post"
+msgstr "Plaats de discussie"
+
+#: discussion//elements/discussion_replies_bar.php:13
+msgid "Display Messages"
+msgstr "Toon berichten"
+
+#: discussion//elements/discussion_replies_bar.php:25
+#: discussion//page_types/discussion_post.php:25
+msgid "Reply"
+msgstr "Reageer op deze discussie"
+
+#: discussion//elements/discussion_track.php:3
+#, php-format
+msgid "&quot;%s&quot; is now being monitored."
+msgstr "&quot;%s&quot; wordt in de gaten gehouden."
+
+#: discussion//elements/discussion_track.php:4
+#: discussion//elements/discussion_track.php:7
+msgid "Close Window"
+msgstr "Sluit scherm"
+
+#: discussion//elements/discussion_track.php:6
+#, php-format
+msgid "&quot;%s&quot; is no longer being monitored."
+msgstr "&quot;%s&quot; wordt niet meer in de gaten gehouden."
+
+#: discussion//elements/discussion_track.php:10
+#, php-format
+msgid "Are you sure you would like to un-monitor &quot;%s&quot;?"
+msgstr "Weet u zeker dat u &quot;%s&quot; niet meer in de gaten wilt houden?"
+
+#: discussion//elements/discussion_track.php:11
+msgid "You will no longer receive any emails related to this item."
+msgstr "U zal geen emails meer ontvangen die gerelateerd zijn aan deze discussie."
+
+#: discussion//elements/discussion_track.php:14
+#, php-format
+msgid "Are you sure you would like to monitor &quot;%s&quot;?"
+msgstr "Weet u zeker dat u &quot;%s&quot; in de gaten wilt houden?"
+
+#: discussion//elements/discussion_track.php:15
+msgid "You will receive an email when any responses are posted."
+msgstr "U zult een email ontvangen wanneer er nieuwe discussies of reacties zijn geplaatst in dit forum."
+
+#: discussion//elements/moderation/search.php:9
+msgid "Fields"
+msgstr "Velden"
+
+#: discussion//elements/moderation/search.php:10
+msgid "Created Between"
+msgstr "Aangemaakt tussen"
+
+#: discussion//elements/moderation/search.php:23
+msgid "to"
+msgstr "naar"
+
+#: discussion//elements/moderation/search.php:47
+msgid "Keywords"
+msgstr "Kernwoorden"
+
+#: discussion//elements/moderation/search.php:57
+msgid "Results Per Page"
+msgstr "Resultaten per pagina"
+
+#: discussion//elements/moderation/search.php:81
+msgid "Select Search Field."
+msgstr "Selecteer een zoekveld."
+
+#: discussion//elements/moderation/search_results.php:19
+msgid "Approve"
+msgstr "Goedkeuren"
+
+#: discussion//elements/moderation/search_results.php:25
+msgid "Username"
+msgstr "Gebruiker"
+
+#: discussion//elements/moderation/search_results.php:26
+msgid "Date Posted"
+msgstr "Datum gepost"
+
+#: discussion//elements/moderation/search_results.php:68
+msgid "No Posts found."
+msgstr "Geen discussies gevonden"
+
+#: discussion//libraries/datetime_compat.php:51
+msgid "Default"
+msgstr "Standaard"
+
+#: discussion//mail/moderation_required.php:2
+msgid "A new message requires moderation"
+msgstr "Een nieuwe discussies moet worden bekeken door een beheerder"
+
+#: discussion//mail/moderation_required.php:3
+msgid "follow the link below to review pending discussion posts"
+msgstr "Volg de link hieronder om discussies te bekijken die in afwachting zijn."
+
+#: discussion//models/anonymous_user.php:13
+msgid "Anonymous"
+msgstr "Anoniem"
+
+#: discussion//models/discussion_badge.php:54
+msgid "Manage Badges"
+msgstr "Beheer Badges"
+
+#: discussion//page_types/discussion.php:21
+#: discussion//page_types/discussion_post.php:19
+msgid "Stop Monitoring"
+msgstr "Stop met volgen"
+
+#: discussion//page_types/discussion.php:21
+#: discussion//page_types/discussion_post.php:19
+msgid "Monitor"
+msgstr "Volgen"
+
+#: discussion//page_types/discussion.php:27
+msgid "Start Discussion"
+msgstr "Open een discussie"
+
+#: discussion//page_types/discussion_post.php:30
+msgid "re: "
+msgstr "re: "
+
+#: discussion//single_pages/dashboard/discussion/badges.php:6
+msgid "Edit Badge"
+msgstr "Wijzig Badge"
+
+#: discussion//single_pages/dashboard/discussion/badges.php:6
+#: discussion//single_pages/dashboard/discussion/badges.php:102
+msgid "required field"
+msgstr "verplicht veld"
+
+#: discussion//single_pages/dashboard/discussion/badges.php:15
+#: discussion//single_pages/dashboard/discussion/badges.php:111
+msgid "Group"
+msgstr "Groep"
+
+#: discussion//single_pages/dashboard/discussion/badges.php:21
+#: discussion//single_pages/dashboard/discussion/badges.php:120
+msgid "Description"
+msgstr "Omschrijving"
+
+#: discussion//single_pages/dashboard/discussion/badges.php:27
+#: discussion//single_pages/dashboard/discussion/badges.php:126
+msgid "Image"
+msgstr "Afbeelding"
+
+#: discussion//single_pages/dashboard/discussion/badges.php:35
+msgid "Update"
+msgstr "Updaten"
+
+#: discussion//single_pages/dashboard/discussion/badges.php:44
+#: discussion//single_pages/dashboard/discussion/badges.php:56
+msgid "Delete Badge"
+msgstr "Verwijder Badge"
+
+#: discussion//single_pages/dashboard/discussion/badges.php:47
+msgid "Are you sure you want to permanently remove this badge?"
+msgstr "Weet u zeker dat de badge permanent verwijderd moet worden?"
+
+#: discussion//single_pages/dashboard/discussion/badges.php:83
+msgid "No groups found."
+msgstr "Geen groepen gevonden"
+
+#: discussion//single_pages/dashboard/discussion/badges.php:102
+msgid "Add Badge"
+msgstr "Voeg badge toe"
+
+#: discussion//single_pages/dashboard/discussion/badges.php:116
+msgid "Select Group"
+msgstr "Selecteer groep"
+
+#: discussion//single_pages/dashboard/discussion/badges.php:116
+msgid "Select Existing Group"
+msgstr "Selecteer bestaande groep"
+
+#: discussion//single_pages/dashboard/discussion/moderation.php:2
+msgid "Are you sure?"
+msgstr "Weet u het zeker?"
+
+#: discussion//single_pages/dashboard/discussion/moderation.php:4
+msgid "Moderated Posts"
+msgstr "Beheer discussies"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:9
+msgid "Settings"
+msgstr "Instellingen"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:13
+msgid "Default Display"
+msgstr "Standaard display"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:15
+msgid "Mode"
+msgstr "Modus"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:16
+msgid "Flat."
+msgstr "Plat"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:17
+msgid "Threaded."
+msgstr "Bedraad"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:20
+msgid "Topic Sorting"
+msgstr "Sorteren van discussies"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:37
+msgid "Display badges overlay when hovering over user avatars."
+msgstr "Toon badges wanneer er over een avatar wordt gehoverd."
+
+#: discussion//single_pages/dashboard/discussion/settings.php:38
+msgid "Display badges on user profiles (User profiles must be enabled.)"
+msgstr "Toon badges op gebruikersprofielen (gebruikersprofielen dient aangezet te worden)"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:50
+msgid "Posting"
+msgstr "Bericht achterlaten"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:53
+msgid "Anonymous Posting"
+msgstr "Anonieme posting"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:54
+msgid "Posting Method Form"
+msgstr "Manier van posten"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:66
+msgid "Overlay."
+msgstr "Popup."
+
+#: discussion//single_pages/dashboard/discussion/settings.php:67
+msgid "Within the page."
+msgstr "Binnen in de pagina."
+
+#: discussion//single_pages/dashboard/discussion/settings.php:73
+msgid "Moderation"
+msgstr "Beheer"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:78
+msgid "Posts by users in the following groups will not be moderated: Administrators, No_Moderation"
+msgstr "Berichten en reacties van de volgende groepen worden niet beheerd: Administrator, No_Moderation"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:80
+msgid "Moderator Email"
+msgstr "E-mailadres van beheerder"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:82
+msgid "Email will be sent to moderator when posts requiring moderation are submitted, leave blank for no notification."
+msgstr "Een e-mail zal verstuurd worden naar een beheerder wanneer dit noodzakelijk is, laat leeg voor geen bericht."
+
+#: discussion//single_pages/dashboard/discussion/settings.php:86
+msgid "Content Filtering"
+msgstr "Content filteren"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:87
+msgid "Disallow posts that contain words in the banned words file."
+msgstr "Blokkeer discussies en reacties die verboden worden bevatten."
+
+#: discussion//single_pages/dashboard/discussion/settings.php:88
+msgid "Do not check posts for banned content."
+msgstr "Reacties en discussies niet checken op verboden content."
+
+#: discussion//single_pages/dashboard/discussion/settings.php:91
+msgid "Typical location of this file:"
+msgstr "Locatie van dit bestand:"
+
+#: discussion//single_pages/dashboard/discussion/settings.php:94
+msgid "Save"
+msgstr "Opslaan"
+
+#: discussion//tools/change_post_to_page.php:23
+msgid "Post to be Promoted"
+msgstr "Post wordt gepromoveerd"
+
+#: discussion//tools/change_post_to_page.php:27
+msgid "New Parent Page"
+msgstr "Nieuwe bovenliggende pagina"
+
+#: discussion//tools/change_post_to_page.php:30
+msgid "Page Type"
+msgstr "Pagina Type"
+
+#: discussion//tools/change_post_to_page.php:41
+msgid "Move or Copy?"
+msgstr "Verplaatst of Kopieren?"
+
+#: discussion//tools/change_post_to_page.php:42
+msgid "Move (Remove Old Post after Creating Page)"
+msgstr "Verplaats (verwijderd oude discussies na het aanmaken van de pagina)"
+
+#: discussion//tools/change_post_to_page.php:43
+msgid "Copy and Retain Existing Discussion"
+msgstr "Kopieer en behoudt een bestaande discussie"
+
+#: discussion//tools/change_post_to_page.php:44
+msgid "Copy and Create New Discussion"
+msgstr "Kopieer en creeer een nieuwe discussie"
+
+#: discussion//tools/change_post_to_page.php:47
+msgid "Change Post"
+msgstr "Verander discussie"
+
+#: discussion//tools/change_post_to_page.php:56
+msgid "You must specify a parent page for the new page you want to create."
+msgstr "U dient een bovenliggende pagina aante geven voor de nieuwe pagina die u aan het aanmaken bent."
+
+#: discussion//tools/get_badges_content.php:33
+msgid "View Profile"
+msgstr "Bekijk profiel"
+
+#: discussion//tools/manage_badges.php:31
+msgid "User's Badges"
+msgstr "Badges van gebruiker"
+
+#: discussion//tools/manage_badges.php:36
+msgid "Badges saved!  Refreshing page."
+msgstr "Badges opgeslagen! Pagina wordt ververst."
+
+#: discussion//tools/manage_badges.php:61
+msgid "Save Changes"
+msgstr "Aanpassingen opslaan"
+
