@@ -271,10 +271,29 @@ a.signButt{background: #84b400; color: #fff; width: 100%; padding: 5px; border-r
 
 .VideoHide{ display: none;}
 
+@media only screen and (max-width: 980px) {
+
+.pro_navbar {
+	min-height: 40px;
+	 padding: 15px 20px;
+}
+
+@media only screen and (max-width: 640px) {
+.logo img { margin:0 auto; display:block; height:auto; margin:0 5%;}
+.Homeform img { margin:0 auto; display:block; height:auto;}
+.Homeform h2 { text-align:center; margin:0 5%;}
+.Homeform p { text-align:center; margin:0 5%;}
+.guideForm{padding-right: 20px!important;}
+.textPad { padding:0 10%; }
+.ccm-core-commerce-add-to-cart-image { margin:0 auto; display:block;}
+.blog { margin:20px 0}
+}
 
 @media only screen and (max-width: 400px) {
-	
-a.loginLink{ margin: 0 5%; width: 90%;}
+
+.fullwidthnav { padding-bottom:20px;}
+a.loginLink{ margin: 0 5%; width: 40%; float:left; padding:8px 0; text-align:center;}
+a.registerLink{ margin: 0 5%; width: 40%; float:left; padding:8px 0; text-align:center;}
 
 .nopad{ padding: 0; padding-left: 0.9375em;
   padding-right: 0.9375em;}
