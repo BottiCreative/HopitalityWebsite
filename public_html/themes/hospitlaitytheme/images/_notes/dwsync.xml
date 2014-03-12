@@ -32,6 +32,7 @@
 <file name="testimage.png" server="91.208.99.4" local="3477040580" remote="323953104393148184" Dst="-1" />
 <file name="testpoint.png" server="91.208.99.4" local="130385814011153688" remote="130390915200000000" Dst="1" />
 <file name="tick.png" server="91.208.99.4" local="3477040580" remote="323953104393148184" Dst="-1" />
-<file name="video-link-icon.png" server="91.208.99.4" local="3477040576" remote="323953104393139124" Dst="-1" />
-<file name="icon-login.png" server="91.208.99.4" local="130390914394501814" remote="130390915200000000" Dst="1" />
+<file name="video-link-icon.png" server="91.208.99.4" local="130385813815913688" remote="130390956600000000" Dst="1" />
+<file name="icon-login.png" server="91.208.99.4" local="130390963235725448" remote="130390962600000000" Dst="1" />
+<file name="membersbg.gif" server="91.208.99.4" local="130390955280239979" remote="130390954800000000" Dst="1" />
 </dwsync>
