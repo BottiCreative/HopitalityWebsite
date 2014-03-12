@@ -1,0 +1,108 @@
+html { height: 100%;margin-top: 20px !important; }
+body { height: 100%; margin: 0; padding: 0 }
+
+#map { height: 100%;width: 100% !important; }
+
+div.HeaderWrapper, div.wideWrapper {
+	
+	overflow: visible;
+	
+}
+
+/*.mapBox{width: 300px; height: 300px; float: left; margin: 0 20px 0 0; position: relative;}
+
+.mapBox img{padding: 10px; background: #fff; -webkit-box-shadow:  2px 2px 3px 2px rgba(0, 0, 0, .1); box-shadow:  2px 2px 3px 2px rgba(0, 0, 0, .1); transform: rotate(-5deg) ; width: 260px; height: 260px; margin: 0 0 0 20px;
+-webkit-transform: rotate(-5deg) ;
+-moz-transform: rotate(-5deg) ;
+-o-transform: rotate(-5deg) ;
+-ms-transform: rotate(-5deg) ; }
+*/
+
+.moomusic-area-infowindow { width: 100%;color: #333333;  }
+.moomusic-area-infowindow h2 {  }
+
+.moomusic-area-infowindow .infowindowImage
+{
+	float: left;
+	height: 80px;
+	margin: 3px 8px 3px 0px;
+}
+
+
+
+
+
+/*#searchresults { 
+
+position: absolute;z-index: 1000;
+background-color: #fff;
+color: #333333;overflow: auto;
+height: 500px;
+width: 240px;
+display: none; 
+padding: 5px 5px;
+
+}
+
+*/
+
+#searchresults ul li {
+	list-item-style: none;
+	list-style: none;
+	margin: 0px 0px;
+	padding: 0px 0px;
+	
+}
+
+#searchresults .moomusic-area-infowindow {
+	margin: 10px 0px;
+	font-size: 0.85em;
+}
+
+#searchresults h2 {
+	
+	margin: 0px 0px;
+	padding: 0px 0px;
+}
+
+#searchresults h3{
+	color: #333;
+}
+
+#searchresults a.buylink {
+	font-size: 1.3em;
+}
+
+#searchresults .infowindowImage
+{
+	/*height: 50px;*/
+}
+
+#searchresults .ccm-core-commerce-add-to-cart, #searchresults .moomusic-map-image
+{
+	float: left;
+	
+}
+
+#searchresults .moomusic-map-image
+{
+	width: 300px;
+	height: 300px;
+}
+
+#searchresults .ccm-core-commerce-add-to-cart
+{
+	width: 350px;
+	margin-right: 10px;
+	
+}
+
+.smallwatermark
+{
+	width: inherit !important;
+	height: 18px;
+	float:none;
+	
+}
+
+.closeButton { float: right;  }

@@ -1,0 +1,86 @@
+
+.ccm-pagination ul, .ccm-pagination ul li
+{
+	list-style:none;
+	
+}
+
+.ccm-pagination ul li
+{
+	float: left;
+	margin-right: 10px;
+}
+
+.moomusic-file-downloads, .moomusic-music-downloads
+{
+	text-align: center;	
+}
+
+ul.moomusic-file-downloads-list
+{
+	
+	margin:auto auto;
+	padding: 0px 0px;
+	list-style:none;
+	
+}
+
+
+ul.moomusic-music-downloads-list li
+{
+	/*float: left;*/
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+	margin: 10px 10px;
+	list-style:none;
+	overflow:hidden;
+	text-align:center;
+	
+	
+}
+
+div.moomusic-music-download
+{
+	background: url('../../../../themes/MooTheme/images/music_2.png') center center no-repeat transparent;
+	
+}
+
+
+div.moomusic-music-download
+{
+	width: 128px;
+	height: 128px;	
+}
+
+ul.moomusic-music-downloads-list li .settings
+{
+	width: 128px;
+	
+}
+
+input
+{ 
+	background:b00;
+}
+
+
+ul.moomusic-music-downloads-list li .settings p
+{
+	text-align: center;
+	margin: 10px 5px;
+	padding: 0px 0px;
+	
+}
+
+.moomusic-file-stats
+{
+	font-size:0.6em;
+	
+}
+
+.moomusic-file-stats li
+{
+	margin: 0px 0px !important;
+	padding: 0px 0px;	
+}
