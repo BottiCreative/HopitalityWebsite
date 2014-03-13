@@ -18,19 +18,19 @@ if (count($cArray) > 0) { ?>
 
 	  			<div class="content-sbBlog-contain">
                 
-                <div class="grid-3 columns content-sbBlog-date nopadLeft">
-			    	<?php      echo date('M d, Y',strtotime($blogDate));  ?>
+                <div class="grid-3 columns content-sbBlog-date">
+			    	<p><?php      echo date('M d, Y',strtotime($blogDate));  ?></p>
 			    </div>
 				<div class="grid-5 columns content-category">
-			    	<?php     
+			    	<p><?php     
 					echo t('Category').': '.'<a href="'.BASE_URL.$search.'categories/'.str_replace(' ','_',$cat).'/">'.$cat.'</a>';;
-					?>
+					?></p>
                     </div>
-                    <div class="grid-4 columns content-category">
-                    
+                    <div class="grid-4 columns content-comments">
+                    <p>
                  <?php      if($comments){ ?>
 	  			<?php      echo $comment_count;?>
-	  			<?php      } ?>
+	  			<?php      } ?></p>
                     
                     
 			    		</div>

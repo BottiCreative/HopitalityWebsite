@@ -717,9 +717,4 @@ min-height:100%
 .pro_navbar ul.pronav_list li a .livicon{display:inline-block;vertical-align: middle;}
 .pro_navbar ul.pronav_list li ul.dropdown-menu  .livicon{margin-top: -2px;}
 
-@media only screen and (max-width: 980px) {
 
-.pro_navbar {
-	min-height: 40px;
-	 padding: 15px 20px;
-}

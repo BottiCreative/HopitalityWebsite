@@ -10,7 +10,7 @@ extract($blog_settings);
 
 ?>
 
- <div class="row mainContent">
+ <div class="row mainContent topRowPad">
      
      	<div class="grid-8 columns">
         
