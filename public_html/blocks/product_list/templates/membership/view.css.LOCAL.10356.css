@@ -88,21 +88,16 @@ line-height: 20px;
 padding: 0 3px;
 }
 
-.ccm-core-commerce-add-to-cart-product-price {
-color: #fff!important; display: block; float: left; font-size: 20px; margin: 10px 0;
-}
-
-.btn.ccm-input-submit{ float:right; margin: 10px 0;}
-
 
 /* Membership Changes */
-div.ccm-core-commerce-product-list-product{position: relative;}
+div.ccm-core-commerce-product-list-product
+{
+	position: relative;
+}
 
-.ccm-core-commerce-add-to-cart-product-name{ background-color: rgba(0, 0, 0, .7);
-color: rgba(0, 0, 0, .7); position: absolute; top: 200px; z-index: 10; display: block; padding: 15px; width: 85%; font-size: 19px; font-weight: 700; }
-
-div.membership-overlay{position: absolute; top: -10px; left: -10px; background: #ccc;  }
-
-
-.productListprodHolder{ position: relative; float: left; }
+div.membership-overlay
+{
+	position: absolute;
+	border:#FFF9BB 1px solid;
+}
 

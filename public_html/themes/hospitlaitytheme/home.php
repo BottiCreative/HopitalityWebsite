@@ -3,15 +3,18 @@ defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php'); ?>
 
 
+
 <div class="mainContainer">
 <div class="fullwidthheader">
 	<div class="rowWide header">
+    <div class="grid-12 columns nopad">
 
     	<?php  
 			$a = new Area('HomeSlider');
 			$a->display($c);
 			?>
 
+    </div>
     </div>
 </div>
 

@@ -26,7 +26,7 @@
     	<div class="grid-2 columns logo">
         	<a href="<?php echo DIR_REL?>/"><img src="<?php  echo $this->getThemePath(); ?>/images/Hospitality Entrepreneur Logo.png" alt="Hospitality Entrepreneur"/></a>
         </div>
-        <div class="grid-8 columns">
+        <div class="grid-8 columns nopad">
         	<?php  
 		$a = new GlobalArea('Header Nav');
 		$a->display();
