@@ -51,8 +51,7 @@ class HospitalityEntrepreneurPackage extends Package {
 		$this->AddDashboardPages();
 		$pkg = Package::getByHandle($this->getPackageHandle());
 		
-		//add discount area type.
-		//$this->AddDiscountType();
+		
 		
 	}
 	

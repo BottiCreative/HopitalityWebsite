@@ -7,6 +7,25 @@ if(!isset($pkg)) {
 }
 $c = Page::getCurrentPage();
 
+//get the current user;
+$u = new User();
+
+//get the membership groups that are allowed to purchase...
+$purchaseGroups = $product->getProductPurchaseGroupIDArray();
+
+$userHasAccess = false;
+
+foreach($purchaseGroups as $purchaseGroup)
+{
+	if($u->inGroup(Group::getByID($purchaseGroup)));
+	{
+		//is in a purchase group - lets allow them access
+		$userHasAccess = true;
+	}
+}
+
+
+
 $link_before = '';
 $link_after = '';
 
@@ -94,10 +113,12 @@ if (!$halign) {
 	display:none;
 }
 </style>
+
+
 <div class="ccm-core-commerce-add-to-cart">
 <form method="post" id="ccm-core-commerce-add-to-cart-form-<?php echo $id?>" action="<?php echo $this->url('/cart', 'update')?>">
 <input type="hidden" name="rcID" value="<?php echo $c->getCollectionID()?>" />
-<h1>HELLO WORLD</h1>
+
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
 <?php  if ($displayImage && $imagePosition == 'T') { ?>
 <tr>
@@ -135,7 +156,7 @@ if (!$halign) {
 
 		}
 		
-		Loader::packageElement('product/display/properties', 'core_commerce', array('linkToProductPage' => $linkToProductPage, 'properties' => $properties, 'product' => $product));
+		Loader::packageElement('product/display/properties', 'core_commerce', array('linkToProductPage' => $linkToProductPage, 'properties' => $properties, 'product' => $product,'userHasAccess' => $userHasAccess ));
 
 		if ($displayAddToCart) { ?>
 			<table cellspacing="0" cellpadding="0" border="0">
@@ -237,7 +258,7 @@ if (!$halign) {
 				}	
 			}
 			
-			Loader::packageElement('product/display/properties', 'core_commerce', array('linkToProductPage' => $linkToProductPage, 'properties' => $properties, 'product' => $product));
+			Loader::packageElement('product/display/properties', 'core_commerce', array('linkToProductPage' => $linkToProductPage, 'properties' => $properties, 'product' => $product, 'userHasAccess' => $userHasAccess));
 	
 			?>	
 		</div>
@@ -269,7 +290,7 @@ if ($useOverlaysL) {
 				}	
 			}
 			
-			Loader::packageElement('product/display/properties', 'core_commerce', array('linkToProductPage' => $linkToProductPage, 'properties' => $properties, 'product' => $product));
+			Loader::packageElement('product/display/properties', 'core_commerce', array('linkToProductPage' => $linkToProductPage, 'properties' => $properties, 'product' => $product, 'userHasAccess' => $userHasAccess));
 		?>		
 	</div>
 	<?php 

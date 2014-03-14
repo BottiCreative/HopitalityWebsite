@@ -28,23 +28,45 @@ foreach($properties as $property) {
 	<?php  } ?>
 	
 	<?php  if ($property->handle == 'displayPrice' && (!$hasBothPrices)) { ?>		
-		<div><?php echo Loader::packageElement('product/price', 'core_commerce', array('product' => $product, 'displayDiscount' => false)); ?></div>
+		<div><?php echo Loader::packageElement('product/price', 'core_commerce', array('product' => $product, 'displayDiscount' => false, 'hasAccess' => $hasAccess)); ?></div>
 	
 	<?php  } ?>
 	
 	<?php  if ($property->handle == 'displayDiscount') { ?>		
 
-		<div><?php echo Loader::packageElement('product/price', 'core_commerce', array('product' => $product, 'displayDiscount' => true)); ?></div>
+		<div><?php echo Loader::packageElement('product/price', 'core_commerce', array('product' => $product, 'displayDiscount' => true, 'hasAccess' => $hasAccess)); ?></div>
 	
 	<?php  } ?>
 	
-	<?php  if ($property->handle == 'displayDescription') { ?>		
-	
+	<?php  if ($property->handle == 'displayDescription') { 
+		
+		if($userHasAccess)
+		{
+		?>		
+		
 		<div>
 		<?php echo $product->getProductDescription()?>
 		</div>
 	
-	<?php  } ?>
+	<?php 
+		}
+		else
+			{
+				$limitedText = substr($product->getProductDescription(),0,round(len($product->getProductDescription() * 0.10)));
+				echo $limitedText;
+			?>	
+			<div class="content-membership-overlay">
+				<div class="content-membership-overlay-ribbon">
+					<!--Need to submit the membership here -->
+					<h2>INSERT MEMBERSHIP DETAIL HERE - WE'LL MAKE THIS RETURN THE MEMBERSHIP PRODUCT BLOCK</h2>
+				</div>
+				
+				
+				
+			</div>
+			<?php	
+			}
+	 } ?>
 	
 	<?php  if ($property->handle == 'displayDimensions') { ?>		
 	
