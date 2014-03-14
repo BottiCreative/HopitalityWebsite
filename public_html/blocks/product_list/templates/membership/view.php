@@ -81,32 +81,13 @@ if ($options['show_search_form']) {
 			
 			}
 			
-			$db = Loader::db();
-			
-			$membershipLevel = $db->GetAll("SELECT ak_Membership_Level FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($pr->getProductID()));
-			print '<div class="ccm-core-commerce-product-list-product '. str_replace(' ','-',trim($membershipLevel[0]['ak_Membership_Level'])) . '">';
-			
-			//now load the div
-			?>
-			<div class="membership-overlay overlay-<?php echo trim($membershipLevel[0]['ak_Membership_Level']); ?>">
-				<div class="overlayRibbon">
-					<h2><?php echo trim($membershipLevel[0]['ak_Membership_Level']) ?></h2>
-					
-				</div>
-				
-				
-				
-			</div>
-			
-			
-			<?php
 			
 			
 			
-			Loader::packageElement('../blocks/product/templates/plain/view','core_commerce', $args);
+			Loader::packageElement('../blocks/product/templates/plain/view','hospitality_entrepreneur', $args);
 			
 			
-			print '</div>';
+			
 		}
 	?>
 		</div>

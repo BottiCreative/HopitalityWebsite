@@ -81,11 +81,11 @@ if ($displayImage) {
 }
 </style>
 
+<div class="row">
 	
+    	<div class="grid-12 columns">12</div>
+        </div>
 
-<div class="grid-4 columns nopadLeft">	
-
-<div class="productListprodHolder">
 
 <div class="ccm-core-commerce-add-to-cart-container">
 <form method="post" id="ccm-core-commerce-add-to-cart-form-<?php   echo $id?>" action="<?php   echo $this->url('/cart', 'update')?>">
@@ -96,26 +96,8 @@ if ($displayImage) {
 	<div class="photo ccm-core-commerce-add-to-cart-image"><?php   echo $img?></div>
 
 <!-- product info -->
-<?php	
 
-			$db = Loader::db();
-			$arrmembershipLevel = $db->GetAll("SELECT ak_Membership_Level FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($pr->getProductID()));
-			$membershipLevel = str_replace(' ','-',trim($arrmembershipLevel[0]['Membership_Level']));
-?>
-		<h1>HELLO WORLD</h1>	
-	<div class="hproduct ccm-core-commerce-add-to-cart-product-info-container overlay-<?php echo $membershipLevel; ?>">
-		<div class="membership-overlay overlay-<?php echo $membershipLevel;  ?>">
-				<div class="overlayRibbon">
-					<h2><?php echo $membershipLevel; ?></h2>
-					
-				</div>
-				
-				
-				
-			</div>
-		
-		
-		
+	<div class="hproduct ccm-core-commerce-add-to-cart-product-info-container">
 		<?php    if ($displayNameP) { ?>
 			<div class="fn ccm-core-commerce-add-to-cart-product-name"><?php   echo $link_before.$product->getProductName().$link_after?></div>
 		<?php    } ?>
@@ -302,12 +284,6 @@ if ($displayImage) {
 	</div>
 </form>
 </div>
-
-	</div>
-</div><!--end grid-->
-
-
-
 
 <?php    if (!$c->isEditMode()) { ?>
 <script type="text/javascript">
