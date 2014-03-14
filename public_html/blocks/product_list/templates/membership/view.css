@@ -87,3 +87,17 @@ text-decoration: none;
 line-height: 20px;
 padding: 0 3px;
 }
+
+
+/* Membership Changes */
+div.ccm-core-commerce-product-list-product
+{
+	position: relative;
+}
+
+div.membership-overlay
+{
+	position: absolute;
+	border:#FFF9BB 1px solid;
+}
+

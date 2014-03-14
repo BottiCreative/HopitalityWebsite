@@ -16,14 +16,11 @@ if ($options['show_search_form']) {
 	$productList = $this->controller->getRequestedSearchResults();
 	$products = $productList->getPage();
 	$paginator = $productList->getPagination();
-	
-	
-	
 	?>
 	<?php  if(count($products)>0) { ?>
 	
 <!-- begin products -->
-		
+
 		<div class="ccm-core-commerce-product-list-container">
 			
 			
@@ -78,34 +75,14 @@ if ($options['show_search_form']) {
 			$args['id'] = $pr->getProductID() . '-' . $b->getBlockID();
 			foreach($this->controller->getSets() as $key => $value) {
 				$args[$key] = $value;
-			
 			}
 			
-			$db = Loader::db();
+			//print '<div>';
+			//Loader::packageElement('product/display', 'core_commerce', $args);
+			//print '</div>';
 			
-			$membershipLevel = $db->GetAll("SELECT ak_Membership_Level FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($pr->getProductID()));
-			print '<div class="ccm-core-commerce-product-list-product '. str_replace(' ','-',trim($membershipLevel[0]['ak_Membership_Level'])) . '">';
-			
-			//now load the div
-			?>
-			<div class="membership-overlay overlay-<?php echo trim($membershipLevel[0]['ak_Membership_Level']); ?>">
-				<div class="overlayRibbon">
-					<h2><?php echo trim($membershipLevel[0]['ak_Membership_Level']) ?></h2>
-					
-				</div>
-				
-				
-				
-			</div>
-			
-			
-			<?php
-			
-			
-			
-			Loader::packageElement('../blocks/product/templates/plain/view','core_commerce', $args);
-			
-			
+			print '<div class="ccm-core-commerce-product-list-product">';
+			Loader::packageElement('../blocks/product/templates/plain/view', 'core_commerce', $args);
 			print '</div>';
 		}
 	?>
@@ -126,7 +103,5 @@ if($paging['show_bottom'] && $paginator && strlen($paginator->getPages())>0){ ?>
 	 <span class="pageRight"><?php  echo $paginator->getNext(t('Next'))?></span>
 </div>	
 <?php  } ?>
-
-
 
  
