@@ -5,7 +5,7 @@ class HospitalityEntrepreneurPackage extends Package {
 	
 	protected $pkgHandle = 'hospitality_entrepreneur';
 	protected $appVersionRequired = '1.0.0';
-	protected $pkgVersion = '1.0.0';
+	protected $pkgVersion = '1.0.2';
 	
 	public function getPackageDescription()
 	{
@@ -37,6 +37,8 @@ class HospitalityEntrepreneurPackage extends Package {
 		//add pages.
 		$this->AddDashboardPages();
 		
+		//now add the theme.
+		PageTheme::add('hospitalitytheme', $pkg);
 			
 		
 	}
@@ -47,6 +49,8 @@ class HospitalityEntrepreneurPackage extends Package {
 		parent::upgrade();
 		$this->AddBlocks();
 		$this->AddDashboardPages();
+		$pkg = Package::getByHandle($this->getPackageHandle());
+		
 		
 		//add discount area type.
 		//$this->AddDiscountType();
