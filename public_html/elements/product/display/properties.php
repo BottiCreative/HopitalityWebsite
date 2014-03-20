@@ -40,7 +40,7 @@ foreach($properties as $property) {
 	
 	<?php  if ($property->handle == 'displayDescription') { 
 		
-		if(!$userHasAccess)
+		if($userHasAccess)
 		{
 		?>		
 		

@@ -21,8 +21,12 @@ foreach($purchaseGroups as $purchaseGroup)
 	if($u->inGroup(Group::getByID($purchaseGroup)));
 	{
 		//is in a purchase group - lets allow them access
-		$userHasAccess = true;
-		break;
+		if(!$userHasAccess)
+		{
+			$userHasAccess = true;	
+		}
+		
+		
 	}
 }
 
