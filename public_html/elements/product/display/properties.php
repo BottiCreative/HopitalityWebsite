@@ -40,7 +40,7 @@ foreach($properties as $property) {
 	
 	<?php  if ($property->handle == 'displayDescription') { 
 		
-		if($userHasAccess)
+		if(!$userHasAccess)
 		{
 		?>		
 		
@@ -52,7 +52,8 @@ foreach($properties as $property) {
 		}
 		else
 			{
-				$limitedText = substr($product->getProductDescription(),0,round(len($product->getProductDescription() * 0.10)));
+					
+				$limitedText = substr($product->getProductDescription(),0,round(strlen($product->getProductDescription() * 0.10)));
 				echo $limitedText;
 			?>	
 			<div class="content-membership-overlay">
