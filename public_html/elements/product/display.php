@@ -22,7 +22,7 @@ foreach($purchaseGroups as $purchaseGroup)
 	
 	if(!$userHasAccess)
 	{
-		echo 'Attempting';	
+		
 		$userHasAccess = $u->inGroup($group);
 		
 	}
