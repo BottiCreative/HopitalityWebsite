@@ -1,10 +1,33 @@
+
 <?php  
 defined('C5_EXECUTE') or die(_("Access Denied."));  
 
 global $c;
 
+$excludedSetName = 'Membership';
+
+
 $uh = Loader::helper('urls', 'core_commerce');
 $im = Loader::helper('image');
+
+Loader::model('product/set','core_commerce');
+
+//now get the 'membership product set'
+
+$productSets = CoreCommerceProductSet::getList();
+$selectedProductSet = null;
+foreach($productSets as $productSet)
+{
+	if($productSet->getProductSetName() == $excludedSetName)
+	{
+		$selectedProductSet = $productSet;
+	}
+	
+}
+
+
+
+
 if ($options['show_search_form']) {
 	$this->inc('view_search_form.php', array( 'c'=>$c, 'b'=>$b, 'controller'=>$controller,'block_args'=>$block_args ) );
 }
@@ -16,10 +39,9 @@ if ($options['show_search_form']) {
 	$productList = $this->controller->getRequestedSearchResults();
 	$products = $productList->getPage();
 	$paginator = $productList->getPagination();
-	
-	
-	
+
 	?>
+    
 	<?php  if(count($products)>0) { ?>
 	
 <!-- begin products -->
@@ -71,22 +93,26 @@ if ($options['show_search_form']) {
 
 		<?php 
 	
-		for ($i = 0; $i < count($products); $i++) {	
+		for ($i = 0; $i < count($products); $i++) {
+					
+					
 			
 			$pr = $products[$i];
-			$args['product'] = $pr;	
-			$args['id'] = $pr->getProductID() . '-' . $b->getBlockID();
-			foreach($this->controller->getSets() as $key => $value) {
-				$args[$key] = $value;
 			
+			if(!$selectedProductSet->Contains($pr))
+			{
+			
+			
+				$args['product'] = $pr;	
+				$args['id'] = $pr->getProductID() . '-' . $b->getBlockID();
+				foreach($this->controller->getSets() as $key => $value) {
+					$args[$key] = $value;
+				
+				}
+				
+				Loader::packageElement('../blocks/product/templates/plain/view','hospitality_entrepreneur', $args);
+				
 			}
-			
-			
-			
-			
-			Loader::packageElement('../blocks/product/templates/plain/view','hospitality_entrepreneur', $args);
-			
-			
 			
 		}
 	?>
@@ -110,4 +136,5 @@ if($paging['show_bottom'] && $paginator && strlen($paginator->getPages())>0){ ?>
 
 
 
+<div class="clearfix"></div>
  

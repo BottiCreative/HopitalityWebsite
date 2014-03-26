@@ -99,10 +99,15 @@ color: #fff!important; display: block; float: left; font-size: 20px; margin: 10p
 div.ccm-core-commerce-product-list-product{position: relative;}
 
 .ccm-core-commerce-add-to-cart-product-name{ background-color: rgba(0, 0, 0, .7);
-color: rgba(0, 0, 0, .7); position: absolute; top: 200px; z-index: 10; display: block; padding: 15px; width: 85%; font-size: 19px; font-weight: 700; }
+color: rgba(0, 0, 0, .7); position: absolute; top: 40%; z-index: 10; display: block; padding: 15px; width: 85%; font-size: 18px; font-weight: 700; }
 
-div.membership-overlay{position: absolute; top: -10px; left: -10px; background: #ccc;  }
+div.membership-overlay{position: absolute; top: -10px; left: -10px;  }
+.overlayRibbon{ width: 250px; height: 200px;}
+
+div.membership-overlay.overlay-Starter{background: #0f0!important;}
+div.membership-overlay.overlay-Free{background: #00f!important;}
+
+.productListprodHolder{ position: relative; float: left; background: #333!important; width: 100%; min-height: 500px; padding: 10px; margin: 10px 0;  }
 
 
-.productListprodHolder{ position: relative; float: left; }
 
