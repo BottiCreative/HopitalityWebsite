@@ -28,13 +28,13 @@ foreach($properties as $property) {
 	<?php  } ?>
 	
 	<?php  if ($property->handle == 'displayPrice' && (!$hasBothPrices)) { ?>		
-		<div><?php echo Loader::packageElement('product/price', 'core_commerce', array('product' => $product, 'displayDiscount' => false, 'hasAccess' => $hasAccess)); ?></div>
+		<div><?php echo Loader::packageElement('product/price', 'core_commerce', array('product' => $product, 'displayDiscount' => false, 'userHasAccess' => $userHasAccess)); ?></div>
 	
 	<?php  } ?>
 	
 	<?php  if ($property->handle == 'displayDiscount') { ?>		
 
-		<div><?php echo Loader::packageElement('product/price', 'core_commerce', array('product' => $product, 'displayDiscount' => true, 'hasAccess' => $hasAccess)); ?></div>
+		<div><?php echo Loader::packageElement('product/price', 'core_commerce', array('product' => $product, 'displayDiscount' => true, 'userHasAccess' => $userHasAccess)); ?></div>
 	
 	<?php  } ?>
 	

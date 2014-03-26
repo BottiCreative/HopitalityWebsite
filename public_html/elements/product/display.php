@@ -10,26 +10,26 @@ $c = Page::getCurrentPage();
 //get the current user;
 $u = new User();
 
+
 //get the membership groups that are allowed to purchase...
 $purchaseGroups = $product->getProductPurchaseGroupIDArray();
 
 $userHasAccess = false;
 
-
 foreach($purchaseGroups as $purchaseGroup)
 {
-	if($u->inGroup(Group::getByID($purchaseGroup)));
+	$group = Group::getByID($purchaseGroup);
+	
+	if(!$userHasAccess)
 	{
-		//is in a purchase group - lets allow them access
-		if(!$userHasAccess)
-		{
-			$userHasAccess = true;	
-		}
-		
+		echo 'Attempting';	
+		$userHasAccess = $u->inGroup($group);
 		
 	}
+	
+		
+	
 }
-
 
 
 $link_before = '';
