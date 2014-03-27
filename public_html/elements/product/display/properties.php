@@ -52,8 +52,15 @@ foreach($properties as $property) {
 		}
 		else
 			{
-					
-				$limitedText = substr($product->getProductDescription(),0,round(strlen($product->getProductDescription() * 0.10)));
+				
+				//Let's use the c5 text object to sanitize input.
+				Loader::helper('text');
+				
+				$textHelper = new TextHelper();
+				
+				//ok, limit the text to 25% of the whole article.
+				$limitedText = $textHelper->sanitize($product->getProductDescription(),round(strlen($product->getProductDescription()) * 0.25),'<p><br>'); //substr($product->getProductDescription(),0,round(strlen($product->getProductDescription() * 0.10)));
+				
 				echo $limitedText;
 			?>	
 			<div class="content-membership-overlay">
