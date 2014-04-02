@@ -2,7 +2,7 @@
 defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php'); ?>
 	
-<div class="mainContainer">
+
 		<div class="row topRowPad">
         	<div class="grid-8 columns">
 			<?php  
@@ -19,6 +19,6 @@ $this->inc('elements/header.php'); ?>
 			?>
 		</div>	
 	</div>
-    </div>
+
 	
 <?php  $this->inc('elements/footer.php'); ?>

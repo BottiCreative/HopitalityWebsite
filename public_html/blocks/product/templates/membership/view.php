@@ -99,11 +99,10 @@ if ($displayImage) {
 <?php	
 
 			$db = Loader::db();
-			$arrmembershipLevel = $db->GetAll("SELECT ak_Membership_Level FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($product->getProductID()));
-			
-			$membershipLevel = str_replace(' ','-',trim($arrmembershipLevel[0]['ak_Membership_Level']));
+			$arrmembershipLevel = $db->GetAll("SELECT ak_Membership_Level FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($pr->getProductID()));
+			$membershipLevel = str_replace(' ','-',trim($arrmembershipLevel[0]['Membership_Level']));
 ?>
-		
+		<h1>HELLO WORLD</h1>	
 	<div class="hproduct ccm-core-commerce-add-to-cart-product-info-container overlay-<?php echo $membershipLevel; ?>">
 		<div class="membership-overlay overlay-<?php echo $membershipLevel;  ?>">
 				<div class="overlayRibbon">
@@ -190,8 +189,6 @@ if ($displayImage) {
 		<?php    } ?>
 	
 		</div>
-        
-        <div class="FreeSubscribe">Free to subscribers</div>
 			
 		<!-- callout -->
 

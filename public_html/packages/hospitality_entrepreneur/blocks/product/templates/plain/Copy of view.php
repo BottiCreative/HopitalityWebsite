@@ -5,6 +5,8 @@ $ih = Loader::helper('image');
 
 $c = Page::getCurrentPage();
 
+$membershipName = 'Membership';
+
 $link_before = '';
 $link_after = '';
 
@@ -81,11 +83,11 @@ if ($displayImage) {
 }
 </style>
 
-<div class="row">
 	
-    	<div class="grid-12 columns">12</div>
-        </div>
 
+<div class="grid-4 columns nopadLeft">	
+
+<div class="productListprodHolder">
 
 <div class="ccm-core-commerce-add-to-cart-container">
 <form method="post" id="ccm-core-commerce-add-to-cart-form-<?php   echo $id?>" action="<?php   echo $this->url('/cart', 'update')?>">
@@ -96,8 +98,61 @@ if ($displayImage) {
 	<div class="photo ccm-core-commerce-add-to-cart-image"><?php   echo $img?></div>
 
 <!-- product info -->
+<?php	
 
-	<div class="hproduct ccm-core-commerce-add-to-cart-product-info-container">
+			$db = Loader::db();
+			$arrmembershipLevel = $db->GetAll("SELECT ak_Membership_Level FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($product->getProductID()));
+			
+			//get the membership product set.
+			$membershipProductSetID = $db->GetAll("SELECT prsID FROM CoreCommerceProductSets WHERE prsName = ?",array($membershipName));
+			$selectedProductSetID = $membershipProductSetID[0]['prsID'];
+			$membershipLevel = str_replace(' ','-',trim($arrmembershipLevel[0]['ak_Membership_Level']));
+?>
+		
+	<div class="hproduct ccm-core-commerce-add-to-cart-product-info-container overlay-<?php echo $membershipLevel; ?>">
+		<div class="membership-overlay overlay-<?php echo $membershipLevel;  ?>">
+				<div class="overlayRibbon">
+					<h2><?php echo $membershipLevel; ?></h2>
+					
+					<!-- Lets show the membership here -->
+					<?php
+					
+					//lets get the product(s)
+					$productList = new CoreCommerceProductList();
+					$productSet = new CoreCommerceProductSet();
+					
+					
+					$selectedProductSet = $productSet->getByID($selectedProductSetID);
+					
+					
+					//filter by membership set.
+					$productList->filterBySet($selectedProductSet);
+					
+					
+					$btProduct = BlockType::getByHandle('product','core_commerce');
+					
+					//get the 
+					$btProduct->productID = $productList->get(1);
+					
+					//lets choose which product elements to display...
+					$displayPropertyOrder =  array();
+					
+					$displayPropertyOrder[] = "displayName";
+					
+					$btProduct->render('templates/membership');
+					
+					
+					
+					?>
+					
+				</div>
+				
+				
+				
+			</div>
+		
+		
+		
 		<?php    if ($displayNameP) { ?>
 			<div class="fn ccm-core-commerce-add-to-cart-product-name"><?php   echo $link_before.$product->getProductName().$link_after?></div>
 		<?php    } ?>
@@ -284,6 +339,12 @@ if ($displayImage) {
 	</div>
 </form>
 </div>
+
+	</div>
+</div><!--end grid-->
+
+
+
 
 <?php    if (!$c->isEditMode()) { ?>
 <script type="text/javascript">

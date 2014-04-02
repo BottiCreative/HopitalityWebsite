@@ -11,11 +11,11 @@
         
         <ul>
         <li><a class="headLink" href="">A little Info</a></li>
-        <li><a href="">About Us</a></li>
-        <li><a href="">Partners</a></li>
-        <li><a href="">Membership</a></li>
-        <li><a href="">What people say</a></li>
-        <li><a href="">Blog</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/partners/">Partners</a></li>
+        <li><a href="/membership/">Membership</a></li>
+        <li><a href="/what-people/">What people say</a></li>
+        <li><a href="/blog/">Blog</a></li>
         </ul>
         
        <ul>
@@ -31,7 +31,8 @@
         </ul>
         
         <ul>
-       	<li><a class="headLink" href="/resources">Get in touch</a></li>
+       	<li><a class="headLink" href="/contact-us">Get in touch</a></li>
+        <li><a href="/contact-us">Ask a question</a></li>
         <li><a href="=tel;01865 739 174">01865 739 174</a></li>
         <li><a href="mailto@info@hospitalityentrepreneur.com">info@hospitalityentrepreneur.com</a></li>
 
@@ -39,9 +40,10 @@
         
         
                 <div class="social">
-        		<p><a href="" target="_blank" class="fbLink" rel="nofollow" ></a>
-              	<a href="" target="_blank" class="twitLink" rel="nofollow" ></a>
-              	<a href="" target="_blank" class="inLink" rel="nofollow" ></a></p>
+        		<p><a href="https://www.facebook.com/pages/Hospitality-Entrepreneur/449799375102971?ref=hl" target="_blank" class="fbLink" rel="nofollow" ></a>
+              	<a href="https://twitter.com/hospitalitypete" target="_blank" class="twitLink" rel="nofollow" ></a>
+              	<a href="" target="_blank" class="inLink" rel="nofollow" ></a>
+                <a href="" target="_blank" class="youLink" rel="nofollow" ></a></p>
                 </div>
         
         
@@ -68,12 +70,61 @@
     <!--<script src="js/foundation/foundation.orbit.js"></script>-->
     <script src="<?php  echo $this->getThemePath(); ?>/js/foundation/foundation.reveal.js"></script>
     
-      <script>
-    $(document).foundation(
-	
-	
-	);
-  </script>
+  
+  
+
+<script src="<?php  echo $this->getThemePath(); ?>/js/foundation/foundation.orbit.js"></script>
+<script>
+$(document).foundation({
+  orbit: {
+    animation: 'fade',
+    timer_speed: 5000,
+    pause_on_hover: true,
+    animation_speed: 650,
+    navigation_arrows: true,
+    bullets: false
+  }
+});
+</script>
+
+
+    
+    
+    
+   <script>
+      $(document).foundation({
+  orbit: {
+    animation: 'slide',
+    timer_speed: 8000,
+    pause_on_hover: true,
+    animation_speed: 500,
+    navigation_arrows: true,
+    bullets: true
+  	}
+	});
+    </script>
+
+  
+<script type="text/javascript" src="<?=$this->getThemePath()?>/js/jquery.watermark.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.watermark').watermark();
+		$('.watermark1').watermark();
+	});
+</script>
+
+</script><script src="<?=$this->getThemePath()?>/js/watermarkform.js" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+jQuery(function($){
+		$("#first").Watermark("First");
+		$("#mi").Watermark("MI");
+		$("#last").Watermark("Last");
+		$("#suffix").Watermark("Suffix");
+		$("#textarea").Watermark("Your Message","#666");
+		
+});
+// ]]&gt;</script>
+  
   
   <script src="<?=$this->getThemePath()?>/js/jquery.fitvids.js"></script>
    <script>
