@@ -122,8 +122,8 @@ if (!$halign) {
 
 
 <div class="ccm-core-commerce-add-to-cart">
-<form method="post" id="ccm-core-commerce-add-to-cart-form-<?php echo $id?>" action="<?php echo $this->url('/cart', 'update')?>">
-<input type="hidden" name="rcID" value="<?php echo $c->getCollectionID()?>" />
+<!--<form method="post" id="ccm-core-commerce-add-to-cart-form-<?php echo $id?>" action="<?php echo $this->url('/cart', 'update')?>">
+<input type="hidden" name="rcID" value="<?php echo $c->getCollectionID()?>" />-->
 
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
 <?php  if ($displayImage && $imagePosition == 'T') { ?>
@@ -303,7 +303,7 @@ if ($useOverlaysL) {
 }
 
 ?>
-</form>
+<!--</form>-->
 </div>
 
 <?php  if (!$c->isEditMode()) { ?>

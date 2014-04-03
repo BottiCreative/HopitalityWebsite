@@ -3,7 +3,7 @@
 			
 			
 			
-		<div class="row topRowPad">
+		<div class="row">
 			<div class="grid-12 columns">
             
         <?php  
@@ -40,12 +40,9 @@
             
             </div>
             
-            <div class="grid-4 columns">
+        <div class="grid-4 columns">
             
-            <div class="login"><a href="/login">login detail</a></div>
-            
-            
-            
+
          <?php  
          $a = new GlobalArea(' Membership Side');
          $a->display();

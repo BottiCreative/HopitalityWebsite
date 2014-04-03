@@ -26,8 +26,8 @@ class UserblogifyHelper {
 
 			if($ui->hasAvatar()){
 				$avatarImgPath=$av->getImagePath($ui,false);
-				$mw=($maxWidth)?$maxWidth:'60';
-				$mh=($maxHeight)?$maxHeight:'80';
+				$mw=($maxWidth)?$maxWidth:'150';
+				$mh=($maxHeight)?$maxHeight:'180';
 				if(substr($avatarImgPath,0,strlen(DIR_REL))==DIR_REL)$avatarImgPath=substr($avatarImgPath,strlen(DIR_REL));
 					$thumb=$ih->getThumbnail(DIR_BASE.$avatarImgPath,$mw,$mh);
 					if($thumb->src){

@@ -3,6 +3,14 @@
 
 <?php  
 $tmp = array();
+
+Loader::model('product/set','core_commerce');
+Loader::model('product/list','core_commerce');
+
+//add the membership name here.  Shoudl ideally be added into a helper or somewhere reusable.  Not a major issue just now
+//might bite me in the arse later though :-|
+$membershipName = 'Membership';
+
 foreach($properties as $property) {
 	$tmp[] = $property->handle;	
 }
@@ -84,49 +92,40 @@ foreach($properties as $property) {
 				
 				echo $limitedText;
 			?>	
-			<div class="content-membership-overlay-fadeout"></div>
-			<div class="content-membership-overlay">
-				<div class="content-membership-overlay-ribbon">
-					<!--Need to submit the membership here -->
-					<div class="row">
-
-
-					<h3 class="centered">Subscribe to read the rest of this report...</h3>
+			
+			<!-- Lets show the membership here -->
+					<?php
+					
+							$db = Loader::db();
+					$arrmembershipLevel = $db->GetAll("SELECT ak_Membership_Level FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($product->getProductID()));
+					
+					//get the membership product set.  We only want the membership product wth this membership level.
+					$membershipProductSetID = $db->GetAll("SELECT prsID FROM CoreCommerceProductSets WHERE prsName = ?",array($membershipName));
+					$selectedProductSetID = $membershipProductSetID[0]['prsID'];
+					
+					 	
+					 
+					//lets get the product(s)
+					$productList = new CoreCommerceProductList();
+					$productSet = new CoreCommerceProductSet();
+					
+					 
 					
 					
-					<div class="membersOverlay">
-						<div class="grid-7 columns">
-					    <div class="TrialRegistration">
-					   <h4> Try it free for one week</h4>
-						<p>Register to try out HE completely for free for 30 days.</p>
-					    
-					    <form>
-					    <input class="watermark" value="Your Name" placeholder="Your Name" />
-					    <input class="watermark" value="Your Email" placeholder="Your Email" />
-					    <input class="watermark" value="Password" placeholder="Your Name" />
-					    <input type="submit" value="Start Your Free Trial" />
-					    
-					    </form>
-					    </div>
-					    
-					    </div>
-						<div class="grid-5 columns">
-					    <p>...or subscribe today</p>
-						<p>&pound;10/month</p>
-					    <p>&pound;100/year</p>
-					    <a href="#" class="membButt4">Subscribe Now</a>
-					    
-					    </div>
-					</div>
+					$selectedProductSet = $productSet->getByID($selectedProductSetID);
 					
-					</div>
-
-				</div>
-				
-				
-				
-			</div>
-			<?php	
+					
+					//filter by membership set.
+					$productList->filterBySet($selectedProductSet);
+					
+					//now lets show the form.
+					echo Loader::packageElement('membershipsignup/view', 'hospitality_entrepreneur', array('productArray' => $productList->get(1),'controller' => $this));
+					
+					
+					
+					?>
+					
+						<?php	
 			}
 	 } ?>
 	

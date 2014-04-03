@@ -5,10 +5,39 @@
 	extract($blogify->getBlogSettings());
 	extract($blogify->getBlogVars($c));
 	?>
-	<div class="blog-attributes">
-		<h1><?php       echo $blogTitle; ?> </h1>
-	</div>
-	<h4><?php       echo date('M d, Y',strtotime($blogDate));  ?></h4>
+	
+	
+    <h1><?php echo $blogTitle; ?></h1>
+    
+    
+	
+    <div class="blog-attributes">
+    
+    <div class="blogElems blogdate"><?php echo date('M d, Y',strtotime($blogDate));  ?>
+    </div>
+    
+    <div class="blogElems blogCat">
+		<?php      echo t('Category').': '.'<a href="'.BASE_URL.$search.'categories/'.str_replace(' ','_',$cat).'/">'.$cat.'</a>';?>
+    </div>
+    
+    <div class="blogElems blogTag">		<?php      echo t('Tags')?>:
+		<?php       
+		if(!empty($tag_list)){
+			$x = 0;
+			foreach($tag_list as $akct){
+				if($x){echo ', ';}
+				echo '<a href="'.BASE_URL.$search.str_replace(' ','_',$akct->getSelectAttributeOptionValue()).'/">'.$akct->getSelectAttributeOptionValue().'</a>';
+				$x++;
+					
+			}
+		}
+		?>
+    </div>
+
+    </div>
+    
+    
+    
 	<?php       
 	//go get the content block
 	$content = $blogify->closetags(str_replace($breakSyntax,'',$controller->getContent()));
@@ -41,23 +70,7 @@
 			<?php       } ?>
 	</div>
 	<br/>
-	<div class="taglist">
-		<?php      echo t('Tags')?>:
-		<?php       
-		if(!empty($tag_list)){
-			$x = 0;
-			foreach($tag_list as $akct){
-				if($x){echo ', ';}
-				echo '<a href="'.BASE_URL.$search.str_replace(' ','_',$akct->getSelectAttributeOptionValue()).'/">'.$akct->getSelectAttributeOptionValue().'</a>';
-				$x++;
-					
-			}
-		}
-		?>
-	</div>
-	<div class="taglist">
-		<?php      echo t('Category').': '.'<a href="'.BASE_URL.$search.'categories/'.str_replace(' ','_',$cat).'/">'.$cat.'</a>';?>
-	</div>
+
 	<?php       
 	if($author == 1){
 		//if show author is set in settings,
@@ -71,20 +84,28 @@
 	<div id="bio" itemscope itemtype="http://data-vocabulary.org/Person">
 		<h2><?php       echo $aboutTitle ; ?></h2>
 	    <div id="bioInfo">
-	    <h3><span itemprop="name"><?php       echo $firstName.' '.$lastName; ?></span></h3>
-	    <h5><?php       echo $uLocation ; ?></h5>
-	    	<div id="avatar"><span itemprop="photo">
+        
+        
+        <div class="grid-2 columns">
+       
+            	<div id="avatar"><span itemprop="photo">
 	    		<?php       	echo  $uAvatar; ?>
 	    	</span></div>
-	    	<p>
-	    	<?php       
+        </div>
+        <div class="grid-10 columns">
+         <h4><span itemprop="name"><?php       echo $firstName.' '.$lastName; ?></span></h4>
+        <h5><?php echo $uLocation ; ?></h5>
+            	<?php       
 	    	if(isset($aboutBio)){
 	    		echo "<span itemprop=\"title\">" . $aboutBio . "</span>"; 
 	    	}else{
 	    		echo t('<i> Please add your bio info through your member profile page, or through your dashboard.</i>');
 	    	}
 	    	?>
-	    	</p> 		
+        
+        </div>
+        
+        		
 	    </div>
 	</div>
 	<?php  } ?>

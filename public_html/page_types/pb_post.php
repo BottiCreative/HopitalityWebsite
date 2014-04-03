@@ -7,12 +7,19 @@ $authorID = $blogify->getBlogAuthor($c);
 $blog_settings = $blogify->getBlogSettings();
 extract($blog_settings);
 
-
 ?>
 
- <div class="row mainContent topRowPad">
-     
-     	<div class="grid-8 columns">
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+	<div class="grid-8 columns blogPostMain">
         
         
         
@@ -48,7 +55,7 @@ extract($blog_settings);
           	}
         }
         ?>
-        <div class="ccm-next-previous-wrapper">
+        <div class="ccm-next-previous-wrapper BlogNextPrevNav">
         	<br/>
 	        <?php       
 	      	if($prev_link){
@@ -80,8 +87,26 @@ extract($blog_settings);
 			$a->display($c);
 			?>
             
+        
+        
+        <div class="fbBox">
+        <div class="fb-like-box" data-href="https://www.facebook.com/pages/Hospitality-Entrepreneur/449799375102971?ref=hl" data-width="307" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false">
+        </div>
+        
+
+        
+            <?php  
+			$a = new Area('Sidebar Blog Extra');
+			$a->display($c);
+			?>   
+            
+            
+            
        	</aside>     
         </div>
+        
+        
+        
         
         <div class="row">
         	<div class="grid-12 columns">

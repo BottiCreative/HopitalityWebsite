@@ -96,25 +96,53 @@ if ($displayImage) {
 	<div class="photo ccm-core-commerce-add-to-cart-image"><?php   echo $img?></div>
 
 <!-- product info -->
-<?php	
+		
+		<div class="content-membership-overlay-fadeout"></div>
+			<div class="content-membership-overlay">
+				<div class="content-membership-overlay-ribbon">
+					<!--Need to submit the membership here -->
+					<div class="row">
 
-			$db = Loader::db();
-			$arrmembershipLevel = $db->GetAll("SELECT ak_Membership_Level FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($pr->getProductID()));
-			$membershipLevel = str_replace(' ','-',trim($arrmembershipLevel[0]['Membership_Level']));
-?>
-		<h1>SIGNUP Membership HELLO WORLD</h1>	
-	<div class="hproduct ccm-core-commerce-add-to-cart-product-info-container overlay-<?php echo $membershipLevel; ?>">
-		<div class="membership-overlay overlay-<?php echo $membershipLevel;  ?>">
-				<div class="overlayRibbon">
-					<h2><?php echo $membershipLevel; ?></h2>
+
+					<h3 class="centered">Subscribe to read the rest of this report...</h3>
 					
+					
+					<div class="membersOverlay">
+						<div class="grid-7 columns">
+					    <div class="TrialRegistration">
+					   <h4> Try it free for one week</h4>
+						<p>Register to try out HE completely for free for 30 days.</p>
+					    
+					    <form>
+					    <input class="watermark" value="Your Name" placeholder="Your Name" />
+					    <input class="watermark" value="Your Email" placeholder="Your Email" />
+					    <input class="watermark" value="Password" placeholder="Your Name" />
+					    <input type="submit" value="Start Your Free Trial" />
+					    
+					    </form>
+					    </div>
+					    
+					    </div>
+						<div class="grid-5 columns">
+					    <p>...or subscribe today</p>
+						<p>&pound;10/month</p>
+					    <p>&pound;100/year</p>
+					    <a href="#" class="membButt4">Subscribe Now</a>
+					    
+					    </div>
+					</div>
+					
+					</div>
+
 				</div>
 				
 				
 				
 			</div>
+
 		
 		
+				
 		
 		<?php    if ($displayNameP) { ?>
 			<div class="fn ccm-core-commerce-add-to-cart-product-name"><?php   echo $link_before.$product->getProductName().$link_after?></div>
