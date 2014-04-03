@@ -37,9 +37,12 @@ if ($options['show_search_form']) {
 	$nh = Loader::helper('navigation');
 	
 	$productList = $this->controller->getRequestedSearchResults();
-	$products = $productList->getPage();
-	$paginator = $productList->getPagination();
-
+	//$products = $productList->getPage();
+	$products = $productList->get(0);
+	//$paginator = $productList->getPagination();
+	
+	 
+	  
 	?>
     
 	<?php  if(count($products)>0) { ?>
@@ -49,11 +52,11 @@ if ($options['show_search_form']) {
 		<div class="ccm-core-commerce-product-list-container">
 			
 			
-			<?php  if($paging['show_top'] || $paging['show_bottom']) {
+			<?php  /*if($paging['show_top'] || $paging['show_bottom']) {
 				echo '<div class="ccm-core-commerce-summary">';
 				$productList->displaySummary();
 				echo '</div>';
-			}
+			}*/
 			?>				
 			<?php 
 				if (count($sort_columns)>0) { ?>
