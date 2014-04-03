@@ -2,9 +2,9 @@
 	defined('C5_EXECUTE') or die(_("Access Denied."));
 	
 	/**
-	 * Utilities helper class - random functions useful for moo music operation.
+	 * Utilities helper class - random functions useful for operation.
 	 */
-	class MooMusicUtilitiesHelper {
+	class HospitalityEntreprenurUtilitiesHelper {
 		
 		private $dateLockedWindowMinutes = 15;
 		private $packageHandle = 'moo_music';
@@ -84,6 +84,19 @@
 		return $memberemail;
 		
 	}
+	
+	/**
+	 * Attempt resize using imagemagick
+	 * @param $width width of image
+	 * @param $height height of image
+	 * @param image full path of image.
+	 */
+	public function imageMagickResizeImage($width=0,$height=0,$fullImagePath)
+	{
+		
+		
+	}
+	
 	
 	}
 ?>
