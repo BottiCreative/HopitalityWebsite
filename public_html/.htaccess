@@ -19,3 +19,5 @@ BrowserMatch ^Mozilla/4.0[678] no-gzip
 BrowserMatch bMSIE !no-gzip !gzip-only-text/html
 SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png|rar|zip|pdf)$ no-gzip dont-vary
 Header append Vary User-Agent
+
+AddDefaultCharset UTF-8

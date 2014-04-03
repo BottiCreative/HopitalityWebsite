@@ -3,7 +3,7 @@ $nh = Loader::helper('navigation');
 ?>
 
 
-		<div class="row">
+		<div class="row partnerBlock">
         	<div class="grid-3 columns">
             
             <?php  if (!empty($field_1_image)): ?>
@@ -31,7 +31,7 @@ $nh = Loader::helper('navigation');
 	$link_url = $nh->getLinkToCollection(Page::getByID($field_5_link_cID), true);
 	$link_text = empty($field_5_link_text) ? $link_url : htmlentities($field_5_link_text, ENT_QUOTES, APP_CHARSET);
 	?>
-	<a href="<?php  echo $link_url; ?>"><?php  echo $link_text; ?></a>
+	<a class="partnerLink" href="<?php  echo $link_url; ?>"><?php  echo $link_text; ?></a>
 <?php  endif; ?>
 			
             

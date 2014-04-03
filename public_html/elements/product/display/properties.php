@@ -53,13 +53,74 @@ foreach($properties as $property) {
 		else
 			{
 					
-				$limitedText = substr($product->getProductDescription(),0,round(strlen($product->getProductDescription() * 0.10)));
+				//Let's use the c5 text object to sanitize input.
+				Loader::helper('text');
+				
+				//configure the percentage of words to limit here....
+				$limitCharsPercentage = 0.05;
+				
+				$numbChars =  round(strlen($product->getProductDescription()) * $limitCharsPercentage);
+				
+				if($numbChars > 1000)
+				{
+					//ok, there's more than 1000 chars to limit by - lets change it to 2.5%
+					$limitCharsPercentage = 0.025;
+					
+				}
+				
+				//if number of chars percentage is less than 50 then increase the percentage
+				if($numbChars < 50)
+				{
+					//lets go for 30%	
+					$limitCharsPercentage = 0.035;
+					
+				} 
+				
+				$numbChars =  round(strlen($product->getProductDescription()) * $limitCharsPercentage);
+				
+				
+				$textHelper = new TextHelper();	
+				$limitedText = $textHelper->sanitize($product->getProductDescription(),$numbChars,'<p><br>'); //substr($product->getProductDescription(),0,round(strlen($product->getProductDescription() * 0.10)));
+				
 				echo $limitedText;
 			?>	
+			<div class="content-membership-overlay-fadeout"></div>
 			<div class="content-membership-overlay">
 				<div class="content-membership-overlay-ribbon">
 					<!--Need to submit the membership here -->
-					<h2>INSERT MEMBERSHIP DETAIL HERE - WE'LL MAKE THIS RETURN THE MEMBERSHIP PRODUCT BLOCK</h2>
+					<div class="row">
+
+
+					<h3 class="centered">Subscribe to read the rest of this report...</h3>
+					
+					
+					<div class="membersOverlay">
+						<div class="grid-7 columns">
+					    <div class="TrialRegistration">
+					   <h4> Try it free for one week</h4>
+						<p>Register to try out HE completely for free for 30 days.</p>
+					    
+					    <form>
+					    <input class="watermark" value="Your Name" placeholder="Your Name" />
+					    <input class="watermark" value="Your Email" placeholder="Your Email" />
+					    <input class="watermark" value="Password" placeholder="Your Name" />
+					    <input type="submit" value="Start Your Free Trial" />
+					    
+					    </form>
+					    </div>
+					    
+					    </div>
+						<div class="grid-5 columns">
+					    <p>...or subscribe today</p>
+						<p>&pound;10/month</p>
+					    <p>&pound;100/year</p>
+					    <a href="#" class="membButt4">Subscribe Now</a>
+					    
+					    </div>
+					</div>
+					
+					</div>
+
 				</div>
 				
 				

@@ -98,16 +98,22 @@ color: #fff!important; display: block; float: left; font-size: 20px; margin: 10p
 /* Membership Changes */
 div.ccm-core-commerce-product-list-product{position: relative;}
 
-.ccm-core-commerce-add-to-cart-product-name{ background-color: rgba(0, 0, 0, .7);
-color: rgba(0, 0, 0, .7); position: absolute; top: 40%; z-index: 10; display: block; padding: 15px; width: 85%; font-size: 18px; font-weight: 700; }
+.ccm-core-commerce-add-to-cart-product-name{ background-color: rgba(0, 0, 0, .6);
+color: rgba(0, 0, 0, .6); position: absolute; bottom: 80px; z-index: 10; display: block; padding: 15px; width: 85%; font-size: 16px; font-weight: 400; color: #fff; }
 
-div.membership-overlay{position: absolute; top: -10px; left: -10px;  }
-.overlayRibbon{ width: 250px; height: 200px;}
+div.membership-overlay{position: absolute; top: -5px; left: -5px;  }
+.overlayRibbon{ width: 100px; height: 100px;}
 
-div.membership-overlay.overlay-Starter{background: #0f0!important;}
-div.membership-overlay.overlay-Free{background: #00f!important;}
+div.membership-overlay h2{ text-indent: -9999999px;}
 
-.productListprodHolder{ position: relative; float: left; background: #333!important; width: 100%; min-height: 500px; padding: 10px; margin: 10px 0;  }
+div.membership-overlay.overlay-Starter{background: url(images/sash-starter.png) no-repeat top left!important;}
+div.membership-overlay.overlay-Starvervip{background: url(images/sash-starter.png) no-repeat top left!important;}
+div.membership-overlay.overlay-Club{background: url(images/sash-clubplus.png) no-repeat top left!important;}
+
+.productListprodHolder{ position: relative; float: left; background: #333!important; width: 100%; min-height: 320px; padding: 10px; margin: 10px 0;  }
 
 
+.productListprodHolder img{min-width: 282px; height: 250px;}
+
+/*.photo img,.ccm-core-commerce-add-to-cart-image img{min-width: 282px; height: 250px;}*/
 

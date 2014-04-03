@@ -613,6 +613,18 @@ a.signButt{background: #84b400; color: #fff; width: 100%; padding: 5px; border-r
 .touch .orbit-bullets {
   display: none; }
   
+ 
+.content-membership-overlay-fadeout
+{
+	position: relative; 
+	font-size: 15px;
+	font-style: italic;
+	margin: -150px 0 0 0;
+	height: 150px;
+	background: transparent url('images/fadeoutoverlay.png') repeat-x top left;
+	z-index: 19;	 
+	
+}
   
   
 @media only screen and (min-width: 40.063em) {
@@ -695,3 +707,4 @@ a.registerLink{ margin: 0 5%; width: 40%; float:left; padding:8px 0; text-align:
 
 
 }
+
