@@ -12,6 +12,10 @@ $im = Loader::helper('image');
 
 Loader::model('product/set','core_commerce');
 
+Loader::helper('utilities','hospitality_entrepreneur');
+
+$utils = new HospitalityEntrepreneurUtilitiesHelper();
+
 //now get the 'membership product set'
 
 $productSets = CoreCommerceProductSet::getList();
@@ -24,8 +28,6 @@ foreach($productSets as $productSet)
 	}
 	
 }
-
-
 
 
 if ($options['show_search_form']) {
@@ -112,6 +114,11 @@ if ($options['show_search_form']) {
 					$args[$key] = $value;
 				
 				}
+				
+				$args['userHasAccess'] = $utils->user_has_access($pr); 
+				
+				
+				
 				
 				Loader::packageElement('../blocks/product/templates/plain/view','hospitality_entrepreneur', $args);
 				

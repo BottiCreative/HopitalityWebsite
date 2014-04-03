@@ -191,8 +191,18 @@ if ($displayImage) {
 	
 		</div>
         
+        
+        <?php
+        
+        if(!$userHasAccess)
+		{
+			
+		?>
         <div class="FreeSubscribe">Free to subscribers</div>
 			
+		<?php
+		}
+		?>	
 		<!-- callout -->
 
 		<?php    if ($useOverlaysC) { ?>

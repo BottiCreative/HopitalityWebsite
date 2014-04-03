@@ -4,7 +4,7 @@
 	/**
 	 * Utilities helper class - random functions useful for operation.
 	 */
-	class HospitalityEntreprenurUtilitiesHelper {
+	class HospitalityEntrepreneurUtilitiesHelper {
 		
 		private $dateLockedWindowMinutes = 15;
 		private $packageHandle = 'moo_music';
@@ -86,6 +86,50 @@
 	}
 	
 	/**
+	 * Determine if user has access to the current product.
+	 */ 
+	public function user_has_access($product, $user = null)
+	{
+			
+			
+		//get the current user;
+		if(!isset($user))
+		{
+				
+			$user = new User();
+		}
+		
+		
+		
+		//get the membership groups that are allowed to purchase...
+		$purchaseGroups = $product->getProductPurchaseGroupIDArray();
+		
+		$userHasAccess = false;
+		
+		
+		foreach($purchaseGroups as $purchaseGroup)
+		{
+			$group = Group::getByID($purchaseGroup);
+			
+			//if the current user is a superuser or has admin access then give them access.
+			$userHasAccess = ($user->isSuperUser() || $user->inGroup(Group::getByName("Administrators"))); 
+			
+			if(!$userHasAccess)
+			{
+				
+				$userHasAccess = $user->inGroup($group);
+				
+			}
+			
+				
+			
+		}
+		
+		return $userHasAccess;
+		
+	}
+	
+	/**
 	 * Attempt resize using imagemagick
 	 * @param $width width of image
 	 * @param $height height of image
@@ -93,6 +137,7 @@
 	 */
 	public function imageMagickResizeImage($width=0,$height=0,$fullImagePath)
 	{
+		
 		
 		
 	}

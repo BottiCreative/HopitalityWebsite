@@ -2,34 +2,16 @@
 
 $uh = Loader::helper('urls', 'core_commerce');
 $ih = Loader::helper('image');
+
+$util = Loader::helper('utilities','hospitality_entrepreneur');
+
 if(!isset($pkg)) {
 	$pkg = Package::getByHandle('core_commerce');
 }
 $c = Page::getCurrentPage();
 
-//get the current user;
-$u = new User();
 
-
-//get the membership groups that are allowed to purchase...
-$purchaseGroups = $product->getProductPurchaseGroupIDArray();
-
-$userHasAccess = false;
-
-foreach($purchaseGroups as $purchaseGroup)
-{
-	$group = Group::getByID($purchaseGroup);
-	
-	if(!$userHasAccess)
-	{
-		
-		$userHasAccess = $u->inGroup($group);
-		
-	}
-	
-		
-	
-}
+$userHasAccess = $util->user_has_access($product);
 
 
 $link_before = '';
