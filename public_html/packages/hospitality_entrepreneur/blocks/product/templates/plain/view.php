@@ -41,16 +41,17 @@ if(is_string($overlayCalloutImage)) {
 if ($displayImage) { 
 	$pi = $primaryImage;
 	if (is_object($pi)) {
-		if($imageMaxWidth<=0) {$imageMaxWidth = 200;} 
-		if($imageMaxHeight<=0) {$imageMaxHeight = 200;} 
+		if($imageMaxWidth<=0) {$imageMaxWidth = 282;} 
+		if($imageMaxHeight<=0) {$imageMaxHeight = 250;} 
 		$thumb = $ih->getThumbnail($pi, $imageMaxWidth, $imageMaxHeight);
-		$img = '<img src="' . $thumb->src . '" width="' . $thumb->width . '" height="' . $thumb->height . '" ';
+		//$img = '<img src="' . $thumb->src . '" width="' . $thumb->width . '" height="' . $thumb->height . '" ';
+		$img = '<img src="' . $thumb->src . '" ';
 		$himg = '';
 		if (is_object($primaryHoverImage)) {
 			$hthumb = $ih->getThumbnail($primaryHoverImage, $imageMaxWidth, $imageMaxHeight);
 			if (is_object($hthumb)) {
 				$img .= 'class="ccm-productListDefaultImage"';
-				$himg = "<img src='{$hthumb->src}' width='{$thumb->width}' height='{$thumb->height}' class='ccm-productListHoverImage' />";
+				$himg = "<img src='{$hthumb->src}' class='ccm-productListHoverImage' />";
 			}
 		}
 		$img .= ' />';

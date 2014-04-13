@@ -49,6 +49,21 @@ $product = $productArray[0];
 					    <input type="submit" value="Submit" />
 					   <input type="hidden" name="productID" id="productID" value="<?php echo $product->getProductID(); ?>" />
 					   </form>
+					   
+					   <div class="ccm-core-commerce-add-to-cart-product-button-box">
+				<?php    if ($product->isProductEnabled()) { ?>
+					<span class="ccm-core-commerce-add-to-cart-submit">
+						<input type="submit" value="BUY NOW" class="btn ccm-input-submit" />
+						
+					</span>
+					<img src="<?php   echo ASSETS_URL_IMAGES?>/throbber_white_16.gif" width="16" height="16" class="ccm-core-commerce-add-to-cart-loader" />
+
+				<?php    } else { ?>
+					<strong><?php   echo t('This product is unavailable.')?></strong>
+				<?php    } ?>
+			</div>
+					   
+					   
 					</div>
 					
 					</div>

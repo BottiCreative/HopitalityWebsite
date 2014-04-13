@@ -112,7 +112,7 @@
 			$group = Group::getByID($purchaseGroup);
 			
 			//if the current user is a superuser or has admin access then give them access.
-			$userHasAccess = ($user->isSuperUser() || $user->inGroup(Group::getByName("Administrators"))); 
+			//$userHasAccess = ($user->isSuperUser() || $user->inGroup(Group::getByName("Administrators"))); 
 			
 			if(!$userHasAccess)
 			{

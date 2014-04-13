@@ -18,20 +18,20 @@ $this->inc('elements/header.php'); ?>
   
   <ul class="example-orbit" data-orbit>
   <li>
-    <img src="/files/7613/9600/7646/headerimage1.jpg" alt="headerimage.jpg" width="2000" height="782" />
+    <img src="/files/2713/9654/3309/headerimage-slide1.jpg" alt="headerimage.jpg" width="2000" height="782" />
     <div class="orbit-caption">
           <div class="row">
           
-          <div class="grid-6 column">
+          <div class="grid-6 column push-6">
           
-<h2 class="home-Left">Wake up!...</h2>
-<p class="home-Left whiteText">It's time to join the new Club</p>
-<p class="home-Left whiteText"> for independent hospitality</p>
-<p class="home-Left whiteText">business owners</p>
+          <h2 class="home-Right">Slide-1...</h2>
+<p class="home-Right whiteText">It's time to join the new Club</p>
+<p class="home-Right whiteText"> for independent hospitality</p>
+<p class="home-Right whiteText">business owners</p>
 
 <div class="clearfix"></div>
 
-<a href="#" class="SlideButt videoButt" >Find Out More</a>
+<a href="#" class="SlideButt videoButt RightButt" >Find Out More</a>
 
 <div class="VideoHide">
 <iframe width="853" height="480" src="//www.youtube.com/embed/vVUqpIRCLBs" frameborder="0" allowfullscreen></iframe>

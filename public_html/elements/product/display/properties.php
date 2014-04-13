@@ -119,7 +119,7 @@ foreach($properties as $property) {
 					$productList->filterBySet($selectedProductSet);
 					
 					//now lets show the form.
-					echo Loader::packageElement('membershipsignup/view', 'hospitality_entrepreneur', array('productArray' => $productList->get(1),'controller' => $this));
+					echo Loader::packageElement('membershipsignup/view', 'hospitality_entrepreneur', array('productArray' => $productList->get(1),'controller' => $this,'producttobuy' => $product));
 					
 					
 					
