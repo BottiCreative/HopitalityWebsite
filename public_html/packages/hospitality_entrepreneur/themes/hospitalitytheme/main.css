@@ -209,6 +209,14 @@ p.memberIntro span { font-weight:700; color:#84B400;}
 
 span.tick{ background: #f00;}
 
+/* Product Page */
+.ccm-core-commerce-product-property-list .ccm-core-commerce-add-to-cart-image
+{
+	float: left;
+	margin-right: 15px;
+}
+
+
 /*CART OVERRIDES*/
 
 .ccm-input-text,.ccm-input-select{ height: 30px; margin: 5px 0; }
@@ -707,4 +715,8 @@ a.registerLink{ margin: 0 5%; width: 40%; float:left; padding:8px 0; text-align:
 
 
 }
+
+
+
+
 

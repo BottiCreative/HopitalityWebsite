@@ -24,6 +24,17 @@ foreach($properties as $property) {
 	?>
 	
 	<?php  if ($property->handle == 'displayName') {
+		
+	  	if ($displayImage && $imagePosition == 'T') { ?>
+		<div class="ccm-core-commerce-add-to-cart-image"><?php echo $img?></div>
+		<?php }
+		
+		
+		if ($displayImage && $imagePosition == 'L') { ?>
+		<div class="ccm-core-commerce-add-to-cart-image image-left"><?php echo $img?></div>
+	  
+	  <?php } 		
+			
 		if ($linkToProductPage) {
 			$linksTo = Page::getByID($product->getProductCollectionID());
 			$link_before = '<a href="' . Loader::helper('navigation')->getLinkToCollection($linksTo) . '">';
@@ -64,7 +75,7 @@ foreach($properties as $property) {
 				//Let's use the c5 text object to sanitize input.
 				Loader::helper('text');
 				
-				//configure the percentage of words to limit here....lets start at 10%
+				//configure the percentage of words to limit here....
 				$limitCharsPercentage = 0.10;
 				
 				$numbChars =  round(strlen($product->getProductDescription()) * $limitCharsPercentage);
@@ -80,7 +91,7 @@ foreach($properties as $property) {
 				if($numbChars < 50)
 				{
 					//lets go for 30%	
-					$limitCharsPercentage = 0.35;
+					$limitCharsPercentage = 0.30;
 					
 				} 
 				
@@ -163,7 +174,7 @@ foreach($properties as $property) {
 		
 	} ?>
 	
-	<div class="ccm-spacer">&nbsp;</div>
+	
 
 <?php  } ?>
 </div>

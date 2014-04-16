@@ -107,21 +107,7 @@ if (!$halign) {
 <form method="post" id="ccm-core-commerce-add-to-cart-form-<?php echo $id?>" action="<?php echo $this->url('/cart', 'update')?>">
 <input type="hidden" name="rcID" value="<?php echo $c->getCollectionID()?>" />
 
-<table border="0" cellspacing="0" cellpadding="0" width="100%">
-<?php  if ($displayImage && $imagePosition == 'T') { ?>
-<tr>
-	<td valign="<?php echo $valign?>" align="<?php echo $halign?>" class="ccm-core-commerce-add-to-cart-thumbnail-top" <?php  if ($imageMaxHeight > 0) { ?>style="height:<?php echo $imageMaxHeight?>px"<?php  } ?>>
-		<div class="ccm-core-commerce-add-to-cart-image"><?php echo $img?></div>
-	</td>
-</tr>
-<?php  } ?>
-<tr>
-	<?php  if ($displayImage && $imagePosition == 'L') { ?>
-	<td valign="<?php echo $valign?>" align="<?php echo $halign?>" class="ccm-core-commerce-add-to-cart-thumbnail-left">
-		<div class="ccm-core-commerce-add-to-cart-image" <?php  if ($imageMaxWidth > 0) { ?>style="width:<?php echo $imageMaxWidth?>px"<?php  } ?>><?php echo $img?></div>
-	</td>
-	<?php  } ?>
-	<td valign="top" align="<?php echo $halign?>" width="100%">
+
 <?php 
 		Loader::model('product/display_property', 'core_commerce'); 
 		$list = new CoreCommerceProductDisplayPropertyList();
@@ -143,8 +129,10 @@ if (!$halign) {
 			}
 
 		}
+		 
+			
 		
-		Loader::packageElement('product/display/properties', 'core_commerce', array('linkToProductPage' => $linkToProductPage, 'properties' => $properties, 'product' => $product,'userHasAccess' => $userHasAccess ));
+		Loader::packageElement('product/display/properties', 'core_commerce', array('img' => $img,'displayImage' => $displayImage,'imagePosition' =>$imagePosition, 'linkToProductPage' => $linkToProductPage, 'properties' => $properties, 'product' => $product,'userHasAccess' => $userHasAccess ));
 
 		if ($displayAddToCart) { ?>
 			<table cellspacing="0" cellpadding="0" border="0">
@@ -195,21 +183,13 @@ if (!$halign) {
 				<?php echo $form->hidden('productID', $product->getProductID()); ?>
 		<?php  } ?>
 		
-	</td>
 	<?php  if ($displayImage && $imagePosition == 'R') { ?>
-	<td valign="<?php echo $valign?>" class="ccm-core-commerce-add-to-cart-thumbnail-right">
-		<div class="ccm-core-commerce-add-to-cart-image"><?php echo $img?></div>
-	</td>
+		<div class="ccm-core-commerce-add-to-cart-image image-right"><?php echo $img?></div>
 	<?php  } ?>
-</tr>
 <?php  if ($displayImage && $imagePosition == 'B') { ?>
-<tr>
-	<td valign="<?php echo $valign?>" class="ccm-core-commerce-add-to-cart-thumbnail-bottom" <?php  if ($imageMaxHeight > 0) { ?>style="height:<?php echo $imageMaxHeight?>px"<?php  } ?>>
 		<div class="ccm-core-commerce-add-to-cart-image"><?php echo $img?></div>
-	</td>
-</tr>
 <?php  } ?>
-</table>
+
 <?php  if ($useOverlaysC) { ?>
 	<div class="ccm-core-commerce-add-to-cart-callout">
 		<div class="ccm-core-commerce-add-to-cart-callout-inner">
