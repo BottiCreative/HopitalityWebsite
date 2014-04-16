@@ -40,18 +40,41 @@ if(is_string($overlayCalloutImage)) {
 
 if ($displayImage) { 
 	$pi = $primaryImage;
+	
 	if (is_object($pi)) {
-		if($imageMaxWidth<=0) {$imageMaxWidth = 282;} 
-		if($imageMaxHeight<=0) {$imageMaxHeight = 250;} 
-		$thumb = $ih->getThumbnail($pi, $imageMaxWidth, $imageMaxHeight);
+		if($imageMaxWidth<=282 ||$imageMaxWidth>=282 ) {$imageMaxWidth = 282;} 
+		if($imageMaxHeight<=250 || $imageMaxHeight>=250 ) {$imageMaxHeight = 250;} 
+		$thumb = $ih->getThumbnail($pi, $imageMaxWidth, $imageMaxHeight,true);
+		$newImagePath = dirname(__FILE__) . '/images/' . $product->getProductID() . "." . $pi->getExtension();
+		$newRelativePath = "/packages/hospitality_entrepreneur/blocks/product/templates/plain/images/" . $product->getProductID() . "." . $pi->getExtension();
+		
+		if(!file_exists($newImagePath))
+		{
+			//lets change the 	
+			$ih->create($pi->getPath(),$newImagePath,$imageMaxWidth,$imageMaxHeight,true);
+		}
+		
+		
+		
+		//$ih->create($pi->)
 		//$img = '<img src="' . $thumb->src . '" width="' . $thumb->width . '" height="' . $thumb->height . '" ';
-		$img = '<img src="' . $thumb->src . '" ';
+		$img = '<img src="' . $newRelativePath . '" ';
 		$himg = '';
 		if (is_object($primaryHoverImage)) {
 			$hthumb = $ih->getThumbnail($primaryHoverImage, $imageMaxWidth, $imageMaxHeight);
+			$newhImagePath = dirname(__FILE__) . '/images/h' . $product->getProductID() . "." . $pi->getExtension();
+			$newhRelativePath = "/packages/hospitality_entrepreneur/blocks/product/templates/plain/images/h" . $product->getProductID() . "." . $pi->getExtension();
+			
+			if(!file_exists($newhImagePath))
+		{
+			//lets change the 	
+			$ih->create($primaryHoverImage->getPath(),$newhImagePath,$imageMaxWidth,$imageMaxHeight,true);
+		}
+		
+			
 			if (is_object($hthumb)) {
 				$img .= 'class="ccm-productListDefaultImage"';
-				$himg = "<img src='{$hthumb->src}' class='ccm-productListHoverImage' />";
+				$himg = "<img src='{$newhRelativePath}' class='ccm-productListHoverImage' />";
 			}
 		}
 		$img .= ' />';

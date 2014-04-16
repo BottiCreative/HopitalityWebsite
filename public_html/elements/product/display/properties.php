@@ -64,8 +64,8 @@ foreach($properties as $property) {
 				//Let's use the c5 text object to sanitize input.
 				Loader::helper('text');
 				
-				//configure the percentage of words to limit here....
-				$limitCharsPercentage = 0.05;
+				//configure the percentage of words to limit here....lets start at 10%
+				$limitCharsPercentage = 0.10;
 				
 				$numbChars =  round(strlen($product->getProductDescription()) * $limitCharsPercentage);
 				
@@ -80,7 +80,7 @@ foreach($properties as $property) {
 				if($numbChars < 50)
 				{
 					//lets go for 30%	
-					$limitCharsPercentage = 0.035;
+					$limitCharsPercentage = 0.35;
 					
 				} 
 				
