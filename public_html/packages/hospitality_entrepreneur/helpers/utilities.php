@@ -99,20 +99,26 @@
 			$user = new User();
 		}
 		
+		$db = Loader::db();
+		$arrPurchaseGroups = $db->GetAll("SELECT ak_authorized_members FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($product->getProductID()));
 		
+		//get purchase groups by splitting by newline characters.
+		$purchaseGroups = explode("\n",$arrPurchaseGroups[0]['ak_authorized_members']);
 		
-		//get the membership groups that are allowed to purchase...
-		$purchaseGroups = $product->getProductPurchaseGroupIDArray();
-		
+		//exit();
 		$userHasAccess = false;
 		
 		
 		foreach($purchaseGroups as $purchaseGroup)
 		{
-			$group = Group::getByID($purchaseGroup);
+			//sometime empty value can be returned.  Lets skip them.	
+			if(empty($purchaseGroup))
+				continue;
+				
+			$group = Group::getByName($purchaseGroup);
 			
 			//if the current user is a superuser or has admin access then give them access.
-			//$userHasAccess = ($user->isSuperUser() || $user->inGroup(Group::getByName("Administrators"))); 
+			$userHasAccess = ($user->isSuperUser() || $user->inGroup(Group::getByName("Administrators"))); 
 			
 			if(!$userHasAccess)
 			{
@@ -120,6 +126,7 @@
 				$userHasAccess = $user->inGroup($group);
 				
 			}
+			
 			
 				
 			
@@ -140,6 +147,59 @@
 		
 		
 		
+	}
+	
+	/**
+	 * Attempt
+	 * 
+	 */
+	public function AddNewBuyerAsMember($order)
+	{
+		if (!$order->getOrderUserID())
+						{
+							
+							$newUser = UserInfo::getByEmail($order->getOrderEmail());
+							
+							if(!is_object($newUser))
+							{
+								
+								//no user assigned!  Lets automatically create the user and assign them to the moo music members group.
+								$newUserPassword = rand(1111,9999);
+								$newUser = UserInfo::register(array('uName' => $order->getOrderEmail(), 
+																'uEmail' => $order->getOrderEmail(), 
+																'uPassword' => $newUserPassword,
+																'ulsValidated' => 1, 
+																'ulsFullRecord' => 1,
+																'uPasswordConfirm' => $newUserPassword));
+								
+								$newUser->setAttribute('billing_address',$order->getAttribute('billing_address'));
+								$newUser->setAttribute('billing_first_name',$order->getAttribute('billing_first_name'));
+								$newUser->setAttribute('billing_last_name',$order->getAttribute('billing_last_name'));
+								$newUser->setAttribute('billing_phone',$order->getAttribute('billing_phone'));	
+								
+							}
+								
+								
+								$newUserObj = $newUser->getUserObject();
+								
+								//add user to the group if it exists.
+								$group = Group::getByName('FREE');
+								if(is_object($group))
+								{
+									$newUserObj->enterGroup(Group::getByName('FREE'));
+									$order->setOrderUserID($newUserObj->getUserID());
+									$order->setOrderEmail($newUserObj->getUserName());
+									
+									
+									//$this->sendUserEmail($newUserObj,$order,$newUserPassword);
+									
+									
+										
+								}
+							}
+							
+						
+						
 	}
 	
 	

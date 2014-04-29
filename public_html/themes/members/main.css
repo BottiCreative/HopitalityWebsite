@@ -6,6 +6,7 @@
 body { font-family: 'Open Sans', sans-serif; color: #444; font-weight: 300; font-style: normal; background: #f2f2f2 ;}
 
 h3{ font-family: 'Open Sans', sans-serif; color: #444; font-weight: 700; font-style: normal;}
+h1{ font-family: 'Open Sans', sans-serif; color: #444; font-weight: 300; font-style: normal; padding: 15px 0;}
 
 a { text-decoration:none; -webkit-transition: all .2s ease-in-out;
  -moz-transition: all .2s ease-in-out;
@@ -19,6 +20,30 @@ a { text-decoration:none; -webkit-transition: all .2s ease-in-out;
 
 .logo { margin:12px 0 0 0; border-right:1px #84B400 solid}
 
+
+.membersTabs .panel{margin: 4px 0;  text-align: center; padding: 0!important; background: none!important; -webkit-box-shadow: none; 
+box-shadow: none; border-bottom: none!important;  }
+
+.panel{background: #fff!important; padding: 30px; width: 100%; float: left; height: auto; -webkit-border-radius: 5px 5px 5px 5px;
+border-radius: 5px 5px 5px 5px; border-bottom: solid 1px #ccc;}
+
+.membersTabs a{ width: 100%; display: block;  height: 100%; min-height: 180px; margin: 10px 0; background: #fff; -webkit-border-radius: 5px 5px 5px 5px;
+border-radius: 5px 5px 5px 5px; border-bottom: solid 1px #ccc; }
+.membersTabs a:hover{ background: #84B400; min-height: 200px; margin: 0px 0;}
+
+.membersTabs a span{ display: block; width: 100%;}
+
+.membersTabs a:hover span.tabtitle{ font-size: 30px; color: #fff; }
+.membersTabs a:hover span.tabDesc{ color: #fff; }
+
+
+.membersTabs a span.tabtitle{ font-size: 20px; padding: 4px 0; font-weight: 700; color: #84B400; }
+
+.membersTabs a span.tabDesc{ font-size: 13px; padding: 4px 0; color: #999;}
+
+.membersTabs i{ display: block; width: 100%; text-align: center; font-size: 44px; padding: 25px 0 0px 0; color: #ccc;}
+
+.membersTabs a:hover i{ color: #fff;}
 
 .login a { background:#84B400}
 
@@ -87,14 +112,19 @@ img.u-avatar{ padding: 5px; border: solid 1px #f4f4f4; }
 
 /*///////////////////////////////////////*/
 
-.panel{background: #fff!important; padding: 20px 15px; width: 100%; float: left; height: auto; -webkit-box-shadow: 0 1px 2px 1px rgba(0,0,0,.1); border-bottom: solid 1px #ccc;
-box-shadow: 0 1px 1px 1px rgba(0,0,0,.1); -webkit-border-radius: 5px 5px 5px 5px;
-border-radius: 5px 5px 5px 5px;}
+.panel{background: #fff!important; padding: 30px; width: 100%; float: left; height: auto; -webkit-border-radius: 5px 5px 5px 5px;
+border-radius: 5px 5px 5px 5px; border-bottom: solid 1px #ccc;}
 
-.sideMembersNav{padding: 0!important; background: #f6f6f6!important; margin: 0 0 30px 0; }
+.sideMembersNav{padding: 0!important; background: #f9f9f9!important; margin: 0 0 30px 0; }
 
 .sideMembersNav h3{ background: #fff; display: block; padding: 20px; -webkit-border-radius: 5px 5px 0px 0px;
 border-radius: 5px 5px 0px 0px; border-bottom: solid 1px #ccc;}
+
+div.ccm-profile-body-item {
+margin-bottom: 12px;
+padding-bottom: 12px;
+border-bottom: 1px solid #fff;
+}
 
 
 
@@ -286,6 +316,7 @@ box-shadow: 0 2px 10px 1px rgba(122,122,122,122); }
 
 .nopad{ padding: 0!important;}
 .nopadLeft{ padding-left: 0!important;}
+.nopadRight{ padding-right: 0!important;}
 
 /*FORM STYLES*/
 

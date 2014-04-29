@@ -104,7 +104,6 @@ if ($options['show_search_form']) {
 			
 			$pr = $products[$i];
 			
-			
 			if(!$selectedProductSet->Contains($pr))
 			{
 			

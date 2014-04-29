@@ -32,10 +32,6 @@ $this->inc('elements/header.php'); ?>
 <div class="clearfix"></div>
 
 <a href="#" class="SlideButt videoButt RightButt" >Find Out More</a>
-
-<div class="VideoHide">
-<iframe width="853" height="480" src="//www.youtube.com/embed/vVUqpIRCLBs" frameborder="0" allowfullscreen></iframe>
-</div>
           
           
           </div>
@@ -43,7 +39,8 @@ $this->inc('elements/header.php'); ?>
     </div>
   </li>
   <li>
-    <img src="/files/2813/9600/7653/headerimage4.jpg" alt="headerimage.jpg" width="2000" height="782" />
+
+    <img src="/files/6313/9772/9759/headerimage-slide2.jpg" alt="headerimage.jpg" width="2000" height="782" />
     <div class="orbit-caption">
           <div class="row">
           
@@ -85,6 +82,7 @@ $this->inc('elements/header.php'); ?>
           
           
           </div>
+
     </div>
     </div>
   </li>
@@ -108,6 +106,7 @@ $this->inc('elements/header.php'); ?>
           
           </div>
     </div>
+>>>>>>> FETCH_HEAD
     </div>
   </li>
   
@@ -117,12 +116,24 @@ $this->inc('elements/header.php'); ?>
 
  <!--slider--> 
     
+   
+    
     
     
     
     </div>
 </div>
 
+<div class="videoResponsive">
+<div class="row">
+<div class="grid-12 columns">
+<h2>It's time to join the new Club</h2>
+<p> for independent hospitality <br />business owners</p>
+
+<iframe width="853" height="480" src="//www.youtube.com/embed/vVUqpIRCLBs" frameborder="0" allowfullscreen></iframe>
+</div>
+</div><!--end row-->
+</div><!--end videoResponsive-->
 
 
 <div class="fullwidthform">
@@ -146,6 +157,17 @@ $this->inc('elements/header.php'); ?>
         </div>
 
 </div><!--row-->
+
+<div class="fullwidthgreen">
+	<div class="row Homeform">
+    
+
+    	<?php  
+			$a = new Area('Giveaway');
+			$a->display($c);
+			?>
+    </div>
+</div>
 
 
 <div class="fullwidthtest">
