@@ -9,7 +9,7 @@
 <?php  endif; ?>
 </div>
 <div class="testbottomPartners"></div>
-
+<div class="testBlockBottom">
 <?php  if (!empty($field_2_image)): ?>
 	<img src="<?php  echo $field_2_image->src; ?>" width="<?php  echo $field_2_image->width; ?>" height="<?php  echo $field_2_image->height; ?>" alt="" />
 <?php  endif; ?>
@@ -21,5 +21,5 @@
 <span><?php  if (!empty($field_4_textbox_text)): ?>
 	<?php  echo htmlentities($field_4_textbox_text, ENT_QUOTES, APP_CHARSET); ?>
 <?php  endif; ?></span></h5>
-
+</div>
 </div>

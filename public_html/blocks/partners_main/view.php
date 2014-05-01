@@ -4,6 +4,7 @@ $nh = Loader::helper('navigation');
 
 
 		<div class="row partnerBlock">
+        
         	<div class="grid-3 columns">
             
             <?php  if (!empty($field_1_image)): ?>
