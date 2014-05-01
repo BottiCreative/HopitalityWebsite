@@ -41,16 +41,26 @@ if(is_string($overlayCalloutImage)) {
 if ($displayImage) { 
 	$pi = $primaryImage;
 	
+	
 	if (is_object($pi)) {
+		
+		//get the file version object	
+		$fileVersionObject = $pi->getVersion();
+		
+		//create a unique name based on file version id and the file id.  Use this for the new file name
+		$uniqueImageName = $pi->getFileID() . '-' . $fileVersionObject->getFileVersionID();
+			
 		if($imageMaxWidth<=282 ||$imageMaxWidth>=282 ) {$imageMaxWidth = 282;} 
 		if($imageMaxHeight<=250 || $imageMaxHeight>=250 ) {$imageMaxHeight = 250;} 
 		$thumb = $ih->getThumbnail($pi, $imageMaxWidth, $imageMaxHeight,true);
-		$newImagePath = dirname(__FILE__) . '/images/' . $product->getProductID() . "." . $pi->getExtension();
-		$newRelativePath = "/packages/hospitality_entrepreneur/blocks/product/templates/plain/images/" . $product->getProductID() . "." . $pi->getExtension();
+		$newImagePath = dirname(__FILE__) . '/images/' . $uniqueImageName . "." . $pi->getExtension();
+		$newRelativePath = "/packages/hospitality_entrepreneur/blocks/product/templates/plain/images/" . $uniqueImageName . "." . $pi->getExtension();
+		
 		
 		if(!file_exists($newImagePath))
 		{
-			//lets change the 	
+				
+			//lets create the file
 			$ih->create($pi->getPath(),$newImagePath,$imageMaxWidth,$imageMaxHeight,true);
 		}
 		
