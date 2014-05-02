@@ -5,7 +5,7 @@ class HospitalityEntrepreneurPackage extends Package {
 	
 	protected $pkgHandle = 'hospitality_entrepreneur';
 	protected $appVersionRequired = '1.0.0';
-	protected $pkgVersion = '1.0.2';
+	protected $pkgVersion = '1.0.3';
 	
 	public function getPackageDescription()
 	{
@@ -37,8 +37,14 @@ class HospitalityEntrepreneurPackage extends Package {
 		//add pages.
 		$this->AddDashboardPages();
 		
+		//add payment methods
+		$this->AddPaymentMethods();
+		
+		
 		//now add the theme.
 		PageTheme::add('hospitalitytheme', $pkg);
+		
+		
 			
 		
 	}
@@ -49,7 +55,34 @@ class HospitalityEntrepreneurPackage extends Package {
 		parent::upgrade();
 		$this->AddBlocks();
 		$this->AddDashboardPages();
-		$pkg = Package::getByHandle($this->getPackageHandle());
+		
+		$this->AddPaymentMethods();
+		
+		
+		//$pkg = Package::getByHandle($this->getPackageHandle());
+		
+		
+		
+	}
+	
+	private function AddPaymentMethods()
+	{
+		
+		$pkg = Package::getByHandle($this->getPackageHandle());	
+			
+		//now add the core_commerce payment option.
+		//load the payment handler for this package.  Load the default one
+		$coreCommerceHandle = Package::getByHandle('core_commerce');
+		Loader::model('payment/method', 'core_commerce');
+		
+		//attempt to get the payment methods.
+		$paymentMethod = CoreCommercePaymentMethod::getByHandle($this->getPackageHandle());
+		
+		if(!is_object($paymentMethod))
+		{
+			//now payment method.  Lets add it now.	
+			CoreCommercePaymentMethod::add($this->getPackageHandle(), $this->getPackageDescription(), 0,NULL, $pkg);
+		}
 		
 		
 		
