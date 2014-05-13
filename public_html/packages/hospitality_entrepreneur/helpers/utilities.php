@@ -8,7 +8,10 @@
 		
 		private $dateLockedWindowMinutes = 15;
 		private $packageHandle = 'moo_music';
-		/**
+		private $membershipSetName = 'Membership';
+		 
+		 
+		 /**
 		 * Chooses from trademark moo music images and returns a random one.
 		 * @return random moo music image path.
 		 */
@@ -90,8 +93,7 @@
 	 */ 
 	public function user_has_access($product, $user = null)
 	{
-			
-			
+		
 		//get the current user;
 		if(!isset($user))
 		{
@@ -99,14 +101,22 @@
 			$user = new User();
 		}
 		
+		
+		/*//if the current user is a superuser or has admin access then give them access.
+		$userHasAccess = ($user->isSuperUser() || $user->inGroup(Group::getByName("Administrators"))); 
+		
+		if($userHasAccess)
+		{
+			return $userHasAccess;
+		}*/
+		
+		
 		$db = Loader::db();
 		$arrPurchaseGroups = $db->GetAll("SELECT ak_authorized_members FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($product->getProductID()));
 		
 		//get purchase groups by splitting by newline characters.
 		$purchaseGroups = explode("\n",$arrPurchaseGroups[0]['ak_authorized_members']);
 		
-		//exit();
-		$userHasAccess = false;
 		
 		
 		foreach($purchaseGroups as $purchaseGroup)
@@ -126,6 +136,12 @@
 				$userHasAccess = $user->inGroup($group);
 				
 			}
+			else {
+				//has access.  Lets return
+				return $userHasAccess;
+			}
+			
+			
 			
 			
 				
@@ -149,11 +165,38 @@
 		
 	}
 	
+	public function get_membership_set()
+	{
+			
+			
+		$productSets = CoreCommerceProductSet::getList();
+
+		//get the product set we want to select for EXCLUSION from the list.
+		$selectedProductSet = null;
+		
+		foreach($productSets as $productSet)
+		{
+			if($productSet->getProductSetName() == $this->membershipSetName)
+			{
+				$selectedProductSet = $productSet;
+				
+				//found it, now return.
+				return $selectedProductSet;
+			}
+			
+				
+			
+		}	
+	
+			return $selectedProductSet;
+	}
+	
+	
 	/**
 	 * Attempt
 	 * 
 	 */
-	public function AddNewBuyerAsMember($order)
+	public function AddNewBuyerAsMember($order,$groupName)
 	{
 		if (!$order->getOrderUserID())
 						{
@@ -183,10 +226,10 @@
 								$newUserObj = $newUser->getUserObject();
 								
 								//add user to the group if it exists.
-								$group = Group::getByName('FREE');
+								$group = Group::getByName($groupName);
 								if(is_object($group))
 								{
-									$newUserObj->enterGroup(Group::getByName('FREE'));
+									$newUserObj->enterGroup($group);
 									$order->setOrderUserID($newUserObj->getUserID());
 									$order->setOrderEmail($newUserObj->getUserName());
 									

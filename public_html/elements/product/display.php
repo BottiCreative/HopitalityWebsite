@@ -104,8 +104,6 @@ if (!$halign) {
 
 
 <div class="ccm-core-commerce-add-to-cart">
-<form method="post" id="ccm-core-commerce-add-to-cart-form-<?php echo $id?>" action="<?php echo $this->url('/cart', 'update')?>">
-<input type="hidden" name="rcID" value="<?php echo $c->getCollectionID()?>" />
 
 
 <?php 
@@ -133,7 +131,7 @@ if (!$halign) {
 			
 		
 		Loader::packageElement('product/display/properties', 'core_commerce', array('img' => $img,'displayImage' => $displayImage,'imagePosition' =>$imagePosition, 'linkToProductPage' => $linkToProductPage, 'properties' => $properties, 'product' => $product,'userHasAccess' => $userHasAccess ));
-
+		
 		if ($displayAddToCart) { ?>
 			<table cellspacing="0" cellpadding="0" border="0">
 			<?php 
@@ -145,7 +143,7 @@ if (!$halign) {
 			</tr>
 			
 			<?php  } 
-			
+			$displayQuantity = false;
 			if ($displayQuantity) { ?>
 			<tr>
 				<td valign="top" style="padding-right: 10px"><?php echo $form->label('quantity', t('Quantity'))?> <span class="ccm-required">*</span></td>
@@ -160,7 +158,7 @@ if (!$halign) {
 			</tr>
 			<?php  } ?>
 			</table>
-			<div style="padding: 6px 0px 12px 0px">
+			<!--<div style="padding: 6px 0px 12px 0px">
 				<?php  if ($product->isProductEnabled()) { ?>
 					<?php echo $form->submit('submit', $addToCartText); ?>
 					<img src="<?php echo ASSETS_URL_IMAGES?>/throbber_white_16.gif" width="16" height="16" class="ccm-core-commerce-add-to-cart-loader" />
@@ -168,7 +166,7 @@ if (!$halign) {
 				<?php  } else { ?>
 					<strong><?php echo t('This product is unavailable.')?></strong>
 				<?php  } ?>
-			</div>
+			</div>-->
 			<?php  
 			if($pkg->config('WISHLISTS_ENABLED')) {?>
 				<div>
@@ -271,7 +269,7 @@ if ($useOverlaysL) {
 <?php  if (!$c->isEditMode()) { ?>
 <script type="text/javascript">
 	$(function() {
-		ccm_coreCommerceRegisterAddToCart('ccm-core-commerce-add-to-cart-form-<?php echo $id?>', '<?php echo $uh->getToolsURL('cart_dialog')?>');
+		//ccm_coreCommerceRegisterAddToCart('ccm-core-commerce-add-to-cart-form-<?php echo $id?>', '<?php echo $uh->getToolsURL('cart_dialog')?>');
 		<?php  if($pkg->config('WISHLISTS_ENABLED')) { ?>
 			ccm_coreCommerceRegisterAddToWishList('ccm-core-commerce-add-to-cart-form-<?php echo $id?>', '<?php echo $uh->getToolsURL('wishlist/add_to_wishlist')?>?rcID=<?php  echo Page::getCurrentPage()->getCollectionID()?>');
 			ccm_coreCommerceRegisterAddToRegistry('ccm-core-commerce-add-to-cart-form-<?php echo $id?>', '<?php echo $uh->getToolsURL('wishlist/add_to_registry')?>?rcID=<?php  echo Page::getCurrentPage()->getCollectionID()?>');

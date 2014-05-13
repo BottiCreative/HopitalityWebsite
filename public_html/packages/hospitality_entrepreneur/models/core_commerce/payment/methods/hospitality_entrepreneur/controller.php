@@ -2,6 +2,7 @@
 defined('C5_EXECUTE') or die(_("Access Denied."));
 Loader::library('payment/controller', 'core_commerce');
 Loader::helper('utilities','hospitality_entrepreneur');
+Loader::model('membershipproducts','hospitality_entrepreneur');
 
 class CoreCommerceHospitalityEntrepreneurPaymentMethodController extends CoreCommercePaymentController {
 
@@ -62,21 +63,40 @@ class CoreCommerceHospitalityEntrepreneurPaymentMethodController extends CoreCom
 			if ($o) {
 				// deal with float comparison problems
 				$order_total = number_format($o->getOrderTotal(),2,'.','');
-				$paid_total = number_format($_REQUEST['mc_gross'],2,'.','');
+				$paid_total = 0;
+				if(isset($_REQUEST['mc_gross']))
+				{
+					$paid_total = number_format($_REQUEST['mc_gross'],2,'.','');
+				}
+				elseif(isset($_REQUEST['mc_amount3']))
+				{
+					$paid_total = number_format($_REQUEST['mc_amount3'],2,'.','');
+				}
 				
 				if ($paid_total >= $order_total) {
 					if ($_REQUEST['payment_status'] == 'Pending') {
 						$o->setStatus(CoreCommerceOrder::STATUS_PENDING);
 						parent::finishOrder($o, 'Paypal - Website Payments Standard');
-					} else if ($_REQUEST['payment_status'] == 'Processed' || $_REQUEST['payment_status'] == 'Completed') {
+					} else if ($_REQUEST['payment_status'] == 'Processed' || $_REQUEST['payment_status'] == 'Completed' || 
+								$_REQUEST['payer_status'] == 'verified') {
+							
 						$o->setStatus(CoreCommerceOrder::STATUS_AUTHORIZED);
 						
-						//successful payment.  
+						//successful payment. Lets start with the infusion process.
+						
 						
 										
 						parent::finishOrder($o, 'Paypal - Website Payments Standard');
 					} else {
-						Log::addEntry('Unable to set status. Status received: ' . $_REQUEST['payment_status']);
+						
+						$returnInformation = '';
+						
+						foreach($_REQUEST as $key => $value) {
+							//do something with your $key and $value;
+							$returnInformation .= "| $key = $value";
+						}
+						
+						Log::addEntry('Unable to set status for Paypal HE Payment. Status received: ' . $returnInformation);
 					}			
 				} else {
 					Log::addEntry('Invalid payment for order# '.$o->getOrderID() . " Requested ". $pkg->config('CURRENCY_SYMBOL').$order_total.', got '.$pkg->config('CURRENCY_SYMBOL').$paid_total );
@@ -97,13 +117,94 @@ class CoreCommerceHospitalityEntrepreneurPaymentMethodController extends CoreCom
 			$this->set('action', 'https://www.paypal.com/cgi-bin/webscr');
 		}
 		$o = CoreCommerceCurrentOrder::get();
+		
+		$membershipProduct = $this->get_membership_product($o);
+		
+		$trialPeriod = 0;
+		$membershipProductPrice = 0;
+		$membershipAdded = false;
+		
+		
+		if($membershipProduct instanceof CoreCommerceOrderProduct)
+		{
+			//get the actual product so we can get the definitation.
+			$productObject = $membershipProduct->getProductObject();
+			
+			//ok, we have a membershp.  Lets get the trial period if there is one, followed by the price of membership.
+			$trialPeriod = $productObject->getAttribute('trial_period');
+			
+			//If the membership product is the FREE membership...
+			if(strtolower($productObject->getProductName()) == 'free')
+			{
+				//lets set the price to that of the STARTER membership.
+				$membershipProductObj = new HospitalityEntrepreneurMembershipProductsModel();
+				
+				//get the starter membereship.
+				$membershipProductObj->filterByMembershipName('Starter');
+				if(count($membershipProductObj) > 0)
+				{
+					//get the membership product.
+					$starterMembership = $membershipProductObj->get(1);
+					$starterMembership = $starterMembership[0];
+					//and set the price.
+					$membershipProductPrice = $starterMembership->getProductPrice();
+					
+					
+					
+				}
+				
+				$fields['a3'] = $membershipProductPrice;
+				$fields['p3'] = 30;
+				$fields['t3'] = 'D';
+				
+				
+			}
+			else {
+				//set to whatever the product price is.
+				$membershipProductPrice = $productObject->getProductPrice();
+				
+				$fields['a3'] = $membershipProductPrice;
+				$fields['p3'] = 1;
+				$fields['t3'] = 'M';
+				
+			}
+			
+			//set flag to indicate that membership has been added.
+			$membershipAdded = true;
+		}
+		
+		
       //would it be possible to set the status here
       //then we would have a legitimate invoice number
       $o->setStatus(CoreCommerceOrder::STATUS_INCOMPLETE);
 		$this->set('item_name', SITE);
 
 		// paypal fields
+		
+		
 		$fields['cmd'] = '_xclick';
+		
+		if($membershipAdded)
+		{
+			//membership is added, we need to change the cmd and set some additional fields
+			$fields['cmd'] = '_xclick-subscriptions';
+			$fields['src'] = 1;
+			
+			if(isset($trialPeriod) && $trialPeriod > 0)
+			{
+				$fields['a1'] = 0;	
+				$fields['p1'] = $trialPeriod;
+				$fields['t1'] = 'D';
+				
+				
+				
+			}
+			
+			
+				
+		}
+		
+		
 		$fields['address_override'] = 0;
 		$fields['rm'] = 2;
 		$fields['no_note'] = 1;
@@ -152,7 +253,8 @@ class CoreCommerceHospitalityEntrepreneurPaymentMethodController extends CoreCom
 		
  		//callback
 		$fields['notify_url'] = $this->action('notify_complete');
-	
+		
+		
 		$ch = Loader::helper('checkout/step', 'core_commerce');
 		$ns = $ch->getNextCheckoutStep();
 		$ps = $ch->getCheckoutStep();
@@ -173,6 +275,44 @@ class CoreCommerceHospitalityEntrepreneurPaymentMethodController extends CoreCom
 		$pkg->saveConfig('PAYMENT_METHOD_PAYPAL_STANDARD_PASS_ADDRESS', $this->post('PAYMENT_METHOD_PAYPAL_STANDARD_PASS_ADDRESS'));
 	}
 	
+	/**
+	 * Checks all products of an order to see what membership is defined.
+	 * @param $order The order that contains the products.
+	 * 
+	 * @return The membership product from the order
+	 */
+	private function get_membership_product($order)
+	{
+		Loader::model('product/set','core_commerce');	
+		Loader::helper('utilities','hospitality_entrepreneur');
+		$utils = new HospitalityEntrepreneurUtilitiesHelper();
+			
+			
+		$productsOrdered = $order->getProducts();
+		
+		//get the membership product set.
+		$membershipProductSet = $utils->get_membership_set();
+		
+		if($membershipProductSet instanceof CoreCommerceProductSet)
+		{
+			//search all products
+			foreach($productsOrdered as $productOrdered)
+			{
+				if($productOrdered->inProductSet($membershipProductSet))
+				{
+					//its a membership product.  Lets get this one.  We get the first one that is in the list of orders.
+					return $productOrdered;
+				}
+			}
+			
+			
+			
+		}
+		
+		return null;
+		
+		
+	}		
 
    private function validateIPN() {
       $pkg = Package::getByHandle('core_commerce');

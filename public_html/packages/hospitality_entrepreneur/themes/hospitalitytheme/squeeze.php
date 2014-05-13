@@ -6,18 +6,21 @@ $this->inc('elements/squeeze_header.php'); ?>
 		<div class="mainContainer">
         
         <div class="row topRowPad">
-		</div>
-        
-        
-        
-        <div class="row">
-        	<div class="grid-12 columns">
+	
+        	<div class="grid-8 columns">
 			<?php  
 			$a = new Area('Main');
 			$a->display($c);
 			?>
             </div>
-        </div>
+            
+              	<div class="grid-4 columns">
+			<?php  
+			$a = new Area('Sidebar');
+			$a->display($c);
+			?>
+            </div>
+    
         
    <div class="fullwidthmembers">
 

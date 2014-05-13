@@ -7,6 +7,11 @@ class HospitalityEntrepreneurPackage extends Package {
 	protected $appVersionRequired = '1.0.0';
 	protected $pkgVersion = '1.0.3';
 	
+	public function on_start()
+	{
+		Events::extend('core_commerce_change_order_status', 'HEChangeOrderStatus', 'onChange', DIRNAME_PACKAGES . '/' . $this->pkgHandle . '/models/events/change_order_status.php');
+	}
+	
 	public function getPackageDescription()
 	{
 		

@@ -26,7 +26,7 @@ $(function() {
 	);
 	$('.product-list-add-to-cart-form').each(
 		function () {
-			ccm_coreCommerceRegisterAddToCart(this.id);
+			//ccm_coreCommerceRegisterAddToCart(this.id);
 			//e.preventDefault();
 		}
 	);

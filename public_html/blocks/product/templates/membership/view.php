@@ -312,9 +312,9 @@ if ($displayImage) {
 <?php    if (!$c->isEditMode()) { ?>
 <script type="text/javascript">
 	$(function() {
-		ccm_coreCommerceRegisterAddToCart('ccm-core-commerce-add-to-cart-form-<?php   echo $id?>', '<?php   echo $uh->getToolsURL('cart_dialog')?>');
+		//ccm_coreCommerceRegisterAddToCart('ccm-core-commerce-add-to-cart-form-<?php   echo $id?>', '<?php   echo $uh->getToolsURL('cart_dialog')?>');
 		<?php    if ($useOverlaysC) { ?>
-			ccm_coreCommerceRegisterCallout('ccm-core-commerce-add-to-cart-form-<?php   echo $id?>');
+			//ccm_coreCommerceRegisterCallout('ccm-core-commerce-add-to-cart-form-<?php   echo $id?>');
 		<?php    } ?>
 		<?php    if ($useOverlaysL) { ?>
 			$('#ccm-core-commerce-add-to-cart-form-<?php   echo $id?> .ccm-core-commerce-add-to-cart-lightbox-image').lightBox({

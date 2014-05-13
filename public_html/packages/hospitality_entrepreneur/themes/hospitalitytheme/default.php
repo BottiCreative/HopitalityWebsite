@@ -17,7 +17,23 @@ $this->inc('elements/header.php'); ?>
 			$a = new Area('Sidebar');
 			$a->display($c);
 			?>
-		</div>	
+		</div>
+        </div>	
+        
+        <div class="row">
+           	<div class="grid-6 columns">
+			<?php  
+			$a = new Area('Partners Left');
+			$a->display($c);
+			?>
+			</div>
+            	<div class="grid-6 columns">
+			<?php  
+			$a = new Area('Partners Right');
+			$a->display($c);
+			?>
+			</div>
+        
 	</div>
 
 	

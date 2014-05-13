@@ -46,10 +46,10 @@ foreach($properties as $property) {
 	
 	<?php  } ?>
 	
-	<?php  if ($property->handle == 'displayPrice' && (!$hasBothPrices)) { ?>		
+	<!--?php  if ($property->handle == 'displayPrice' && (!$hasBothPrices)) { ?>		
 		<div><?php echo Loader::packageElement('product/price', 'core_commerce', array('product' => $product, 'displayDiscount' => false, 'userHasAccess' => $userHasAccess)); ?></div>
 	
-	<?php  } ?>
+	<php  } -->
 	
 	<?php  if ($property->handle == 'displayDiscount') { ?>		
 
@@ -107,30 +107,50 @@ foreach($properties as $property) {
 			<!-- Lets show the membership here -->
 					<?php
 					
-							$db = Loader::db();
-					$arrmembershipLevel = $db->GetAll("SELECT ak_Membership_Level FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($product->getProductID()));
+					//load the custom membership product class.  Use to get the membership name
+					Loader::model('membershipproduct','hospitality_entrepreneur');
+					Loader::model('membershipproducts','hospitality_entrepreneur');
 					
-					//get the membership product set.  We only want the membership product wth this membership level.
-					$membershipProductSetID = $db->GetAll("SELECT prsID FROM CoreCommerceProductSets WHERE prsName = ?",array($membershipName));
-					$selectedProductSetID = $membershipProductSetID[0]['prsID'];
-					
-					 	
-					 
-					//lets get the product(s)
-					$productList = new CoreCommerceProductList();
-					$productSet = new CoreCommerceProductSet();
-					
-					 
+					$membershipProducts = new HospitalityEntrepreneurMembershipProductModel();
+					$selectedMembershipLevel = $membershipProducts->getMembershipLevel($product->getProductID());
 					
 					
-					$selectedProductSet = $productSet->getByID($selectedProductSetID);
+					$membershipProducts = new HospitalityEntrepreneurMembershipProductsModel();
+					$membershipProducts->filterByMembershipName('Free');
 					
 					
-					//filter by membership set.
-					$productList->filterBySet($selectedProductSet);
+					if(count($membershipProducts) < 1)
+					{
+						throw new Exception('FREE Membership Signup option cannot be found.');
+						
+					}
+					
+					//get the first product  - it should be the FREE
+					$freeMembershipProduct = $membershipProducts->get(0);
+					
+					//now, reset the search, and lets try and if this product has a membership level then we get the membership that needs to be added. 
+					$membershipProducts = new HospitalityEntrepreneurMembershipProductsModel();
+					//$membershipNameProduct->filterByMembershipName($selectedMembershipLevel);
+					$membershipProducts->filterByMembershipName($selectedMembershipLevel);
+					
+					$selectedMembershipProduct = null;
+					
+					
+					if($membershipProducts->getTotal() > 0)
+					{
+						$arrSelectedMembershipProduct = $membershipProducts->get(0);
+						$selectedMembershipProduct = $arrSelectedMembershipProduct[0];
+					}
+					
+					
+					
 					
 					//now lets show the form.
-					echo Loader::packageElement('membershipsignup/view', 'hospitality_entrepreneur', array('productArray' => $productList->get(1),'controller' => $this,'producttobuy' => $product));
+					echo Loader::packageElement('membershipsignup/view', 'hospitality_entrepreneur', 
+												array('membershipproduct' => $selectedMembershipProduct
+													,'controller' => $this,
+													'producttobuy' => $product,
+													'freemembershipproduct' => $freeMembershipProduct[0]));
 					
 					
 					
@@ -173,6 +193,7 @@ foreach($properties as $property) {
 		<?php  }
 		
 	} ?>
+	
 	
 	
 

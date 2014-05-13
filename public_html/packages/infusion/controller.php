@@ -5,7 +5,7 @@ class InfusionPackage extends Package {
 	
 	protected $pkgHandle = 'infusion';
 	protected $appVersionRequired = '1.0.0';
-	protected $pkgVersion = '1.0.0';
+	protected $pkgVersion = '1.0.1';
 	
 	public function getPackageDescription()
 	{
@@ -29,8 +29,11 @@ class InfusionPackage extends Package {
 	public function install() {
 			
 		$pkg = parent::install();	
-			
 		
+		//add the Infusion API connectionname here.
+        $pkg->saveConfig('INFUSION_CONNECTIONNAME','vn172');
+        	
+        	
 	}
 	
 	public function upgrade()
@@ -38,6 +41,9 @@ class InfusionPackage extends Package {
 		
 		parent::upgrade();
 		
+		 $pkg = Package::getByHandle($this->pkgHandle);
+		 $pkg->saveConfig('INFUSION_CONNECTIONNAME','vn172');
+			
 		
 	}
 	

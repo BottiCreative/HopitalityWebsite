@@ -42,8 +42,8 @@
                 <div class="social">
         		<p><a href="https://www.facebook.com/pages/Hospitality-Entrepreneur/449799375102971?ref=hl" target="_blank" class="fbLink" rel="nofollow" ></a>
               	<a href="https://twitter.com/hospitalitypete" target="_blank" class="twitLink" rel="nofollow" ></a>
-              	<a href="" target="_blank" class="inLink" rel="nofollow" ></a>
-                <a href="" target="_blank" class="youLink" rel="nofollow" ></a></p>
+              	<a href="http://uk.linkedin.com/pub/peter-austen/34/36b/6a" target="_blank" class="inLink" rel="nofollow" ></a>
+                <a href="https://www.youtube.com/watch?v=vVUqpIRCLBs" target="_blank" class="youLink" rel="nofollow" ></a></p>
                 </div>
         
         
@@ -58,7 +58,7 @@
 
 <div id="VideoModal" class="reveal-modal" data-reveal>
 <div class="row">
-<iframe width="853" height="480" src="//www.youtube.com/embed/vVUqpIRCLBs" frameborder="0" allowfullscreen></iframe>
+<iframe width="853" height="480" src="//www.youtube.com/embed/XnAoBOpfds4?&rel=0&showinfo=0&modestbranding=1&autohide=1" frameborder="0" allowfullscreen></iframe>
   <a class="close-reveal-modal">&#215;</a>
 </div>
 </div>

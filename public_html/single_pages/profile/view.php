@@ -21,7 +21,7 @@
 
 	<div class="panel">
     
-            <h1><?php echo $profile->getUserName()?></h1>
+        <h1>Welcome <strong><?php echo $profile->getUserName()?> </strong>how are you today</h1>
         <?php 
         $uaks = UserAttributeKey::getPublicProfileList();
         foreach($uaks as $ua) { ?>
@@ -32,7 +32,7 @@
         <?php  } ?>		
         
   
-		
+		<div class="clearfix"></div>
 		<?php  
 			$a = new Area('Main'); 
 			$a->setAttribute('profile', $profile); 
@@ -42,17 +42,103 @@
 		?>
         
         
-        		<?php  
+        <?php  
 			$a = new Area('Members Main');
 			$a->display($c);
 			?>
     
     
-    
-    
-    
-    
     </div>
+    
+    <div class="grid-6 columns nopadLeft membersTabs">
+
+		<div class="panel ">
+        
+        <a href="">
+        
+        <i class="anp-icon-clipboard"></i>
+    
+   	 	<span class="tabtitle">Your Resources</span>
+        <span class="tabDesc">Text to go here</span>
+        
+        </a>
+    
+    	</div>
+    </div>
+    
+        <div class="grid-6 columns nopadRight membersTabs">
+
+		<div class="panel">
+        
+        <a href="">
+        <i class="anp-icon-comments-o"></i>
+   	 	<span class="tabtitle">Members Blog</span>
+        <span class="tabDesc">Text to go here</span>
+        
+        </a>
+    
+    	</div>
+    </div>
+    
+    <div class="clearfix"></div>
+    
+        <div class="grid-6 columns nopadLeft membersTabs">
+
+		<div class="panel">
+        
+        <a href="">
+    	<i class="anp-icon-comments-o"></i>
+   	 	<span class="tabtitle">Partners Offers</span>
+        <span class="tabDesc">Text to go here</span>
+        </a>
+    
+    	</div>
+    </div>
+    
+        <div class="grid-6 columns nopadRight membersTabs">
+
+		<div class="panel">
+        
+        <a href="">
+    	<i class="anp-icon-comments-o"></i>
+   	 	<span class="tabtitle">Exclusive Video</span>
+        <span class="tabDesc">Text to go here</span>
+        </a>
+    
+    	</div>
+    </div>
+    
+     <div class="clearfix"></div>
+     
+     
+      <div class="grid-6 columns nopadLeft membersTabs">
+
+		<div class="panel">
+        
+        <a href="">
+
+    	<i class="anp-icon-comments-o"></i>
+   	 	<span class="tabtitle">Forum</span>
+        <span class="tabDesc">Text to go here</span>
+        </a>
+    
+    	</div>
+    </div>
+    
+        <div class="grid-6 columns nopadRight membersTabs">
+
+		<div class="panel">
+        <a href="">
+        <i class="anp-icon-comments-o"></i>
+    
+   	 	<span class="tabtitle">Survey's</span>
+        <span class="tabDesc">Text to go here</span>
+        </a>
+    
+    	</div>
+    </div>
+    
+    
 </div><!--end Grid-->
 
 

@@ -4,18 +4,21 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
 //Lets load the set model from core_commerce
 Loader::model('product/set','core_commerce');
 Loader::model('product/list','core_commerce');
-Loader::helper('geocode','moo_music');
+
 		
 		
 		
-class MooMusicAreasModel extends CoreCommerceProductList {
+class HospitalityEntrepreneurMembershipProductsModel extends CoreCommerceProductList {
 	
-	public function __construct()
+	
+	
+	public function filterByMembershipName($membershipProductName)
 	{
-		$this->filterAreas();
+		$db = Loader::db();	
+		$this->filterByMembershipSet();
+		$this->filter(false,"pr.prName = {$db->quote($membershipProductName)}");
 		
 	}
-	
 	
 	/** 
 	 * Filters areas where no coordinates are present e.g where longitude and latitude is 0
@@ -124,9 +127,9 @@ class MooMusicAreasModel extends CoreCommerceProductList {
 	
 	
 	/**
-	 * Filters by all moo music areas.
+	 * Filters by all membership.
 	 */
-	private function filterAreas()
+	private function filterByMembershipSet()
 	{
 		
 		$set = new CoreCommerceProductSet();
@@ -136,7 +139,7 @@ class MooMusicAreasModel extends CoreCommerceProductList {
 		
 		foreach($sets as $productSet)
 		{
-			if($productSet instanceof CoreCommerceProductSet && $productSet->prsName == 'MooMusic Areas' )
+			if($productSet instanceof CoreCommerceProductSet && $productSet->prsName == 'Membership' )
 			{
 				$this->filterBySet($productSet);		
 				
