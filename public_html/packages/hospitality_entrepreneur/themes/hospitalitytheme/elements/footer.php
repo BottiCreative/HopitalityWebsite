@@ -58,7 +58,11 @@
 
 <div id="VideoModal" class="reveal-modal" data-reveal>
 <div class="row">
-<iframe width="853" height="480" src="//www.youtube.com/embed/XnAoBOpfds4?&rel=0&showinfo=0&modestbranding=1&autohide=1" frameborder="0" allowfullscreen></iframe>
+
+
+<iframe width="853" height="480" src="//www.youtube.com/embed/XnAoBOpfds4" frameborder="0" allowfullscreen></iframe>
+
+
   <a class="close-reveal-modal">&#215;</a>
 </div>
 </div>

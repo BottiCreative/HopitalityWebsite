@@ -115,6 +115,7 @@ foreach($properties as $property) {
 					$selectedMembershipLevel = $membershipProducts->getMembershipLevel($product->getProductID());
 					
 					
+					
 					$membershipProducts = new HospitalityEntrepreneurMembershipProductsModel();
 					$membershipProducts->filterByMembershipName('Free');
 					
@@ -134,7 +135,6 @@ foreach($properties as $property) {
 					$membershipProducts->filterByMembershipName($selectedMembershipLevel);
 					
 					$selectedMembershipProduct = null;
-					
 					
 					if($membershipProducts->getTotal() > 0)
 					{
