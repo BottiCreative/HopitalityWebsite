@@ -155,8 +155,13 @@ if ($displayImage) {
 			
 			<div class="ccm-core-commerce-add-to-cart-product-button-box">
 				<?php    if ($product->isProductEnabled()) { ?>
-					<span class="ccm-core-commerce-add-to-cart-submit"><?php   
-					echo $form->submit('submit', $addToCartText,array('onclick'=>'showOverlay();')); ?></span>
+					<!--<span class="ccm-core-commerce-add-to-cart-submit">--><?php   
+					//echo $form->submit('submit', $addToCartText,array('onclick'=>'showOverlay();','class' => 'regButt','id' => 'register')); ?>
+					<!--</span>-->
+					
+					<input type="submit" id="register" value="Get your FREE Trial NOW"  class="regButt" />
+					
+					
 					<img src="<?php   echo ASSETS_URL_IMAGES?>/throbber_white_16.gif" width="16" height="16" class="ccm-core-commerce-add-to-cart-loader" />
 
 				<?php    } else { ?>

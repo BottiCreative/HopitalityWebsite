@@ -17,10 +17,11 @@ ul.pronav_list li,
 ol.pronav_list li  {
 padding: 0;
 margin: 0;
-list-style: none
+list-style: none;
+
 }
 
-.anp_bootstrap_nav{ padding: 20px 0;}
+.anp_bootstrap_nav{ padding: 0px 0!important;}
 
 
 ol.pronav_list ol li {float:none}
@@ -31,7 +32,6 @@ ol.pronav_list ol li {float:none}
 	outline: 0;
 	text-decoration: none;
 	cursor: pointer;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	text-shadow:none;
 	text-align:left;
 }
@@ -66,11 +66,7 @@ ol.pronav_list ol li {float:none}
 div#main-container ol.pronav_list a,
 div#main-container ol.pronav_list a:visited,
 div#main-container ol.pronav_list a:hover
-
-{	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	outline: 0;
-	text-decoration: none;
-	cursor: pointer
+{outline: 0;text-decoration: none;cursor: pointer
 }
 
 div#main-container  ol.pronav_list ,
@@ -83,7 +79,7 @@ div#main-container ol.pronav_list ol li
 	list-style: none
 }
 
-.ol.pronav_list{ float: right; background: #f00;}
+.ol.pronav_list{ float: left;}
 
 div#main-container  ol.pronav_list  li{
 	display:block
@@ -102,7 +98,7 @@ div#main-container .anp_bootstrap_nav ol.pronav_list .dropdown-menu li.open > a:
 div#main-container .anp_bootstrap_nav ol.pronav_list a:hover,
 div#main-container .anp_bootstrap_nav ol.pronav_list li a.nav-selected
 {
-	color:#fff
+	color:#fff; 
 }
 
 /*_____________________________________________________________reset___________________________________________________________*/
@@ -110,15 +106,13 @@ div#main-container .anp_bootstrap_nav ol.pronav_list li a.nav-selected
 /*nav list*/
 .anp_bootstrap_nav .pronav_list a,
 div#main-container .anp_bootstrap_nav ol.pronav_list li a{
-	font-size:14px;
+	font-size:15px;
 	line-height:20px;
-	padding:10px 20px
+	padding:10px 10px 10px 30px
 }
 .anp_bootstrap_nav .pronav_list a i {line-height:16px}
 
-.anp_bootstrap_nav .pronav_list > li {
-  float: right;
-}
+.anp_bootstrap_nav .pronav_list > li {float: left;}
 
 
 .anp_bootstrap_nav ol.pronav_list{ background: #0f0;}
@@ -127,8 +121,8 @@ ol.pronav_list{ background: #f00;}
 .anp_bootstrap_nav .pronav_list > li > a ,
 div#main-container .anp_bootstrap_nav ol.pronav_list li a{
   float: none;
-  padding: 10px 15px 10px;
-  color: #999999;
+  padding: 10px 10px 10px 30px;
+  color: #666;
   text-decoration: none;
  
 }
@@ -141,7 +135,7 @@ div#main-container .anp_bootstrap_nav ol.pronav_list li a{
 .anp_bootstrap_nav .pronav_list > li > a:hover,
 .anp_bootstrap_nav .pronav_list > li  a {
   text-decoration: none;
-  background-color: transparent;
+  background-color: transparent; font-family: 'Raleway', sans-serif!important;
 }
 .anp_bootstrap_nav ol.pronav_list  li.open > a,
 .anp_bootstrap_nav .pronav_list > .nav-selected > a,
@@ -156,7 +150,7 @@ div#main-container .anp_bootstrap_nav .anp_bootstrap_nav .pronav_list > li.open 
  {
   color: #84B400;
   text-decoration: none;
-  background-color: #f1f1f1;
+  background-color: #f1f1f1; 
 }
 
 .pronav_list {

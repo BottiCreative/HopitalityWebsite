@@ -4,13 +4,16 @@ $this->inc('elements/header.php'); ?>
 	
 
 		<div class="row topRowPad">
+        
+        <main>
         	<div class="grid-8 columns">
+            
 			<?php  
 			$a = new Area('Main');
 			$a->display($c);
 			?>
 			</div>
-
+</main>
 
 		<div class="grid-4 columns">
 			<?php  
@@ -19,6 +22,21 @@ $this->inc('elements/header.php'); ?>
 			?>
 		</div>
         </div>	
+        
+        
+  <div class="fullwidthgreen">
+	<div class="row Homeform">
+  
+    	<?php  
+			$a = new Area('Giveaway');
+			$a->display($c);
+			?>
+    </div>
+</div>      
+        
+        
+        
+        
         
         <div class="row">
            	<div class="grid-6 columns">
@@ -33,6 +51,15 @@ $this->inc('elements/header.php'); ?>
 			$a->display($c);
 			?>
 			</div>
+            
+            <div class="grid-12 columns">
+			<?php  
+			$a = new Area('Bottom Full');
+			$a->display($c);
+			?>
+			</div>
+            
+            
         
 	</div>
 

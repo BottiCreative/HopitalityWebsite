@@ -24,7 +24,7 @@ class PartnersMainBlockController extends BlockController {
 	}
 
 	public function view() {
-		$this->set('field_1_image', (empty($this->field_1_image_fID) ? null : $this->get_image_object($this->field_1_image_fID, 200, 200, true)));
+		$this->set('field_1_image', (empty($this->field_1_image_fID) ? null : $this->get_image_object($this->field_1_image_fID, 600, 600, true)));
 	}
 
 

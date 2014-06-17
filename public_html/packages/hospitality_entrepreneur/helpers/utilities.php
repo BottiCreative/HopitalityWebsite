@@ -102,17 +102,18 @@
 		}
 		
 		
-		/*//if the current user is a superuser or has admin access then give them access.
+		//if the current user is a superuser or has admin access then give them access.
 		$userHasAccess = ($user->isSuperUser() || $user->inGroup(Group::getByName("Administrators"))); 
 		
 		if($userHasAccess)
 		{
 			return $userHasAccess;
-		}*/
+		}
 		
 		
 		$db = Loader::db();
 		$arrPurchaseGroups = $db->GetAll("SELECT ak_authorized_members FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($product->getProductID()));
+		
 		
 		//get purchase groups by splitting by newline characters.
 		$purchaseGroups = explode("\n",$arrPurchaseGroups[0]['ak_authorized_members']);
@@ -127,8 +128,6 @@
 				
 			$group = Group::getByName($purchaseGroup);
 			
-			//if the current user is a superuser or has admin access then give them access.
-			$userHasAccess = ($user->isSuperUser() || $user->inGroup(Group::getByName("Administrators"))); 
 			
 			if(!$userHasAccess)
 			{

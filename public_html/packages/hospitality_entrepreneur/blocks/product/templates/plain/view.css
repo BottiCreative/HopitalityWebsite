@@ -1,5 +1,8 @@
 /* containers */
 
+
+.resourceWrapper{ width: 282px; float: left; height: auto; margin: 10px 20px; }
+
 .ccm-core-commerce-add-to-cart-container {
   width: 100%;
 }

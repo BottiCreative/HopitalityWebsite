@@ -89,7 +89,7 @@ padding: 0 3px;
 }
 
 .ccm-core-commerce-add-to-cart-product-price {
-color: #fff!important; display: block; float: left; font-size: 20px; margin: 10px 0;
+/*color: #fff!important; display: block; float: left; font-size: 20px; margin: 10px 0;*/ display: none;
 }
 
 .btn.ccm-input-submit{ float:right; margin: 10px 0;}
@@ -99,7 +99,9 @@ color: #fff!important; display: block; float: left; font-size: 20px; margin: 10p
 div.ccm-core-commerce-product-list-product{position: relative;}
 
 .ccm-core-commerce-add-to-cart-product-name{ background-color: rgba(0, 0, 0, .6);
-color: rgba(0, 0, 0, .6); position: absolute; bottom: 80px; z-index: 10; display: block; padding: 15px; width: 85%; font-size: 16px; font-weight: 400; color: #fff; }
+color: rgba(0, 0, 0, .6); position: absolute; bottom: 80px; z-index: 10; display: block; padding: 15px 7px 15px 15px; width: 85%; font-weight: 400; color: #fff; left: 10px; }
+
+.ccm-core-commerce-add-to-cart-product-name a:hover{ color: #84b400;}
 
 div.membership-overlay{position: absolute; top: -5px; left: -5px;  }
 .overlayRibbon{ width: 100px; height: 100px;}
@@ -110,10 +112,12 @@ div.membership-overlay.overlay-Starter{background: url(images/sash-starter.png) 
 div.membership-overlay.overlay-Starvervip{background: url(images/sash-starter.png) no-repeat top left!important;}
 div.membership-overlay.overlay-Club{background: url(images/sash-clubplus.png) no-repeat top left!important;}
 
-.productListprodHolder{ position: relative; float: left; background: #333!important; width: 100%; height: 320px; padding: 10px; margin: 10px 0;  }
+.productListprodHolder{ position: relative; float: left; background: #333!important; width: 100%; min-height: 250px; margin: 10px 0;  }
 
 
-/*.productListprodHolder img{ margin-bottom: 10px;}*/
+.productListprodHolder img{min-width: 282px; height: 250px; padding: 10px;}
+
+.resourceWrapper{ width: 282px; float: left; height: auto; margin: 10px 20px; }
 
 /*.photo img,.ccm-core-commerce-add-to-cart-image img{min-width: 282px; height: 250px;}*/
 

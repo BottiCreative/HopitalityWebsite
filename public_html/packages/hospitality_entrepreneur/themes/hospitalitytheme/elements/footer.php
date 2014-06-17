@@ -1,7 +1,7 @@
 <?php   defined('C5_EXECUTE') or die("Access Denied."); ?>
 <div class="fullwidthfooter">
 	<div class="row">
-    	<div class="grid-6 columns nopadRight">
+    	<div class="grid-6 columns">
         	<img src="<?php  echo $this->getThemePath(); ?>/images/footerLogo.gif" alt="Hospitality Entrepreneur"/>
             <p>Hospitality Entrepreneur is a collaboration of leading industry professionals and companies, with proven expertise in building successful hospitality businesses. Our goal is to ensure you get better profits, better knowledge and better peace of mind.</p>
         <p class="footCopy">&copy;<?php  echo date('Y')?> Hospitality Entrepreneur ~ All rights reserved</p>
@@ -10,7 +10,7 @@
         <div class="grid-6 columns FootLinks">
         
         <ul>
-        <li><a class="headLink" href="">A little Info</a></li>
+        <li><a class="headLink" href="/about/">A little Info</a></li>
         <li><a href="/about/">About Us</a></li>
         <li><a href="/partners/">Partners</a></li>
         <li><a href="/membership/">Membership</a></li>
@@ -43,7 +43,7 @@
         		<p><a href="https://www.facebook.com/pages/Hospitality-Entrepreneur/449799375102971?ref=hl" target="_blank" class="fbLink" rel="nofollow" ></a>
               	<a href="https://twitter.com/hospitalitypete" target="_blank" class="twitLink" rel="nofollow" ></a>
               	<a href="http://uk.linkedin.com/pub/peter-austen/34/36b/6a" target="_blank" class="inLink" rel="nofollow" ></a>
-                <a href="https://www.youtube.com/watch?v=vVUqpIRCLBs" target="_blank" class="youLink" rel="nofollow" ></a></p>
+                <a href="https://www.youtube.com/channel/UCPk91_CerE_J_F8IMBJ9hiw" target="_blank" class="youLink" rel="nofollow" ></a></p>
                 </div>
         
         

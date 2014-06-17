@@ -32,7 +32,7 @@
         <?php  } ?>		
         
   
-		<div class="clearfix"></div>
+<div class="clearfix"></div>
 		<?php  
 			$a = new Area('Main'); 
 			$a->setAttribute('profile', $profile); 
@@ -40,105 +40,36 @@
 			$a->setBlockWrapperEnd('</div>');
 			$a->display($c); 
 		?>
-        
-        
-        <?php  
+		<?php  
 			$a = new Area('Members Main');
 			$a->display($c);
 			?>
-    
-    
-    </div>
-    
-    <div class="grid-6 columns nopadLeft membersTabs">
+</div>
 
-		<div class="panel ">
-        
-        <a href="">
-        
-        <i class="anp-icon-clipboard"></i>
+<div class="grid-12 columns">     
+            <?php  
+			$a = new Area('MembersTabs Header');
+			$a->display($c);
+			?>
+</div>
     
-   	 	<span class="tabtitle">Your Resources</span>
-        <span class="tabDesc">Text to go here</span>
-        
-        </a>
-    
-    	</div>
-    </div>
-    
-        <div class="grid-6 columns nopadRight membersTabs">
+<div class="grid-6 columns nopadLeft membersTabs">
+            <?php  
+			$a = new Area('MembersTabs Left');
+			$a->display($c);
+			?>
+</div>
 
-		<div class="panel">
-        
-        <a href="">
-        <i class="anp-icon-comments-o"></i>
-   	 	<span class="tabtitle">Members Blog</span>
-        <span class="tabDesc">Text to go here</span>
-        
-        </a>
+<div class="grid-6 columns nopadRight membersTabs">   
+            <?php  
+			$a = new Area('MembersTabs Right');
+			$a->display($c);
+			?>
+</div>
     
-    	</div>
-    </div>
-    
-    <div class="clearfix"></div>
-    
-        <div class="grid-6 columns nopadLeft membersTabs">
+<div class="clearfix"></div>
+<div class="clearfix"></div>
 
-		<div class="panel">
-        
-        <a href="">
-    	<i class="anp-icon-comments-o"></i>
-   	 	<span class="tabtitle">Partners Offers</span>
-        <span class="tabDesc">Text to go here</span>
-        </a>
-    
-    	</div>
-    </div>
-    
-        <div class="grid-6 columns nopadRight membersTabs">
-
-		<div class="panel">
-        
-        <a href="">
-    	<i class="anp-icon-comments-o"></i>
-   	 	<span class="tabtitle">Exclusive Video</span>
-        <span class="tabDesc">Text to go here</span>
-        </a>
-    
-    	</div>
-    </div>
-    
-     <div class="clearfix"></div>
-     
-     
-      <div class="grid-6 columns nopadLeft membersTabs">
-
-		<div class="panel">
-        
-        <a href="">
-
-    	<i class="anp-icon-comments-o"></i>
-   	 	<span class="tabtitle">Forum</span>
-        <span class="tabDesc">Text to go here</span>
-        </a>
-    
-    	</div>
-    </div>
-    
-        <div class="grid-6 columns nopadRight membersTabs">
-
-		<div class="panel">
-        <a href="">
-        <i class="anp-icon-comments-o"></i>
-    
-   	 	<span class="tabtitle">Survey's</span>
-        <span class="tabDesc">Text to go here</span>
-        </a>
-    
-    	</div>
-    </div>
-    
-    
 </div><!--end Grid-->
 
 

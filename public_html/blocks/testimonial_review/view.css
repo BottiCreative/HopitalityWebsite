@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.testHolderLeft { width: 100%; height: auto; float: left; margin: 20px 0; padding: 0;}
+
+.testWrap{ width: 100%; height: auto; float: left; margin: 0 0 25px 0; background: #fff; padding: 10px 20px; -webkit-border-radius: 10px;
+border-radius: 10px; border: solid 3px #e9e9e9; position: relative;}
+
+.speechBox{ width: 40px; height: 30px; bottom: -30px; left: 10%; background: url(speech-Down.png) no-repeat center bottom; position: absolute;}
+
+.testHolderLeft h3{ font-size: 20px; line-height: 30px; color: #333; font-weight: 700; font-weight: bold; margin: 10px 0;}
+
+.testHolderLeft p{ font-size: 17px; line-height: 22px; color: #333; font-weight: 300; margin-bottom: 10px;}
+
+.testHolderLeft .testImage{ margin: 0; width: 100px; float: left;}
+.testHolderLeft .testImage img{ border-radius: 50%; -moz-border-radius: 50%;  border: solid 3px #e9e9e9; max-width: 80%;}
+
+.qouteAfter{ margin: 50px 0;}
+
+
+.testName{ margin-bottom: 0px;}
+.testName strong{ font-weight: bold; font-weight: 700; color: #84b400; display: block; padding: 15px 0 0 0;}
+.testName em{ font-size: 17px; line-height: 22px; color: #333; font-weight: 300; font-weight: normal; margin-bottom: 10px; font-style: normal; font-weight: 700;}

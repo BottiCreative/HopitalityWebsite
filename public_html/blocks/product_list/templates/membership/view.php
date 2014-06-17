@@ -117,7 +117,7 @@ if ($options['show_search_form']) {
 				
 				$args['userHasAccess'] = $utils->user_has_access($pr); 
 				
-				
+				//var_dump($args);
 				
 				
 				Loader::packageElement('../blocks/product/templates/plain/view','hospitality_entrepreneur', $args);

@@ -14,7 +14,7 @@
 <script src="<?php  echo $this->getThemePath(); ?>/js/modernizr.js"></script>
 
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
 
 
 </head>

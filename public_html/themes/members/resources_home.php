@@ -4,12 +4,12 @@ $this->inc('elements/header.php'); ?>
 
 
 		
-        
-        <div class="row">
-        
+       <div class="rowWide" >
         
         
-			<div class="grid-12 columns">
+			<div class="grid-12 columns sectionNav">
+            
+            <h1>Resources: <span><?php echo $c->getCollectionName() ?></span></h1>
             
         <?php  
         	$a = new GlobalArea('Resources Header');
@@ -18,11 +18,12 @@ $this->inc('elements/header.php'); ?>
             
             
             </div>
-		</div>
+            </div>
+	
         
         
         
-        <div class="row">
+        <div class="rowWide">
         	<div class="grid-12 columns">
 			<?php  
 			$a = new Area('Main');

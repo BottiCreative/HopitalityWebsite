@@ -11,6 +11,7 @@ if(!isset($pkg)) {
 $c = Page::getCurrentPage();
 
 
+
 $userHasAccess = $util->user_has_access($product);
 
 

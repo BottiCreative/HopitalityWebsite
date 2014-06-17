@@ -4,8 +4,7 @@ $nh = Loader::helper('navigation');
 
 
 		<div class="row partnerBlock">
-        
-        	<div class="grid-3 columns">
+        	<div class="grid-12 columns">
             
             <?php  if (!empty($field_1_image)): ?>
 	<?php  if (!empty($field_1_image_internalLinkCID)) { ?><a href="<?php  echo $nh->getLinkToCollection(Page::getByID($field_1_image_internalLinkCID), true); ?>"><?php  } ?><img src="<?php  echo $field_1_image->src; ?>" width="<?php  echo $field_1_image->width; ?>" height="<?php  echo $field_1_image->height; ?>" alt="<?php  echo $field_1_image_altText; ?>" /><?php  if (!empty($field_1_image_internalLinkCID)) { ?></a><?php  } ?>
@@ -13,8 +12,7 @@ $nh = Loader::helper('navigation');
 
 			</div>
 
-
-		<div class="grid-9 columns">
+<div class="grid-12 columns">
         
         <?php  if (!empty($field_2_textbox_text)): ?>
 	<h3><?php  echo htmlentities($field_2_textbox_text, ENT_QUOTES, APP_CHARSET); ?></h3>

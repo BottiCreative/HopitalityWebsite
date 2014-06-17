@@ -14,7 +14,9 @@
 <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/reveal-modal.css"/>
 <script src="<?php  echo $this->getThemePath(); ?>/js/modernizr.js"></script>
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+
+
 
 </head>
 
@@ -34,8 +36,38 @@
         </div>
         <div class="grid-2 columns nopad topLinks">
         
-        <a href="/login" class="loginLink">Login</a>
+        <?php 
+        
+        $currentUser = new User();
+        
+       	if($currentUser->isLoggedIn())
+		{
+			//get the userinfo object for this user.
+			$currentUserInfo = UserInfo::getByID($currentUser->getUserID());
+			$welcomeName = 	$currentUserInfo->getAttribute('billing_first_name');
+			if(!isset($welcomeName))
+			{
+				$welcomeName = $currentUser->getUserName();
+			}
+		
+        
+		?>
+		<p class="welcome">Hi <?php echo $welcomeName; ?> </p>
+		<a href="/profile" class="loginLink">View My Profile</a>
+		
+		<?php
+		}
+		else
+		{
+		
+		?>	
+		
+		<a href="/login" class="loginLink">Login</a>
         <a href="/login" class="registerLink">Register</a>
+		
+		<?php
+		}
+		?>
 
         </div>
     </div>

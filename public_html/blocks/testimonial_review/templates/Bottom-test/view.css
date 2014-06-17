@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+.testHolderBottom{width: 100%; height: auto; float: left; margin: 20px 0; position: relative; }
+
+.testHolderBottom .testWrapper{ width: 100%; height: auto; float: left; position: relative;  padding: 0 0 30px 0;}
+.testHolderBottom .testWrapperInside{ padding: 20px; width: 100%; height: auto; float: left; background: #ccc; border-radius: 10px; -moz-border-radius: 10px;}
+
+.testHolderBottom .testWrapperInside h6{ font-size: 1.6em; color: #33C!important;}
+
+.testHolderBottom .testWrapperInside p{ font-size: 1em; margin-bottom: 0px;}
+
+.testHolderBottom .testImage{  width: 100%; text-align: center; float: left; margin-bottom: 0px;}
+.testHolderBottom .testImage img{ border-radius: 50%; -moz-border-radius: 50%;  border: solid 3px #ccc;}
+
+.testHolderBottom .testName{ text-align: center;}
+.testHolderBottom .testName strong{font-weight: bold; font-weight: 700; color: #f00;}
+.testHolderBottom .testName em{  color: #0f0; font-style:normal } 
+
+.arrow-down {
+	width: 40px; 
+	height: 30px; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	float: left;
+	border-top: 20px solid #ccc;
+	left: 50%; margin-left: -20px; position: absolute; bottom: 0px;
+}
+
+

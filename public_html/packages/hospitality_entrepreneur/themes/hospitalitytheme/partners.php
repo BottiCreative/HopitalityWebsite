@@ -25,6 +25,9 @@ $this->inc('elements/header.php'); ?>
          $a->display();
          ?>
          
+         <div class="clearfix"></div>
+         
+         
          <?php  
 			$a = new Area('Sidebar');
 			$a->display($c);

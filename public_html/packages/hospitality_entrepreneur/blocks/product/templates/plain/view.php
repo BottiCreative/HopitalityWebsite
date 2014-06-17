@@ -117,7 +117,7 @@ if ($displayImage) {
 
 	
 
-<div class="grid-4 columns nopadLeft">	
+<div class="resourceWrapper">	
 
 <div class="productListprodHolder">
 
@@ -212,11 +212,25 @@ if ($displayImage) {
 			<!-- add to cart button -->
 			
 			<div class="ccm-core-commerce-add-to-cart-product-button-box">
-				<?php    if ($product->isProductEnabled()) { ?>
+				<?php    if ($product->isProductEnabled()) { 
+					
+					if(!$userHasAccess)
+					{
+					?>
 					<span class="ccm-core-commerce-add-to-cart-submit"><?php   echo $form->submit('submit', $addToCartText); ?></span>
 					<img src="<?php   echo ASSETS_URL_IMAGES?>/throbber_white_16.gif" width="16" height="16" class="ccm-core-commerce-add-to-cart-loader" />
 
-				<?php    } else { ?>
+				<?php    } 
+					elseif(isset($linksTo)) {
+						?>
+						
+			<a href="<?php echo $this->url($linksTo->getCollectionPath()); ?>" class="btn ccm-input-submit">VIEW NOW</a>
+						
+						<?php
+					}
+				
+				}
+				else { ?>
 					<strong><?php   echo t('This product is unavailable.')?></strong>
 				<?php    } ?>
 			</div>

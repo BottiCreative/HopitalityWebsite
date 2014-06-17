@@ -5,7 +5,7 @@ class InfusionPackage extends Package {
 	
 	protected $pkgHandle = 'infusion';
 	protected $appVersionRequired = '1.0.0';
-	protected $pkgVersion = '1.0.1';
+	protected $pkgVersion = '1.0.2';
 	
 	public function getPackageDescription()
 	{
@@ -16,7 +16,7 @@ class InfusionPackage extends Package {
 	
 	public function getPackageName()
 	{
-		return t('Infusion');
+		return t('infusion');
 		
 	}
 	

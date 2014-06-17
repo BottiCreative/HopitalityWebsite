@@ -17,6 +17,10 @@ class HEChangeOrderStatus extends ChangeOrderStatus   {
 			case CoreCommerceOrder::STATUS_AUTHORIZED:
 			    
 				try{
+						
+						
+						
+					HEChangeOrderStatus::send_to_infusion($order);	
 					HEChangeOrderStatus::SetMembership($order);	
 				}
 				catch( exception $e)
@@ -30,7 +34,7 @@ class HEChangeOrderStatus extends ChangeOrderStatus   {
 			case CoreCommerceOrder::STATUS_INCOMPLETE:
 				
 				/*try{
-					HEChangeOrderStatus::SetMembership($order);	
+					HEChangeOrderStatus::send_to_infusion($order);
 				}
 				catch( exception $e)
 				{
@@ -67,7 +71,7 @@ class HEChangeOrderStatus extends ChangeOrderStatus   {
 							
 							if(!is_object($newUser))
 							{
-							
+								
 								//no user assigned!  Lets automatically create the user and assign them to the moo music members group.
 								$newUserPassword = rand(1111,9999);
 								$newUser = UserInfo::register(array('uName' => $order->getOrderEmail(), 
@@ -178,6 +182,56 @@ EMAIL;
 		
 	}
 	
-	
+	/**
+	 * Send user to infusion.
+	 * @param $order the order
+	 * 
+	 * @return the order id
+	 */
+	public static function send_to_infusion($order)
+	{
+		//now load the infusion api
+		Loader::model('Groups','infusion');
+		
+		$groups = new InfusionGroupsModel();
+		
+		$ContactData = array();
+		
+		$ContactData["FirstName"]  = $order->getAttribute('billing_first_name');
+		$ContactData["LastName"]  = $order->getAttribute('billing_last_name');
+		$ContactData["Email"] = $order->getOrderEmail();
+		$ContactData["Phone1"] = $order->getAttribute('billing_phone');
+		
+		//get all the products
+		$productTagIDS = array();
+		$products = $order->getProducts();
+		
+		//search all products
+		foreach($products as $productOrdered)
+		{
+			$productObject = $productOrdered->getProductObject();	
+				
+			$tags = $productObject->getAttribute('infusion_tag_ids');	
+			
+			//now split by comma
+			$tagArray = explode(',',$tags);
+			
+			
+			foreach($tagArray as $tag)
+			{
+				
+				if(is_numeric(trim($tag)) && intval($tag) > 0 && !in_array($tag,$productTagIDS))
+				{
+					$productTagIDS[] = intval($tag);
+				}
+			}
+			
+				
+		}
+		
+		return $groups->updateInfusionContact(0,$order->getOrderEmail(),$ContactData,$productTagIDS);
+		
+		
+	}
 	
 }

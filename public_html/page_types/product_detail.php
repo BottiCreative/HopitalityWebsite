@@ -1,27 +1,16 @@
 <?php  defined('C5_EXECUTE') or die(_("Access Denied.")); ?>
 	
 			
-			
-			
-		<div class="row">
-			<div class="grid-12 columns">
-            
-        <?php  
-        	$a = new GlobalArea('Resources Nav');
-        	$a->display();
-         ?>
-            
-            
-            </div>
-		</div>
-            
-            
-            
-            <div class="row">
-            
-            <div class="grid-8 columns">
+<div class="row">
 
-			
+</div>
+            
+<div class="row topRowProd">
+ 
+ <div class="grid-8 columns productInfo">
+            
+
+			<main>
 			<?php 
 			
 			$a = new Area('Product');
@@ -32,25 +21,55 @@
 			
 			?>
             
-            
            <?php  
 			$a = new Area('Social Share');
 			$a->display($c);
          ?>
             
-            </div>
             
-        <div class="grid-4 columns">
+            </main>
+            
             
 
-         <?php  
-         $a = new GlobalArea(' Membership Side');
-         $a->display();
-         ?>
-            
-            
             
             </div>
+            
+<div class="grid-4 columns">
+        <aside>
+        
+        <div class="fixedSide">
+        
+                <?php  
+         $a = new GlobalArea('Resource Nav');
+         $a->display();
+         ?>
+         
+         <div class="clearfix"></div>
+
+         
+                  <?php  
+			$a = new Area('Trial Side');
+			$a->display($c);
+			?>
+         
+         
+		 <div class="PopularPosts">
+         <h4>New Resources</h4>
+		 <?php  
+         $a = new GlobalArea('Popular Posts');
+         $a->display();
+         ?>
+         </div>
+         
+         <?php  
+			$a = new Area('Sidebar Low');
+			$a->display($c);
+			?>
+            
+            </div>
+         
+         </aside>
+</div>
 
             </div>
             

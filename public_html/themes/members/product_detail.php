@@ -1,14 +1,11 @@
-<?php  defined('C5_EXECUTE') or die(_("Access Denied.")); ?>
-	
-			
-			
-			
+<?php  defined('C5_EXECUTE') or die(_("Access Denied.")); 
+
+$this->inc('elements/header.php');
+
+?>
 			<div class="row">
             
             <div class="grid-12 columns">
-			
-			
-			
 			
 			<?php 
 			
@@ -23,3 +20,5 @@
             </div>
             
             </div>
+            
+<?php  $this->inc('elements/members_footer.php'); ?>            

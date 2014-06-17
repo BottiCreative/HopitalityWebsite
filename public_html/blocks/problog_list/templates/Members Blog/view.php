@@ -13,15 +13,48 @@ if (count($cArray) > 0) { ?>
 		
 		$content = $controller->getContent($cobj,$blog_settings);
 		?>
-		     <div class="grid-12 columns content-sbBlog-wrap nopad">
-             
-
+		     <div class="content-sbBlog-wrap">
+		      	<div class="addthis_toolbox addthis_default_style">
+					<?php      
+					if($tweet>0){
+					?>
+						<span class="st_twitter" st_url="<?php      echo BASE_URL.$url?>" st_title="<?php      echo $blogTitle?>"></span>
+					<?php      }
+					if($fb_like==1){
+					?>
+						<span class="st_facebook" st_url="<?php      echo BASE_URL.$url?>" st_title="<?php      echo $blogTitle?>"></span>
+					
+					<?php     
+					}
+					if($google==1){
+					?>
+						<span class="st_plusone" st_url="<?php      echo BASE_URL.$url?>" st_title="<?php      echo $blogTitle?>"></span>
+					<?php     
+					}
+					?>
+				</div>
+				<script type="text/javascript">var switchTo5x=true;</script>
+				<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+				<?php      if($sharethis){ ?>
+				<script type="text/javascript">stLight.options({publisher:'<?php      echo $sharethis;?>'});</script>
+				<?php      } ?>
+				<?php      if($comments){ ?>
+	  			<div class="content-sbBlog-commentcount"><?php      echo $comment_count;?></div>
+	  			<?php      } ?>
 	  			<div class="content-sbBlog-contain">
-                
-   
-                
-                
-                	<div class="grid-3 columns nopadLeft">
+	  				<div id="content-sbBlog-title">
+			    		<h3 class="ccm-page-list-title"><a href="<?php      echo $url;?>"><?php      echo $blogTitle?></a></h3>
+			    		<div id="content-sbBlog-date">
+			    		<?php      echo date('M d, Y',strtotime($blogDate));  ?>
+			    		</div>
+					</div>
+					<div>
+					<?php     
+					echo t('Category').': '.'<a href="'.BASE_URL.$search.'categories/'.str_replace(' ','_',$cat).'/">'.$cat.'</a>';;
+					?>
+					<br/><br/>
+					</div>
+					<div class="content-sbBlog-post">
 					<?php      
 						if($thumb){
 							echo '<div class="thumbnail">';
@@ -29,48 +62,28 @@ if (count($cArray) > 0) { ?>
 							echo '</div>';
 						}	
 					?>
-                    </div>
-                    
-              
-              <div class="grid-9 columns nopadLeft">
-              <h3 class="ccm-page-list-title"><a href="<?php      echo $url;?>"><?php      echo $blogTitle?></a></h3>
-              	<?php      
+			  		<?php      
 			  			echo $blogify->closetags($content);
 			  		?>
-                    
-                    <a class="readmore" href="<?php      echo $url?>"><?php     echo t('Read More')?></a>
-                    
-              
-              </div>
-              
-                 
-                 <div class="grid-3 columns content-sbBlog-date nopadLeft end">
-			    	
-			    </div>
-				<div class="grid-5 columns content-category">
-			 	 <?php      echo date('M d, Y',strtotime($blogDate));  ?>
-                </div>
-                    <div class="grid-4 columns content-category">
-                    
-                 <?php      if($comments){ ?>
-	  			<?php      echo $comment_count;?>
-	  			<?php      } ?>
-                    
-                    
-			    		</div>
-                
-                
-		
-        </div>
-			  	
-            
-            
-           
-            
-            
-            
-			</div>
-			<br class="clearfloat" />
+			  		</div>
+			  	</div>
+			  	<a class="readmore" href="<?php      echo $url?>"><?php     echo t('Read More')?></a>
+			  	<div id="tags">
+			  	<b><?php     echo t('Tags')?> : </b>
+				<?php      
+				if(!empty($tag_list)){
+					$x = 0;
+					foreach($tag_list as $akct){
+						if($x){echo ', ';}
+						echo '<a href="'.BASE_URL.$search.str_replace(' ','_',$akct->getSelectAttributeOptionValue()).'/">'.$akct->getSelectAttributeOptionValue().'</a>';
+						$x++;
+							
+					}
+				}
+				?>
+ 			</div>
+</div>
+
 	<?php      		
 	} 
 	$u = new User();
@@ -81,7 +94,7 @@ if (count($cArray) > 0) { ?>
 		}
 		?>
 		<div id="subscribe_to_blog" class="ccm-ui">
-			<a href="<?php     echo $subscribe_link; ?>?blog=<?php     echo $c->getCollectionID(); ?>&user=<?php     echo $u->getUserID(); ?>" onClick="javascript:;" class="subscribe_to_blog btn btn-mini" data-status="<?php     if($subscribed_status){ echo 'unsubscribe';}else{ echo 'subscribed';}?>"> <?php     if($subscribed_status){echo t('Unsubscribe from this Blog'); }else{ echo t('Subscribe to this Blog'); }?> </a>
+			<a href="<?php     echo $subscribe_link; ?>?blog=<?php     echo $c->getCollectionID(); ?>&user=<?php     echo $u->getUserID(); ?>" onClick="javascript:;" class="subscribe_to_blog btn btn-mini" data-status="<?php     if($subscribed_status){ echo 'unsubscribe';}else{ echo 'subscribed';}?>"> <?php     if($subscribed_status){echo t('Unsubscribe from this Blog'); }else{ echo t('Subscribe to this BLog'); }?> </a>
 		</div>
 		<?php    
 	}

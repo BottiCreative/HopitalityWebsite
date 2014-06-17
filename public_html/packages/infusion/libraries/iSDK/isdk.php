@@ -110,9 +110,12 @@ public function appEcho($txt) {
 }
 ###Method Caller###
 public function methodCaller($service,$callArray) {
-    ###Set up the call###
+    
+	
+	###Set up the call###
     $call = new xmlrpcmsg($service, $callArray);
     ###Send the call###
+    
     $result = $this->client->send($call);
     ###Check the returned value to see if it was successful and return it###
     if(!$result->faultCode()) {
