@@ -7,7 +7,7 @@
 	class HospitalityEntrepreneurUtilitiesHelper {
 		
 		private $dateLockedWindowMinutes = 15;
-		private $packageHandle = 'moo_music';
+		private $packageHandle = 'hospitality_entrepreneur';
 		private $membershipSetName = 'Membership';
 		 
 		 
@@ -75,11 +75,19 @@
 		
 	}
 	
+	/**
+	 * Gets the saved member email, replacing certain links if necessary.
+	 * @param username username of member
+	 * @param password password of member
+	 * @param loginlink the link to the site.
+	 * 
+	 * @return the member email text.
+	 */
 	public function get_member_email($username, $password, $loginlink)
 	{
 		$pkg = Package::getByHandle($this->packageHandle);
 		
-		$memberemail = $pkg->config('MOO_MUSIC_MEMBER_EMAIL');
+		$memberemail = $pkg->config('HOSPITALITY_ENTREPRENEUR_MEMBER_EMAIL');
 		$memberemail = str_replace('[username]',$username,$memberemail);
 		$memberemail = str_replace('[password]',$password,$memberemail);
 		$memberemail = str_replace('[loginlink]',$loginlink,$memberemail);
