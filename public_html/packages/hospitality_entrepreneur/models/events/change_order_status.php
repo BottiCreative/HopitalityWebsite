@@ -42,8 +42,8 @@ class HEChangeOrderStatus extends ChangeOrderStatus   {
 					
 				}*/
 				
-				$newUser = UserInfo::getByEmail($order->getOrderEmail());
-				HEChangeOrderStatus::sendUserEmail($newUser,$order,'1234');
+				//$newUser = UserInfo::getByEmail($order->getOrderEmail());
+				//HEChangeOrderStatus::sendUserEmail($newUser,$order,'1234');
 			
 			break;
 		}
@@ -129,7 +129,7 @@ class HEChangeOrderStatus extends ChangeOrderStatus   {
 		Loader::helper('utilities','hospitality_entrepreneur');
 		$hospitality = new HospitalityEntrepreneurUtilitiesHelper();
 		
-		$loginLink = BASE_URL . '/members';
+		$loginLink = BASE_URL . '/login';
 		
 		$newUserObj = $newUser->getUserObject();
 		
@@ -140,6 +140,7 @@ class HEChangeOrderStatus extends ChangeOrderStatus   {
 		$mail->to($order->getOrderEmail());
 		
 		$mail->setBodyHTML($memberEmail);
+		Log::addEntry($memberEmail,'Member Email Sent');
 		$mail->sendMail();
 	}
 	
