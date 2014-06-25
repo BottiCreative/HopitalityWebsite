@@ -5,7 +5,7 @@ class HospitalityEntrepreneurPackage extends Package {
 	
 	protected $pkgHandle = 'hospitality_entrepreneur';
 	protected $appVersionRequired = '1.0.0';
-	protected $pkgVersion = '1.0.3';
+	protected $pkgVersion = '1.0.4';
 	
 	public function on_start()
 	{
@@ -196,7 +196,7 @@ class HospitalityEntrepreneurPackage extends Package {
 		if($sp->isError() && $sp->getError() == COLLECTION_NOT_FOUND)
 		{
 				
-			SinglePage::add('/dashboard/hospitality_entrepreneur', $pkg);	
+			SinglePage::add('/dashboard/hospitality_entrepreneur/members', $pkg);	
 			
 		}
 		

@@ -1,9 +1,9 @@
 <?php
 
 
-class DashboardMooMusicMembersController extends Controller {
+class DashboardHospitalityEntrepreneurMembersController extends Controller {
 		
-	private $packageHandle = 'moo_music';		
+	private $packageHandle = 'hospitality_entrepreneur';		
 	private $coreCommerceHandle = 'core_commerce';
 
 	public function view()
@@ -13,7 +13,7 @@ class DashboardMooMusicMembersController extends Controller {
 		Loader::helper('concrete/interface/menu');
 		$adminMenu = new ConcreteInterfaceMenuHelper();
 		
-		$adminMenu->addPageHeaderMenuItem(0,"Configure Customer Email", 0,null,'moo_music');
+		$adminMenu->addPageHeaderMenuItem(0,"Configure Customer Email", 0,null,'hospitality_entrepreneur');
 		$this->set('adminMenu',$adminMenu);
 		
 		
@@ -28,17 +28,17 @@ class DashboardMooMusicMembersController extends Controller {
 		$pkg = Package::getByHandle($this->packageHandle);
 		
 		
-		if($pkg->config('MOO_MUSIC_MEMBER_EMAIL') == null || $pkg->config('MOO_MUSIC_MEMBER_EMAIL') == '' )
+		if($pkg->config('HOSPITALITY_ENTREPRENEUR_MEMBER_EMAIL') == null || $pkg->config('HOSPITALITY_ENTREPRENEUR_MEMBER_EMAIL') == '' )
 		{
-			$pkg->saveConfig('MOO_MUSIC_MEMBER_EMAIL',<<<USEREMAIL
+			$pkg->saveConfig('HOSPITALITY_ENTREPRENEUR_MEMBER_EMAIL',<<<USEREMAIL
 		
-		<p>Congratulations... and thank you for joining the Moo Music family and taking the first step in this new chapter of your life. Give yourself a pat on the back!</p> 
-		<p>To log in to your Farmers Market, please go to [loginlink].  Your login details are below:</p>
+		<p>Congratulations... and thank you for joining taking the first step in this new chapter of your life. Give yourself a pat on the back!</p> 
+		<p>To log in to your please go to [loginlink].  Your login details are below:</p>
 		<ul>
 		<li>Username: <strong>[username]</strong></li>
 		<li>Password: <strong>[password]</strong></li>
 		</ul>
-		<p>You should soon receive another email with your purchase details.  Further below is your license.  A copy of your license is also available in the Farmers Market.</p>
+		<p>You should soon receive another email with your purchase details.</p>
 		<p>Thanks for joining us!</p>
 		
 		
@@ -52,14 +52,14 @@ USEREMAIL
 		{
 			if(isset($_REQUEST['content']))
 			{
-				$pkg->saveConfig('MOO_MUSIC_MEMBER_EMAIL', $_REQUEST['content']);
+				$pkg->saveConfig('HOSPITALITY_ENTREPRENEUR_MEMBER_EMAIL', $_REQUEST['content']);
 		
 			}
 				
 		}
 		
 			
-		$this->set('member_email',$pkg->config('MOO_MUSIC_MEMBER_EMAIL'));
+		$this->set('member_email',$pkg->config('HOSPITALITY_ENTREPRENEUR_MEMBER_EMAIL'));
 	
 	}
 

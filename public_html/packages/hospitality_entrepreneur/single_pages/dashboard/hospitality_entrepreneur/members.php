@@ -21,7 +21,7 @@ if($this->controller->getTask() == 'update_member_email')
  ?>
 <form id="form1" method="post" action="<?php echo $form->action("/dashboard/hospitality_entrepreneur/members/update_member_email",'update') ?>">
 
-<p><?php echo t('This is the email that gets sent to Moo Music Members just after they purchase their first area and become a member.');?></p>
+<p><?php echo t('This is the email that gets sent to Hospitality Entrepreneur Members just after they become a member.');?></p>
 <p><?php echo t('The following tags (in square brackets) can be used with this email:'); ?></p>
 <ul>
 	<li>Link to Login Page: [loginlink]</li>
