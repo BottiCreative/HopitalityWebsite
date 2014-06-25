@@ -10,7 +10,7 @@
         <div class="grid-6 columns FootLinks">
         
         <ul>
-        <li><a class="headLink" href="/about/">A little Info</a></li>
+        <li><a class="headLink" href="/about/">Why Join</a></li>
         <li><a href="/about/">About Us</a></li>
         <li><a href="/partners/">Partners</a></li>
         <li><a href="/membership/">Membership</a></li>
@@ -26,12 +26,12 @@
         <li><a href="/resources/operations/">Operations</a></li>
         <li><a href="/resources/people/">People</a></li>
         <li><a href="/resources/profit/">Profit</a></li>
-        <li><a href="/resources/qualifications/">Qualifications</a></li>
+        <li><a href="/resources/video/">Videos</a></li>
 
         </ul>
         
         <ul>
-       	<li><a class="headLink" href="/contact-us">Get in touch</a></li>
+       	<li><a class="headLink" href="/about">Get in touch</a></li>
         <li><a href="/contact-us">Ask a question</a></li>
         <li><a href="=tel;01865 739 174">01865 739 174</a></li>
         <li><a href="mailto@info@hospitalityentrepreneur.com">info@hospitalityentrepreneur.com</a></li>
@@ -42,7 +42,7 @@
                 <div class="social">
         		<p><a href="https://www.facebook.com/pages/Hospitality-Entrepreneur/449799375102971?ref=hl" target="_blank" class="fbLink" rel="nofollow" ></a>
               	<a href="https://twitter.com/hospitalitypete" target="_blank" class="twitLink" rel="nofollow" ></a>
-              	<a href="http://uk.linkedin.com/pub/peter-austen/34/36b/6a" target="_blank" class="inLink" rel="nofollow" ></a>
+              	<!--<a href="http://uk.linkedin.com/pub/peter-austen/34/36b/6a" target="_blank" class="inLink" rel="nofollow" ></a>-->
                 <a href="https://www.youtube.com/channel/UCPk91_CerE_J_F8IMBJ9hiw" target="_blank" class="youLink" rel="nofollow" ></a></p>
                 </div>
         

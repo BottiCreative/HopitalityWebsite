@@ -99,7 +99,7 @@ padding: 0 3px;
 div.ccm-core-commerce-product-list-product{position: relative;}
 
 .ccm-core-commerce-add-to-cart-product-name{ background-color: rgba(0, 0, 0, .6);
-color: rgba(0, 0, 0, .6); position: absolute; bottom: 80px; z-index: 10; display: block; padding: 15px 7px 15px 15px; width: 85%; font-weight: 400; color: #fff; left: 10px; }
+color: rgba(0, 0, 0, .6); position: absolute; bottom: 105px; z-index: 10; display: block; padding: 15px 7px 15px 15px; width: 85%; font-weight: 400; color: #fff; left: 10px; }
 
 .ccm-core-commerce-add-to-cart-product-name a:hover{ color: #84b400;}
 
@@ -112,7 +112,7 @@ div.membership-overlay.overlay-Starter{background: url(images/sash-starter.png) 
 div.membership-overlay.overlay-Starvervip{background: url(images/sash-starter.png) no-repeat top left!important;}
 div.membership-overlay.overlay-Club{background: url(images/sash-clubplus.png) no-repeat top left!important;}
 
-.productListprodHolder{ position: relative; float: left; background: #333!important; width: 100%; min-height: 250px; margin: 10px 0;  }
+.productListprodHolder{ position: relative; float: left; background: #333!important; width: 100%; min-height: 340px; margin: 10px 0;display:inline-block;  }
 
 
 .productListprodHolder img{min-width: 282px; height: 250px; padding: 10px;}

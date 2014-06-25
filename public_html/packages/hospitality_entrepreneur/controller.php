@@ -166,7 +166,7 @@ class HospitalityEntrepreneurPackage extends Package {
 	 */
 	private function AddDashboardPages()
 	{
-		/*Loader::model('package');
+		Loader::model('package');
 		// install single pages
         Loader::model('single_page');
        		
@@ -174,32 +174,32 @@ class HospitalityEntrepreneurPackage extends Package {
 			
 		
 	
-		$sp = SinglePage::getByPath('/dashboard/moomusic');
+		$sp = SinglePage::getByPath('/dashboard/hospitality_entrepreneur');
 		
 		if($sp->isError() && $sp->getError() == COLLECTION_NOT_FOUND)
 		{
-			$sp = SinglePage::add('/dashboard/moomusic',$pkg);
+			$sp = SinglePage::add('/dashboard/hospitality_entrepreneur',$pkg);
 			$sp->update(array('cName'=>$this->getPackageName(), 'cDescription'=>$this->getPackageDescription()));
         	
 		}
 		
-		$sp = SinglePage::getByPath('/dashboard/moomusic/areas');
+		/*$sp = SinglePage::getByPath('/dashboard/moomusic/areas');
 		
 		if($sp->isError() && $sp->getError() == COLLECTION_NOT_FOUND)
 		{
 			SinglePage::add('/dashboard/moomusic/areas', $pkg);
         		
-		}
+		}*/
 		
-		$sp = SinglePage::getByPath('/dashboard/moomusic/members');
+		$sp = SinglePage::getByPath('/dashboard/hospitality_entrepreneur/members');
 		
 		if($sp->isError() && $sp->getError() == COLLECTION_NOT_FOUND)
 		{
 				
-			SinglePage::add('/dashboard/moomusic/members', $pkg);	
+			SinglePage::add('/dashboard/hospitality_entrepreneur', $pkg);	
 			
 		}
-		*/
+		
         
 	}
 	

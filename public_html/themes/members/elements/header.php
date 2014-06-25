@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body class="fitvid">
 
 		<div class="sideStripNav">
         

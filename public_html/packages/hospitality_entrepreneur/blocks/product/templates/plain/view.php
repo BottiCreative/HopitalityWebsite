@@ -214,6 +214,14 @@ if ($displayImage) {
 			<div class="ccm-core-commerce-add-to-cart-product-button-box">
 				<?php    if ($product->isProductEnabled()) { 
 					
+					if(isset($linksTo)) {
+						?>
+						
+			<a href="<?php echo $this->url($linksTo->getCollectionPath()); ?>" class="btn ccm-input-submit">VIEW NOW</a>
+						
+						<?php
+					}
+					
 					if(!$userHasAccess)
 					{
 					?>
@@ -221,13 +229,7 @@ if ($displayImage) {
 					<img src="<?php   echo ASSETS_URL_IMAGES?>/throbber_white_16.gif" width="16" height="16" class="ccm-core-commerce-add-to-cart-loader" />
 
 				<?php    } 
-					elseif(isset($linksTo)) {
-						?>
-						
-			<a href="<?php echo $this->url($linksTo->getCollectionPath()); ?>" class="btn ccm-input-submit">VIEW NOW</a>
-						
-						<?php
-					}
+				
 				
 				}
 				else { ?>

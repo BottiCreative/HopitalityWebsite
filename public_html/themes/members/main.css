@@ -9,12 +9,26 @@ h3{ font-family: 'Raleway', sans-serif; color: #333; font-weight: 700; font-styl
 h1{ font-family: 'Raleway', sans-serif; color: #333; font-weight: 300; font-style: normal; padding: 15px 0;}
 h2{ font-family: 'Raleway', sans-serif; color: #333; font-weight: 300; font-style: normal; padding: 30px 0 15px 0;}
 
+p{ padding: 10px 0;}
+
+
+
+/*-temporary hiding of add to cart button--*/
+.ccm-core-commerce-add-to-cart-submit{display:none;}
+
+
+
+.ccm-core-commerce-add-to-cart-image{ float: left; margin: 15px 20px 15px 0;}
+
+.ccm-core-commerce-add-to-cart-image img{ max-width: 220px;}
 
 a { text-decoration:none; -webkit-transition: all .2s ease-in-out;
  -moz-transition: all .2s ease-in-out;
         -ms-transition: all .2s ease-in-out;
         -o-transition: all .2s ease-in-out;
  transition: all .2s ease-in-out;}
+ 
+.resourceContent h2{ display: none;}
 
 .fullwidthnav { width:100%; background:#424251; padding:10px 0}
 
@@ -128,8 +142,8 @@ margin: 12px 0;
 
 .ccm-page-list{ float: left; width: 100%; margin: 0 0 30px 0;}
 
-.ccm-page-list a{ background: #ccc; font-size: 13px; padding: 5px; margin: 0 5px 0 0; color: #333; float: left;}
-.ccm-page-list a:hover{ background: #333; color: #fff;}
+/*.ccm-page-list a{ background: #ccc; font-size: 13px; padding: 5px; margin: 0 5px 0 0; color: #333; float: left;}
+.ccm-page-list a:hover{ background: #333; color: #fff;}*/
 
 .guestBook-formBlock {
 margin: 12px 0 12px 0; float: left; min-height: 500px; width: 100%;
@@ -143,6 +157,9 @@ margin: 12px 0 12px 0; float: left; min-height: 500px; width: 100%;
 .button:hover{ background: #333;}
 
 
+
+/*---nathan amends--*/
+.anp_bootstrap_nav ol.pronav_list{background:#fff !important;}
 
   
 /*// CORE OVERRIDES //////////////////////////*/ 

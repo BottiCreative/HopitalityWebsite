@@ -19,7 +19,7 @@ $v = View::getInstance();
 $user = new User();
 
 
-if($user->isLoggedIn())
+if($user->isLoggedIn() && !$user->inGroup(Group::getByName('Administrators')) && !$user->isSuperUser() )
 {
 	//$v->setThemeByPath('/about','members');
 	//$v->setThemeByPath('','members');
@@ -28,7 +28,7 @@ if($user->isLoggedIn())
 	
 
 	//echo $path;
-	$excludePages = array('/about/','/partners/','/membership/','/dashboard/');
+	$excludePages = array('/about/','/partners/','/membership/','/dashboard/','/index.php?cID');
 	
 	$excludePage = false;
 	

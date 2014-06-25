@@ -14,56 +14,25 @@ if (count($cArray) > 0) { ?>
 		$content = $controller->getContent($cobj,$blog_settings);
 		?>
 		     <div class="content-sbBlog-wrap">
-		      	<div class="addthis_toolbox addthis_default_style">
-					<?php      
-					if($tweet>0){
-					?>
-						<span class="st_twitter" st_url="<?php      echo BASE_URL.$url?>" st_title="<?php      echo $blogTitle?>"></span>
-					<?php      }
-					if($fb_like==1){
-					?>
-						<span class="st_facebook" st_url="<?php      echo BASE_URL.$url?>" st_title="<?php      echo $blogTitle?>"></span>
-					
-					<?php     
-					}
-					if($google==1){
-					?>
-						<span class="st_plusone" st_url="<?php      echo BASE_URL.$url?>" st_title="<?php      echo $blogTitle?>"></span>
-					<?php     
-					}
-					?>
-				</div>
-				<script type="text/javascript">var switchTo5x=true;</script>
-				<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
-				<?php      if($sharethis){ ?>
-				<script type="text/javascript">stLight.options({publisher:'<?php      echo $sharethis;?>'});</script>
-				<?php      } ?>
-				<?php      if($comments){ ?>
-	  			<div class="content-sbBlog-commentcount"><?php      echo $comment_count;?></div>
-	  			<?php      } ?>
+
+
 	  			
                 <div class="content-sbBlog-contain">
                 
 	  			
-                <h3 class="ccm-page-list-title">
-                <a href="<?php echo $url;?>"><?php echo $blogTitle?></a></h3>
-			    		
-                        <div id="content-sbBlog-date">
-			    		<?php      echo date('M d, Y',strtotime($blogDate));  ?>
-			    		</div>
-		
-					
-                    <div>
-					<?php     
-					echo t('Category').': '.'<a href="'.BASE_URL.$search.'categories/'.str_replace(' ','_',$cat).'/">'.$cat.'</a>';;
-					?>
+                
 			
 					</div>
                     
 <div class="grid-12 columns nopad ">
+
+                    <div class="categoryBlog"><?php     
+					echo t('Category').': '.'<a href="'.BASE_URL.$search.'categories/'.str_replace(' ','_',$cat).'/">'.$cat.'</a>';;
+					?></div>
+
 				<div class="blogThumbnail">
                 
-                <div class="blog-date-overlay">date</div>
+                <div class="blog-date-overlay"><?php echo date('M d, Y',strtotime($blogDate));  ?></div>
 
 					<?php      
 						if($thumb){
@@ -75,10 +44,23 @@ if (count($cArray) > 0) { ?>
                     </div>
                     </div>
                     
+                 <h3 class="ccm-page-list-title">
+                <a href="<?php echo $url;?>"><?php echo $blogTitle?></a></h3>
+			    		
+                    <div class="blogContent">
+
+                    
 			  		<?php      
-			  			echo $blogify->closetags($content);
+			  		echo $blogify->closetags($content);
 			  		?>
+                    
                     <a class="readmore" href="<?php      echo $url?>"><?php     echo t('Read More')?></a>
+                    
+
+                    
+                              	<?php      if($comments){ ?>
+	  			<div class="content-sbBlog-commentcount"><?php      echo $comment_count;?></div>
+	  			<?php      } ?>
                     
 			  		
 			  	</div>

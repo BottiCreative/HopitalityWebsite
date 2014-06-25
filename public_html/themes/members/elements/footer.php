@@ -22,6 +22,14 @@
     </div>
 </div>
 
+<script src="<?=$this->getThemePath()?>/js/jquery.fitvids.js"></script>
+   <script>
+        // Basic FitVids Test
+        $(".fitvid").fitVids();
+        // Custom selector and No-Double-Wrapping Prevention Test
+        $(".fitvid").fitVids({ customSelector: "iframe[src^='http://socialcam.com']"});
+      </script>	
+
 <?php   Loader::element('footer_required'); ?>
 
 </body>

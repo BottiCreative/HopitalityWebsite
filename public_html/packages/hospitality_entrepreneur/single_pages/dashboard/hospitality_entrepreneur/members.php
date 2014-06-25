@@ -19,7 +19,7 @@ if($this->controller->getTask() == 'update_member_email')
 
 	
  ?>
-<form id="form1" method="post" action="<?php echo $form->action("/dashboard/moomusic/members/update_member_email",'update') ?>">
+<form id="form1" method="post" action="<?php echo $form->action("/dashboard/hospitality_entrepreneur/members/update_member_email",'update') ?>">
 
 <p><?php echo t('This is the email that gets sent to Moo Music Members just after they purchase their first area and become a member.');?></p>
 <p><?php echo t('The following tags (in square brackets) can be used with this email:'); ?></p>
@@ -50,7 +50,7 @@ elseif($this->controller->getTask() == 'update_license')
 
 	
  ?>
-<form id="form1" method="post" action="<?php echo $form->action("/dashboard/moomusic/members/update_license",'update') ?>">
+<form id="form1" method="post" action="<?php echo $form->action("/dashboard/hospitality_entrepreneur/members/update_license",'update') ?>">
 
 <p><?php echo t('This is the license that gets sent to Moo Music Members just after they purchase their area and become a member.');?></p>
 <p><?php echo t('The following tags (in square brackets) can be used with this email:'); ?></p>
@@ -83,8 +83,8 @@ else
 {
 
 //view		
-echo $ih->button('Update Member Email',$this->url('/dashboard/moomusic/members','update_member_email'), 'left');
-echo $ih->button('Update Member License',$this->url('/dashboard/moomusic/members','update_license'), 'left');
+echo $ih->button('Update Member Email',$this->url('/dashboard/hospitality_entrepreneur/members','update_member_email'), 'left');
+//echo $ih->button('Update Member License',$this->url('/dashboard/hospitality_entrepreneur/members','update_license'), 'left');
 
 ?>
 
