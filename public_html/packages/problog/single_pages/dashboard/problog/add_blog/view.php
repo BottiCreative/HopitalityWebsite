@@ -22,6 +22,9 @@ if (is_object($blog)) {
 	$buttonText = t('Add Blog Entry');
 	$title= t('Add');
 }
+
+$set = AttributeSet::getByHandle('problog_additional_attributes');
+$setAttribs = $set->getAttributeKeys();
 ?>
 <style type="text/css">
 .good{color: green!important;}
@@ -57,8 +60,10 @@ td.checkmark{font-size: 22px;}
 			</li>
 			<li><a href="javascript:void(0)" onclick="$('ul.tabs li').removeClass('active'); $(this).parent().addClass('active'); $('.pane').hide(); $('div.options').show();"><?php     echo t('Options')?></a>
 			</li>
-			<li><a href="javascript:void(0)" onclick="$('ul.tabs li').removeClass('active'); $(this).parent().addClass('active'); $('.pane').hide(); $('div.attributes').show();"><?php     echo t('Attributes')?></a>
+			<?php  if(count($setAttribs) > 0){ ?>
+			<li><a href="javascript:void(0)" onclick="$('ul.tabs li').removeClass('active'); $(this).parent().addClass('active'); $('.pane').hide(); $('div.attributes').show();"><?php      echo t('Attributes')?></a>
 			</li>
+			<?php  } ?>
 			<li><a href="javascript:void(0)" onclick="$('ul.tabs li').removeClass('active'); $(this).parent().addClass('active'); $('.pane').hide(); $('div.meta').show();"><?php     echo t('Meta')?></a>
 			</li>
 			<li><a href="javascript:void(0)" onclick="$('ul.tabs li').removeClass('active'); $(this).parent().addClass('active'); $('.pane').hide(); $('div.seo').show();" class="seo-tools"><?php     echo t('Optimize')?></a>
@@ -278,8 +283,6 @@ td.checkmark{font-size: 22px;}
 		</div>
 		<div class="pane attributes" style="display: none;">
 			<?php      
-				$set = AttributeSet::getByHandle('problog_additional_attributes');
-				$setAttribs = $set->getAttributeKeys();
 				if($setAttribs){
 					foreach ($setAttribs as $ak) {
 						if(is_object($blog)) {
@@ -339,7 +342,7 @@ td.checkmark{font-size: 22px;}
 			<div class="alert-message block-message info">
 			  <a class="close" href="javascript:;">×</a>
 			  <p><strong><?php       echo t('SEO Tools to help you maximize your impact!');?></strong></p>
-			  <p><?php       echo t('<p>Bellow you will find some helpful SEO tools to aid you in the delicate balance of keywords, keyword phrases, images, and links.</p><p>To the right you will find three important checklists.  While nothing on this report is mandatory, making sure as many items are checked on these lists as possible will ensure better readability and ranking by search engine algorithms.</p>');?></p>
+			  <p><?php       echo t('<p>Below you will find some helpful SEO tools to aid you in the delicate balance of keywords, keyword phrases, images, and links.</p><p>To the right you will find three important checklists.  While nothing on this report is mandatory, making sure as many items are checked on these lists as possible will ensure better readability and ranking by search engine algorithms.</p>');?></p>
 			  <div class="alert-actions">
 
 			  </div>
@@ -353,7 +356,7 @@ td.checkmark{font-size: 22px;}
 				
 					<div style="display: none;" id="content_dom"></div>
 					<a href="http://www.alchemyapi.com/" class="alchemy" target="_blank"></a>
-					<h3><?php echo t('Natural Language Keyword Phrase Stregth')?>  <i class="icon icon-question-sign tooltips" title="<?php echo t('<p>Natural Language Processing (NLP) is an advanced algorithm design to appropriately arranged keywords as users would most likely search for them</p><p>This differs from single keyword density in that users rarely will search for any given term by itself.  Thus providing a more concise recognizable grouping of keyword terms.  Search Engines are now progressing to recognize and parse data in this way</p>')?>"></i></h3>
+					<h3><?php echo t('Natural Language Keyword Phrase Strength')?>  <i class="icon icon-question-sign tooltips" title="<?php echo t('<p>Natural Language Processing (NLP) is an advanced algorithm design to appropriately arranged keywords as users would most likely search for them</p><p>This differs from single keyword density in that users rarely will search for any given term by itself.  Thus providing a more concise recognizable grouping of keyword terms.  Search Engines are now progressing to recognize and parse data in this way</p>')?>"></i></h3>
 					<table id="phrase_result" class="table table-bordered table-striped">
 						<thead>
 							<tr>

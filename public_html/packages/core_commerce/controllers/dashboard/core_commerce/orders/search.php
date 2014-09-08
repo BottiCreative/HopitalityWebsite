@@ -71,11 +71,7 @@ class DashboardCoreCommerceOrdersSearchController extends Controller {
 		$orderList = new CoreCommerceOrderList();
 		$orderList->sortBy('oDateAdded', 'desc');
 		
-		if(is_numeric($_GET['keywords'])) {
-		
-		}
-		
-		if ($_GET['keywords'] != '') {
+		if (strlen(trim($_GET['keywords']))) {
 			$orderList->filterByKeywords($_GET['keywords']);
 		}	
 		
@@ -132,7 +128,6 @@ class DashboardCoreCommerceOrdersSearchController extends Controller {
 		return $orderList;
 	}
 	public function export() {
-	//	echo var_dump($this->getRequestedSearchResults()->get(0)); // models/order/model.php delete() function.  Look in there to see how the attributes can be gotten like the userlist.  
 		$orderList = $this->getRequestedSearchResults();
 		$orderList->setItemsPerPage(-1);
 		$orderList = $orderList->getPage();	

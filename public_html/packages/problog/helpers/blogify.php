@@ -6,9 +6,11 @@ class BlogifyHelper {
 
 	}
 	
-	function getCanonicalParent($date=null,$blog){
+	public function getCanonicalParent($date=null,$blog){
+	
 		$canonical_path = $blog->getCollectionPath();
 		$path_break = explode('/',$canonical_path);
+		
 		if(strlen($path_break[count($path_break)-2]) > 2){
 			$path = $canonical_path;
 			$path= substr($path,0,strrpos($path, "/")).'/';
@@ -18,7 +20,13 @@ class BlogifyHelper {
 				$path = $par_pos[0].$path_break[count($path_break)-4].'/';
 			}
 		}
-		return Page::getByPath($path)->getCollectionID();
+		
+		if(!$path){
+			return 1;
+		}else{
+			return Page::getByPath($path)->getCollectionID();
+		}
+
 	}
 	
 	function getOrCreateCanonical($date,$parent){

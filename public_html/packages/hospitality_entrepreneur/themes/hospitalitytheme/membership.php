@@ -5,7 +5,7 @@ $this->inc('elements/header.php'); ?>
 
 <div class="mainContainer">
         
-        <div class="row topRowPad">
+        <div class="row">
 		</div>
         
         

@@ -5,9 +5,11 @@ $fm = Loader::helper('form');
 Loader::model('collection_types');
 $bt = BlockType::getByHandle('related_pages');
 $akIDs = explode(',', $akID);
+
 $at = AttributeType::getByHandle('select');
 $atID = $at->getAttributeTypeID();
 $list = $controller->getList(array('AttributeKeys.atID'=>$atID));
+
 $AJAXselect = Loader::helper('concrete/urls')->getBlockTypeToolsURL($bt).'/nab_attribute.php';
 //var_dump($AJAXselect);
 ?>

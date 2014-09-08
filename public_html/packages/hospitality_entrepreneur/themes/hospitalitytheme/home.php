@@ -61,7 +61,7 @@ $this->inc('elements/header.php'); ?>
         
         </div>
     
-      <div class="grid-7 columns blog">
+      <div class="grid-8 columns blog">
         	<?php  
 			$a = new Area('blog');
 			$a->display($c);
@@ -69,7 +69,7 @@ $this->inc('elements/header.php'); ?>
         
         </div>
         
-          <div class="grid-5 columns videoContent">
+          <div class="grid-4 columns videoContent">
         	<?php  
 			$a = new Area('video');
 			$a->display($c);

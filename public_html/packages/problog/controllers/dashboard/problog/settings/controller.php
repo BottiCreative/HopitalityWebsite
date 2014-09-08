@@ -28,13 +28,11 @@ class DashboardProblogSettingsController extends Controller {
 				$this->set('breakSyntax',$row['breakSyntax']);
 		}
 		
-		$html = Loader::helper('html');
-		$this->addHeaderItem($html->javascript('jquery.oauthpopup.js', 'problog'));
-		
 		$this->loadPageTypes();
 	}
 	
 	function save(){
+
 		$pkg = Package::getByHandle('problog');
 		
 		$pkg->saveConfig('PROBLOG_COMMENT_MAIL', $this->post('email_notice'));

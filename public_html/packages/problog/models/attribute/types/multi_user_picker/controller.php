@@ -46,7 +46,7 @@ class MultiUserPickerAttributeTypeController extends DefaultAttributeTypeControl
 		$html .= '<tr>';
 		$html .= '<th>' . t('Username') . '</th>';
 		$html .= '<th>' . t('Email Address') . '</th>';
-		$html .= '<th><a class="ccm-multiuser-select-item dialog-launch"  onclick="ccmActiveUserField=this" alt="multi" var="'.$this->attributeKey->getAttributeKeyID().'" dialog-width="90%" dialog-height="70%" dialog-modal="false" dialog-title="' . t('Choose Users') . '" href="' . REL_DIR_FILES_TOOLS_REQUIRED . '/users/search_dialog?mode=choose_multiple"><img src="' . ASSETS_URL_IMAGES . '/icons/add.png" width="16" height="16" /> &nbsp;&nbsp;Add</a></th>';
+		$html .= '<th><a class="ccm-multiuser-select-item dialog-launch"  onclick="ccmActiveBlogUserField=this" alt="multi" var="'.$this->attributeKey->getAttributeKeyID().'" dialog-width="90%" dialog-height="70%" dialog-modal="false" dialog-title="' . t('Choose Users') . '" href="' . Loader::helper('concrete/urls')->getToolsURL('users/search_dialog','problog').'?mode=choose_multiple"><img src="' . ASSETS_URL_IMAGES . '/icons/add.png" width="16" height="16" /> &nbsp;&nbsp;Add</a></th>';
 		$html .= '</tr><tbody id="ccmMultiUserSelect' . $fieldName . '_body" >';
 	
 		for ($i = 0; $i < count($ul); $i++ ) {
@@ -67,7 +67,7 @@ class MultiUserPickerAttributeTypeController extends DefaultAttributeTypeControl
 		}
 		$html .= '</tbody></table><script type="text/javascript">
 		$(function() {
-			//var field = $(ccmActiveUserField).attr(\'var\');
+			//var field = $(ccmActiveBlogUserField).attr(\'var\');
 
 			$(".ccm-multiuser-select-item").dialog();
 			$("a.ccm-user-list-clear").click(function() {
@@ -76,13 +76,13 @@ class MultiUserPickerAttributeTypeController extends DefaultAttributeTypeControl
 				$(".ccm-results-list tr").attr(\'class\', \'ccm-list-record\');
 			});
 		
-			ccm_triggerSelectUser = function(uID, uName, uEmail) {
-				var field = $(ccmActiveUserField).attr(\'var\');
+			ccm_triggerSelectBlogMultiUser = function(uID, uName, uEmail) {
+				console.log(uID);
+				var field = $(ccmActiveBlogUserField).attr(\'var\');
 			
-				if($(ccmActiveUserField).attr(\'alt\') != "multi"){
-
-					var par = $(ccmActiveUserField).parent().find(\'.ccm-summary-selected-item-label\');
-					var pari = $(ccmActiveUserField).parent().find(\'[name=' . $fieldName . ']\');
+				if($(ccmActiveBlogUserField).attr(\'alt\') != "multi"){
+					var par = $(ccmActiveBlogUserField).parent().find(\'.ccm-summary-selected-item-label\');
+					var pari = $(ccmActiveBlogUserField).parent().find(\'[name=' . $fieldName . ']\');
 					par.html(uName);
 					pari.val(uID);
 	

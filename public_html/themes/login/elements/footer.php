@@ -4,6 +4,10 @@
 
 
 <div class="row">
+    	<?php  
+			$a = new Area('Payment Info');
+			$a->display($c);
+			?>
 
 </div>
 

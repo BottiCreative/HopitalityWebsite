@@ -45,12 +45,18 @@ background-image:url('<?php       echo ASSETS_URL_IMAGES?>/icons_sprite.png'); /
 	$tmpSections = $blogSectionList->get();
 	$sections = array();
 	foreach($tmpSections as $_c) {
-		$sections[$_c->getCollectionID()] = $_c->getCollectionName();
+		$p = new Permissions($_c);
+		if($p->canAddSubContent()){
+			$pt = $p;
+			$sections[$_c->getCollectionID()] = $_c->getCollectionName();
+		}
 	}
 	$ctArray = CollectionType::getList('');
 	$pageTypes = array();
 	foreach($ctArray as $ct) {
-		$pageTypes[$ct->getCollectionTypeID()] = $ct->getCollectionTypeName();		
+		if($pt && $pt->canAddSubCollection($ct) != 0){
+			$pageTypes[$ct->getCollectionTypeID()] = $ct->getCollectionTypeName();	
+		}	
 	}
 	if($_REQUEST['blogID']){
 		$keys = array_keys($sections);
@@ -61,6 +67,8 @@ background-image:url('<?php       echo ASSETS_URL_IMAGES?>/icons_sprite.png'); /
 		$date = $current_page->getCollectionDatePublic();
 		$canonical_parent_id = Loader::helper('blogify','problog')->getCanonicalParent($date,$current_page);
 		
+		$cParentID = $canonical_parent_id;
+		
 		if(in_array($canonical_parent_id, $keys)){
 			$blog = $current_page;
 		}
@@ -70,7 +78,6 @@ background-image:url('<?php       echo ASSETS_URL_IMAGES?>/icons_sprite.png'); /
 		$blogTitle = $blog->getCollectionName();
 		$blogDescription = $blog->getCollectionDescription();
 		$blogDate = $blog->getCollectionDatePublic();
-		$cParentID = $blog->getCollectionParentID();
 		$ctID = $blog->getCollectionTypeID();
 		$blogBody = '';
 		$eb = $blog->getBlocks('Main');
@@ -86,6 +93,9 @@ background-image:url('<?php       echo ASSETS_URL_IMAGES?>/icons_sprite.png'); /
 		$buttonText = t('Add Blog Entry');
 		$title= 'Add';
 	}
+	
+	$set = AttributeSet::getByHandle('problog_additional_attributes');
+	$setAttribs = $set->getAttributeKeys();
 	?>
 	
 <div style="padding-left: 8px;" class="ccm-ui">
@@ -99,8 +109,10 @@ background-image:url('<?php       echo ASSETS_URL_IMAGES?>/icons_sprite.png'); /
 			</li>
 			<li><a href="javascript:void(0)" onclick="$('ul.tabs li').removeClass('active'); $(this).parent().addClass('active'); $('.pane').hide(); $('div.options').show();"><?php      echo t('Options')?></a>
 			</li>
+			<?php  if(count($setAttribs) > 0){ ?>
 			<li><a href="javascript:void(0)" onclick="$('ul.tabs li').removeClass('active'); $(this).parent().addClass('active'); $('.pane').hide(); $('div.attributes').show();"><?php      echo t('Attributes')?></a>
 			</li>
+			<?php  } ?>
 			<li><a href="javascript:void(0)" onclick="$('ul.tabs li').removeClass('active'); $(this).parent().addClass('active'); $('.pane').hide(); $('div.meta').show();"><?php      echo t('Meta')?></a>
 			</li>
 
@@ -305,8 +317,6 @@ background-image:url('<?php       echo ASSETS_URL_IMAGES?>/icons_sprite.png'); /
 			</div>
 			<div class="pane attributes" style="display: none;">
 				<?php       
-					$set = AttributeSet::getByHandle('problog_additional_attributes');
-					$setAttribs = $set->getAttributeKeys();
 					if($setAttribs){
 						foreach ($setAttribs as $ak) {
 							if(is_object($blog)) {

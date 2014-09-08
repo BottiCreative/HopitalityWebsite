@@ -103,7 +103,7 @@ global $c;
 		}
 		?>
 		<div id="subscribe_to_blog" class="ccm-ui">
-			<a href="<?php      echo $subscribe_link; ?>?blog=<?php      echo $c->getCollectionID(); ?>&user=<?php      echo $u->getUserID(); ?>" onClick="javascript:;" class="subscribe_to_blog btn btn-mini" data-status="<?php      if($subscribed_status){ echo 'unsubscribe';}else{ echo 'subscribed';}?>"> <?php      if($subscribed_status){echo t('Unsubscribe from this Blog'); }else{ echo t('Subscribe to this BLog'); }?> </a>
+			<a href="<?php      echo $subscribe_link; ?>?blog=<?php      echo $cParentID; ?>&user=<?php      echo $u->getUserID(); ?>" onClick="javascript:;" class="subscribe_to_blog btn btn-mini" data-status="<?php      if($subscribed_status){ echo 'unsubscribe';}else{ echo 'subscribed';}?>"> <?php      if($subscribed_status){echo t('Unsubscribe from this Blog'); }else{ echo t('Subscribe to this Blog'); }?> </a>
 		</div>
 		<?php     
 	}

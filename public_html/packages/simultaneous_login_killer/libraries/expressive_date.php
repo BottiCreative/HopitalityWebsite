@@ -1,4 +1,4 @@
-<?php  
+<?php
 defined('C5_EXECUTE') or die(_("Access Denied"));
 
 /**
@@ -152,11 +152,19 @@ class ExpressiveDate extends DateTime {
 	 */
 	protected function parseSuppliedTimezone($timezone)
 	{
-		if ($timezone instanceof DateTimeZone or is_null($timezone))
+		if ($timezone instanceof DateTimeZone)
 		{
 			return $timezone;
 		}
-
+		if (is_null($timezone))
+		{
+			if (!ini_get('date.timezone')) {
+			    $timezone = 'UTC';
+			} else {
+				$timezone = ini_get('date.timezone');
+			}
+			date_default_timezone_set($timezone);
+		}
 		try
 		{
 			$timezone = new DateTimeZone($timezone);

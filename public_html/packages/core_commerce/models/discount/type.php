@@ -52,7 +52,7 @@ class CoreCommerceDiscountType extends Object {
 			$pkgID = $pkg->getPackageID();
 		}
 		$db = Loader::db();
-		$db->Execute('insert into CoreCommerceDiscountTypes (discountTypeHandle, discountTypeName) values (?, ?)', array($handle, $name));
+		$db->Execute('insert into CoreCommerceDiscountTypes (discountTypeHandle, discountTypeName, pkgID) values (?, ?, ?)', array($handle, $name, $pkgID));
 		$id = $db->Insert_ID();
 		$est = CoreCommerceDiscountType::getByID($id);
 	

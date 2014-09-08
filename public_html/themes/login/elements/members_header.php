@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/foundation.css"/>
 <script src="<?php  echo $this->getThemePath(); ?>/js/modernizr.js"></script>
 
-
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>

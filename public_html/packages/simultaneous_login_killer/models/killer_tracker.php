@@ -9,7 +9,15 @@
 if( !class_exists( KillerTracker ) ){
 	class KillerTracker extends Model{
 
-		function __construct(){}
+		function __construct(){
+			if (!ini_get('date.timezone')) {
+			    $timezone = 'UTC';
+
+			} else {
+				$timezone = ini_get('date.timezone');
+			}
+			date_default_timezone_set($timezone);
+		}
 
 		/**
 		 * track and set number of logouts

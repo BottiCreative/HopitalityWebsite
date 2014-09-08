@@ -4,7 +4,7 @@ class CoreCommercePackage extends Package {
 
 	protected $pkgHandle = 'core_commerce';
 	protected $appVersionRequired = '5.6';
-	protected $pkgVersion = '2.8.10';
+	protected $pkgVersion = '2.8.12';
 	
 	/**
 	 * @var array all of the single pages that need to exist for ecom

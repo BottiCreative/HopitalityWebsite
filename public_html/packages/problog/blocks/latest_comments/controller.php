@@ -48,7 +48,7 @@ class LatestCommentsBlockController extends BlockController {
 			$blogify = Loader::helper('blogify','problog');
 			$settings = $blogify->getBlogSettings();
 			if($settings['disqus']){
-				return '<div id="recentcomments" class="dsq-widget"><h2 class="dsq-widget-title">Latest Comments</h2><script type="text/javascript" src="http://'.$settings['disqus'].'.disqus.com/recent_comments_widget.js?num_items='.$limit.'&hide_avatars=0&avatar_size=22&excerpt_length=100"></script></div><a href="http://disqus.com/">Powered by Disqus</a>';
+				return '<div id="recentcomments" class="dsq-widget"><h2 class="dsq-widget-title">Latest Comments</h2><script type="text/javascript" src="https://'.$settings['disqus'].'.disqus.com/recent_comments_widget.js?num_items='.$limit.'&hide_avatars=0&avatar_size=22&excerpt_length=100"></script></div><a href="https://disqus.com/">Powered by Disqus</a>';
 			}else{
 				return $rows;
 			}

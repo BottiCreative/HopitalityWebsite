@@ -5,10 +5,10 @@
 <div class="fullwidthfooter">
 	<div class="rowWide">
 
-        <div class="grid-4 columns">
+        <div class="grid-4 columns contactFoot">
 
-            <a href="">01865 739 174</a><br>
-            <a href="">info@hospitalityentrepreneur.com</a>
+            <a href="tel:01865 739 174" class="callfootLink">01865 739 174</a>
+            <a href="mailto:info@hospitalityentrepreneur.com" class="mailfootLink">info@hospitalityentrepreneur.com</a>
         </div>
         <div class="grid-8 columns end">
                 

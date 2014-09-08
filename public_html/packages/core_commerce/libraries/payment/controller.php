@@ -79,9 +79,15 @@ class CoreCommercePaymentController extends Controller {
 		// now we reduce quantity if that option is enabled
 		if ($pkg->config('MANAGE_INVENTORY') == 1 && $pkg->config('MANAGE_INVENTORY_TRIGGER') == 'FINISHED') {
 			$products = $order->getProducts();
+			$adjustedProducts = array();
 			foreach ($products as $product) {
-				$baseProduct = $product->getProductObject();
+				if (in_array($product->productID,$adjustedProducts)) {
+					$baseProduct = CoreCommerceProduct::getByID($product->productID); //reload the product to get the correct quantity.
+				} else {
+					$baseProduct = $product->getProductObject();
+				}
 				$baseProduct->decreaseProductQuantity($product->getQuantity());
+				$adjustedProducts[] = $product->productID;
 			}
 		}
 

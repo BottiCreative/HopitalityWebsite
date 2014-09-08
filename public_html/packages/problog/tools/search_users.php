@@ -32,7 +32,7 @@ $v->outputHeaderItems();
 	<?php      echo $searchForm?>
 </div>
 
-<?php       Loader::packageElement('users/search_results_pb', array('columns' => $columns, 'mode' => $mode, 'users' => $users, 'userList' => $userList, 'pagination' => $pagination)); ?>
+<?php       Loader::packageElement('users/search_results_pb', 'problog', array('columns' => $columns, 'mode' => $mode, 'users' => $users, 'userList' => $userList, 'pagination' => $pagination)); ?>
 </div>
 </div>
 

@@ -4,28 +4,17 @@ $this->inc('elements/header.php'); ?>
 
 
 
-<div class="fullwidthheader">
-	<div class="rowWide header">
-    
-    
-    	<?php  
-			$a = new Area('HomeSlider');
-			$a->display($c);
-			?>
 
-    </div>
-</div>
 
-<div class="fullwidthform">
-	<div class="row form">
-    	<?php  
-			$a = new Area('wideform');
-			$a->display($c);
-			?>
-    </div>
-</div>
 
-<div class="row">
+<script type="text/javascript">
+<!--
+window.location = "http://hospitalityentrepreneur.com/profile"
+//-->
+</script>
+
+
+<div class="rowWide">
 	
     	<div class="grid-12 columns">
         	<?php  
@@ -38,7 +27,7 @@ $this->inc('elements/header.php'); ?>
 
 
 <div class="fullwidthtest">
-	<div class="row">
+	<div class="rowWide">
     	<div class="grid-8 columns">
         <?php  
 			$a = new Area('testimonial');
@@ -56,7 +45,7 @@ $this->inc('elements/header.php'); ?>
     </div>
 </div>
 
-<div class="row">
+<div class="rowWide">
 	<div class="grid-12 columns partners">
     	<?php  
 			$a = new Area('partnersintro');
@@ -71,7 +60,7 @@ $this->inc('elements/header.php'); ?>
 
 
 <div class="fullwidthmembers">
-	<div class="row members">
+	<div class="rowWide members">
     	<div class="grid-12 columns">
      
             <div class="row">
@@ -91,7 +80,7 @@ $this->inc('elements/header.php'); ?>
 </div>
 
 
-<div class="row members">
+<div class="rowWide members">
     	<div class="grid-4 columns">
         Test 1
         </div>

@@ -18,12 +18,10 @@ extract($blog_settings);
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
+<div class="topRowPad"></div>
 
-	<div class="grid-8 columns blogPostMain">
-        
-        
-        
-       
+<div class="grid-8 columns blogPostMain">
+
 	    <?php    
 		if($u->isLoggedIn() && ($u->uID == $authorID) && ENABLE_USER_PROFILES > 0){
 			echo '<a href="'.DIR_REL.'/index.php/profile/problog_editor/'.$c->getCollectionID().'/" rel="edit">'.t('Edit This Post').'</a>';	
@@ -82,7 +80,43 @@ extract($blog_settings);
         <div class="grid-4 columns">
         
         <aside>
-        		<?php  
+        
+        <?php  
+        	$a = new GlobalArea('BlogNav');
+        	$a->display();
+         ?>
+        
+        <div class="clearfix"></div>
+        	
+		<?php  
+        	$a = new GlobalArea('BlogHeadPromo');
+        	$a->display();
+         ?>
+         
+         
+        <div class="clearfix"></div>
+        	
+		<?php  
+        	$a = new GlobalArea('Blog Categories');
+        	$a->display();
+         ?>
+         
+         
+         
+        
+        <div class="clearfix"></div>
+        	
+		<?php  
+        	$a = new GlobalArea('SidePosts');
+        	$a->display();
+         ?>
+         
+         
+         
+         <div class="clearfix"></div>   
+            
+           
+		   <?php  
 			$a = new Area('Sidebar');
 			$a->display($c);
 			?>
@@ -91,6 +125,7 @@ extract($blog_settings);
         
         <div class="fbBox">
         <div class="fb-like-box" data-href="https://www.facebook.com/pages/Hospitality-Entrepreneur/449799375102971?ref=hl" data-width="307" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false">
+        </div>
         </div>
         
 

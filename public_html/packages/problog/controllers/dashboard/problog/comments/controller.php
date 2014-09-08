@@ -33,13 +33,35 @@ class DashboardProblogCommentsController extends Controller {
 	
 	public function getCommentsByParentIDs($IDs){
 		$db = Loader::db();
+		$child_pages = array();
+		
+		$blogList = new PageList();
+		$blogList->sortBy('cDateAdded', 'desc');
+		$blogList->filter(false,"(CHAR_LENGTH(cv.cvName) > 4 OR cv.cvName NOT REGEXP '^[0-9]')");
+
+		if(is_array($IDs)){
+			foreach($IDs as $id){
+				if($fs){$fs .= ' OR ';}
+				$path = Page::getByID($id)->getCollectionPath().'/';
+				$fs .= "PagePaths.cPath LIKE '$path%'";
+			}
+			$blogList->filter(false,"($fs)");
+		}
+		$blogList->filter(false,"(CHAR_LENGTH(cv.cvName) > 4 OR cv.cvName NOT REGEXP '^[0-9]')");
+		$blogResults=$blogList->get();
+		
+		foreach($blogResults as $result){
+			$child_pages[] = $result->getCollectionID();
+		}
+		
 		$r = $db->EXECUTE("SELECT * FROM btGuestBookEntries ORDER BY entryDate DESC");
 		$comments = array();
 		
 		while($row=$r->fetchrow()){
 			$ccObj = Page::getByID($row['cID']);
-			$pID = $ccObj->getCollectionParentID();
-			if(in_array($pID, $IDs)){
+			$pID = $ccObj->getCollectionID();
+			//var_dump($pID.' - '.print_r($child_pages));
+			if(in_array($pID, $child_pages)){
 				$comments[] = $row;
 			}
 		}

@@ -42,8 +42,6 @@ class HEChangeOrderStatus extends ChangeOrderStatus   {
 					
 				}*/
 				
-				//$newUser = UserInfo::getByEmail($order->getOrderEmail());
-				//HEChangeOrderStatus::sendUserEmail($newUser,$order,'1234');
 			
 			break;
 		}
@@ -126,21 +124,22 @@ class HEChangeOrderStatus extends ChangeOrderStatus   {
 	public static function sendUserEmail($newUser, $order,$newUserPassword)
 	{
 		$mail = Loader::helper('mail');	
-		Loader::helper('utilities','hospitality_entrepreneur');
-		$hospitality = new HospitalityEntrepreneurUtilitiesHelper();
-		
-		$loginLink = BASE_URL . '/login';
 		
 		$newUserObj = $newUser->getUserObject();
 		
-		$memberEmail = $hospitality->get_member_email($newUserObj->getUserName(), $newUserPassword, $loginLink);
+		$memberEmail = <<<EMAIL
+		 <p>Thanks for joining</p>
+		 <ul>
+		 <li>Your username is <strong>{$newUserObj->getUserName()}</strong></li>
+		 <li>Your password is <strong>{$newUserPassword}</strong></li>
+		 </ul>
+EMAIL;
 				
 		$mail->setSubject("Thanks for joining, {$newUser->getAttribute('billing_first_name')}!");
 		$mail->from('noreply@hospitalityentrepreneur.com');
 		$mail->to($order->getOrderEmail());
 		
 		$mail->setBodyHTML($memberEmail);
-		Log::addEntry($memberEmail,'Member Email Sent');
 		$mail->sendMail();
 	}
 	

@@ -18,11 +18,11 @@ table td{padding: 12px!important;}
 		-->
 		<h4><?php       echo t('Options')?></h4> 
 		<div id="settings_adds" style="float: right; width: 310px;">
-			<a href="http://chadstrat.com/apps/problogmobile/" target="_blank"><img src="http://chadstrat.com/apps/problogmobile/images/promo.png" alt="phone" style="float: left; padding-right: 15px;"/></a>
+			<a href="http://chadstrat.com/apps/problogmobile/" target="_blank"><img src="<?php echo BASE_URL.DIR_REL?>/packages/problog/images/problog_mobile.png" alt="phone" style="float: left; padding-right: 15px;"/></a>
 			<strong><?php      echo t('ProBlog Mobile')?></strong>
 			<p><?php      echo t('Don\'t forget to check out ProBog Mobile iPhone & iPad native app in the Apple App Store for $4.99!')?></p>
 			<p><?php      echo t('Blog on the go and include phone photos and geo-tagging for the ultimate photo-blogging experience!')?></p>
-			<a href="http://chadstrat.com/apps/problogmobile/" target="_blank"><img src="http://chadstrat.com/apps/problogmobile/images/app_store.gif" alt="store" style="width: 140px!important;"/></a>
+			<a href="http://chadstrat.com/apps/problogmobile/" target="_blank"><img src="<?php echo BASE_URL.DIR_REL?>/packages/problog/images/appstore.png" alt="store" style="width: 140px!important;"/></a>
 		</div>
 		<form method="post" action="<?php       echo $this->action('save')?>" id="settings" style="width: 480px!important;">
 		<table>
@@ -84,7 +84,7 @@ table td{padding: 12px!important;}
 				</tr>
 				<tr>
 					<td>
-					<?php       echo $fm->select('ctID', $pageTypes, $ctID)?>
+					<?php   echo $fm->select('ctID', $pageTypes, $ctID)?>
 					</td>
 				</tr>
 			</table>
@@ -101,7 +101,7 @@ table td{padding: 12px!important;}
 				</tr>
 				<tr>
 					<td>
-					<?php       echo $fm->text('breakSyntax',$breakSyntax);?>
+					<?php   echo $fm->text('breakSyntax',$breakSyntax);?>
 					</td>
 				</tr>
 			</table>
@@ -199,7 +199,7 @@ table td{padding: 12px!important;}
 			<table id="settings3" class="ccm-grid">
 				<tr>
 					<th class="header">
-					<strong><?php       echo t('Sharethis Publisher Key')?></strong>
+					<strong><?php  echo t('Sharethis Publisher Key')?></strong>
 					</th>
 				</tr>
 				<tr>
@@ -252,7 +252,7 @@ table td{padding: 12px!important;}
 					$PB_APP_KEY = $pkg->config('PB_APP_KEY');
 					$PB_APP_SECRET = $pkg->config('PB_APP_SECRET');
 					$uh = Loader::helper('concrete/urls');
-					$tool = str_replace('index.php/','',BASE_URL.$uh->getToolsUrl('twitter_save.php?', 'problog'));
+					$tool = str_replace('index.php/','',BASE_URL.DIR_REL.$uh->getToolsUrl('twitter_save.php?', 'problog'));
 					if(!$PB_APP_KEY){
 						$pkg->saveConfig('PB_APP_KEY','MfUJJrhZDXHUsvbVSf2Ag');
 						$pkg->saveConfig('PB_APP_SECRET','uhvYCtKCNSdHGYvwNwu80rkw5Ju53f5jhaLPMAgK0');

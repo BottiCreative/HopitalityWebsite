@@ -1,4 +1,4 @@
-<?php   
+<?php    
 defined('C5_EXECUTE') or die("Access Denied.");
 /**
 	* @ concrete5 package AutonavPro
@@ -17,8 +17,8 @@ if($info['responsive']==null){$info['responsive']='979';}
 //load alternative colorpicker
 ?>
 
-<script type="text/javascript" src="<?php    echo $burl; ?>/js/jquery.miniColors.js"></script>
-<link type="text/css" rel="stylesheet" href="<?php    echo $burl; ?>/css/jquery.miniColors.css" />	
+<script type="text/javascript" src="<?php     echo $burl; ?>/js/jquery.miniColors.js"></script>
+<link type="text/css" rel="stylesheet" href="<?php     echo $burl; ?>/css/jquery.miniColors.css" />	
 <style>
 .miniColors-selector {
 	margin: -45px 0 0 160px;
@@ -220,77 +220,77 @@ input[type="checkbox"] {margin:0 5px}
 </script>
 <div style="padding:10px">
 <ul id="ccm-autonav-tabs" class="ccm-dialog-tabs">
-	<li class="ccm-nav-active"><a id="ccm-autonav-tab-add" href="javascript:void(0);"><?php    echo t('Edit')?></a></li>
-	<li class=""><a id="ccm-autonav-tab-style"  href="javascript:void(0);"><?php    echo t('Customize')?></a></li>			
+	<li class="ccm-nav-active"><a id="ccm-autonav-tab-add" href="javascript:void(0);"><?php     echo t('Edit')?></a></li>
+	<li class=""><a id="ccm-autonav-tab-style"  href="javascript:void(0);"><?php     echo t('Customize')?></a></li>			
 </ul>
 <div class="ccm-autonavPane" id="ccm-autonavPane-add" style="clear: both">
 
-<input type="hidden" name="autonavCurrentCID" value="<?php    echo $c->getCollectionID()?>" />
-<input type="hidden" name="autonavPreviewPane" value="<?php    echo REL_DIR_FILES_TOOLS_BLOCKS?>/<?php    echo $this->getBlockTypeHandle()?>/preview_pane.php" />
+<input type="hidden" name="autonavCurrentCID" value="<?php     echo $c->getCollectionID()?>" />
+<input type="hidden" name="autonavPreviewPane" value="<?php     echo REL_DIR_FILES_TOOLS_BLOCKS?>/<?php     echo $this->getBlockTypeHandle()?>/preview_pane.php" />
 <div class="ccm-summary-selected-item">
-<strong><?php    echo t('Pages Should Appear')?></strong><br/>
+<strong><?php     echo t('Pages Should Appear')?></strong><br/>
 <select name="orderBy" class="mySelect">
-	<option value="display_asc" <?php     if ($info['orderBy'] == 'display_asc') { ?> selected<?php     } ?>><?php    echo t('in their sitemap order.')?></option>
-	<option value="chrono_desc" <?php     if ($info['orderBy'] == 'chrono_desc') { ?> selected<?php     } ?>><?php    echo t('with the most recent first.')?></option>
-    <option value="chrono_asc" <?php     if ($info['orderBy'] == 'chrono_asc') { ?> selected<?php     } ?>><?php    echo t('with the earliest first.')?></option>
-    <option value="alpha_asc" <?php     if ($info['orderBy'] == 'alpha_asc') { ?> selected<?php     } ?>><?php    echo t('in alphabetical order.')?></option>
-    <option value="alpha_desc" <?php     if ($info['orderBy'] == 'alpha_desc') { ?> selected<?php     } ?>><?php    echo t('in reverse alphabetical order.')?></option>
-    <option value="display_desc" <?php     if ($info['orderBy'] == 'display_desc') { ?> selected<?php     } ?>><?php    echo t('in reverse sitemap order.')?></option>
+	<option value="display_asc" <?php      if ($info['orderBy'] == 'display_asc') { ?> selected<?php      } ?>><?php     echo t('in their sitemap order.')?></option>
+	<option value="chrono_desc" <?php      if ($info['orderBy'] == 'chrono_desc') { ?> selected<?php      } ?>><?php     echo t('with the most recent first.')?></option>
+    <option value="chrono_asc" <?php      if ($info['orderBy'] == 'chrono_asc') { ?> selected<?php      } ?>><?php     echo t('with the earliest first.')?></option>
+    <option value="alpha_asc" <?php      if ($info['orderBy'] == 'alpha_asc') { ?> selected<?php      } ?>><?php     echo t('in alphabetical order.')?></option>
+    <option value="alpha_desc" <?php      if ($info['orderBy'] == 'alpha_desc') { ?> selected<?php      } ?>><?php     echo t('in reverse alphabetical order.')?></option>
+    <option value="display_desc" <?php      if ($info['orderBy'] == 'display_desc') { ?> selected<?php      } ?>><?php     echo t('in reverse sitemap order.')?></option>
 </select>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><?php    echo t('Viewing Permissions')?></strong><br/>
-<?php    echo $fm -> checkbox('displayUnavailablePages', 1, $info['displayUnavailablePages']); ?>
-<?php    echo t('Display pages to users even when those users cannot access those pages.')?>
+<strong><?php     echo t('Viewing Permissions')?></strong><br/>
+<?php     echo $fm -> checkbox('displayUnavailablePages', 1, $info['displayUnavailablePages']); ?>
+<?php     echo t('Display pages to users even when those users cannot access those pages.')?>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><?php    echo t('Display Pages')?></strong><br/>
+<strong><?php     echo t('Display Pages')?></strong><br/>
 <select name="displayPages" onchange="toggleCustomPage(this.value);" class="mySelect">
-	<option value="top"<?php     if ($info['displayPages'] == 'top') { ?> selected<?php     } ?>><?php    echo t('at the top level.')?></option>
-	<option value="second_level"<?php     if ($info['displayPages'] == 'second_level') { ?> selected<?php     } ?>><?php    echo t('at the second level.')?></option>
-	<option value="third_level"<?php     if ($info['displayPages'] == 'third_level') { ?> selected<?php     } ?>><?php    echo t('at the third level.')?></option>
-	<option value="above"<?php     if ($info['displayPages'] == 'above') { ?> selected<?php     } ?>><?php    echo t('at the level above.')?></option>
-	<option value="current"<?php     if ($info['displayPages'] == 'current') { ?> selected<?php     } ?>><?php    echo t('at the current level.')?></option>
-	<option value="below"<?php     if ($info['displayPages'] == 'below') { ?> selected<?php     } ?>><?php    echo t('At the level below.')?></option>
-	<option value="custom"<?php     if ($info['displayPages'] == 'custom') { ?> selected<?php     } ?>><?php    echo t('Beneath a particular page')?></option>
+	<option value="top"<?php      if ($info['displayPages'] == 'top') { ?> selected<?php      } ?>><?php     echo t('at the top level.')?></option>
+	<option value="second_level"<?php      if ($info['displayPages'] == 'second_level') { ?> selected<?php      } ?>><?php     echo t('at the second level.')?></option>
+	<option value="third_level"<?php      if ($info['displayPages'] == 'third_level') { ?> selected<?php      } ?>><?php     echo t('at the third level.')?></option>
+	<option value="above"<?php      if ($info['displayPages'] == 'above') { ?> selected<?php      } ?>><?php     echo t('at the level above.')?></option>
+	<option value="current"<?php      if ($info['displayPages'] == 'current') { ?> selected<?php      } ?>><?php     echo t('at the current level.')?></option>
+	<option value="below"<?php      if ($info['displayPages'] == 'below') { ?> selected<?php      } ?>><?php     echo t('At the level below.')?></option>
+	<option value="custom"<?php      if ($info['displayPages'] == 'custom') { ?> selected<?php      } ?>><?php     echo t('Beneath a particular page')?></option>
 </select>
 
 <br/>
 
-<div id="ccm-autonav-page-selector"<?php     if ($info['displayPages'] != 'custom') { ?> style="display: none"<?php     } ?>>
-<?php     $fmps = Loader::helper('form/page_selector');
+<div id="ccm-autonav-page-selector"<?php      if ($info['displayPages'] != 'custom') { ?> style="display: none"<?php      } ?>>
+<?php      $fmps = Loader::helper('form/page_selector');
 	print $fmps -> selectPage('displayPagesCID', $info['displayPagesCID']);
 ?>
 </div>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><?php    echo t('Subpages to Display')?></strong><br/>
+<strong><?php     echo t('Subpages to Display')?></strong><br/>
 <select name="displaySubPages" onchange="toggleSubPageLevels(this.value);" class="mySelect">
-	<option value="none"<?php     if ($info['displaySubPages'] == 'none') { ?> selected<?php     } ?>><?php    echo t('None')?></option>
-	<option value="relevant"<?php     if ($info['displaySubPages'] == 'relevant') { ?> selected<?php     } ?>><?php    echo t('Relevant sub pages.')?></option>
-	<option value="relevant_breadcrumb"<?php     if ($info['displaySubPages'] == 'relevant_breadcrumb') { ?> selected<?php     } ?>><?php    echo t('Display breadcrumb trail.')?></option>
-	<option value="all"<?php     if ($info['displaySubPages'] == 'all') { ?> selected<?php     } ?>><?php    echo t('Display all.')?></option>
+	<option value="none"<?php      if ($info['displaySubPages'] == 'none') { ?> selected<?php      } ?>><?php     echo t('None')?></option>
+	<option value="relevant"<?php      if ($info['displaySubPages'] == 'relevant') { ?> selected<?php      } ?>><?php     echo t('Relevant sub pages.')?></option>
+	<option value="relevant_breadcrumb"<?php      if ($info['displaySubPages'] == 'relevant_breadcrumb') { ?> selected<?php      } ?>><?php     echo t('Display breadcrumb trail.')?></option>
+	<option value="all"<?php      if ($info['displaySubPages'] == 'all') { ?> selected<?php      } ?>><?php     echo t('Display all.')?></option>
 </select>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><?php    echo t('Subpage Levels')?></strong><br/>
-<select id="displaySubPageLevels" name="displaySubPageLevels" <?php     if ($info['displaySubPages'] == 'none') { ?> disabled <?php     } ?> onchange="toggleSubPageLevelsNum(this.value);" class="mySelect">
-	<option value="enough"<?php     if ($info['displaySubPageLevels'] == 'enough') { ?> selected<?php     } ?>><?php    echo t('Display sub pages to current.')?></option>
-	<option value="enough_plus1"<?php     if ($info['displaySubPageLevels'] == 'enough_plus1') { ?> selected<?php     } ?>><?php    echo t('Display sub pages to current +1.')?></option>
-	<option value="all"<?php     if ($info['displaySubPageLevels'] == 'all') { ?> selected<?php     } ?>><?php    echo t('Display all.')?></option>
-	<option value="custom"<?php     if ($info['displaySubPageLevels'] == 'custom') { ?> selected<?php     } ?>><?php    echo t('Display a custom amount.')?></option>
+<strong><?php     echo t('Subpage Levels')?></strong><br/>
+<select id="displaySubPageLevels" name="displaySubPageLevels" <?php      if ($info['displaySubPages'] == 'none') { ?> disabled <?php      } ?> onchange="toggleSubPageLevelsNum(this.value);" class="mySelect">
+	<option value="enough"<?php      if ($info['displaySubPageLevels'] == 'enough') { ?> selected<?php      } ?>><?php     echo t('Display sub pages to current.')?></option>
+	<option value="enough_plus1"<?php      if ($info['displaySubPageLevels'] == 'enough_plus1') { ?> selected<?php      } ?>><?php     echo t('Display sub pages to current +1.')?></option>
+	<option value="all"<?php      if ($info['displaySubPageLevels'] == 'all') { ?> selected<?php      } ?>><?php     echo t('Display all.')?></option>
+	<option value="custom"<?php      if ($info['displaySubPageLevels'] == 'custom') { ?> selected<?php      } ?>><?php     echo t('Display a custom amount.')?></option>
 </select>
 
 <br/>
 
-<div id="divSubPageLevelsNum"<?php     if ($info['displaySubPageLevels'] != 'custom') { ?> style="display: none"<?php     } ?>>
+<div id="divSubPageLevelsNum"<?php      if ($info['displaySubPageLevels'] != 'custom') { ?> style="display: none"<?php      } ?>>
 	<br/>
-	<input type="text" name="displaySubPageLevelsNum" value="<?php    echo $info['displaySubPageLevelsNum'] ;?>" style="width: 30px; vertical-align: middle">
-	&nbsp;<?php    echo t('levels')?>
+	<input type="text" name="displaySubPageLevelsNum" value="<?php     echo $info['displaySubPageLevelsNum'] ;?>" style="width: 30px; vertical-align: middle">
+	&nbsp;<?php     echo t('levels')?>
 </div>
 </div>
 <br/><br/>
@@ -298,221 +298,221 @@ input[type="checkbox"] {margin:0 5px}
 
 <div  class="ccm-autonavPane " id="ccm-autonavPane-style" style="display: none;clear: both">
 <div class="ccm-summary-selected-item">
-<strong><?php    echo t('Responsive Width')?></strong><br/>
+<strong><?php     echo t('Responsive Width')?></strong><br/>
 <p>
-<?php    echo t('Width when nav becomes responsive. Set to 0 to disable. Default value is 979')?>
+<?php     echo t('Width when nav becomes responsive. Set to 0 to disable. Default value is 979')?>
 </p>
 <br/>
-<?php     echo $fm->text('responsive', $info['responsive']); ?>&nbsp;px
+<?php      echo $fm->text('responsive', $info['responsive']); ?>&nbsp;px
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><?php    echo t('Sublevel Min Width Size')?></strong><br/>
-<?php     echo $fm->text('swidthsize', $info['swidthsize']); ?>&nbsp;px
+<strong><?php     echo t('Sublevel Min Width Size')?></strong><br/>
+<?php      echo $fm->text('swidthsize', $info['swidthsize']); ?>&nbsp;px
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><?php    echo t('Search Results Page')?></strong><br/>
-<?php     $sform = Loader::helper('form/page_selector');
+<strong><?php     echo t('Search Results Page')?></strong><br/>
+<?php      $sform = Loader::helper('form/page_selector');
 	print $sform->selectPage('searchres', $info['searchres']);
 ?>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><?php    echo t('Customize Nav')?></strong><br/>
+<strong><?php     echo t('Customize Nav')?></strong><br/>
 <select id="customnav" name="customnav"  class="mySelect customnav">
-	<option value="0"<?php     if ($info['customnav'] == 0) { ?> selected<?php     } ?>><?php    echo t('No')?></option>
-	<option value="1"<?php     if ($info['customnav'] == 1 ) { ?> selected<?php     } ?>><?php    echo t('Yes')?></option>
+	<option value="0"<?php      if ($info['customnav'] == 0) { ?> selected<?php      } ?>><?php     echo t('No')?></option>
+	<option value="1"<?php      if ($info['customnav'] == 1 ) { ?> selected<?php      } ?>><?php     echo t('Yes')?></option>
 
 </select>
 </div>
 <br/>
 <div class="custom_options">
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="fontsize_c" value="1" id="fontsize_c" <?php   
+<strong><input type="checkbox" name="fontsize_c" value="1" id="fontsize_c" <?php    
 	if ($info['fontsize_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Font Size')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Font Size')?></strong><br/>
 <div id="fontsize_div">
 <select id="fontsize" name="fontsize"  class="mySelect">
 	
-	<option value="1"<?php     if ($info['fontsize'] == 1) { ?> selected<?php     } ?>><?php    echo t('1px')?></option>
-	<option value="2"<?php     if ($info['fontsize'] == 2) { ?> selected<?php     } ?>><?php    echo t('2px')?></option>
-	<option value="3"<?php     if ($info['fontsize'] == 3) { ?> selected<?php     } ?>><?php    echo t('3px')?></option>
-	<option value="4"<?php     if ($info['fontsize'] == 4) { ?> selected<?php     } ?>><?php    echo t('4px')?></option>
-	<option value="5"<?php     if ($info['fontsize'] == 5) { ?> selected<?php     } ?>><?php    echo t('5px')?></option>
-	<option value="6"<?php     if ($info['fontsize'] == 6) { ?> selected<?php     } ?>><?php    echo t('6px')?></option>
-	<option value="7"<?php     if ($info['fontsize'] == 7) { ?> selected<?php     } ?>><?php    echo t('7px')?></option>
-	<option value="8"<?php     if ($info['fontsize'] == 8) { ?> selected<?php     } ?>><?php    echo t('8px')?></option>
-	<option value="9"<?php     if ($info['fontsize'] == 9) { ?> selected<?php     } ?>><?php    echo t('9px')?></option>
-	<option value="10"<?php     if ($info['fontsize'] == 10) { ?> selected<?php     } ?>><?php    echo t('10px')?></option>
-	<option value="11"<?php     if ($info['fontsize'] == 11) { ?> selected<?php     } ?>><?php    echo t('11px')?></option>
-	<option value="12"<?php     if ($info['fontsize'] == 12) { ?> selected<?php     } if($info['fontsize'] == null){echo 'selected';} ?>><?php    echo t('12px')?></option>
-	<option value="13"<?php     if ($info['fontsize'] == 13) { ?> selected<?php     } ?>><?php    echo t('13px')?></option>
-	<option value="14"<?php     if ($info['fontsize'] == 14) { ?> selected<?php     } ?>><?php    echo t('14px')?></option>
-	<option value="15"<?php     if ($info['fontsize'] == 15) { ?> selected<?php     } ?>><?php    echo t('15px')?></option>
-	<option value="16"<?php     if ($info['fontsize'] == 16) { ?> selected<?php     } ?>><?php    echo t('16px')?></option>
-	<option value="17"<?php     if ($info['fontsize'] == 17) { ?> selected<?php     } ?>><?php    echo t('17px')?></option>
-	<option value="18"<?php     if ($info['fontsize'] == 18) { ?> selected<?php     } ?>><?php    echo t('18px')?></option>
-	<option value="19"<?php     if ($info['fontsize'] == 19) { ?> selected<?php     } ?>><?php    echo t('19px')?></option>
-	<option value="20"<?php     if ($info['fontsize'] == 20) { ?> selected<?php     } ?>><?php    echo t('20px')?></option>
-	<option value="21"<?php     if ($info['fontsize'] == 21) { ?> selected<?php     } ?>><?php    echo t('21px')?></option>
-	<option value="22"<?php     if ($info['fontsize'] == 22) { ?> selected<?php     } ?>><?php    echo t('22px')?></option>
-	<option value="23"<?php     if ($info['fontsize'] == 23) { ?> selected<?php     } ?>><?php    echo t('23px')?></option>
-	<option value="24"<?php     if ($info['fontsize'] == 24) { ?> selected<?php     } ?>><?php    echo t('24px')?></option>
-	<option value="25"<?php     if ($info['fontsize'] == 25) { ?> selected<?php     } ?>><?php    echo t('25px')?></option>
-	<option value="26"<?php     if ($info['fontsize'] == 26) { ?> selected<?php     } ?>><?php    echo t('26px')?></option>
-	<option value="27"<?php     if ($info['fontsize'] == 27) { ?> selected<?php     } ?>><?php    echo t('27px')?></option>
-	<option value="28"<?php     if ($info['fontsize'] == 28) { ?> selected<?php     } ?>><?php    echo t('28px')?></option>
-	<option value="29"<?php     if ($info['fontsize'] == 29) { ?> selected<?php     } ?>><?php    echo t('29px')?></option>
-	<option value="30"<?php     if ($info['fontsize'] == 30) { ?> selected<?php     } ?>><?php    echo t('30px')?></option>	
+	<option value="1"<?php      if ($info['fontsize'] == 1) { ?> selected<?php      } ?>><?php     echo t('1px')?></option>
+	<option value="2"<?php      if ($info['fontsize'] == 2) { ?> selected<?php      } ?>><?php     echo t('2px')?></option>
+	<option value="3"<?php      if ($info['fontsize'] == 3) { ?> selected<?php      } ?>><?php     echo t('3px')?></option>
+	<option value="4"<?php      if ($info['fontsize'] == 4) { ?> selected<?php      } ?>><?php     echo t('4px')?></option>
+	<option value="5"<?php      if ($info['fontsize'] == 5) { ?> selected<?php      } ?>><?php     echo t('5px')?></option>
+	<option value="6"<?php      if ($info['fontsize'] == 6) { ?> selected<?php      } ?>><?php     echo t('6px')?></option>
+	<option value="7"<?php      if ($info['fontsize'] == 7) { ?> selected<?php      } ?>><?php     echo t('7px')?></option>
+	<option value="8"<?php      if ($info['fontsize'] == 8) { ?> selected<?php      } ?>><?php     echo t('8px')?></option>
+	<option value="9"<?php      if ($info['fontsize'] == 9) { ?> selected<?php      } ?>><?php     echo t('9px')?></option>
+	<option value="10"<?php      if ($info['fontsize'] == 10) { ?> selected<?php      } ?>><?php     echo t('10px')?></option>
+	<option value="11"<?php      if ($info['fontsize'] == 11) { ?> selected<?php      } ?>><?php     echo t('11px')?></option>
+	<option value="12"<?php      if ($info['fontsize'] == 12) { ?> selected<?php      } if($info['fontsize'] == null){echo 'selected';} ?>><?php     echo t('12px')?></option>
+	<option value="13"<?php      if ($info['fontsize'] == 13) { ?> selected<?php      } ?>><?php     echo t('13px')?></option>
+	<option value="14"<?php      if ($info['fontsize'] == 14) { ?> selected<?php      } ?>><?php     echo t('14px')?></option>
+	<option value="15"<?php      if ($info['fontsize'] == 15) { ?> selected<?php      } ?>><?php     echo t('15px')?></option>
+	<option value="16"<?php      if ($info['fontsize'] == 16) { ?> selected<?php      } ?>><?php     echo t('16px')?></option>
+	<option value="17"<?php      if ($info['fontsize'] == 17) { ?> selected<?php      } ?>><?php     echo t('17px')?></option>
+	<option value="18"<?php      if ($info['fontsize'] == 18) { ?> selected<?php      } ?>><?php     echo t('18px')?></option>
+	<option value="19"<?php      if ($info['fontsize'] == 19) { ?> selected<?php      } ?>><?php     echo t('19px')?></option>
+	<option value="20"<?php      if ($info['fontsize'] == 20) { ?> selected<?php      } ?>><?php     echo t('20px')?></option>
+	<option value="21"<?php      if ($info['fontsize'] == 21) { ?> selected<?php      } ?>><?php     echo t('21px')?></option>
+	<option value="22"<?php      if ($info['fontsize'] == 22) { ?> selected<?php      } ?>><?php     echo t('22px')?></option>
+	<option value="23"<?php      if ($info['fontsize'] == 23) { ?> selected<?php      } ?>><?php     echo t('23px')?></option>
+	<option value="24"<?php      if ($info['fontsize'] == 24) { ?> selected<?php      } ?>><?php     echo t('24px')?></option>
+	<option value="25"<?php      if ($info['fontsize'] == 25) { ?> selected<?php      } ?>><?php     echo t('25px')?></option>
+	<option value="26"<?php      if ($info['fontsize'] == 26) { ?> selected<?php      } ?>><?php     echo t('26px')?></option>
+	<option value="27"<?php      if ($info['fontsize'] == 27) { ?> selected<?php      } ?>><?php     echo t('27px')?></option>
+	<option value="28"<?php      if ($info['fontsize'] == 28) { ?> selected<?php      } ?>><?php     echo t('28px')?></option>
+	<option value="29"<?php      if ($info['fontsize'] == 29) { ?> selected<?php      } ?>><?php     echo t('29px')?></option>
+	<option value="30"<?php      if ($info['fontsize'] == 30) { ?> selected<?php      } ?>><?php     echo t('30px')?></option>	
 </select></div>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="fontstyle_c" value="1" id="fontstyle_c" <?php   
+<strong><input type="checkbox" name="fontstyle_c" value="1" id="fontstyle_c" <?php    
 	if ($info['fontstyle_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Font Style')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Font Style')?></strong><br/>
 <div id="fontstyle_div">
 <select id="fontstyle" name="fontstyle"  class="mySelect">	
-	<option value="normal"<?php     if ($info['fontstyle'] == 'normal') { ?> selected<?php     } ?>><?php    echo t('normal')?></option>
-	<option value="italic"<?php     if ($info['fontstyle'] == 'italic') { ?> selected<?php     } ?>><?php    echo t('italic')?></option>
-	<option value="oblique"<?php     if ($info['fontstyle'] == 'oblique') { ?> selected<?php     } ?>><?php    echo t('oblique')?></option>
-	<option value="bold"<?php     if ($info['fontstyle'] == 'bold') { ?> selected<?php     } ?>><?php    echo t('bold')?></option>	
-	<option value="italic_b"<?php     if ($info['fontstyle'] == 'italic_b') { ?> selected<?php     } ?>><?php    echo t('italic bold')?></option>
-	<option value="oblique_b"<?php     if ($info['fontstyle'] == 'oblique_b') { ?> selected<?php     } ?>><?php    echo t('oblique bold')?></option>
+	<option value="normal"<?php      if ($info['fontstyle'] == 'normal') { ?> selected<?php      } ?>><?php     echo t('normal')?></option>
+	<option value="italic"<?php      if ($info['fontstyle'] == 'italic') { ?> selected<?php      } ?>><?php     echo t('italic')?></option>
+	<option value="oblique"<?php      if ($info['fontstyle'] == 'oblique') { ?> selected<?php      } ?>><?php     echo t('oblique')?></option>
+	<option value="bold"<?php      if ($info['fontstyle'] == 'bold') { ?> selected<?php      } ?>><?php     echo t('bold')?></option>	
+	<option value="italic_b"<?php      if ($info['fontstyle'] == 'italic_b') { ?> selected<?php      } ?>><?php     echo t('italic bold')?></option>
+	<option value="oblique_b"<?php      if ($info['fontstyle'] == 'oblique_b') { ?> selected<?php      } ?>><?php     echo t('oblique bold')?></option>
 </select>	
 </div>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="fontcolor_c" value="1" id="fontcolor_c" <?php   
+<strong><input type="checkbox" name="fontcolor_c" value="1" id="fontcolor_c" <?php    
 	if ($info['fontcolor_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Font Color')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Font Color')?></strong><br/>
 <div id="fontcolor_div">
-<?php   
+<?php    
 echo '<input type="text" id="fontcolor" name="fontcolor" class="miniColors" value="'.$info['fontcolor'].'" />&nbsp;';
 ?>
 </div>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="fontcolorh_c" value="1" id="fontcolorh_c" <?php   
+<strong><input type="checkbox" name="fontcolorh_c" value="1" id="fontcolorh_c" <?php    
 	if ($info['fontcolorh_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Font Color On Hover')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Font Color On Hover')?></strong><br/>
 
 <div id="fontcolorh_div">
-<?php     
+<?php      
 echo '<input type="text" id="fontcolorh" name="fontcolorh" class="miniColors" value="'.$info['fontcolorh'].'" />&nbsp;';
 ?>
 </div>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="bgcolor_c" value="1" id="bgcolor_c" <?php   
+<strong><input type="checkbox" name="bgcolor_c" value="1" id="bgcolor_c" <?php    
 	if ($info['bgcolor_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Nav Background Color')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Nav Background Color')?></strong><br/>
 <div id="bgcolor_div">
-<?php   
+<?php    
  echo '<input type="text" id="bgcolor" name="bgcolor" class="miniColors" value="'.$info['bgcolor'].'" />&nbsp;';
  ?>
 </div>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="bgtabcolor_c" value="1" id="bgtabcolor_c" <?php   
+<strong><input type="checkbox" name="bgtabcolor_c" value="1" id="bgtabcolor_c" <?php    
 	if ($info['bgtabcolor_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Tabs Background Color')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Tabs Background Color')?></strong><br/>
 <div id="bgtabcolor_div">
-<?php   
+<?php    
  echo '<input type="text" id="bgtabcolor" name="bgtabcolor" class="miniColors" value="'.$info['bgtabcolor'].'" />&nbsp;';
 ?>
 </div>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="bgtabcolorh_c" value="1" id="bgtabcolorh_c" <?php   
+<strong><input type="checkbox" name="bgtabcolorh_c" value="1" id="bgtabcolorh_c" <?php    
 	if ($info['bgtabcolorh_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Tabs Background Color On Hover')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Tabs Background Color On Hover')?></strong><br/>
 <div id="bgtabcolorh_div">
-<?php   
+<?php    
  echo '<input type="text" id="bgtabcolorh" name="bgtabcolorh" class="miniColors" value="'.$info['bgtabcolorh'].'" />&nbsp;';
  ?>
 </div>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="sfontsize_c" value="1" id="sfontsize_c" <?php   
+<strong><input type="checkbox" name="sfontsize_c" value="1" id="sfontsize_c" <?php    
 	if ($info['sfontsize_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Sublevel Font Size')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Sublevel Font Size')?></strong><br/>
 <div id="sfontsize_div">
 <select id="sfontsize" name="sfontsize"  class="mySelect">
 	
-	<option value="1"<?php     if ($info['sfontsize'] == 1) { ?> selected<?php     } ?>><?php    echo t('1px')?></option>
-	<option value="2"<?php     if ($info['sfontsize'] == 2) { ?> selected<?php     } ?>><?php    echo t('2px')?></option>
-	<option value="3"<?php     if ($info['sfontsize'] == 3) { ?> selected<?php     } ?>><?php    echo t('3px')?></option>
-	<option value="4"<?php     if ($info['sfontsize'] == 4) { ?> selected<?php     } ?>><?php    echo t('4px')?></option>
-	<option value="5"<?php     if ($info['sfontsize'] == 5) { ?> selected<?php     } ?>><?php    echo t('5px')?></option>
-	<option value="6"<?php     if ($info['sfontsize'] == 6) { ?> selected<?php     } ?>><?php    echo t('6px')?></option>
-	<option value="7"<?php     if ($info['sfontsize'] == 7) { ?> selected<?php     } ?>><?php    echo t('7px')?></option>
-	<option value="8"<?php     if ($info['sfontsize'] == 8) { ?> selected<?php     } ?>><?php    echo t('8px')?></option>
-	<option value="9"<?php     if ($info['sfontsize'] == 9) { ?> selected<?php     } ?>><?php    echo t('9px')?></option>
-	<option value="10"<?php     if ($info['sfontsize'] == 10) { ?> selected<?php     } ?>><?php    echo t('10px')?></option>
-	<option value="11"<?php     if ($info['sfontsize'] == 11) { ?> selected<?php     } ?>><?php    echo t('11px')?></option>
-	<option value="12"<?php     if ($info['sfontsize'] == 12) { ?> selected<?php     } if($info['sfontsize'] == null){echo 'selected';} ?>><?php    echo t('12px')?></option>
-	<option value="13"<?php     if ($info['sfontsize'] == 13) { ?> selected<?php     } ?>><?php    echo t('13px')?></option>
-	<option value="14"<?php     if ($info['sfontsize'] == 14) { ?> selected<?php     } ?>><?php    echo t('14px')?></option>
-	<option value="15"<?php     if ($info['sfontsize'] == 15) { ?> selected<?php     } ?>><?php    echo t('15px')?></option>
-	<option value="16"<?php     if ($info['sfontsize'] == 16) { ?> selected<?php     } ?>><?php    echo t('16px')?></option>
-	<option value="17"<?php     if ($info['sfontsize'] == 17) { ?> selected<?php     } ?>><?php    echo t('17px')?></option>
-	<option value="18"<?php     if ($info['sfontsize'] == 18) { ?> selected<?php     } ?>><?php    echo t('18px')?></option>
-	<option value="19"<?php     if ($info['sfontsize'] == 19) { ?> selected<?php     } ?>><?php    echo t('19px')?></option>
-	<option value="20"<?php     if ($info['sfontsize'] == 20) { ?> selected<?php     } ?>><?php    echo t('20px')?></option>
-	<option value="21"<?php     if ($info['sfontsize'] == 21) { ?> selected<?php     } ?>><?php    echo t('21px')?></option>
-	<option value="22"<?php     if ($info['sfontsize'] == 22) { ?> selected<?php     } ?>><?php    echo t('22px')?></option>
-	<option value="23"<?php     if ($info['sfontsize'] == 23) { ?> selected<?php     } ?>><?php    echo t('23px')?></option>
-	<option value="24"<?php     if ($info['sfontsize'] == 24) { ?> selected<?php     } ?>><?php    echo t('24px')?></option>
-	<option value="25"<?php     if ($info['sfontsize'] == 25) { ?> selected<?php     } ?>><?php    echo t('25px')?></option>
-	<option value="26"<?php     if ($info['sfontsize'] == 26) { ?> selected<?php     } ?>><?php    echo t('26px')?></option>
-	<option value="27"<?php     if ($info['sfontsize'] == 27) { ?> selected<?php     } ?>><?php    echo t('27px')?></option>
-	<option value="28"<?php     if ($info['sfontsize'] == 28) { ?> selected<?php     } ?>><?php    echo t('28px')?></option>
-	<option value="29"<?php     if ($info['sfontsize'] == 29) { ?> selected<?php     } ?>><?php    echo t('29px')?></option>
-	<option value="30"<?php     if ($info['sfontsize'] == 30) { ?> selected<?php     } ?>><?php    echo t('30px')?></option>	
+	<option value="1"<?php      if ($info['sfontsize'] == 1) { ?> selected<?php      } ?>><?php     echo t('1px')?></option>
+	<option value="2"<?php      if ($info['sfontsize'] == 2) { ?> selected<?php      } ?>><?php     echo t('2px')?></option>
+	<option value="3"<?php      if ($info['sfontsize'] == 3) { ?> selected<?php      } ?>><?php     echo t('3px')?></option>
+	<option value="4"<?php      if ($info['sfontsize'] == 4) { ?> selected<?php      } ?>><?php     echo t('4px')?></option>
+	<option value="5"<?php      if ($info['sfontsize'] == 5) { ?> selected<?php      } ?>><?php     echo t('5px')?></option>
+	<option value="6"<?php      if ($info['sfontsize'] == 6) { ?> selected<?php      } ?>><?php     echo t('6px')?></option>
+	<option value="7"<?php      if ($info['sfontsize'] == 7) { ?> selected<?php      } ?>><?php     echo t('7px')?></option>
+	<option value="8"<?php      if ($info['sfontsize'] == 8) { ?> selected<?php      } ?>><?php     echo t('8px')?></option>
+	<option value="9"<?php      if ($info['sfontsize'] == 9) { ?> selected<?php      } ?>><?php     echo t('9px')?></option>
+	<option value="10"<?php      if ($info['sfontsize'] == 10) { ?> selected<?php      } ?>><?php     echo t('10px')?></option>
+	<option value="11"<?php      if ($info['sfontsize'] == 11) { ?> selected<?php      } ?>><?php     echo t('11px')?></option>
+	<option value="12"<?php      if ($info['sfontsize'] == 12) { ?> selected<?php      } if($info['sfontsize'] == null){echo 'selected';} ?>><?php     echo t('12px')?></option>
+	<option value="13"<?php      if ($info['sfontsize'] == 13) { ?> selected<?php      } ?>><?php     echo t('13px')?></option>
+	<option value="14"<?php      if ($info['sfontsize'] == 14) { ?> selected<?php      } ?>><?php     echo t('14px')?></option>
+	<option value="15"<?php      if ($info['sfontsize'] == 15) { ?> selected<?php      } ?>><?php     echo t('15px')?></option>
+	<option value="16"<?php      if ($info['sfontsize'] == 16) { ?> selected<?php      } ?>><?php     echo t('16px')?></option>
+	<option value="17"<?php      if ($info['sfontsize'] == 17) { ?> selected<?php      } ?>><?php     echo t('17px')?></option>
+	<option value="18"<?php      if ($info['sfontsize'] == 18) { ?> selected<?php      } ?>><?php     echo t('18px')?></option>
+	<option value="19"<?php      if ($info['sfontsize'] == 19) { ?> selected<?php      } ?>><?php     echo t('19px')?></option>
+	<option value="20"<?php      if ($info['sfontsize'] == 20) { ?> selected<?php      } ?>><?php     echo t('20px')?></option>
+	<option value="21"<?php      if ($info['sfontsize'] == 21) { ?> selected<?php      } ?>><?php     echo t('21px')?></option>
+	<option value="22"<?php      if ($info['sfontsize'] == 22) { ?> selected<?php      } ?>><?php     echo t('22px')?></option>
+	<option value="23"<?php      if ($info['sfontsize'] == 23) { ?> selected<?php      } ?>><?php     echo t('23px')?></option>
+	<option value="24"<?php      if ($info['sfontsize'] == 24) { ?> selected<?php      } ?>><?php     echo t('24px')?></option>
+	<option value="25"<?php      if ($info['sfontsize'] == 25) { ?> selected<?php      } ?>><?php     echo t('25px')?></option>
+	<option value="26"<?php      if ($info['sfontsize'] == 26) { ?> selected<?php      } ?>><?php     echo t('26px')?></option>
+	<option value="27"<?php      if ($info['sfontsize'] == 27) { ?> selected<?php      } ?>><?php     echo t('27px')?></option>
+	<option value="28"<?php      if ($info['sfontsize'] == 28) { ?> selected<?php      } ?>><?php     echo t('28px')?></option>
+	<option value="29"<?php      if ($info['sfontsize'] == 29) { ?> selected<?php      } ?>><?php     echo t('29px')?></option>
+	<option value="30"<?php      if ($info['sfontsize'] == 30) { ?> selected<?php      } ?>><?php     echo t('30px')?></option>	
 </select>
 </div>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="sfontstyle_c" value="1" id="sfontstyle_c" <?php   
+<strong><input type="checkbox" name="sfontstyle_c" value="1" id="sfontstyle_c" <?php    
 	if ($info['sfontstyle_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Sublevel font style')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Sublevel font style')?></strong><br/>
 <div id="sfontstyle_div">
 <select id="sfontstyle" name="sfontstyle"  class="mySelect">	
-	<option value="normal"<?php     if ($info['sfontstyle'] == 'normal') { ?> selected<?php     } ?>><?php    echo t('normal')?></option>
-	<option value="italic"<?php     if ($info['sfontstyle'] == 'italic') { ?> selected<?php     } ?>><?php    echo t('italic')?></option>
-	<option value="oblique"<?php     if ($info['sfontstyle'] == 'oblique') { ?> selected<?php     } ?>><?php    echo t('oblique')?></option>
-	<option value="bold"<?php     if ($info['sfontstyle'] == 'bold') { ?> selected<?php     } ?>><?php    echo t('bold')?></option>	
-	<option value="italic_b"<?php     if ($info['sfontstyle'] == 'italic_b') { ?> selected<?php     } ?>><?php    echo t('italic bold')?></option>
-	<option value="oblique_b"<?php     if ($info['sfontstyle'] == 'oblique_b') { ?> selected<?php     } ?>><?php    echo t('oblique bold')?></option>
+	<option value="normal"<?php      if ($info['sfontstyle'] == 'normal') { ?> selected<?php      } ?>><?php     echo t('normal')?></option>
+	<option value="italic"<?php      if ($info['sfontstyle'] == 'italic') { ?> selected<?php      } ?>><?php     echo t('italic')?></option>
+	<option value="oblique"<?php      if ($info['sfontstyle'] == 'oblique') { ?> selected<?php      } ?>><?php     echo t('oblique')?></option>
+	<option value="bold"<?php      if ($info['sfontstyle'] == 'bold') { ?> selected<?php      } ?>><?php     echo t('bold')?></option>	
+	<option value="italic_b"<?php      if ($info['sfontstyle'] == 'italic_b') { ?> selected<?php      } ?>><?php     echo t('italic bold')?></option>
+	<option value="oblique_b"<?php      if ($info['sfontstyle'] == 'oblique_b') { ?> selected<?php      } ?>><?php     echo t('oblique bold')?></option>
 </select>
 </div>	
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="sfontcolor_c" value="1" id="sfontcolor_c" <?php   
+<strong><input type="checkbox" name="sfontcolor_c" value="1" id="sfontcolor_c" <?php    
 	if ($info['sfontcolor_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Sublevel Font Color')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Sublevel Font Color')?></strong><br/>
 <div id="sfontcolor_div">
-<?php    
+<?php     
  echo '<input type="text" id="sfontcolor" name="sfontcolor" class="miniColors" value="'.$info['sfontcolor'].'" />&nbsp;';
  ?>
  
@@ -520,24 +520,24 @@ echo '<input type="text" id="fontcolorh" name="fontcolorh" class="miniColors" va
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="sfontcolorh_c" value="1" id="sfontcolorh_c" <?php   
+<strong><input type="checkbox" name="sfontcolorh_c" value="1" id="sfontcolorh_c" <?php    
 	if ($info['sfontcolorh_c'] == 1) {  echo 'checked';
 }
- ?>/>&nbsp;<?php    echo t('Sublevel Font Color On Hover')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Sublevel Font Color On Hover')?></strong><br/>
 <div id="sfontcolorh_div">
-<?php   
+<?php    
 echo '<input type="text" id="sfontcolorh" name="sfontcolorh" class="miniColors" value="'.$info['sfontcolorh'].'" />&nbsp;';
 ?>
 </div>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="sbgcolor_c" value="1" id="sbgcolor_c" <?php   
+<strong><input type="checkbox" name="sbgcolor_c" value="1" id="sbgcolor_c" <?php    
 	if ($info['sbgcolor_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Sublevel Background Color')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Sublevel Background Color')?></strong><br/>
 <div id="sbgcolor_div">
-<?php   
+<?php    
 echo '<input type="text" id="sbgcolor" name="sbgcolor" class="miniColors" value="'.$info['sbgcolor'].'" />&nbsp;';
  ?>
 </div>
@@ -545,24 +545,24 @@ echo '<input type="text" id="sbgcolor" name="sbgcolor" class="miniColors" value=
 <br/>
 <div class="ccm-summary-selected-item">
 <strong>
-<input type="checkbox" name="sbgtabcolor_c" value="1" id="sbgtabcolor_c" <?php   
+<input type="checkbox" name="sbgtabcolor_c" value="1" id="sbgtabcolor_c" <?php    
 	if ($info['sbgtabcolor_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Sublevel Tabs Background Color')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Sublevel Tabs Background Color')?></strong><br/>
 <div id="sbgtabcolor_div">
-<?php   
+<?php    
 echo '<input type="text" id="sbgtabcolor" name="sbgtabcolor" class="miniColors" value="'.$info['sbgtabcolor'].'" />&nbsp;';
  ?>
 </div>
 </div>
 <br/>
 <div class="ccm-summary-selected-item">
-<strong><input type="checkbox" name="sbgtabcolorh_c" value="1" id="sbgtabcolorh_c" <?php   
+<strong><input type="checkbox" name="sbgtabcolorh_c" value="1" id="sbgtabcolorh_c" <?php    
 	if ($info['sbgtabcolorh_c'] == 1) {  echo 'checked';
 	}
- ?>/>&nbsp;<?php    echo t('Sublevel Tabs Background Color On Hover')?></strong><br/>
+ ?>/>&nbsp;<?php     echo t('Sublevel Tabs Background Color On Hover')?></strong><br/>
 <div id="sbgtabcolorh_div">
-<?php    
+<?php     
 echo '<input type="text" id="sbgtabcolorh" name="sbgtabcolorh" class="miniColors" value="'.$info['sbgtabcolorh'].'" />&nbsp;';
  ?>
 </div>

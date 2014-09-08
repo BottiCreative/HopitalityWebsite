@@ -48,7 +48,7 @@ if (empty($downloads)) {
 		
 		// filename/download URL
 		echo '<div class="swp-download-link">';
-		echo '<a href="'. $fv->getDownloadURL() .'">'. $fv->getFileName() .'</a>';
+		echo '<a href="'. $fv->getDownloadURL() .'" target="_blank">'. $fv->getFileName() .'</a>';
 		echo '</div>';
 	
 		if ($display_date == "Y") {

@@ -5,7 +5,7 @@ class ProblogPackage extends Package {
 
 	protected $pkgHandle = 'problog';
 	protected $appVersionRequired = '5.6.0';
-	protected $pkgVersion = '12.0.0';
+	protected $pkgVersion = '12.4.0';
 	
 	public function getPackageDescription() {
 		return t("A professional Blog package");
@@ -1138,6 +1138,19 @@ class ProblogPackage extends Package {
 	  }		
   
 	public function on_start(){
+	
+	$v = View::getInstance();
+	$v->addHeaderItem("
+		<script type=\"text/javascript\">
+			var ccm_triggerSelectUser = function(uID,uName){
+				var par = $(ccmActiveUserField).parent().find('.ccm-summary-selected-item-label');
+				var pari = $(ccmActiveUserField).parent().find('input');
+				par.html(uName);
+				pari.val(uID);
+			}
+		</script>
+	");	
+	
 	
 	Events::extend('on_problog_submit', 'ProBlogSubscription', 'onSubmit', DIRNAME_PACKAGES . '/' . $this->pkgHandle . '/models/events/problog_submit.php');
 

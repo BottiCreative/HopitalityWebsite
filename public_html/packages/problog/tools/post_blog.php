@@ -149,8 +149,8 @@
 		$cck = CollectionAttributeKey::getByHandle('blog_category');
 		$cck->saveAttributeForm($p);
 		
-		$cnv = CollectionAttributeKey::getByHandle('exclude_nav');
-		$cnv->saveAttributeForm($p);
+		//$cnv = CollectionAttributeKey::getByHandle('exclude_nav');
+		//$cnv->saveAttributeForm($p);
 		
 		$ct = CollectionAttributeKey::getByHandle('thumbnail');
 		$ct->saveAttributeForm($p);

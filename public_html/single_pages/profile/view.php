@@ -81,18 +81,28 @@
     <div class="grid-3 columns">
 
        <div class="panel sideMembersNav">
-       <h3>Resources</h3>
         <?php  
         	$a = new GlobalArea('Resources Side Nav');
         	$a->display();
          ?>
          </div>
+         
+       <div class="MembersideAds">
+        <?php  
+        	$a = new GlobalArea('Resources Side Ads');
+        	$a->display();
+         ?>
+       </div>
 			
-			<div class="panel">
-			<?php  
-			$a = new Area('Sidebar');
-			$a->display($c);
-			?>
+		
+        <div class="panel sideMembersNav">
+            
+         <?php  
+        	$a = new GlobalArea('Members Partners Side');
+        	$a->display();
+         ?>
+            
+            
             </div>
 
 

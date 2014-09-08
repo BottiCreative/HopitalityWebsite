@@ -1,4 +1,4 @@
-<?php   
+<?php    
 defined('C5_EXECUTE') or die("Access Denied.");
 /**
 	* @ concrete5 package AutonavPro
@@ -6,13 +6,24 @@ defined('C5_EXECUTE') or die("Access Denied.");
 */
 //get current page
 $c = Page::getCurrentPage();
-//get navigation
-$allNavItems = $controller -> generateNav();
-//create nav array
-$pro_nav_class = Loader::helper('autonavpro', 'autonav_pro');
-$pro_nav_class -> set_curr($c);
-$pro_nav_class -> create_nav_objs($allNavItems);
-$navItems=$pro_nav_class->navItem;
+//cached navigation
+$pageID=$c->getCollectionID();
+$up = new Permissions(Page::getCurrentPage());
+$cached_autonav_pro='autonavpro'.$bID.'pg'.$pageID;
+if ($up->canWrite() || $up->canAddSubContent() || $up->canAdminPage() || $up->canApproveCollection()){
+Cache::delete($cached_autonav_pro, false);
+}
+$navItems = Cache::get($cached_autonav_pro, false);
+if(empty($navItems)){
+	//get navigation
+	$allNavItems = $controller -> generateNav();
+	//create nav array
+	$pro_nav_class = Loader::helper('autonavpro', 'autonav_pro');
+	$pro_nav_class -> set_curr($c);
+	$pro_nav_class -> create_nav_objs($allNavItems);
+	$navItems=$pro_nav_class->navItem;
+	Cache::set($cached_autonav_pro, false,$navItems);
+}
 //get search link
 if($searchres!=null && $searchres!=0 && $searchres!='0'){
 $subPagelink = Page::getById($searchres);
@@ -81,16 +92,19 @@ $anp_extra_attr_data='';
 if($ni['anp_extra_attr_data']!=null){$anp_extra_attr_data=$ni['anp_extra_attr_data'];}
 else{$anp_extra_attr_data='';}
 
-
 /*___________________________________________________remove link_________________________________________________*/
-if ($ni['anp_remove_link']) {$ni['url']='';}
+if ($ni['anp_remove_link']) {$ni['url']='javascript:void(0)';}
+
+/*___________________________________________________overwrite link_________________________________________________*/
+if ($ni['anp_remove_link'] && $ni['anp_overwrite_link']) {$ni['url']=$ni['anp_overwrite_link'];}
+elseif($ni['anp_remove_link'] && $ni['anp_overwrite_link']){$ni['url']='javascript:void(0)';}
 
 
 echo '<li class="'.$li_class.' ' . $ni['classes'] . '">';
 /*________________________________________add item class and remove item link____________________________________*/
 if ($ni['hasSubmenu']|| $ni['anp_sublvl_stack'] == 1 || $ni['anp_sublvl_content'] !=null){ $ni['classes'].=' drop_a_superfish';}
 	
-		echo '<a href="' . $ni['url'] . $ni['anp_overwrite_link'] . '" target="' . $ni['target'] . '" class="' . $ni['classes'] . '" '.$anp_extra_attr_data.' >';
+		echo '<a href="' . $ni['url']. '" target="' . $ni['target'] . '" class="' . $ni['classes'] . '" '.$anp_extra_attr_data.' >';
 		echo $ni['anp_add_img'] . $ni['name'];
 		if ($ni['hasSubmenu']|| $ni['anp_sublvl_stack'] == 1 || $ni['anp_sublvl_content'] !=null){echo '    <b class="caret"></b>';}
 		echo '</a>';
@@ -171,7 +185,7 @@ echo'</tbody></table></div>';
 }}
 ?>
 <style type="text/css">
-<?php   
+<?php    
 /*___________________________________________________css customize______________________________________________________________*/
 
 //set default responsize width size:979
@@ -180,6 +194,7 @@ if($responsive==null || $responsive < 0 ){$responsive='979';}
 
 if($responsive!=0 && $responsive!='0'){
 echo '@media(max-width:'.$responsive.'px){
+#pronav_list'. $bID . '{float:none}
 .anp_superfish #pronav_list'. $bID . ' .caret {right:8px}
 #pronav_list'. $bID . ' > li {
 	float: none;
@@ -295,7 +310,11 @@ if ($customnav == 1) {
 	}
 	//custom nav font size
 	if ($fontsize_c == 1) {
-		echo '#pronav_list' . $bID . ' a ,#pronav_list' . $bID . ', #pronav_list' . $bID . ' a:visited {font-size:' . $fontsize . 'px!important;line-height:'. $fontsize . 'px!important;}';
+		echo '#pronav_list' . $bID . ' a ,#pronav_list' . $bID . ', #pronav_list' . $bID . ' a:visited {font-size:' . $fontsize . 'px!important;line-height:'. $fontsize . 'px;}';
+		if(!empty($fontsize)){
+			$fontsize_i=intval($fontsize) -1;
+			echo '#pronav_list' . $bID . ' a i,#pronav_list' . $bID . ' a i:before{font-size:' . $fontsize . 'px!important;line-height:'. $fontsize_i . 'px!important;}';
+		}
 		
 
 		echo '#pronav_list'. $bID . ' .search-query{font-size:'. $fontsize . 'px}';
@@ -378,6 +397,11 @@ if ($customnav == 1) {
 	//custom font size for sublvl links
 	if ($sfontsize_c == 1) {
 		echo '#pronav_list' . $bID . ' ul.sublvl a ,#pronav_list' . $bID . ', #pronav_list' . $bID . ' ul.sublvl a:visited {font-size:' . $sfontsize . 'px!important;line-height:'. $sfontsize . 'px!important;}';
+		
+		if(!empty($sfontsize)){
+			$sfontsize_i=intval($sfontsize) -1;
+			echo '#pronav_list' . $bID . ' .sublvl a i,#pronav_list' . $bID . ' .sublvl a i:before{font-size:' . $sfontsize . 'px!important;line-height:'. $sfontsize_i . 'px!important;}';
+		}
 	}
 	//custom font color for sublvl links
 	if ($sfontcolor_c == 1) {
@@ -432,10 +456,6 @@ if ($customnav == 1) {
 echo '</style>';
 /*______________________________________________________add js___________________________________________________________________*/
 $html = Loader::helper('html');
-$pkg=Package::getByHandle('autonav_pro');
-$basic_path=Loader::helper('concrete/urls')->getPackageURL($pkg);
-$basic_path=rtrim($basic_path,'/');
-$controller->addFooterItem('<script type="text/javascript" src="'.$basic_path.'/blocks/autonav_pro/templates/superfish/js/autonav_pro_superfish.js"></script>');
 $custom_js='
 		jQuery(function(){
 			jQuery("ul.superfish-menu'.$bID.'").superfish(

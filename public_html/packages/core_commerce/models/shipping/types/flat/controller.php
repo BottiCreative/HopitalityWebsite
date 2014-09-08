@@ -29,8 +29,10 @@ class CoreCommerceFlatShippingTypeController extends CoreCommerceShippingControl
 	
 	public function save() {
 		$pkg = Package::getByHandle('core_commerce');
-		$pkg->saveConfig('SHIPPING_TYPE_FLAT_BASE', $this->post('SHIPPING_TYPE_FLAT_BASE'));
-		$pkg->saveConfig('SHIPPING_TYPE_FLAT_PER_ITEM', $this->post('SHIPPING_TYPE_FLAT_PER_ITEM'));
+		$base =filter_var($this->post('SHIPPING_TYPE_FLAT_BASE'),FILTER_SANITIZE_NUMBER_FLOAT,array('flags'=>FILTER_FLAG_ALLOW_FRACTION));
+		$per =filter_var($this->post('SHIPPING_TYPE_FLAT_PER_ITEM'),FILTER_SANITIZE_NUMBER_FLOAT,array('flags'=>FILTER_FLAG_ALLOW_FRACTION));
+		$pkg->saveConfig('SHIPPING_TYPE_FLAT_BASE', $base);
+		$pkg->saveConfig('SHIPPING_TYPE_FLAT_PER_ITEM', $per);
 	}
 	
 	public function getAvailableShippingMethods($currentOrder) {

@@ -94,7 +94,6 @@ if (!$halign) {
 	display:none;
 }
 </style>
-
 <div class="ccm-core-commerce-add-to-cart">
 <form method="post" id="ccm-core-commerce-add-to-cart-form-<?php echo $id?>" action="<?php echo $this->url('/cart', 'update')?>">
 <input type="hidden" name="rcID" value="<?php echo $c->getCollectionID()?>" />

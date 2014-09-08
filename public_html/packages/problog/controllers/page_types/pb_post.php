@@ -18,7 +18,7 @@ class PbPostPageTypeController extends Controller {
 <script type=\"text/javascript\">
 $(document).ready(function(){
   $('.embedly').each(function(){
-    var w = $(this).parent().width();
+    var w = $(this).parent().parent().width();
   	$(this).embedly({
   		key: '$embedlykey',
   		query: {

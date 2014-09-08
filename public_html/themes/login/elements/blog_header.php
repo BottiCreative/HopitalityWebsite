@@ -5,7 +5,7 @@
 <head>
 
 <meta charset="utf-8" />
-
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- Site Header Content //-->
 
 <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/reset.css" />

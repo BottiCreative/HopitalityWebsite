@@ -37,7 +37,9 @@ if ($u->isSuperUser() || $tp->can()){
 		$buttonText = t('Add Blog Entry');
 		$title= 'Add';
 	}	
-	
+	$set = AttributeSet::getByHandle('problog_additional_attributes');
+	$setAttribs = $set->getAttributeKeys();
+
 	$u = new User();
 	if($u->isLoggedIn()){
 	?>
@@ -75,8 +77,10 @@ if ($u->isSuperUser() || $tp->can()){
 				</li>
 				<li><a href="javascript:void(0)" onclick="$('ul.tabs li').removeClass('active'); $(this).parent().addClass('active'); $('.pane').hide(); $('div.options').show();"><?php      echo t('Options')?></a>
 				</li>
+				<?php  if(count($setAttribs) > 0){ ?>
 				<li><a href="javascript:void(0)" onclick="$('ul.tabs li').removeClass('active'); $(this).parent().addClass('active'); $('.pane').hide(); $('div.attributes').show();"><?php      echo t('Attributes')?></a>
-			</li>
+				</li>
+				<?php  } ?>
 				<li><a href="javascript:void(0)" onclick="$('ul.tabs li').removeClass('active'); $(this).parent().addClass('active'); $('.pane').hide(); $('div.meta').show();"><?php      echo t('Meta')?></a>
 				</li>
 	
@@ -345,8 +349,6 @@ if ($u->isSuperUser() || $tp->can()){
 				</div>
 				<div class="pane attributes" style="display: none;">
 					<?php       
-						$set = AttributeSet::getByHandle('problog_additional_attributes');
-						$setAttribs = $set->getAttributeKeys();
 						if($setAttribs){
 							foreach ($setAttribs as $ak) {
 								if(is_object($event)) {

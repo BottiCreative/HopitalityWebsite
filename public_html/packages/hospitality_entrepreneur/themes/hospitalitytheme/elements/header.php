@@ -3,7 +3,7 @@
 <html lang="<?php echo LANGUAGE?>">
 
 <head>
-
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <?php   Loader::element('header_required'); ?>
 
 <!-- Site Header Content //-->
@@ -63,7 +63,7 @@
 		?>	
 		
 		<a href="/login" class="loginLink">Login</a>
-        <a href="/login" class="registerLink">Register</a>
+        <a href="/membership/free-trial" class="registerLink">Register</a>
 		
 		<?php
 		}
@@ -72,6 +72,9 @@
         </div>
     </div>
 </div>
+
+
+<div class="topRowPad"></div>
 
 
 

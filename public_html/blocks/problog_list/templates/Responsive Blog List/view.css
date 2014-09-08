@@ -3,25 +3,30 @@
 .chicklets{padding-left: 10px!important;}
 
 .content-sbBlog-contain{background: #fff; height:40px; padding: 10px 5px; margin: 0 0 30px 0; /*border-radius: 5px; -moz-border-radius: 5px; -webkit-box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);
-box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);*/ line-height:30px; display:block; }
+box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);*/ line-height:30px; display:block;  }
+
 
 .content-sbBlog-commentcount{ background: #ccc;}
 
-.content-sbBlog-wrap{ border: none; padding: 0!important; background: none; margin:0 0 40px 0;}
+.content-sbBlog-wrap{ border: none; padding: 0!important; background: none; margin:0 0 60px 0; position: relative;}
 
-.content-sbBlog-wrap img { margin:35px 0 0 0; height:auto;}
+.content-sbBlog-wrap img { margin:28px 0 0 0; height:auto;}
 
-h3.ccm-page-list-title{ font-family: 'Lato', sans-serif; padding: 10px 0 0 0; text-transform:none!important;}
+h3.ccm-page-list-title, h3.ccm-page-list-title a{padding: 20px 0 10px 0; text-transform:none!important; margin: 0;
+color: #84b400!important;}
+h3.ccm-page-list-title, h3.ccm-page-list-title a:hover{color: #333!important;}
 
 a.readmore{ color: #f39117;}
 
-.content-sbBlog-date p { background:url(icon-date.png) no-repeat 0 0; padding:0 0 0 30px; line-height:24px; width:auto; float:left;}
-.content-category p { background:url(icon-tag.png) no-repeat 0 0; padding:0 0 0 30px; line-height:24px;}
-.content-comments p { background:url(icon-comments.png) no-repeat 0 0; padding:0 0 0 40px; line-height:24px;}
+.blogInfo.content-sbBlog-date{ background:url(icon-date.png) no-repeat 0 5px; padding: 0 0 0 38px;}
+.blogInfo.content-category{ background:url(icon-tag.png) no-repeat 0 5px; padding: 0 0 0 38px;}
+.blogInfo.content-comments{ background:url(icon-comments.png) no-repeat 0 5px; padding: 0 0 0 38px;}
 
 .content-category a, a.readmore { color:#84b400;}
 
 .content-category a:hover, a.readmore:hover { text-decoration:underline;}
 
 h3.ccm-page-list-title a { font-size:24px; color:#444;}
+
+.blogInfo{ background: #ccc; float: left; margin: 0 18px 0 0;}
 

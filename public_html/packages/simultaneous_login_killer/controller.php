@@ -10,7 +10,7 @@ class SimultaneousLoginKillerPackage extends Package {
 
 	protected $pkgHandle = 'simultaneous_login_killer';
 	protected $appVersionRequired = '5.6.0';
-	protected $pkgVersion = '1.0';
+	protected $pkgVersion = '1.1';
 
 	public function getPackageDescription(){
 		return t('Kill unwanted simultaneous login to your website.');

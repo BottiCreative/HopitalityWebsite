@@ -1,3 +1,13 @@
+2.6.12
+    - Adding pkgID to discount type add function sql statement.
+    - Made order export honor current filters & sorting
+
+2.8.11
+	- Discounts will work without specifying a timeframe
+	- product inventory fix
+	- flat rate shipping fix
+	- edit cart on checkout step will not break the price of your cart.
+
 2.8.10
 	- Disabled and expired discounts do not impede checkout
 	- "Show search results" option changed to "Show products" option for product list

@@ -41,7 +41,7 @@ $uh = Loader::helper('urls', 'core_commerce');
 					    
 					    </div>
 						
-<!--<input type="hidden" name="rcID" value="<?php   echo $c->getCollectionID(); ?>" />-->
+<input type="hidden" name="rcID" value="<?php   echo $c->getCollectionID(); ?>" />
 						
                         
                         
@@ -65,19 +65,19 @@ $uh = Loader::helper('urls', 'core_commerce');
 				<div class="ccm-core-commerce-add-to-cart-product-option-attributes-value"><?php   echo $at->render('form');?></div>
 			</div>
 			<?php }  ?>		    
-					    <!--<input type="submit" value="Sign Up For <?php echo $membershipproduct->getProductName() ?> Membership" class="btn ccm-input-submit" />
-					   <input type="hidden" name="productID" id="productID" value="<?php echo $membershipproduct->getProductID(); ?>" />-->
+					    <input type="submit" value="Sign Up For <?php echo $membershipproduct->getProductName() ?> Membership" class="btn ccm-input-submit" />
+					   <input type="hidden" name="productID" id="productID" value="<?php echo $membershipproduct->getProductID(); ?>" />
 					   </form>
 				
 				<?php } ?>
 				
 				
 				<form method="post" id="ccm-core-commerce-add-to-cart-form-<?php echo $producttobuy->getProductID();?>" action="<?php echo $this->url('/cart', 'update')?>">
-<!--<input type="hidden" name="rcID" value="<?php echo $c->getCollectionID()?>" />-->
+<input type="hidden" name="rcID" value="<?php echo $c->getCollectionID()?>" />
 	   				
 	   				
 	   				<input type="hidden" name="productID" id="productID" value="<?php echo $producttobuy->getProductID(); ?>" />
-	   				<!--<input type="submit" value="Buy This Product Now" class="btn ccm-input-submit" />-->
+	   				<input type="submit" value="Buy This Product Now" class="btn ccm-input-submit" />
 	   				
 	   			</form>
 				

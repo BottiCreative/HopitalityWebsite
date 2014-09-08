@@ -2,7 +2,7 @@
 	defined('C5_EXECUTE') or die(_("Access Denied."));
 
 	if($title!=''){
-		echo '<h2>'.t($title).'</h2>';
+		echo '<h3>'.t($title).'</h3>';
 	}
 	?>
 	<div class="ccm-page-list tagC">

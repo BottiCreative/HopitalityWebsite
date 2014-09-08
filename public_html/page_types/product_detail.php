@@ -1,9 +1,7 @@
 <?php  defined('C5_EXECUTE') or die(_("Access Denied.")); ?>
 	
 			
-<div class="row">
-
-</div>
+<div class="topRowPad"></div>
             
 <div class="row topRowProd">
  
@@ -47,14 +45,14 @@
          <div class="clearfix"></div>
 
          
-                  <?php  
-			$a = new Area('Trial Side');
-			$a->display($c);
-			?>
+         <?php  
+         $a = new GlobalArea('Side Trial');
+         $a->display();
+         ?>
          
          
 		 <div class="PopularPosts">
-         <h4>New Resources</h4>
+         <h4>Latest Resources</h4>
 		 <?php  
          $a = new GlobalArea('Popular Posts');
          $a->display();

@@ -13,27 +13,33 @@ if (count($cArray) > 0) { ?>
 		
 		$content = $controller->getContent($cobj,$blog_settings);
 		?>
-		     <div class="grid-12 columns content-sbBlog-wrap nopad">
-             
 
-	  			<div class="content-sbBlog-contain">
-                
-                <div class="grid-3 columns content-sbBlog-date">
-			    	<p><?php      echo date('M d, Y',strtotime($blogDate));  ?></p>
-			    </div>
-				<div class="grid-5 columns content-category">
-			    	<p><?php     
+<div class="grid-12 columns content-sbBlog-wrap nopad">
+
+
+
+
+	<div class="content-sbBlog-contain">
+    
+     
+    
+		<div class="blogInfo content-sbBlog-date">
+			<?php echo date('M d, Y',strtotime($blogDate));  ?>
+		</div>
+		<div class="blogInfo content-category">
+			    	<?php     
 					echo t('Category').': '.'<a href="'.BASE_URL.$search.'categories/'.str_replace(' ','_',$cat).'/">'.$cat.'</a>';;
-					?></p>
+					?>
                     </div>
-                    <div class="grid-4 columns content-comments">
-                    <p>
+                    <div class="blogInfo content-comments">
+                   
                  <?php      if($comments){ ?>
 	  			<?php      echo $comment_count;?>
-	  			<?php      } ?></p>
+	  			<?php      } ?>
                     
-                    
-			    		</div>
+				</div>
+                
+                <div class="clearfix"></div>
                 
                 
                 	<div class="grid-3 columns nopadLeft">
@@ -45,31 +51,21 @@ if (count($cArray) > 0) { ?>
 						}	
 					?>
                     </div>
-                    
-              
-              <div class="grid-9 columns nopadLeft">
+
+<div class="grid-9 columns nopadLeft">
               <h3 class="ccm-page-list-title"><a href="<?php      echo $url;?>"><?php      echo $blogTitle?></a></h3>
-              	<?php      
+              	<p><?php      
 			  			echo $blogify->closetags($content);
-			  		?>
-                    
-                    <a class="readmore" href="<?php      echo $url?>"><?php     echo t('Read More')?></a>
-                    
-              
+			  		?> <a class="readmore" href="<?php  echo $url?>"><?php  echo t('Read More')?></a></p>
               </div>
-                
-                
-		
-        </div>
-			  	
-            
-            
-           
-            
-            
-            
-			</div>
-			<br class="clearfloat" />
+</div>
+
+
+</div>
+
+
+
+<br class="clearfloat" />
 	<?php      		
 	} 
 	$u = new User();

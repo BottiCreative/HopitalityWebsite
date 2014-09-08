@@ -18,13 +18,13 @@ if (count($cArray) > 0) { ?>
 
 	  			<div class="content-sbBlog-contain">
                 
-                	<div class="grid-12 columns nopadLeft">
+                	<div class="grid-12 columns nopad">
                     
                     <h3 class="ccm-page-list-title"><a href="<?php      echo $url;?>"><?php      echo $blogTitle?></a></h3>
 			
                     </div>
                     
-                  <div class="grid-3 columns nopad">  
+                  <div class="grid-4 columns nopad">  
                     		<?php      
 						if($thumb){
 							echo '<div class="thumbnail">';
@@ -35,39 +35,19 @@ if (count($cArray) > 0) { ?>
                     </div>
              
              
-              <div class="grid-9 columns nopadRight blogContent">
+              <div class="grid-8 columns nopadRight blogContent">
               
               	<p><?php      
 			  			echo $blogify->closetags($content);
 			  		?></p>
+                    <div class="clearfix"></div>
                     
-                    <a class="readmore" href="<?php echo $url?>"><?php     echo t('Read More')?></a>
-                    
-              
+                    <p><a class="readmore" href="<?php echo $url?>"><?php     echo t('Read More')?></a></p>
+
               </div>
-              
-              
-                          <div class="grid-12 columns Blog-Comments">
-                    
-              	<p><?php      if($comments){ ?>
-	  				<?php      echo $comment_count;?>
-	  				<?php      } ?></p>
-                    
-                    
-			    		</div>
-                
-                
-		
-        </div>
-			  	
-            
-            
-           
-            
-            
-            
-			</div>
-			<br class="clearfloat" />
+	</div>
+</div>
+<br class="clearfloat" />
 	<?php      		
 	} 
 	$u = new User();

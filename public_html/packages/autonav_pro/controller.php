@@ -1,4 +1,4 @@
-<?php   
+<?php    
 defined('C5_EXECUTE') or die(_("Access Denied."));
 /**
 	* @ concrete5 package Auto-Nav Pro
@@ -8,7 +8,7 @@ class AutonavProPackage extends Package {
 
      protected $pkgHandle = 'autonav_pro';
      protected $appVersionRequired = '5.6.2.1';
-     protected $pkgVersion = '1.5.1';
+     protected $pkgVersion = '1.5.5';
 
      public function getPackageDescription() {
           return t("An advanced, responsive auto-nav with a built in Font Awesome icon generator and much more.");

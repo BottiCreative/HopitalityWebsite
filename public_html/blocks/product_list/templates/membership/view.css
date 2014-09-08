@@ -92,14 +92,14 @@ padding: 0 3px;
 /*color: #fff!important; display: block; float: left; font-size: 20px; margin: 10px 0;*/ display: none;
 }
 
-.btn.ccm-input-submit{ float:right; margin: 10px 0;}
+.btn.ccm-input-submit{ float:right;}
 
 
 /* Membership Changes */
 div.ccm-core-commerce-product-list-product{position: relative;}
 
 .ccm-core-commerce-add-to-cart-product-name{ background-color: rgba(0, 0, 0, .6);
-color: rgba(0, 0, 0, .6); position: absolute; bottom: 105px; z-index: 10; display: block; padding: 15px 7px 15px 15px; width: 85%; font-weight: 400; color: #fff; left: 10px; }
+color: rgba(0, 0, 0, .6); position: absolute; bottom: 105px; z-index: 10; display: block; padding: 15px 7px 15px 15px; width: 85%; font-weight: 400; color: #fff; left: 15px; }
 
 .ccm-core-commerce-add-to-cart-product-name a:hover{ color: #84b400;}
 
@@ -109,15 +109,17 @@ div.membership-overlay{position: absolute; top: -5px; left: -5px;  }
 div.membership-overlay h2{ text-indent: -9999999px;}
 
 div.membership-overlay.overlay-Starter{background: url(images/sash-starter.png) no-repeat top left!important;}
-div.membership-overlay.overlay-Starvervip{background: url(images/sash-starter.png) no-repeat top left!important;}
-div.membership-overlay.overlay-Club{background: url(images/sash-clubplus.png) no-repeat top left!important;}
+div.membership-overlay.overlay-Vip-Starter{background: url(images/sash-startervip.png) no-repeat top left!important;}
+div.membership-overlay.overlay-Club-+{background: url(images/sash-clubplus.png) no-repeat top left!important;}
 
-.productListprodHolder{ position: relative; float: left; background: #333!important; width: 100%; min-height: 340px; margin: 10px 0;display:inline-block;  }
+.productListprodHolder{ position: relative; float: left; background: #333!important; width: 100%; min-height: 320px; margin: 10px 0;display:inline-block;  }
+
+.ccm-core-commerce-product-list-container{ width: 100%; float: left;}
 
 
-.productListprodHolder img{min-width: 282px; height: 250px; padding: 10px;}
+.productListprodHolder img{width: 100%; height: auto; padding: 15px;}
 
-.resourceWrapper{ width: 282px; float: left; height: auto; margin: 10px 20px; }
+.resourceWrapper{ width: 292px; float: left; height: auto; margin: 10px 11px; }
 
 /*.photo img,.ccm-core-commerce-add-to-cart-image img{min-width: 282px; height: 250px;}*/
 

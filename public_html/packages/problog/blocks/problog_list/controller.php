@@ -13,7 +13,7 @@
 		 * Used for localization. If we want to localize the name/description we have to include this
 		 */
 		public function getBlockTypeDescription() {
-			return t("List News Items based on type, area, or category.");
+			return t("List Blog Items based on type, author, or category.");
 		}
 		
 		public function getBlockTypeName() {

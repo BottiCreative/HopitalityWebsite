@@ -18,8 +18,8 @@ $nh = Loader::helper('navigation');
 	</div>
 <?php  endif; ?><!-- End Testimonial Image -->
 
-
 <div class="clearfix"></div>
+
 
 <p class="testName">
 <!-- Begin Testimonial Name -->
@@ -43,9 +43,10 @@ $nh = Loader::helper('navigation');
 
 <div class="grid-10 columns">
 
+<div class="speechBox"></div>
+
 <div class="testWrap">
 
-<div class="speechBox"></div>
 
 
 <!-- Begin Testimonial Headline -->

@@ -39,13 +39,18 @@ class DashboardProblogAddBlogController extends Controller {
 	
 
 	protected function loadblogSections() {
+		Loader::model('permission/keys/custom/add_subpage');
 		$blogSectionList = new PageList();
 		$blogSectionList->filterByBlogSection(1);
 		$blogSectionList->sortBy('cvName', 'asc');
 		$tmpSections = $blogSectionList->get();
 		$sections = array();
 		foreach($tmpSections as $_c) {
-			$sections[$_c->getCollectionID()] = $_c->getCollectionName();
+			$p = new Permissions($_c);
+			if($p->canAddSubContent()){
+				$this->pt = $p;
+				$sections[$_c->getCollectionID()] = $_c->getCollectionName();
+			}
 		}
 		$this->set('sections', $sections);
 	}
@@ -67,30 +72,41 @@ class DashboardProblogAddBlogController extends Controller {
 	}
 	
 	protected function setupForm() {
+	
+		Loader::model('permission/keys/custom/add_subpage');
+		
 		$this->loadblogSections();
 		$ubp = Page::getByPath('/profile/user_blog');
 		if($ubp->cID){
 			$this->loaduserBlogSections();
+		}else{
+			$this->set('user_sections', array());
 		}
 		Loader::model("collection_types");
 		$ctArray = CollectionType::getList('');
 		$pageTypes = array();
 		foreach($ctArray as $ct) {
-			$pageTypes[$ct->getCollectionTypeID()] = $ct->getCollectionTypeName();		
+			if($this->pt && $this->pt->canAddSubCollection($ct) != 0){
+				$pageTypes[$ct->getCollectionTypeID()] = $ct->getCollectionTypeName();	
+			}	
 		}
 		$this->set('pageTypes', $pageTypes);
 		$this->addHeaderItem(Loader::helper('html')->javascript('tiny_mce/tiny_mce.js'));
 	}
+	
 
 
 
 	public function edit($cID) {
+		
 		$this->setupForm();
 		
 		$blog = Page::getByID($cID);
 		$date = $blog->getCollectionDatePublic();
 		
 		$canonical_parent_id = Loader::helper('blogify','problog')->getCanonicalParent($date,$blog);
+		
+		$this->set('cParentID',$canonical_parent_id);
 		
 		$newdate = Loader::helper('form/date_time')->translate('blogDate');
 
@@ -271,8 +287,8 @@ class DashboardProblogAddBlogController extends Controller {
 		$cck = CollectionAttributeKey::getByHandle('blog_category');
 		$cck->saveAttributeForm($p);
 		
-		$cnv = CollectionAttributeKey::getByHandle('exclude_nav');
-		$cnv->saveAttributeForm($p);
+		//$cnv = CollectionAttributeKey::getByHandle('exclude_nav');
+		//$cnv->saveAttributeForm($p);
 		
 		$ct = CollectionAttributeKey::getByHandle('thumbnail');
 		$ct->saveAttributeForm($p);

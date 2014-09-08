@@ -7,7 +7,7 @@
 <?php   Loader::element('header_required'); ?>
 
 <!-- Site Header Content //-->
-
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('main.css')?>" />
 <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/foundation.css"/>
@@ -26,7 +26,7 @@
 				<li><a class="he-home" href="<?php echo DIR_REL; ?>/profile"><span>Home</span></a></li>
 				<li><a class="he-resources" href="<?php echo DIR_REL; ?>/profile/resources/"><span>Resources</span></a></li>
 				<li><a class="he-blog" href="<?php echo DIR_REL; ?>/profile/members-blog/"><span>Blog</span></a></li>
-				<li><a class="he-forum" href="<?php echo DIR_REL; ?>/profil/forum/"><span>Forum</span></a></li>
+				<li><a class="he-forum" href="<?php echo DIR_REL; ?>/forums"><span>Forum</span></a></li>
 
 			</ul>
             
@@ -43,6 +43,26 @@
             
 
         </div>
+        
+        
+    <div class="rowWide">
+    
+    <div class="membersHeaderNav">
+    
+    <div class="grid-10 columns">
+   
+         <?php  
+         $a = new GlobalArea('MembersNavTop');
+         $a->display();
+         ?>
+    
+    </div>  
+    
+    <div class="grid-2 columns">
+    <a href="/profile" class="profileButt">Your Profile</a>
+    </div> 
+    </div>
+    </div>
 
 
 

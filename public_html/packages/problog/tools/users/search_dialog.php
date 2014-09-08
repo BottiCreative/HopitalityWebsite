@@ -32,24 +32,12 @@ $v->outputHeaderItems();
 	<?php     echo $searchForm?>
 </div>
 
-<?php      Loader::element('users/search_results', array('columns' => $columns, 'mode' => $mode, 'users' => $users, 'userList' => $userList, 'pagination' => $pagination)); ?>
+<?php      Loader::packageElement('users/search_results_pb', 'problog', array('columns' => $columns, 'mode' => $mode, 'users' => $users, 'userList' => $userList, 'pagination' => $pagination)); ?>
 </div>
 </div>
 
 <script type="text/javascript">
 $(function() {
 	ccm_setupAdvancedSearch('user');
-
-	ccm_triggerSelectBlogUser = function(uID,uName){
-			var par = $(ccmActiveUserField).parent().find('.ccm-summary-selected-user-label');
-			var pari = $(ccmActiveUserField).parent().find('input');
-			$(ccmActiveUserField).parent().find('.ccm-sitemap-clear-selected-user').show();
-			par.html(uName);
-			pari.val(uID);
-			return false;
-	}
-	ccm_triggerSelectUser = function(uID, uName, uEmail) {
-		ccm_triggerSelectBlogUser(uID, uName);
-	}
 });
 </script>

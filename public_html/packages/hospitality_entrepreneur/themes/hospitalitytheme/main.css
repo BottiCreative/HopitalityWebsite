@@ -57,7 +57,7 @@ h3{ color: #333; font-weight: 700; font-style: normal; margin:20px 0 20px 0; fon
 h4{ padding: 10px 0; font-size: 20px; }
 
 aside h3{color:#84b400!important; font-size: 19px; border-bottom: 1px #e9e9e9 solid; padding: 0 0 10px 0; margin: 0 0 10px 0;}
-aside h4{ color: #fff!important;}
+
 
 
 .partnerFull{ width: 100%; background: #f4f4f4; float: left; padding: 30px 0;} 
@@ -80,7 +80,7 @@ a { color:#84b400; text-decoration:none; -webkit-transition: all .2s ease-in-out
 .mainBody p{ padding-right: 15px;}
 .mainBody ul{ margin: 15px 0 15px 25px;} 
 
-.topRowPad{ padding: 100px 0 0 0;}
+.topRowPad{ padding: 55px 0 0 0;}
 .topRowProd{padding: 30px 0 0 0;}
 
 .membButtSide{width: auto;}
@@ -94,6 +94,10 @@ a { color:#84b400; text-decoration:none; -webkit-transition: all .2s ease-in-out
 .fullwidthnav { width:100%; background:#333; padding:10px 0; -webkit-box-shadow: 0 3px 3px 1px rgba(0,0,0,.3);
 box-shadow: 0 3px 3px 1px rgba(0,0,0,.3); position: fixed; z-index: 20; }
 
+.shareSocialPost{ text-align: right; padding: 0;}
+
+
+
 p{ padding: 0 0 14px 0;}
 
 .rowWide{width: 100%;}
@@ -106,13 +110,20 @@ a.registerLink:hover{ color: #fff;}
 
 main ul li,.squeezeForm li,.productInfo ul li{background: url(images/green-tick.gif) no-repeat 0px 11px; list-style: none; padding: 5px 0 5px 35px; font-size: 1.2em; line-height: 25px;}
 
+ul.whiteTick li {
+background: url('images/whitetick-ul.png') no-repeat 0px 11px;
+list-style: none;
+padding: 5px 0 5px 35px;
+font-size: 1.2em;
+line-height: 25px;}
+
 
 main ol li {font-size: 1.2em; line-height: 25px; padding: 5px 0 5px 0px;}
 
 .disclaimer{width: 100%; float: left; height: auto; }
 .disclaimer p{ font-size: 13px;}
 
-.homeHeader{ background: #84B400; padding: 150px 0 30px 0;}
+.homeHeader{ background: #84B400; padding: 70px 0 30px 0;}
 
 p.welcome
 {
@@ -261,8 +272,18 @@ box-shadow: 1px 1px 1px 1px #616161; float: right;}
 
 .testimonial { margin:50px 0}
 
+
 .blog { margin:0; }
 .blog h4 { color:#84B400; font-size:28px; margin:20px 0 0 0}
+.readmore{ position: absolute; bottom: 0; right: 0; }
+
+/*
+a.readmore{background: #84b400; color: #fff; float:right; width:auto; text-align: center; padding:8px 20px; margin:20px 0; display: block; position: absolute; bottom: -60px; right: 20px; text-decoration:none!important;}
+a.readmore:hover{background: #5E8200;}*/
+
+.content-sbBlog-wrap{ position: relative;}
+
+
 
 p span.smallText { font-size:15px;}
 
@@ -342,11 +363,6 @@ border: none;
 
 
 
-
-
-
-.footerRow{float: left; width: 100%; height: auto;}
-
 /*Members table*/
 
 .membersbox .grid-2half h4{ text-align: center;
@@ -388,7 +404,6 @@ box-shadow: 0 2px 7px 1px rgba(0,0,0,0.4); padding: 30px 0; background: #fff; }
 a.members { background: #f17f67; color: #fff; width: 96%; display: block; text-align: center; border-radius:8px; -webkit-border-radius:8px; moz-border-radius:8px; margin:0 5px; padding:6px 0;}
 a.members:hover { background: #84b400;}
 .freetrial ul { list-style-type:none; text-align:left; margin:0; padding: 10px 0 0 20px}
-
 .memberList { font-size:24px!important; font-weight:700; color:#444; float:left; padding:10px 0 0 0;}
 
 
@@ -396,13 +411,9 @@ a.members:hover { background: #84b400;}
 .membersWide h3{ padding: 20px 0 0 0; color: #84B400; font-weight:700; font-size: 30px;}
 
 td.MemberHead{ background: #000; }
-
 .membPrice{ font-size: 60px;}
-
 p.membPrice span{font-size: 13px;}
-
 .memberResponsiveImage { display:none;}
-
 
 .squeezeForm h1{ font-size: 60px;}
 
@@ -429,10 +440,7 @@ cursor: pointer; -webkit-transition: all .2s ease-in-out;
 
 /*Partners Page*/
 
-.partnerFull { display:block; height:auto; margin:20px 0;}
-a.partnerLink { background: #84b400; color: #fff; float:right; width:140px; text-align: center; padding:8px 20px; margin:20px 0; }
-a.partnerLink:hover { background: #5E8200;}
-.factBlock { height:auto; background:#84b400; padding:20px; color:#fff; margin:30px 0;} 
+
 
 
 .fullwidthfooter { border-top:1px #ccc solid; margin: 0px 0 80px 0; padding: 50px 0; background: #fff; }
@@ -447,6 +455,8 @@ a.partnerLink:hover { background: #5E8200;}
 .FootLinks li a.headLink { font-weight: 700;}
 
 .footCopy{ font-size: 13px; padding: 20px 0 0 0;}
+
+.footerRow{float: left; width: 100%; height: auto;}
 
 .nopadRight{ padding-right: 0!important;}
 
@@ -468,11 +478,11 @@ a.partnerLink:hover { background: #5E8200;}
 
 
 /*Comments Form*/
-.guestBook-formBlock{ height: auto;}
-.guestBook-formBlock input{ width: 100%; height: 30px; margin: 5px 0; border: solid 1px #ccc; }
+.guestBook-formBlock{ height: auto; margin: 20px 0 40px 0;}
+.guestBook-formBlock input{ width: 100%; height: 30px; margin: 5px 0; border: solid 1px #ccc; padding: 0 0 0 10px; }
 
-.guestBook-formBlock textarea { width: 100%; height: 150px; margin: 12px 0 0 0; border: solid 1px #ccc; }
-
+.guestBook-formBlock textarea { width: 100%; height: 150px; margin: 12px 0 0 0; border: solid 1px #ccc;  padding: 10px 0 0 10px; font-family: inherit; }
+ 
 h4.guestBook-title {
 border-bottom: 1px solid #ccc; padding: 0 0 10px 0;
 margin-top: 30px; color: #84B400; font-size: 30px;
@@ -480,42 +490,47 @@ margin-top: 30px; color: #84B400; font-size: 30px;
 
 h5.guestBook-formBlock-title{ padding: 0 0 10px 0;}
 
-
-.button{ background:#84B400; color:#FFF; border-radius:5px; -moz-border-radius:5px; padding:10px 0; width: 100%; display: block; cursor: pointer; border: none!important; font-size:18px; font-family: 'Open Sans', sans-serif; -webkit-transition: all .2s ease-in-out;
+.button{ background:#84B400; color:#FFF; -moz-border-radius:5px; padding:10px 0; width: 100%; display: block; cursor: pointer; border: none!important; font-size:18px; font-family: 'Open Sans', sans-serif; -webkit-transition: all .2s ease-in-out;
  -moz-transition: all .2s ease-in-out;
-        -ms-transition: all .2s ease-in-out;
-        -o-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
  transition: all .2s ease-in-out; height: 50px!important; margin: 0!important;}
-.button:hover{ background: #222;}
+.button:hover{ background: #5E8200;}
 
 
 #bio #bioInfo {
 padding: 20px;
 background-color: #f4f4f4;
-display: block;
-width: 100%; float: left;
+display: block; border: none;
+width: 100%; float: left; margin: 30px 0 0 0;
 }
 
 #bioInfo h4{ font-size: 22px; padding: 0;}
+#bioInfo h3{padding: 0; margin: 0; color: #333;}
+#bioInfo h3 span{ color: #84B400;}
 
 
 .blog-attributes{ border-top: solid 1px #ccc; border-bottom: solid 1px #ccc; padding: 10px 0; float: left;  width: 100%; margin: 0 0 30px 0;}
-
 .blogElems{ width: auto; float: left; margin: 0 30px 0 0; }
-
 .BlogNextPrevNav{ display: none;}
 
+.ccm-search-block-text{ width: 80%; height: 40px; padding: 0 0 0 10px;}
+.ccm-search-block-submit{background: #84B400; color: #fff; text-transform: uppercase; padding: 12px; border: none; cursor: pointer;}
+.ccm-search-block-submit:hover{ background:  #5E8200;}
 
 ul.contactList{ list-style: none; margin: 0;}
 
 .formHolder{width: 360px; height: 380px;  margin: 0px 0 0 0px;}
 
 .blog-attributes{ border-top: solid 1px #ccc; border-bottom: solid 1px #ccc; padding: 10px 0; float: left;  width: 100%; margin: 0 0 30px 0;}
+.blog-attributes p{ padding: 0;}
 
 .blogElems{ width: auto; float: left; margin: 0 30px 0 0; }
 
 .BlogNextPrevNav{ display: none;}
 
+.fbBox{margin: 20px 0; padding: 10px 0; width: 100%; height: auto; float: left;
+border-top: solid 1px #e9e9e9; border-bottom: solid 1px #e9e9e9; }
 
 ul.contactList{ list-style: none; margin: 0;}
 
@@ -555,12 +570,25 @@ a.ccm-productListImage{ color: #fff; font-size: 20px;}
 .nopadLeft{ padding-left: 0!important;}
 ul.archived_list li { list-style-type:none; float:left; margin:5px;}
 
-.partnerBlock { width:100%; height:auto; min-height:380px; overflow:hidden; margin:20px 0 30px 0; padding:20px 0; display:block; float:left; position:relative;}
+.partnerBlock { width:100%; height:auto; min-height:380px; overflow:hidden; margin:20px 0 0 0; padding:10px 0; display:block; float:left; position:relative;}
 .partnerTop { display:block; padding:0 0 10px 0; height:auto;}
 .partnerBlock h3 { color:#84b400; font-size:26px; margin:0 0 10px 0;}
 
-.partnerBlock img{ margin: 0 0 20px 0; float: left; }
+.partnerBlock img{ margin: 0 0 20px 0; float: left; max-height: 80px;}
 
+.partnerFull{display:block; height:auto; margin:20px 0 0 0;}
+a.partnerLink{background: #84b400; color: #fff; float:right; width:auto; text-align: center; padding:8px 20px; margin:20px 0; display: block;}
+a.partnerLink:hover{background: #5E8200;}
+
+.PartnerVideo{ margin: 0 0 30px 0;}
+
+.videoWrapper{width: 100%; height: auto; float: left; margin: 10px 0;}
+
+.PartnerFacts{width: 100%; float: left; height: auto; margin: 10px 0 30px 0; border-top: solid 1px #e9e9e9;}
+.PartnerFacts p{}
+.PartnerFacts p strong{font-weight: bold; font-weight: 700; }
+
+.PartnerFacts img{ padding: 20px 0; min-height: 100px;}
 
 
 /*FORM STYLES*/
@@ -583,6 +611,7 @@ a.signButtTrial{background: #F17F67; color: #fff; width: 100%; padding: 5px; bor
 .membOptionBox{ background: #333!important; padding: 20px; color: #fff;}
 
 .VideoHide{ display: none;}
+
 
 
 
@@ -824,7 +853,7 @@ ul.example-orbit li img { margin:0 auto; }
 }
 
 @media only screen and (max-width: 640px) {
-.topRowPad{ padding: 340px 0 0 0;}
+.topRowPad{ padding: 30px 0 0 0;}
 .nopadLeft{ padding-left: 20px!important;}
 .logo img { margin:0 auto; display:block; height:auto; margin:0 5%;}
 a.loginLink{ margin: 0 5%; width: 40%; float:left; padding:8px 0; text-align:center;}
@@ -834,6 +863,9 @@ a.registerLink{ margin: 0 5%; width: 40%; float:left; padding:8px 0; text-align:
 .Homeform p { text-align:center; margin:0 5%;}
 .homeIntro { min-height:330px;}
 .fullwidthSlider { display:none;}
+
+.fullwidthnav{position:static;}
+
 .videoResponsive { display:block; padding:330px 0 30px 0; background:#333; min-height:450px; height:auto;}
 .IntroTextHolder{ display:none;}
 .bigButt { margin:0 auto; display:block; float:none; width:84%; padding:10px 60px;}
@@ -861,8 +893,12 @@ a.readmore { display:block; margin:0 auto; text-align:center;}
 
 }
 
-@media only screen and (max-width: 400px) {
-.topRowPad{ padding: 300px 0 0 0;}
+@media only screen and (max-width: 420px) {
+	
+	
+h1{font-size: 1.6em;}
+	
+.topRowPad{ padding: 0 0 0 0;}
 h2.home-Right{ color: #84b400; font-size: 30px; font-weight: 700; text-align: center; padding: 125px 0 0 0; }
 p.home-Right{ font-size: 20px; padding: 10px 0 40px 0; font-weight: 400; text-align: center; color: #222; }
 a.video{ background: #fff url(images/video-link-icon.png) no-repeat 92% center; padding: 15px 60px 15px 20px; margin: 30px 0 0 0; color:#444; border-radius:8px; -webkit-border-radius:8px; -moz-border-radius:8px; font-weight:700; font-size: 22px; 

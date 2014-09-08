@@ -12,7 +12,7 @@ class UserPickerAttributeTypeController extends DefaultAttributeTypeController  
 		}
 		
 		$fieldName = 'user_pick_'.$this->attributeKey->getAttributeKeyID();
-		
+		//$this->addFooterItem('<script type="text/javascript">$(document).ready(function(){ ccm_triggerSelectUser = function(uID,uName){ alert(uID);} });</scipt>');
 		echo  Loader::helper('user_selector','problog')->selectUser($fieldName,$value,'ccm_triggerSelectBlogUser');
 	}
 	

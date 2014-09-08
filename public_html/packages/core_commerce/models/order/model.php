@@ -467,9 +467,15 @@ class CoreCommerceOrder extends Object {
 			if (($pkg->config('MANAGE_INVENTORY_TRIGGER') == 'SHIPPED' && $status == self::STATUS_SHIPPED) 
 			|| ($pkg->config('MANAGE_INVENTORY_TRIGGER') == 'COMPLETED' && $status == self::STATUS_COMPLETE)) {
 				$products = $this->getProducts();
+				$adjustedProducts = array();
 				foreach ($products as $product) {
-					$baseProduct = $product->getProductObject();
+					if (in_array($product->productID,$adjustedProducts)) {
+						$baseProduct = CoreCommerceProduct::getByID($product->productID); //reload the product to get the correct quantity.
+					} else {
+						$baseProduct = $product->getProductObject();
+					}
 					$baseProduct->decreaseProductQuantity($product->getQuantity());
+					$adjustedProducts[] = $product->productID;
 				}
 			}
 		}

@@ -80,13 +80,6 @@ if ($displayImage) {
 	display:none;
 }
 </style>
-
-	
-
-<div class="grid-4 columns nopadLeft">	
-
-<div class="productListprodHolder">
-
 <div class="ccm-core-commerce-add-to-cart-container">
 <form method="post" id="ccm-core-commerce-add-to-cart-form-<?php   echo $id?>" action="<?php   echo $this->url('/cart', 'update')?>">
 <input type="hidden" name="rcID" value="<?php   echo $c->getCollectionID()?>" />
@@ -284,12 +277,6 @@ if ($displayImage) {
 	</div>
 </form>
 </div>
-
-	</div>
-</div><!--end grid-->
-
-
-
 
 <?php    if (!$c->isEditMode()) { ?>
 <script type="text/javascript">

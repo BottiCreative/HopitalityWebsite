@@ -1,3 +1,17 @@
+1.5.5
+Fix for cache on global areas
+
+1.5.4
+Fix for Remove Link custom attribute (no longer reloads page)
+Added cache functionality
+
+1.5.3
+CSS fix for line height, carat color and link color when using customizer
+CSS fix for links when using customizer (mobile version)
+
+1.5.2
+Removed unused link to JS that was causing 404 (superfish templates)
+
 1.5.1
 JS fix for multiple superfish templates on the same page
 

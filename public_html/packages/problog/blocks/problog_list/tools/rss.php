@@ -1,6 +1,6 @@
 <?php 
 defined('C5_EXECUTE') or die(_("Access Denied."));
-header('Content-type: text/xml');
+header('Content-type: text/xml;');
 echo "<" . "?" . "xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 echo "<"."?"."xml-stylesheet type=\"text/css\" media=\"screen\" href=\"http://feeds.feedburner.com/~d/styles/itemcontent.css\"?>\n";
 

@@ -95,6 +95,11 @@ textarea {
 
 select {
   width: 100%; }
+  
+  
+  
+
+  
 
 .row {
   width: 100%;
@@ -103,7 +108,7 @@ select {
   margin-top: 0;
   margin-bottom: 0;
   *zoom: 1;
-  max-width: 600px}
+  max-width: 980px}
   
 
   .row:before, .row:after {

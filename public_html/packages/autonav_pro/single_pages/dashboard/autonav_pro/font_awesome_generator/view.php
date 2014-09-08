@@ -1,4 +1,4 @@
-<?php   
+<?php    
 defined('C5_EXECUTE') or die(_("Access Denied."));
 /**
 	* @ concrete5 package AutonavPro
@@ -7,7 +7,7 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
 
 $fm = Loader::helper('form');  
 ?>
-<?php   
+<?php    
 echo Loader::helper('concrete/dashboard')->getDashboardPaneHeaderWrapper(t('Font Awesome Generator'));
 ?>
 <style>
@@ -22,7 +22,7 @@ echo Loader::helper('concrete/dashboard')->getDashboardPaneHeaderWrapper(t('Font
 <div class="ccm-pane-body">
 <div class="ccm-summary-selected-item">
 <div>
-<p><strong><?php    echo t('Select Icon');?></strong></p>	
+<p><strong><?php     echo t('Select Icon');?></strong></p>	
 <div class="panel-group" id="font-accordion">
 	<div class="panel panel-default">
     <div class="panel-heading">
@@ -1106,10 +1106,10 @@ echo Loader::helper('concrete/dashboard')->getDashboardPaneHeaderWrapper(t('Font
 
 <input type="hidden" name="AnpIconGen" id="AnpIconGen" value="" />
 <br/>
-<p><strong><?php    echo t('Link Title');?></strong></p>
+<p><strong><?php     echo t('Link Title');?></strong></p>
 <input type="text" name="AnpLlinkTitle" id="AnpLlinkTitle" value="title" class="form-control"/>
 <br/><br/>
-<p><strong><?php    echo t('Position Of Icon');?></strong></p>
+<p><strong><?php     echo t('Position Of Icon');?></strong></p>
 <div id="AnpIconPosition">
 <select name="AnpIconPosition" class="AnpIconPosition">
 
@@ -1119,7 +1119,7 @@ echo Loader::helper('concrete/dashboard')->getDashboardPaneHeaderWrapper(t('Font
 </select>
 </div>
 <br/>
-<a href="#" id="AnpIconMake" class="btn btn-primary"><?php    echo t('Generate HTML');?></a>
+<a href="#" id="AnpIconMake" class="btn btn-primary"><?php     echo t('Generate HTML');?></a>
 </div>
 <div style="clear:both;width:100%;height:1px"></div>
 <br/><br/>
@@ -1176,4 +1176,4 @@ AnpIconMake();
 });
 
 </script>
-<?php    echo Loader::helper('concrete/dashboard')->getDashboardPaneFooterWrapper(false);?>
+<?php     echo Loader::helper('concrete/dashboard')->getDashboardPaneFooterWrapper(false);?>

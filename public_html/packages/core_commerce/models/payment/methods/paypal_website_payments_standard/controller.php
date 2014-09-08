@@ -1,8 +1,6 @@
 <?php 
 defined('C5_EXECUTE') or die(_("Access Denied."));
 Loader::library('payment/controller', 'core_commerce');
-Loader::helper('utilities','hospitality_entrepreneur');
-
 class CoreCommercePaypalWebsitePaymentsStandardPaymentMethodController extends CoreCommercePaymentController {
 
 	public function method_form() {
@@ -69,11 +67,7 @@ class CoreCommercePaypalWebsitePaymentsStandardPaymentMethodController extends C
 						$o->setStatus(CoreCommerceOrder::STATUS_PENDING);
 						parent::finishOrder($o, 'Paypal - Website Payments Standard');
 					} else if ($_REQUEST['payment_status'] == 'Processed' || $_REQUEST['payment_status'] == 'Completed') {
-						$o->setStatus(CoreCommerceOrder::STATUS_AUTHORIZED);
-						
-						//successful payment.  
-						
-										
+						$o->setStatus(CoreCommerceOrder::STATUS_AUTHORIZED);				
 						parent::finishOrder($o, 'Paypal - Website Payments Standard');
 					} else {
 						Log::addEntry('Unable to set status. Status received: ' . $_REQUEST['payment_status']);

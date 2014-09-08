@@ -3,30 +3,27 @@ defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php'); ?>
 	
 
-		<div class="row topRowPad">
-        
-        <main>
-        	<div class="grid-8 columns">
-            
-			<?php  
+<div class="topRowPad"></div>
+<div class="row">
+	<main>
+		<div class="grid-8 columns">
+		<?php  
 			$a = new Area('Main');
 			$a->display($c);
-			?>
-			</div>
+		?>
+	</div>
 </main>
-
-		<div class="grid-4 columns">
-			<?php  
+	<div class="grid-4 columns">
+		<?php  
 			$a = new Area('Sidebar');
 			$a->display($c);
 			?>
-		</div>
-        </div>	
+	</div>
+</div>	
         
         
-  <div class="fullwidthgreen">
+<div class="fullwidthgreen">
 	<div class="row Homeform">
-  
     	<?php  
 			$a = new Area('Giveaway');
 			$a->display($c);

@@ -10,8 +10,19 @@ class CoreCommerceDiscount extends Object {
 	public function getDiscountCode() { return $this->discountCode;}
 	public function isDiscountEnabled() { return $this->discountIsEnabled; }
 	public function withinTimeFrame() {
+
+		if ($this->getDiscountStart() == null && $this->getDiscountEnd() == null) {
+			return true;  //discount has no start or end date, we don't care.
+		}
+
 		$today = new DateTime();
-		return $this->getDiscountStart() > $today && $today >= $this->getDiscountEnd();
+		if ($this->getDiscountStart() == null) {
+			return $today <= new DateTime($this->getDiscountEnd()); // start is null, only worried if the discount is over.
+		}
+	   if ($this->getDiscountEnd() == null) {
+			return new DateTime($this->getDiscountStart()) < $today; // discount never ends, only care when it starts
+		}
+		return new DateTime($this->getDiscountStart()) < $today && $today <= new DateTime($this->getDiscountEnd()); //only possibility left is a set window
 	}
 
 	protected function load($discountID) {

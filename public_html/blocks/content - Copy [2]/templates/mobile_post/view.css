@@ -1,0 +1,121 @@
+#sbBlog {
+	font-style: normal;
+	font-weight: normal;
+	margin-bottom: 7px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	border-bottom-color: #e4e4e4;
+	border-bottom-style: dotted;
+	border-bottom-width: thin;
+	float: left;
+    clear:left;
+    width: 100%;
+}
+
+#sbBlog #titlehead {
+	float: left;
+        width: 100%;
+}
+
+#sbBlog #sbtitle {
+	padding-top: 10px;
+	float: left;
+}
+#sbBlog #date {
+	margin-top: 15px;
+	padding-top: 20px;
+	font-size: 12px;
+    float: right;
+}
+
+#sbBlog #deswrap {
+	
+}
+
+#sbBlog #description {
+	width: 100%;
+	clear: left;
+	float: left;
+}
+
+#sbBlog #datespan {
+	padding-right: 15px;
+	font-size: 14px;
+	float: right;
+}
+
+#bio {
+	float: left;
+	width: 100%;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+#bio #avatar{
+	margin-bottom: 10px;
+	padding-right: 8px;
+	padding-bottom: 8px;
+	float: left;
+}
+
+#bio #bioInfo{
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+	border-color: #adadad;
+	border-width: 1px;
+	border-style: dotted;
+	background-color: #f0f0f0;
+	display: block;
+	width: 300px;
+	float: left;
+}
+
+#tagpostlist{
+	float: right;
+	width: 400px;
+	font-style: italic;
+	margin-top: -45px;
+	text-align: right;
+}
+
+#twee{
+	margin-top: 7px;
+}
+
+.addthis_toolbox, addthis_default_style{
+	margin: 5px 0px 10px 0px;
+}
+
+pre{
+	background-color: #dedede;
+	border-color: #c5c5c5;
+	border-width: 1px;
+	border-style: dashed;
+	padding: 10px;
+	margin-right: 25px;
+	margin-left: 25px;
+	overflow-x: scroll;
+}
+
+.content{!important;
+	font-size: 14px;           
+	font-style: normal;           
+	font-weight: normal;           
+}
+
+
+.content-sbBlog-date{ margin-top: 8px; display: block; float: right; margin-right: 15px;}
+
+.mobile_photo{
+	margin-bottom: 25px;
+	max-width: 535px; 
+	border-color: #f6f4ee; 
+	border-width: 8px; 
+	border-style: solid;
+	-webkit-box-shadow: 3px 3px 6px 3px #636363;
+	-moz-box-shadow: 3px 3px 6px 3px #636363;
+	box-shadow: 3px 3px 6px 3px #636363; 
+}
+
+#gPlus{ margin-right: -23px; float: left; display: block;}

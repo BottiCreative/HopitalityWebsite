@@ -259,7 +259,7 @@ $valt = Loader::helper('validation/token');
 		
 
 		<div id="ccm-export-results-wrapper">
-			<a id="ccm-export-results" href="<?php echo $this->action('export')?>"><span></span><?php echo t('Export')?></a>
+			<a id="ccm-export-results" href="<?php echo $this->action('export').(strlen($_SERVER['QUERY_STRING'])?'?'.$_SERVER['QUERY_STRING']:'');?>"><span></span><?php echo t('Export')?></a>
 		</div>
 		
 		<?php echo $orderList->displaySummary();?>
