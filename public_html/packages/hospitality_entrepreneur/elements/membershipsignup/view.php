@@ -41,7 +41,7 @@ $uh = Loader::helper('urls', 'core_commerce');
 					    
 					    </div>
 						
-<input type="hidden" name="rcID" value="<?php   echo $c->getCollectionID(); ?>" />
+<!--<input type="hidden" name="rcID" value="<?php   echo $c->getCollectionID(); ?>" />-->
 						
                         
                         
@@ -98,10 +98,10 @@ $uh = Loader::helper('urls', 'core_commerce');
 
 </form>
 <script type="text/javascript">
-	/*$(function() {
+	$(function() {
 
-	ccm_coreCommerceRegisterAddToCart('ccm-core-commerce-add-to-cart-form-<php echo $membershipproduct->getProductID(); ?>', '<php echo $uh->getToolsURL('cart_dialog')?>');
+	ccm_coreCommerceRegisterAddToCart('ccm-core-commerce-add-to-cart-form-<?php echo $membershipproduct->getProductID(); ?>', '<?php echo $uh->getToolsURL('cart_dialog')?>');
 	
-	});*/
+	});
 	
 </script>

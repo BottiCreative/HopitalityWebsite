@@ -100,8 +100,8 @@ if ($displayImage) {
 
 			$db = Loader::db();
 			$arrmembershipLevel = $db->GetAll("SELECT ak_Membership_Level FROM CoreCommerceProductSearchIndexAttributes WHERE productID = ?",array($pr->getProductID()));
-			$membershipLevel = str_replace(' ','-',trim($arrmembershipLevel[0]['Membership_Level']));
-			$membershipLevel = str_replace('+','-',$membershipLevel);
+			$membershipLevel = str_replace(' ','_',trim($arrmembershipLevel[0]['Membership_Level']));
+			$membershipLevel = str_replace('+','_',$membershipLevel);
 ?>
 		<h1>HELLO WORLD</h1>	
 	<div class="hproduct ccm-core-commerce-add-to-cart-product-info-container overlay-<?php echo $membershipLevel; ?>">

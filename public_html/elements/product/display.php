@@ -269,7 +269,7 @@ if ($useOverlaysL) {
 <?php  if (!$c->isEditMode()) { ?>
 <script type="text/javascript">
 	$(function() {
-		//ccm_coreCommerceRegisterAddToCart('ccm-core-commerce-add-to-cart-form-<?php echo $id?>', '<?php echo $uh->getToolsURL('cart_dialog')?>');
+		ccm_coreCommerceRegisterAddToCart('ccm-core-commerce-add-to-cart-form-<?php echo $id?>', '<?php echo $uh->getToolsURL('cart_dialog')?>');
 		<?php  if($pkg->config('WISHLISTS_ENABLED')) { ?>
 			ccm_coreCommerceRegisterAddToWishList('ccm-core-commerce-add-to-cart-form-<?php echo $id?>', '<?php echo $uh->getToolsURL('wishlist/add_to_wishlist')?>?rcID=<?php  echo Page::getCurrentPage()->getCollectionID()?>');
 			ccm_coreCommerceRegisterAddToRegistry('ccm-core-commerce-add-to-cart-form-<?php echo $id?>', '<?php echo $uh->getToolsURL('wishlist/add_to_registry')?>?rcID=<?php  echo Page::getCurrentPage()->getCollectionID()?>');

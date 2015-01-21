@@ -27,9 +27,16 @@ if($u->isLoggedIn()){
 }
 ?>
 <div id="ccm-profile-sidebar">
-	<p>Hello world!@!!</p>
+	
+	
 	<div class="ccm-profile-header">
-		<a href="<?php      echo View::url('/profile',$profile->getUserID())?>"><?php      echo  $av->outputUserAvatar($profile)?></a><br />
+		
+		<?php if($profile->hasAvatar()) { ?>
+		<a href="<?php      echo View::url('/profile',$profile->getUserID())?>"><?php      echo  $av->outputUserAvatar($profile,true)?></a><br />
+		<?php
+		}
+		?>
+		
 		<a href="<?php      echo View::url('/profile',$profile->getUserID())?>"><?php      echo  $profile->getUsername()?></a>
 	</div>
 	<div style="margin-top:16px; padding-bottom:4px; margin-bottom:0px; font-weight:bold"><?php      echo t('Member Since')?></div>

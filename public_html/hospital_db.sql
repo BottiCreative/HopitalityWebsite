@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 08, 2014 at 03:03 AM
+-- Generation Time: Sep 11, 2014 at 09:51 AM
 -- Server version: 5.5.37-cll
 -- PHP Version: 5.4.23
 
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `Areas` (
   KEY `arIsGlobal` (`arIsGlobal`),
   KEY `cID` (`cID`),
   KEY `arHandle` (`arHandle`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1874 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1881 ;
 
 --
 -- Dumping data for table `Areas`
@@ -1674,7 +1674,14 @@ INSERT INTO `Areas` (`arID`, `cID`, `arHandle`, `arOverrideCollectionPermissions
 (1870, 310, 'MembersNavTop', 0, 0, 1),
 (1871, 310, 'Resources Side Nav', 0, 0, 1),
 (1872, 310, 'Resources Side Ads', 0, 0, 1),
-(1873, 310, 'Members Partners Side', 0, 0, 1);
+(1873, 310, 'Members Partners Side', 0, 0, 1),
+(1874, 160, 'Payment Info', 0, 0, 0),
+(1875, 267, 'Members Partners Side', 0, 0, 1),
+(1876, 220, 'Resources Side Ads', 0, 0, 1),
+(1877, 292, 'MembersNavTop', 0, 0, 1),
+(1878, 292, 'Resources Side Nav', 0, 0, 1),
+(1879, 292, 'Resources Side Ads', 0, 0, 1),
+(1880, 292, 'Members Partners Side', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -1958,7 +1965,9 @@ INSERT INTO `atBoolean` (`avID`, `value`) VALUES
 (1500, 1),
 (1501, 1),
 (1502, 1),
-(1503, 1);
+(1503, 1),
+(1506, 0),
+(1507, 0);
 
 -- --------------------------------------------------------
 
@@ -2792,8 +2801,8 @@ INSERT INTO `atDefault` (`avID`, `value`) VALUES
 (1422, 'icon-gift'),
 (1449, 'Blog Search Page'),
 (1450, 'Search website for terms, categories, tags and content keywords.'),
-(1451, 'Blog Search Categories - mailto@info@hospitalityentrepreneur.com'),
-(1452, 'Blog categories search result for mailto@info@hospitalityentrepreneur.com'),
+(1451, 'Blog Search Tags - facebook'),
+(1452, 'Blog tags search result for facebook'),
 (1458, ''),
 (1462, ''),
 (1463, ''),
@@ -2811,7 +2820,12 @@ INSERT INTO `atDefault` (`avID`, `value`) VALUES
 (1484, ''),
 (1485, ''),
 (1487, ''),
-(1488, '');
+(1488, ''),
+(1504, '<p><iframe src="//www.youtube.com/embed/08ZJA-dlFcM" frameborder="0" width="560" height="315"></iframe></p>'),
+(1505, '<p>Content to go here about the resource</p>'),
+(1508, ''),
+(1509, ''),
+(1510, '');
 
 -- --------------------------------------------------------
 
@@ -4013,7 +4027,7 @@ CREATE TABLE IF NOT EXISTS `AttributeValues` (
   `uID` int(10) unsigned DEFAULT NULL,
   `atID` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`avID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1504 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1511 ;
 
 --
 -- Dumping data for table `AttributeValues`
@@ -5479,7 +5493,14 @@ INSERT INTO `AttributeValues` (`avID`, `akID`, `avDateAdded`, `uID`, `atID`) VAL
 (1500, 4, '2014-09-01 13:24:57', 1, 3),
 (1501, 5, '2014-09-01 13:24:57', 1, 3),
 (1502, 60, '2014-09-01 13:24:57', 1, 3),
-(1503, 57, '2014-09-01 13:24:57', 1, 3);
+(1503, 57, '2014-09-01 13:24:57', 1, 3),
+(1504, 34, '2014-09-08 08:21:32', 4, 2),
+(1505, 34, '2014-09-08 15:10:26', 1, 2),
+(1506, 9, '2014-09-09 07:49:06', 1, 3),
+(1507, 10, '2014-09-09 07:49:06', 1, 3),
+(1508, 22, '2014-09-09 07:49:06', 1, 2),
+(1509, 23, '2014-09-09 07:49:06', 1, 1),
+(1510, 24, '2014-09-09 07:49:06', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -10636,7 +10657,7 @@ INSERT INTO `CollectionAttributeValues` (`cID`, `cvID`, `akID`, `avID`) VALUES
 (288, 9, 6, 299),
 (288, 9, 34, 708),
 (288, 10, 6, 299),
-(288, 10, 34, 708),
+(288, 10, 34, 1505),
 (289, 1, 6, 299),
 (289, 1, 34, 312),
 (291, 1, 6, 299),
@@ -10845,7 +10866,7 @@ INSERT INTO `CollectionAttributeValues` (`cID`, `cvID`, `akID`, `avID`) VALUES
 (393, 2, 6, 299),
 (393, 2, 34, 1256),
 (393, 3, 6, 299),
-(393, 3, 34, 1256),
+(393, 3, 34, 1504),
 (394, 1, 6, 299),
 (394, 1, 34, 1264),
 (395, 1, 6, 299),
@@ -11505,7 +11526,7 @@ INSERT INTO `CollectionSearchIndexAttributes` (`cID`, `ak_meta_title`, `ak_meta_
 (430, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (431, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (432, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
-(142, 'Blog Search Categories - mailto@info@hospitalityentrepreneur.com', 'Blog categories search result for mailto@info@hospitalityentrepreneur.com', NULL, 1, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
+(142, 'Blog Search Tags - facebook', 'Blog tags search result for facebook', NULL, 1, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (279, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, '<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</span></p>\r\n<p><iframe src="//www.youtube.com/embed/j_2kVtUCj-E" frameborder="0" width="560" height="315"></iframe></p>', 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (281, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, '<p><a href="/index.php/download_file/view/27/">Julia-Ebook.pdf</a></p>', 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (304, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -11620,16 +11641,16 @@ INSERT INTO `CollectionSearchIndexAttributes` (`cID`, `ak_meta_title`, `ak_meta_
 (316, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (321, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (214, '', '', '', 0, 0, NULL, 0, 0, '', NULL, '7', 0, '\nMembers\n', 203, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
-(315, NULL, NULL, NULL, 0, 0, '<script type="text/javascript">var switchTo5x=true;</script>\r\n<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>\r\n<script type="text/javascript">stLight.options({publisher: "e2a1e254-6129-47e5-91da-4a115c949cc8", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>', 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, '<p><strong>Check list for Licensees</strong><br /><br />It is advisable for licence holders to keep a file of all relevant licensing information <br />so that this can be accessed quickly and, where required, displayed in the <br />appropriate part of the premises: <br /><br /> <br /><br />• Copy of your licence summary on display in the premises <br /><br />• A copy of your licence, summary and current approved layout plan available for inspection <br /><br />• Copies of any other permission – e.g. Gambling Act 2005 licence, marriage licence, gaming machine <br />permit, tables and chairs licence/planning permission – on display where required and/or available for inspection <br /><br />• No Smoking signage displayed <br /><br />• Notice under s.57 of the Licensing Act 2003 confirming who has custody of the licence on display <br />[England only]<br /><br />• Copies of personal licences for all those employed at the premises <br /><br />• Authorisation for sales of alcohol <br /><br />• Staff training records <br /><br />• Refusals Log <br /><br />• Incident Log <br /><br />• Door security sign in/sign out log book <br /><br />• Up to date Fire Risk Assessment <br /><br />• Up to date General and Specific Risk Assessments <br /><br />• Contact details for the Local Authority Licensing Officer <br /><br />• Contact details for the Local Police Licensing Officer <br /><br />• Contact details for Gambling Commission Compliance manager (where applicable) <br /><br />• Check list of who to contact within your organisation in the event of an incident <br /><br />Scotland Only<br /><br /><br />• Statutory training records for all members of staff involved in the sale or service of alcohol <br /><br />• Statutory Notice displayed in relation to the sale of alcohol to those under the age of 18 <br /><br />• Statutory notice as to whether or not those under the age of 18 are permitted access to the premises <br /><br />• Contact details for the local Licensing Standards Officer <br /><br /> <br /><br />www.bonddickinson.com<br /><br />BD.259<br /><br />This communication is provided for general information only and does not constitute legal or other professional advice. <br />You should consult a suitably qualified lawyer on any specific legal problem or matter.<br /><br /></p>\r\n<p><span><span><span><br /></span></span></span></p>\r\n<p> </p>\r\n<p><a href="/index.php/download_file/view/92/">_DOC_270610811_BON_DIC_259_Check_list_for_Licensees.pdf</a></p>', 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0);
-INSERT INTO `CollectionSearchIndexAttributes` (`cID`, `ak_meta_title`, `ak_meta_description`, `ak_meta_keywords`, `ak_exclude_nav`, `ak_exclude_page_list`, `ak_header_extra_content`, `ak_exclude_search_index`, `ak_exclude_sitemapxml`, `ak_tags`, `ak_icon_dashboard`, `ak_blog_author`, `ak_blog_section`, `ak_blog_category`, `ak_thumbnail`, `ak_post_location`, `ak_subscription`, `ak_discussion_image`, `ak_discussion_post_is_pinned`, `ak_discussion_is_closed`, `ak_discussion_mode`, `ak_discussion_post_tags`, `ak_discussion_post_not_displayed`, `ak_discussion_moderation_type`, `ak_discussion_anonymous_posting`, `ak_product_description_auto`, `ak_anp_hide_children`, `ak_anp_remove_link`, `ak_anp_overwrite_title`, `ak_anp_overwrite_html`, `ak_anp_hide_nav_txt`, `ak_anp_sublvl_stack`, `ak_anp_nav_class`, `ak_anp_extra_attr_data`, `ak_anp_overwrite_link`, `ak_anp_sublvl_content`, `ak_anp_add_img`, `ak_anp_add_active_img`, `ak_anp_add_extra_img1`, `ak_anp_add_extra_img2`, `ak_anp_add_extra_img3`, `ak_anp_add_extra_img4`, `ak_anp_add_extra_img5`, `ak_anp_exclude_nav`) VALUES
-(288, NULL, NULL, NULL, 0, 0, '<script type="text/javascript">var switchTo5x=true;</script>\r\n<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>\r\n<script type="text/javascript">stLight.options({publisher: "e2a1e254-6129-47e5-91da-4a115c949cc8", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>', 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, '<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>\r\n<p><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></p>\r\n<p><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></p>\r\n<p><span><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></span></p>\r\n<p><span><span><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></span></span></p>\r\n<p><span><span><span><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></span></span></span></p>\r\n<p><span><span><span><span><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></span></span></span></span></p>\r\n<p><span><span><span><span><span><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></span></span></span></span></span></p>\r\n<p><span><span><span><span><span><span><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></span></span></span></span></span></span></p>\r\n<p><span><span><span><span><span><span><span><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></span></span></span></span></span></span></span></p>\r\n<p><span><span><span><span><span><span><span><span><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></span></span></span></span></span></span></span></span></p>\r\n<p><span><span><span><span><span><span><span><span><span><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></span></span></span></span></span></span></span></span></span></p>\r\n<p><span><span><span><span><span><span><span><span><span><span><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></span></span></span></span></span></span></span></span></span></span></p>\r\n<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>', 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
+(315, NULL, NULL, NULL, 0, 0, '<script type="text/javascript">var switchTo5x=true;</script>\r\n<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>\r\n<script type="text/javascript">stLight.options({publisher: "e2a1e254-6129-47e5-91da-4a115c949cc8", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>', 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, '<p><strong>Check list for Licensees</strong><br /><br />It is advisable for licence holders to keep a file of all relevant licensing information <br />so that this can be accessed quickly and, where required, displayed in the <br />appropriate part of the premises: <br /><br /> <br /><br />• Copy of your licence summary on display in the premises <br /><br />• A copy of your licence, summary and current approved layout plan available for inspection <br /><br />• Copies of any other permission – e.g. Gambling Act 2005 licence, marriage licence, gaming machine <br />permit, tables and chairs licence/planning permission – on display where required and/or available for inspection <br /><br />• No Smoking signage displayed <br /><br />• Notice under s.57 of the Licensing Act 2003 confirming who has custody of the licence on display <br />[England only]<br /><br />• Copies of personal licences for all those employed at the premises <br /><br />• Authorisation for sales of alcohol <br /><br />• Staff training records <br /><br />• Refusals Log <br /><br />• Incident Log <br /><br />• Door security sign in/sign out log book <br /><br />• Up to date Fire Risk Assessment <br /><br />• Up to date General and Specific Risk Assessments <br /><br />• Contact details for the Local Authority Licensing Officer <br /><br />• Contact details for the Local Police Licensing Officer <br /><br />• Contact details for Gambling Commission Compliance manager (where applicable) <br /><br />• Check list of who to contact within your organisation in the event of an incident <br /><br />Scotland Only<br /><br /><br />• Statutory training records for all members of staff involved in the sale or service of alcohol <br /><br />• Statutory Notice displayed in relation to the sale of alcohol to those under the age of 18 <br /><br />• Statutory notice as to whether or not those under the age of 18 are permitted access to the premises <br /><br />• Contact details for the local Licensing Standards Officer <br /><br /> <br /><br />www.bonddickinson.com<br /><br />BD.259<br /><br />This communication is provided for general information only and does not constitute legal or other professional advice. <br />You should consult a suitably qualified lawyer on any specific legal problem or matter.<br /><br /></p>\r\n<p><span><span><span><br /></span></span></span></p>\r\n<p> </p>\r\n<p><a href="/index.php/download_file/view/92/">_DOC_270610811_BON_DIC_259_Check_list_for_Licensees.pdf</a></p>', 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
+(288, NULL, NULL, NULL, 0, 0, '<script type="text/javascript">var switchTo5x=true;</script>\r\n<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>\r\n<script type="text/javascript">stLight.options({publisher: "e2a1e254-6129-47e5-91da-4a115c949cc8", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>', 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, '<p>Content to go here about the resource</p>', 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (319, NULL, NULL, NULL, 0, 1, NULL, 1, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (119, NULL, NULL, NULL, 0, 0, NULL, 0, 0, '', NULL, NULL, 1, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (322, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (330, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (359, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (420, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
-(399, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
+(399, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO `CollectionSearchIndexAttributes` (`cID`, `ak_meta_title`, `ak_meta_description`, `ak_meta_keywords`, `ak_exclude_nav`, `ak_exclude_page_list`, `ak_header_extra_content`, `ak_exclude_search_index`, `ak_exclude_sitemapxml`, `ak_tags`, `ak_icon_dashboard`, `ak_blog_author`, `ak_blog_section`, `ak_blog_category`, `ak_thumbnail`, `ak_post_location`, `ak_subscription`, `ak_discussion_image`, `ak_discussion_post_is_pinned`, `ak_discussion_is_closed`, `ak_discussion_mode`, `ak_discussion_post_tags`, `ak_discussion_post_not_displayed`, `ak_discussion_moderation_type`, `ak_discussion_anonymous_posting`, `ak_product_description_auto`, `ak_anp_hide_children`, `ak_anp_remove_link`, `ak_anp_overwrite_title`, `ak_anp_overwrite_html`, `ak_anp_hide_nav_txt`, `ak_anp_sublvl_stack`, `ak_anp_nav_class`, `ak_anp_extra_attr_data`, `ak_anp_overwrite_link`, `ak_anp_sublvl_content`, `ak_anp_add_img`, `ak_anp_add_active_img`, `ak_anp_add_extra_img1`, `ak_anp_add_extra_img2`, `ak_anp_add_extra_img3`, `ak_anp_add_extra_img4`, `ak_anp_add_extra_img5`, `ak_anp_exclude_nav`) VALUES
 (326, NULL, NULL, NULL, 0, 0, '<script type="text/javascript">var switchTo5x=true;</script>\r\n<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>\r\n<script type="text/javascript">stLight.options({publisher: "e2a1e254-6129-47e5-91da-4a115c949cc8", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>', 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, '<p><a href="/download_file/view/111/">THE_12_DAILY_HABITS_OF_SUPER-SUCCESSFUL_HOSPITALITY_ENTREPRENEURS.pdf</a></p>\r\n<p> </p>\r\n<p class="MsoNormal"><strong style="mso-bidi-font-weight: normal;"><span style="text-decoration: underline;">THE 12 DAILY HABITS OF SUPER-SUCCESSFUL HOSPITALITY ENTREPRENEURS</span></strong></p>\r\n<p class="MsoNormal">For nearly 25 years I have wondered what makes some operators in hospitality more successful than others. Whether it’s a single site small hotel, a side-street café, a small group of pubs or a nationwide chain of restaurants, there are character traits and skills which are shared by the most successful.</p>\r\n<p class="MsoNormal">There’s a saying that, “Success leaves clues” and the key factor that I believe separates the achievers that I’ve met from those who struggle (and I’ve worked with hundreds in this latter group also), is their adoption of daily habits. These habits are rarely gained at birth. Instead they are learned and adopted, then implemented ruthlessly each and every day. For some these habits are automatic and they’re but for most these are conscious actions which, applied over time, I can guarantee will have a massive impact and influence on ultimate success.</p>\r\n<p class="MsoNormal">The habits listed below are reflections of my personal opinion and experience of workingwith and meeting some of the best operators in this industry. However, whilst they are comprehensive, they cannot be entirely complete and I would suggest you make note of lots more worthy character traits and habits whenever you see them. I will expand upon each of these 12 points in my book of the same name, but here’s a summary:</p>\r\n<p class="MsoListParagraph" style="margin-left: 18.0pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">1.<span style="font: 7.0pt ''Times New Roman'';">       </span></span></span>Start early</p>\r\n<p class="MsoNormal">It sounds obvious, especially if you’re already an entrepreneur and reading this. However, follow the character traits and success secrets of the world’s wealthiest and very few of them (unless they’re a rock star on tour) get up late in the morning. Running, as well as owning, a restaurant or bar can mean late nights, but perhaps this is one of the many reasons why so few operators manage to control and grow their businesses. Delegation of the late night routine tasks is essential. Our motto is, “Control your business before it controls you” and unless essential controls and systems are in place to allow you to concentrate on working effectively and <em style="mso-bidi-font-style: normal;">early</em>, you’ll always be a slave to your business and it’s a downhill slope. Get the important things done early, recording all your essential creative ideas and implementing them, before all those distractions and operational interruptions.</p>\r\n<p class="MsoListParagraph" style="margin-left: 18.0pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">2.<span style="font: 7.0pt ''Times New Roman'';">       </span></span></span>Put marketing first</p>\r\n<p class="MsoNormal">Promoting your business rather than just carrying on working in it, is now probably the most crucial element of success in the highly competitive hospitality sector. You know (hopefully) that you’re brilliant at what you do already, so start telling everyone about it! The customer has more choices than ever, so it’s more difficult to get heard above your competitors. However, there are also more marketing channels than ever before, with tried and tested ways of getting your message out like never before. Marketing is now do-able and measurable, so get out there before everyone else. It’s no longer just the secret skill of experts and expensive consultants. With automated campaigns and systems, efficient marketing can now be achieved quickly and daily.</p>\r\n<p class="MsoListParagraph" style="margin-left: 18.0pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">3.<span style="font: 7.0pt ''Times New Roman'';">       </span></span></span>Exercise</p>\r\n<p class="MsoNormal">Whether running, walking, cycling or going down the gym, we all know exercise is just as good for the mind as for the muscles, heart and weight loss. Hospitality can be one of the most stressful careers, so the most successful people manage to control the effect it has on them by taking daily exercise, for increased blood flow, higher energy levels, relaxation and an immediate change of scenery as much as for the longer term health benefits.</p>\r\n<p class="MsoListParagraph" style="margin-left: 18.0pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">4.<span style="font: 7.0pt ''Times New Roman'';">       </span></span></span>Write a daily ‘To Do’ list</p>\r\n<p class="MsoNormal">Business goals are almost without exception written down and reviewed and shared regularly with the entire staff team. However, to facilitate this, effective hospitality entrepreneurs have a daily ‘To do’ list of priorities, written down and re-written before the end of each day. This focuses the mind on what’s important and urgent, separating these ‘must dos’ from the ‘nice to do’ which are usually unimportant and not in the slightest bit urgent. Time on planning is time well spent and the most successful are ruthless about how they manage each minute of their time, their most precious and shrinking resource.</p>\r\n<p class="MsoListParagraph" style="margin-left: 18.0pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">5.<span style="font: 7.0pt ''Times New Roman'';">       </span></span></span>Keep a journal</p>\r\n<p class="MsoNormal">Try recording what you do each day and match that to your ‘to do’ list. How are you succeeding as a parent, spouse or friend as well as an entrepreneur? Use this to work out what actions are taking you closer to your goals and to look back at as an essential reference guide.<span style="mso-spacerun: yes;">  </span>Similarly, get key members in your organisation to ask each day what they did well, what didn’t they do well and, most importantly, how can they do something better next time?</p>\r\n<p class="MsoListParagraph" style="margin-left: 18.0pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">6.<span style="font: 7.0pt ''Times New Roman'';">       </span></span></span>Random acts of hospitality and kindness</p>\r\n<p class="MsoNormal">It’s catching. Even if it’s one good deed of recognition, private time or just making someone’s<span style="mso-spacerun: yes;">  </span>job easier each day, just because you’re no longer at the front of house or serving drinks and food to guests, doesn’t mean you have to lose the hospitality (‘H’)factor. You started in this business for a reason, so never underestimate how good you are at welcoming and looking after people, especially when they’re least expecting it. Lead by example if you want your staff team to be genuinely warm and hospitable to others.</p>\r\n<p class="MsoListParagraph" style="margin-left: 18.0pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">7.<span style="font: 7.0pt ''Times New Roman'';">       </span></span></span>Focus on what’s important</p>\r\n<p class="MsoNormal">A ‘To do’ list is fine, but how easy is it to get distracted by ‘the thick of small things’, by customers, emails, phone calls, staff questions and issues that can be either ‘delegated or relegated’? Unless your staff team take them on and grow their experience in sharing these tasks, progress is elusive. Distractions can be anything from a small maintenance issue to a potentially huge business opportunity. Sure, great entrepreneurs can multi-task, but they also know their goals and focus with formidable single mindedness on one task at a time, on the most important and the biggest first, the obstacles that most would run away from or procrastinate over. They realise that a mix of instinct and well thought out preparation, combined with all-out effort and determination, can overcome almost any obstacle, which in turn will make a difference and a lasting, massive, improvement.</p>\r\n<p class="MsoListParagraph" style="margin-left: 18.0pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">8.<span style="font: 7.0pt ''Times New Roman'';">       </span></span></span>Eat well and eat regularly</p>\r\n<p class="MsoNormal">Publicans and restaurateurs are amongst the unhealthiest business owners. Putting the customers first can take its toll on you. The most effective operators have regular meal times, usually with either their home family or their work family. Snacking and squeezing food in between shifts and meetings achieves little and is an invitation to all manner of health problems such as heart attacks, strokes and digestion troubles. Think of meal times as an opportunity to have either a working lunch or to check out the competition, always leaving time to eat a relaxed meal with potential partners, partners and family.</p>\r\n<p class="MsoListParagraph" style="margin-left: 18.0pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">9.<span style="font: 7.0pt ''Times New Roman'';">       </span></span></span>Get inspired and give inspiration to others</p>\r\n<p class="MsoNormal">Whether it’s visiting a business just across the road, travelling to another city or country, reading a book or watching an insightful video, we all need constant inspiration in order to be positive, creative and inspirational to others around us. The top operators and industry leaders haven’t just eaten well abroad, they’ve gone out of their way to constantly learn, find out what others do well and don’t do well and improve themselves and, ultimately, massively improve their own chances of success. In this fast changing and constantly developing sector of hospitality, to stand still is to fall way behind.</p>\r\n<p class="MsoListParagraph" style="margin-left: 18.0pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">10.<span style="font: 7.0pt ''Times New Roman'';">   </span></span></span><span style="mso-spacerun: yes;"> </span>Take responsibility</p>\r\n<p class="MsoNormal">Understanding that you are ultimately 100% responsible for what happens in your business can be difficult. Whether it’s external factors such as the weather, politics or not having the right ‘internals’ such as people, suppliers, systems, buildings, location, equipment, strategies or customer relationships, ultimately these are all your responsibility and no one can be blamed for missing targets and making mistakes except, eventually, you. Yes, you are responsible and if you’re not careful, you are often the person who knows how to get it done and therefore will be prepared to get it done. But as time progresses and the real entrepreneur in you takes over, the actual <em style="mso-bidi-font-style: normal;">running</em> of the business is controlled, efficient, systemised and delegated, leaving you with a business that runs without you being there – the definition of a true business.</p>\r\n<p class="MsoNormal"> </p>\r\n<p class="MsoListParagraph" style="margin-left: 18.0pt; mso-add-space: auto; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">11.<span style="font: 7.0pt ''Times New Roman'';">   </span></span></span>Set deadlines and get things finished</p>\r\n<p class="MsoNormal">Ideas are easy, putting them into action and turning them into reality is not. Great entrepreneurs are great finishers, for many of the reasons already mentioned. They have bullet-proof belief, resilience and obsessive determination to get things finished once they’ve started on them. Whether it’s securing a new site, developing a new food concept or reaching new targets, they’ll get it finished and then move onto the next goal.</p>\r\n<p class="MsoNormal">12. Knowing the numbers</p>\r\n<p class="MsoNormal">Numbers, in the form of vital management figures, information and accounts, are viewed and acted upon on a daily basis. This includes daily sales figures, break-evens, wage percentages, key performance indicators (KPIs), margins, budgets and balances. The best hospitality entrepreneurs set up systems and procedures that enable them to see what’s working and what isn’t working so well, right across their businesses. Planning, monitoring and implementing is only possible with access to accurate figures, enabling key decisions to be made. <span style="mso-spacerun: yes;"> </span></p>\r\n<p class="MsoNormal">In summary, most or all of these habits can be accumulated, learned and implemented on an ongoing basis. But just remember that without adopting these habits, you’ll find success a lot slower to come by, if not completely elusive. Hospitality as a business is a blend of art and science, after all.</p>\r\n<p class="MsoNormal">Peter Austen</p>', 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (325, NULL, NULL, NULL, 0, 0, '<script type="text/javascript">var switchTo5x=true;</script>\r\n<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>\r\n<script type="text/javascript">stLight.options({publisher: "e2a1e254-6129-47e5-91da-4a115c949cc8", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>', 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, '<p>Feedback is like gold dust. It’s not just about whether your staff can keep the toilets clean and loo rolls well stocked. All about the customer experience, ‘mystery’ reporting is an essential tool in gaining an impartial view on your business performance. If you’re passionate about service, maintaining standards and a consistent customer experience, then this is a tool which will pay huge dividends if used properly.</p>\r\n<p>Most chains and multiple operators have used hundreds of mystery reports as an integral part of their training and benchmarking regime and I would really urge our members to consider this as one of the essential and more ‘proactive’ systems and procedures that will enable and facilitate future growth. More often than not, ‘reactive’ operators wait for Tripadvisor reviews to come in before evaluating how their business is satisfying their customer base, which is usually misleading and always bonkers. A good report, carried out at regular intervals, preferably by a variety of mystery guests who are unknown to both you and your staff, will enable you to monitor your ability to consistently deliver great food, drink and accommodation. It’s not just your food or customer service that’s being examined, but the whole building, management presence, atmosphere, booking systems and efficiencies.</p>\r\n<p>Often one of the first procedures to be introduced by serious businesses, this enables you to have a ‘warts ‘n all’ view from the customers’ perspective. You can really adjust our own template to suit the style of your business. The attached is really for a bar and restaurant or food led pub. It covers the main areas, such as:</p>\r\n<ul>\r\n<li> Bookings and enquiries</li>\r\n<li>  First impressions building, atmosphere and environment</li>\r\n<li>  Reception and welcome</li>\r\n<li>  Food ordering</li>\r\n<li>  Food and drink service</li>\r\n<li>  Staff communication</li>\r\n<li>  Food and drink experience</li>\r\n<li>  Perceived value for money</li>\r\n<li>  Overall rating and likelihood of customer returning</li>\r\n</ul>\r\n<p>In my businesses I always used mystery dining as a useful and impartial third party view on operations, over the long term, highlighting both the good and the bad. The short sighted will employ mystery dining reports as a tool for uncovering flaws and finger-pointing at weaknesses which need underlining. However, if used sensibly, they can be embraced by the entire staff team and make all the difference.  Even a bad report (low scoring) can result in the whole staff team learning from it.</p>\r\n<p><strong>Consider the following:</strong></p>\r\n<ol>\r\n<li>Build mystery report results into senior manager (eg restaurant Manager and Head Chef) bonus calculations</li>\r\n<li>Always reward staff who are mentioned positively in reports</li>\r\n<li>Share report results with the entire staff team</li>\r\n<li>Run competitions between departments, sections and managers dependent on report results</li>\r\n<li>Get an early ‘heads up’ on new menus and concept changes</li>\r\n<li>Get honest feedback on areas which are usually hard to evaluate, such as overall value for money, accuracy of bills, staff attitude and those staff going ‘the extra mile’</li>\r\n<li>Boost morale and celebrate where results are consistently good</li>\r\n<li>Your own mystery guests should be able to give thorough, in depth review, often over one or two hours (in return for a ‘free’ meal, of course), unlike those on Tripadvisor</li>\r\n<li>Consider inviting your mystery guests to a staff training session for more detailed and 1:1 feedback</li>\r\n<li>It’s what you do with the findings of your mystery reports that really matters. Adopt a scoring system and evaluation process which has integrity and consistency, congratulating great performance where it is due and constructively acting upon criticism.</li>\r\n<li>Use mystery reports alongside Tripadvisor, customer emails, comment cards and other sources of customer feedback to illuminate trends and tendencies in your business.</li>\r\n<li>Business performance should never be evaluated by profits and (worst case) sales figures alone.</li>\r\n<li>Consider engaging a specialist mystery diner or customer feedback company or service. These companies will give you invaluable data, analysis and third party recommendations, a great return on your time and money invested.</li>\r\n</ol>\r\n<p><strong>Any serious hospitality business will have mystery reports either weekly or monthly.</strong></p>\r\n<p>You can download a sample Mystery Report here and our Mystery Diner Guidelines, ready to be adjusted to your own business and sent out to your mystery guests.</p>\r\n<p>This should keep you and your staff on your toes.</p>\r\n<p>Peter Austen</p>\r\n<p><a href="/download_file/view/108/">HE_MYSTERY_CUSTOMER_REPORT_TEMPLATE.doc</a></p>\r\n<p><a href="/download_file/view/109/">Mystery_Diner_Guidelines.doc</a></p>\r\n<p><a href="/download_file/view/107/">ELEMENTARY_MYSTERY_REPORTING.pdf</a></p>', 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
 (360, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -19901,8 +19922,8 @@ INSERT INTO `Config` (`cfKey`, `timestamp`, `cfValue`, `uID`, `pkgID`) VALUES
 ('GRAVATAR_FALLBACK', '2014-02-19 15:16:16', '1', 0, 0),
 ('GRAVATAR_MAX_LEVEL', '2014-02-19 15:16:16', 'g', 0, 0),
 ('GRAVATAR_IMAGE_SET', '2014-02-19 15:16:16', '404', 0, 0),
-('slk_session_id', '2014-09-01 13:43:30', '541eb53054e43ce0ff559561e3b9ac76', 1, 0),
-('slk_session_data', '2014-09-01 13:43:30', '0519f2e43931821a60c14c8b3246e361', 1, 0),
+('slk_session_id', '2014-09-09 15:00:23', '63fa0ac2c33b6ee31a0b28abf7bfbe51', 1, 0),
+('slk_session_data', '2014-09-09 15:00:23', '0915b63388f39173a65c9514d85a52d3', 1, 0),
 ('LOGIN_REDIRECT', '2014-08-04 14:44:53', 'PROFILE', 0, 0),
 ('LOGIN_REDIRECT_CID', '2014-08-04 14:44:53', '0', 0, 0),
 ('LOGIN_ADMIN_TO_DASHBOARD', '2014-08-04 14:44:53', '0', 0, 0),
@@ -19928,7 +19949,7 @@ INSERT INTO `Config` (`cfKey`, `timestamp`, `cfValue`, `uID`, `pkgID`) VALUES
 ('STATISTICS_TRACK_PAGE_VIEWS', '2014-03-05 10:33:59', '0', 0, 0),
 ('OLD_VERSION_JOB_PAGE_NUM', '2014-09-01 12:38:06', '4', 0, 0),
 ('PERMISSIONS_MODEL', '2014-03-05 15:05:01', 'advanced', 0, 0),
-('slk_session_id', '2014-08-28 21:39:20', '19d76f4fbaeabd0ad9cf5b368251e8fd', 4, 0),
+('slk_session_id', '2014-09-11 08:49:12', '814417c47615a30e16822eca39ab5cd4', 4, 0),
 ('slk_session_data', '2014-07-15 20:47:04', '42c1e4a6b7a524210242e204a0a8d114', 4, 0),
 ('NEWSFLOW_LAST_VIEWED', '2014-05-29 12:29:05', '1401366545', 4, 0),
 ('PAYMENT_METHOD_PAYPAL_STANDARD_TEST_MODE', '2014-06-05 03:20:39', 'live', 0, 3),
@@ -19971,7 +19992,9 @@ INSERT INTO `Config` (`cfKey`, `timestamp`, `cfValue`, `uID`, `pkgID`) VALUES
 ('slk_session_id', '2014-09-01 13:30:37', '0d60025e922be477cbbf88175ee565f2', 33, 0),
 ('slk_session_data', '2014-09-01 08:00:48', '29c21a6fe39ac336a1dca2858aaf1281', 33, 0),
 ('slk_session_id', '2014-08-31 18:52:23', '15019418a4079a05cb273792961e7602', 34, 0),
-('slk_session_data', '2014-08-31 18:09:38', '8925a820796acc90e1df82849663aed1', 34, 0);
+('slk_session_data', '2014-08-31 18:09:38', '8925a820796acc90e1df82849663aed1', 34, 0),
+('slk_session_id', '2014-09-09 13:01:34', 'e70704473e841917f75b42c3117c9bd2', 35, 0),
+('slk_session_data', '2014-09-09 13:01:34', '902654af26aaa146edc1cec623ffaf3c', 35, 0);
 
 -- --------------------------------------------------------
 
@@ -20323,7 +20346,7 @@ CREATE TABLE IF NOT EXISTS `CoreCommerceOrderDownloadableFiles` (
   `limitDownloadTime` tinyint(1) unsigned DEFAULT '0',
   `timeDownloadEnds` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`orderProductFileID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=143 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=204 ;
 
 --
 -- Dumping data for table `CoreCommerceOrderDownloadableFiles`
@@ -20471,7 +20494,68 @@ INSERT INTO `CoreCommerceOrderDownloadableFiles` (`orderProductFileID`, `orderID
 (139, 75, 71, 189, 'PbMlNHHMuIvs', 0, '0000-00-00 00:00:00'),
 (140, 75, 71, 189, 'oqs4Wq4QVnHP', 0, '0000-00-00 00:00:00'),
 (141, 75, 71, 189, 'mbalvyOxkyOj', 0, '0000-00-00 00:00:00'),
-(142, 75, 71, 189, 'I6F6CSwXl2cG', 0, '0000-00-00 00:00:00');
+(142, 75, 71, 189, 'I6F6CSwXl2cG', 0, '0000-00-00 00:00:00'),
+(143, 73, 71, 189, 'L1GTY1gVGpgl', 0, '0000-00-00 00:00:00'),
+(144, 73, 71, 189, 'rgIRDSeONyEf', 0, '0000-00-00 00:00:00'),
+(145, 73, 71, 189, 'tXDV2IZKNqXp', 0, '0000-00-00 00:00:00'),
+(146, 73, 71, 189, '5cwHtZIvvqpM', 0, '0000-00-00 00:00:00'),
+(147, 73, 71, 189, 'BMBmPbjDcxc5', 0, '0000-00-00 00:00:00'),
+(148, 73, 71, 189, 'JU3WgTlzgX6k', 0, '0000-00-00 00:00:00'),
+(149, 73, 71, 189, 'OHrUVx7Z1V57', 0, '0000-00-00 00:00:00'),
+(150, 73, 71, 189, 'DPXCQFCIsY3K', 0, '0000-00-00 00:00:00'),
+(151, 73, 71, 189, 'O8ljiy7ibFWO', 0, '0000-00-00 00:00:00'),
+(152, 73, 71, 189, 'WDZv9ut2RT95', 0, '0000-00-00 00:00:00'),
+(153, 78, 71, 189, 'HDpnDPtqfYCW', 0, '0000-00-00 00:00:00'),
+(154, 78, 71, 189, 'g6zLe1PIet0T', 0, '0000-00-00 00:00:00'),
+(155, 78, 71, 189, 'Rhhky9ezneAN', 0, '0000-00-00 00:00:00'),
+(156, 78, 71, 189, 'Am3pG2xQgICK', 0, '0000-00-00 00:00:00'),
+(157, 78, 71, 189, '5CHKs0Hh58MV', 0, '0000-00-00 00:00:00'),
+(158, 78, 71, 189, 'T4CUGHYRoWJg', 0, '0000-00-00 00:00:00'),
+(159, 78, 71, 189, 'CQEVJFRgkhiq', 0, '0000-00-00 00:00:00'),
+(160, 78, 71, 189, 'eVKXYuiYiPO6', 0, '0000-00-00 00:00:00'),
+(161, 78, 71, 189, 'X3UFrCDDmqr1', 0, '0000-00-00 00:00:00'),
+(162, 78, 71, 189, '7fXwEyq0DzGk', 0, '0000-00-00 00:00:00'),
+(163, 78, 71, 189, '7D778Y4GfgTj', 0, '0000-00-00 00:00:00'),
+(164, 78, 20, 37, 'HazQB8aV5jNN', 0, '0000-00-00 00:00:00'),
+(165, 78, 71, 189, 'McUaVb5WYMpZ', 0, '0000-00-00 00:00:00'),
+(166, 78, 20, 37, 'fTC6sboh33Y7', 0, '0000-00-00 00:00:00'),
+(167, 78, 71, 189, 'mA5yu1aN2b2E', 0, '0000-00-00 00:00:00'),
+(168, 78, 20, 37, 'tTLLjLJiZok2', 0, '0000-00-00 00:00:00'),
+(169, 78, 71, 189, 'f8w5JQFjWu3b', 0, '0000-00-00 00:00:00'),
+(170, 78, 20, 37, 'ICTLBab6WrpZ', 0, '0000-00-00 00:00:00'),
+(171, 78, 71, 189, 'sKeL29zZD8KS', 0, '0000-00-00 00:00:00'),
+(172, 78, 20, 37, '4Te9QgOwUOop', 0, '0000-00-00 00:00:00'),
+(173, 78, 71, 189, 'rfgK85zoyKJa', 0, '0000-00-00 00:00:00'),
+(174, 78, 20, 37, 'p4c0KA2ny8NQ', 0, '0000-00-00 00:00:00'),
+(175, 78, 71, 189, '40y08wFgu9Lj', 0, '0000-00-00 00:00:00'),
+(176, 78, 20, 37, 'luq4WKAEkq6Y', 0, '0000-00-00 00:00:00'),
+(177, 78, 71, 189, 'NlMuDYbs3M21', 0, '0000-00-00 00:00:00'),
+(178, 78, 20, 37, 'S6YofHoublwc', 0, '0000-00-00 00:00:00'),
+(179, 78, 71, 189, 'M3z6t9jBfnlO', 0, '0000-00-00 00:00:00'),
+(180, 78, 20, 37, 'GWysmuGzuZXf', 0, '0000-00-00 00:00:00'),
+(181, 78, 71, 189, '61kjJ5s9lFVA', 0, '0000-00-00 00:00:00'),
+(182, 78, 20, 37, 'vZ3SP9zWrQzP', 0, '0000-00-00 00:00:00'),
+(183, 79, 71, 189, 'mvX63RKh7XAM', 0, '0000-00-00 00:00:00'),
+(184, 79, 71, 189, 'K48QOeOv3usM', 0, '0000-00-00 00:00:00'),
+(185, 79, 71, 189, 'ZW0DywtusovH', 0, '0000-00-00 00:00:00'),
+(186, 79, 71, 189, 'FiSfkgrEENVo', 0, '0000-00-00 00:00:00'),
+(187, 79, 71, 189, 'kMf6RhwjX2gg', 0, '0000-00-00 00:00:00'),
+(188, 79, 71, 189, 'K0aNG2rc2LGt', 0, '0000-00-00 00:00:00'),
+(189, 79, 71, 189, 'kJqoBh1i3czo', 0, '0000-00-00 00:00:00'),
+(190, 79, 71, 189, 'aI3YC2CHL1AM', 0, '0000-00-00 00:00:00'),
+(191, 79, 71, 189, 'TCkWSwiJqisw', 0, '0000-00-00 00:00:00'),
+(192, 79, 71, 189, '7jIexBqXOMHH', 0, '0000-00-00 00:00:00'),
+(193, 80, 71, 189, 'o3XpVR2eoY6l', 0, '0000-00-00 00:00:00'),
+(194, 80, 71, 189, 'hCBFreoE1tHM', 0, '0000-00-00 00:00:00'),
+(195, 80, 71, 189, 'V3Co16bA4eRv', 0, '0000-00-00 00:00:00'),
+(196, 80, 71, 189, 'tuUiDOPURjqb', 0, '0000-00-00 00:00:00'),
+(197, 80, 71, 189, 'mhVcQeoURF5v', 0, '0000-00-00 00:00:00'),
+(198, 80, 71, 189, 'sQkjx4z4STvN', 0, '0000-00-00 00:00:00'),
+(199, 80, 71, 189, 'guo0USuTsZGo', 0, '0000-00-00 00:00:00'),
+(200, 80, 71, 189, 'KWID6qRA0tk1', 0, '0000-00-00 00:00:00'),
+(201, 80, 71, 189, 'Gh1uUKIY5mJq', 0, '0000-00-00 00:00:00'),
+(202, 80, 71, 189, 'iD1pXQzCfjFQ', 0, '0000-00-00 00:00:00'),
+(203, 80, 71, 189, '4N6oEvuSBisS', 0, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -20543,7 +20627,7 @@ CREATE TABLE IF NOT EXISTS `CoreCommerceOrderProducts` (
   `prName` varchar(255) DEFAULT NULL,
   `dateAdded` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`orderProductID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=177 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=186 ;
 
 --
 -- Dumping data for table `CoreCommerceOrderProducts`
@@ -20614,7 +20698,14 @@ INSERT INTO `CoreCommerceOrderProducts` (`orderProductID`, `orderID`, `productID
 (170, 70, 31, 1, '0.0000', '0.0000', 'Free', '2014-07-09 16:31:43'),
 (172, 71, 31, 1, '0.0000', '0.0000', 'Free', '2014-08-01 15:02:29'),
 (173, 72, 31, 1, '0.0000', '0.0000', 'Free', '2014-08-08 14:38:56'),
-(174, 75, 71, 3, '20.0000', '0.0000', '9 Secrets Journalists Love - video by Lucy Matthews', '2014-08-28 22:11:34');
+(174, 75, 71, 3, '20.0000', '0.0000', '9 Secrets Journalists Love - video by Lucy Matthews', '2014-08-28 22:11:34'),
+(177, 77, 31, 1, '0.0000', '0.0000', 'Free', '2014-09-08 09:43:12'),
+(178, 73, 71, 1, '20.0000', '0.0000', '9 Secrets Journalists Love - video by Lucy Matthews', '2014-09-08 15:03:46'),
+(179, 78, 71, 1, '20.0000', '0.0000', '9 Secrets Journalists Love - video by Lucy Matthews', '2014-09-08 15:05:54'),
+(180, 78, 20, 1, '4.9500', '0.0000', 'abv Training''s 100 Top Tips for Running a Successful Pub Business', '2014-09-08 15:10:40'),
+(181, 79, 71, 1, '20.0000', '0.0000', '9 Secrets Journalists Love - video by Lucy Matthews', '2014-09-08 15:11:34'),
+(182, 79, 30, 1, '199.0000', '0.0000', 'Club +', '2014-09-08 15:11:53'),
+(184, 80, 71, 2, '20.0000', '0.0000', '9 Secrets Journalists Love - video by Lucy Matthews', '2014-09-11 08:20:36');
 
 -- --------------------------------------------------------
 
@@ -20633,7 +20724,7 @@ CREATE TABLE IF NOT EXISTS `CoreCommerceOrders` (
   `oPaymentMethodID` int(11) unsigned DEFAULT '0',
   `oType` varchar(60) DEFAULT 'order',
   PRIMARY KEY (`orderID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=76 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=81 ;
 
 --
 -- Dumping data for table `CoreCommerceOrders`
@@ -20714,7 +20805,12 @@ INSERT INTO `CoreCommerceOrders` (`orderID`, `oDateAdded`, `oEmail`, `oShippingM
 (72, '2014-08-08 14:40:05', 'simon.stevenson@bluebirdpartners.co.uk', NULL, 9000, 0, 5, 'order'),
 (73, '2014-08-11 07:52:58', NULL, NULL, 0, 1, 0, 'order'),
 (74, '2014-08-21 04:34:44', NULL, NULL, 0, 0, 0, 'order'),
-(75, '2014-08-28 22:05:48', NULL, NULL, 0, 0, 0, 'order');
+(75, '2014-08-28 22:05:48', NULL, NULL, 0, 0, 0, 'order'),
+(76, '2014-09-08 08:22:05', NULL, NULL, 0, 0, 0, 'order'),
+(77, '2014-09-08 09:43:12', NULL, NULL, 0, 0, 0, 'order'),
+(78, '2014-09-08 15:05:54', NULL, NULL, 0, 0, 0, 'order'),
+(79, '2014-09-08 15:11:34', NULL, NULL, 0, 0, 0, 'order'),
+(80, '2014-09-11 08:20:35', NULL, NULL, 0, 0, 0, 'order');
 
 -- --------------------------------------------------------
 
@@ -20809,7 +20905,9 @@ INSERT INTO `CoreCommerceOrderSearchIndexAttributes` (`orderID`, `ak_discount_ba
 (69, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (70, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (71, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(72, NULL, NULL, NULL, NULL, NULL, 'simon', 'stevenson', '88 Southmoor Road', 'Oxford', 'Oxford', 'OXON', 'GB', 'ox2 6rb', '07974428504', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(72, NULL, NULL, NULL, NULL, NULL, 'simon', 'stevenson', '88 Southmoor Road', 'Oxford', 'Oxford', 'OXON', 'GB', 'ox2 6rb', '07974428504', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(77, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(80, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -21382,7 +21480,7 @@ INSERT INTO `CoreCommerceProducts` (`productID`, `prName`, `prDescription`, `prD
 (14, 'Video', '<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</span></p>\r\n<p><iframe src="//www.youtube.com/embed/j_2kVtUCj-E" frameborder="0" width="560" height="315"></iframe></p>', '2014-03-04 17:21:55', 12, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, '0.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 279, 1, '0.0000', NULL),
 (16, 'Julia Bramble''s Social Media Secrets', '<p><a href="/index.php/download_file/view/27/">Julia-Ebook.pdf</a></p>', '2014-03-04 20:27:16', 36, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, '9.9500', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 281, 1, '0.0000', NULL),
 (19, 'The 20 Marketing Mistakes That Can Be Fatal To Your Business, by Nigel Botterill', '<p><a href="/index.php/download_file/view/34/">20-Marketing-Mistakes.pdf</a></p>', '2014-03-05 13:47:11', 35, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, '9.9500', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 287, 1, '0.0000', NULL),
-(20, 'abv Training''s 100 Top Tips for Running a Successful Pub Business', '<p><a href="/download_file/view/178/">abv_toptips_mar13.pdf</a></p>', '2014-03-05 14:02:50', 69, 0, 179, 1, 0, 0, 0, 1, 0, 0, 1, 1, '4.9500', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 0, 1, '0.0000', NULL),
+(20, 'abv Training''s 100 Top Tips for Running a Successful Pub Business', '<p>Content to go here about the resource</p>', '2014-03-05 14:02:50', 69, 0, 179, 1, 0, 0, 0, 1, 0, 0, 1, 1, '4.9500', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 288, 1, '0.0000', NULL),
 (21, 'Your Marketing Plan', '<p><a href="/index.php/download_file/view/39/">Your_Marketing_Plan.pdf</a></p>', '2014-03-05 14:07:45', 136, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, '0.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 289, 1, '0.0000', NULL),
 (22, 'Beginner''s Bar Boosting 10 Point Checklist', '<p><a title="Beginner''s Bar Boosting 10 Point Checklist" href="http://www.hospitalityentrepreneur.com.gridhosted.co.uk/index.php?cID=291">Beginners_Bar_Boosting_10_Point_Checklist.pdf</a></p>\r\n<h3>Beginner’s ‘Bar Booster’ 10 Point Checklist – HOW DO YOU SCORE TODAY?</h3>\r\n<p>For a lot of operators with bars, being efficient and avoiding mistakes is the key for securing profits and happy customers. Bars are often more chaotic than the restaurant floor due to layout, staff and customer pressure. It''s not just about ''up''selling!....instead, here are just ten out of the hundreds of tips we have from the best in the business:</p>', '2014-03-06 12:21:27', 122, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, '0.9900', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 291, 1, '0.0000', NULL),
 (23, 'Record your Food Allowances and Wastage', '<p>Is your Food Gross Profit a bit hit and miss? If there''s a difference between your Target Gross Profit % and your Actual Gross Profit %, it may well be that you and your chefs are not recording your kitchen allowances and wastage properly.</p>\r\n<p> </p>\r\n<p>This Food Allowance and Wastage Sheet should help. Just make sure it''s used every single time you don''t sell an item at full Retail Price or produce and dishes are either thrown away or given as staff meals, owner''s meals or used as part of a price promotion.</p>\r\n<p> </p>\r\n<p><a href="/index.php/download_file/view/44/">Food_Allowance__Wastage_Sheet.xls</a></p>', '2014-03-06 12:37:18', 45, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, '4.9900', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 292, 1, '0.0000', NULL),
@@ -21429,10 +21527,10 @@ INSERT INTO `CoreCommerceProducts` (`productID`, `prName`, `prDescription`, `prD
 (65, 'The Secret of how PR can improve Your Sex Life..', '<p><img src="/download_file/view_inline/173/" alt="lucy-matthews.jpg" width="300" height="404" /><a href="/download_file/view/174/">The_Secret_of_how_PR_can_improve_your_sex_life.pdf</a></p>', '2014-06-24 14:39:41', 173, 0, 173, 1, 1, 0, 0, 1, 0, 0, 1, 1, '0.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 390, 1, '0.0000', NULL),
 (66, 'Why do you need to have PR as part of your marketing mix? By Lucy Matthews', '<p><img src="/download_file/view_inline/173/" alt="lucy-matthews.jpg" width="300" height="404" /><a href="/download_file/view/175/">Why_do_you_need_to_have_PR_as_part_of_your_marketing_mix.pdf</a></p>', '2014-06-24 14:50:57', 173, 0, 173, 1, 1, 0, 0, 1, 0, 0, 1, 1, '0.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 391, 1, '0.0000', NULL),
 (67, 'How to create a winning PR Strategy for your business. By Lucy Matthews', '<p><img src="/download_file/view_inline/173/" alt="lucy-matthews.jpg" width="300" height="404" /><a href="/download_file/view/176/">How_to_create_a_winning_PR_Strategy_for_your_business.pdf</a></p>\r\n<p><iframe src="//www.youtube.com/embed/08ZJA-dlFcM" frameborder="0" width="560" height="315"></iframe></p>', '2014-06-24 14:57:50', 173, 0, 173, 1, 1, 0, 0, 1, 0, 0, 1, 1, '0.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 392, 1, '0.0000', NULL),
-(68, '''No No''s'' in Press Releases - Lucy Matthews video', '<p><iframe src="//www.youtube.com/embed/08ZJA-dlFcM" frameborder="0" width="560" height="315"></iframe></p>', '2014-06-24 16:54:32', 185, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, '0.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 393, 1, '0.0000', NULL),
+(68, '''No No''s'' in Press Releases - Lucy Matthews video', '<p><iframe src="//www.youtube.com/embed/08ZJA-dlFcM" frameborder="0" width="560" height="315"></iframe></p>', '2014-06-24 16:54:32', 185, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, '10.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 393, 1, '0.0000', NULL),
 (69, 'Adverts v Editorial - video by Lucy Matthews', '<p><iframe src="//www.youtube.com/embed/YDUPun3dUNw" frameborder="0" width="560" height="315"></iframe></p>', '2014-06-24 17:11:10', 185, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, '0.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 394, 1, '0.0000', NULL),
 (70, 'Is it newsworthy?! - video by Lucy Matthews', '<p><iframe src="//www.youtube.com/embed/OZnMZWuVOaE" frameborder="0" width="560" height="315"></iframe></p>', '2014-06-24 17:16:16', 185, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, '0.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 395, 1, '0.0000', NULL),
-(71, '9 Secrets Journalists Love - video by Lucy Matthews', '<p><iframe src="//www.youtube.com/embed/gXnTtcsFUUU" frameborder="0" width="560" height="315"></iframe></p>', '2014-06-24 17:19:09', 185, 0, 0, 1, 1, 0, 0, 1, 20, 0, 0, 1, '20.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 396, 1, '0.0000', NULL),
+(71, '9 Secrets Journalists Love - video by Lucy Matthews', '<p><iframe src="//www.youtube.com/embed/gXnTtcsFUUU" frameborder="0" width="560" height="315"></iframe></p>', '2014-06-24 17:19:09', 185, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, '20.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 396, 1, '0.0000', NULL),
 (72, 'Publicity Stunts - video by Lucy Matthews', '<p> </p>\r\n<p><iframe src="//www.youtube.com/embed/X6kPXI9unuI" frameborder="0" width="560" height="315"></iframe></p>', '2014-06-24 17:23:37', 185, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, '0.0000', '0.0000', '0.0000', 'lb', '0.0000', '0.0000', '0.0000', 'in', 397, 1, '0.0000', NULL);
 
 -- --------------------------------------------------------
@@ -21509,7 +21607,7 @@ INSERT INTO `CoreCommerceProductSearchIndexAttributes` (`productID`, `ak_downloa
 (65, 1, '\nFree\n', '\nFree\nClub +\nVIP Starter\nPartners\nStarter\n', '30.0000', ''),
 (66, 1, '\nFree\n', '\nVIP Starter\nFree\nClub +\nPartners\nStarter\n', '30.0000', ''),
 (67, 1, '\nFree\n', '\nVIP Starter\nFree\nClub +\nPartners\nStarter\n', '30.0000', ''),
-(68, NULL, '\nFree\n', '\nVIP Starter\nFree\nClub +\nPartners\nStarter\n', '30.0000', ''),
+(68, NULL, '\nFree\n', '\nFree\nClub +\nVIP Starter\nPartners\nStarter\n', '30.0000', ''),
 (69, NULL, '\nFree\n', '\nFree\nClub +\nVIP Starter\nPartners\nStarter\n', '30.0000', ''),
 (70, NULL, '\nVip Starter\n', '\nFree\n', '30.0000', ''),
 (71, 1, '\nClub +\n', '\nFree\nClub +\nVIP Starter\nPartners\nStarter\n', '30.0000', ''),
@@ -21614,11 +21712,6 @@ INSERT INTO `CoreCommerceProductSearchPurchaseGroups` (`productID`, `gID`) VALUE
 (70, 12),
 (70, 13),
 (70, 14),
-(71, 9),
-(71, 11),
-(71, 12),
-(71, 13),
-(71, 14),
 (72, 9),
 (72, 11),
 (72, 12),
@@ -21641,7 +21734,7 @@ CREATE TABLE IF NOT EXISTS `CoreCommerceProductSetProducts` (
   PRIMARY KEY (`prspID`),
   KEY `prsID` (`prsID`),
   KEY `productID` (`productID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=502 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=517 ;
 
 --
 -- Dumping data for table `CoreCommerceProductSetProducts`
@@ -21688,8 +21781,6 @@ INSERT INTO `CoreCommerceProductSetProducts` (`prspID`, `productID`, `prsID`, `t
 (304, 64, 11, '2014-06-24 10:58:52', 1),
 (318, 66, 4, '2014-06-24 13:50:57', 16),
 (335, 67, 4, '2014-06-24 15:27:34', 17),
-(337, 68, 4, '2014-06-24 15:58:46', 18),
-(338, 68, 11, '2014-06-24 15:58:46', 2),
 (349, 59, 4, '2014-06-24 16:38:33', 23),
 (350, 59, 11, '2014-06-24 16:38:33', 7),
 (355, 50, 4, '2014-06-24 16:45:07', 24),
@@ -21722,13 +21813,6 @@ INSERT INTO `CoreCommerceProductSetProducts` (`prspID`, `productID`, `prsID`, `t
 (398, 25, 1, '2014-06-25 09:16:00', 5),
 (399, 25, 2, '2014-06-25 09:16:00', 4),
 (400, 37, 6, '2014-06-25 09:18:15', 13),
-(401, 20, 5, '2014-06-25 09:20:42', 1),
-(402, 20, 6, '2014-06-25 09:20:42', 2),
-(403, 20, 4, '2014-06-25 09:20:42', 7),
-(404, 20, 1, '2014-06-25 09:20:42', 2),
-(405, 20, 3, '2014-06-25 09:20:42', 2),
-(406, 20, 2, '2014-06-25 09:20:42', 1),
-(407, 20, 7, '2014-06-25 09:20:42', 1),
 (408, 23, 6, '2014-06-25 11:25:12', 4),
 (409, 23, 1, '2014-06-25 11:25:12', 4),
 (410, 23, 2, '2014-06-25 11:25:12', 2),
@@ -21767,9 +21851,6 @@ INSERT INTO `CoreCommerceProductSetProducts` (`prspID`, `productID`, `prsID`, `t
 (476, 53, 4, '2014-08-28 21:41:41', 31),
 (477, 53, 1, '2014-08-28 21:41:41', 14),
 (478, 53, 11, '2014-08-28 21:41:41', 15),
-(482, 71, 12, '2014-08-28 22:10:36', 0),
-(483, 71, 4, '2014-08-28 22:10:36', 21),
-(484, 71, 11, '2014-08-28 22:10:36', 5),
 (485, 63, 4, '2014-08-31 18:04:02', 25),
 (486, 63, 13, '2014-08-31 18:04:02', 0),
 (487, 63, 11, '2014-08-31 18:04:02', 8),
@@ -21780,7 +21861,19 @@ INSERT INTO `CoreCommerceProductSetProducts` (`prspID`, `productID`, `prsID`, `t
 (498, 62, 13, '2014-09-01 13:01:31', 2),
 (499, 62, 11, '2014-09-01 13:01:31', 9),
 (500, 65, 4, '2014-09-01 13:03:02', 15),
-(501, 65, 19, '2014-09-01 13:03:02', 0);
+(501, 65, 19, '2014-09-01 13:03:02', 0),
+(502, 68, 4, '2014-09-08 08:21:32', 18),
+(503, 68, 11, '2014-09-08 08:21:32', 2),
+(507, 20, 5, '2014-09-08 15:10:26', 1),
+(508, 20, 6, '2014-09-08 15:10:26', 2),
+(509, 20, 4, '2014-09-08 15:10:26', 7),
+(510, 20, 1, '2014-09-08 15:10:26', 2),
+(511, 20, 3, '2014-09-08 15:10:26', 2),
+(512, 20, 2, '2014-09-08 15:10:26', 1),
+(513, 20, 7, '2014-09-08 15:10:26', 1),
+(514, 71, 4, '2014-09-11 08:35:17', 21),
+(515, 71, 12, '2014-09-11 08:35:17', 0),
+(516, 71, 11, '2014-09-11 08:35:17', 5);
 
 -- --------------------------------------------------------
 
@@ -21844,66 +21937,66 @@ INSERT INTO `CoreCommerceProductStats` (`productID`, `totalViews`, `totalPurchas
 (5, 1, 0),
 (6, 1, 0),
 (7, 19, 0),
-(8, 15, 0),
-(9, 33, 0),
-(10, 46, 1),
+(8, 16, 0),
+(9, 34, 0),
+(10, 47, 1),
 (11, 17, 0),
 (13, 10, 0),
 (14, 19, 0),
 (15, 2, 0),
-(16, 30, 0),
+(16, 32, 0),
 (18, 2, 0),
-(19, 37, 0),
-(20, 236, 4),
+(19, 40, 0),
+(20, 239, 5),
 (21, 12, 0),
-(22, 95, 0),
-(23, 33, 0),
-(24, 30, 1),
-(25, 26, 0),
-(26, 36, 1),
-(27, 14, 0),
-(28, 30, 0),
-(29, 38, 1),
-(30, 0, 6),
-(31, 578, 46),
+(22, 96, 0),
+(23, 38, 0),
+(24, 31, 1),
+(25, 28, 0),
+(26, 40, 1),
+(27, 15, 0),
+(28, 32, 0),
+(29, 40, 1),
+(30, 0, 7),
+(31, 592, 47),
 (32, 13, 0),
 (33, 15, 0),
 (35, 0, 0),
-(37, 26, 0),
-(38, 22, 0),
-(39, 29, 0),
-(40, 38, 0),
-(41, 21, 0),
-(42, 52, 0),
+(37, 28, 0),
+(38, 25, 0),
+(39, 30, 0),
+(40, 40, 0),
+(41, 22, 0),
+(42, 54, 0),
 (43, 12, 0),
-(44, 47, 2),
-(45, 117, 0),
-(46, 70, 0),
-(47, 28, 1),
-(48, 36, 0),
-(50, 41, 0),
-(51, 27, 1),
-(52, 23, 0),
-(53, 37, 0),
-(54, 37, 0),
-(55, 22, 0),
-(56, 26, 0),
-(57, 22, 0),
-(58, 27, 0),
-(59, 23, 0),
-(60, 18, 0),
-(61, 18, 0),
-(62, 27, 0),
-(63, 29, 0),
+(44, 50, 2),
+(45, 120, 0),
+(46, 72, 0),
+(47, 31, 1),
+(48, 37, 0),
+(50, 43, 0),
+(51, 28, 1),
+(52, 24, 0),
+(53, 40, 0),
+(54, 42, 0),
+(55, 24, 0),
+(56, 27, 0),
+(57, 23, 0),
+(58, 29, 0),
+(59, 24, 0),
+(60, 19, 0),
+(61, 20, 0),
+(62, 30, 0),
+(63, 30, 0),
 (64, 2, 0),
-(65, 21, 0),
-(66, 16, 0),
-(67, 18, 0),
-(68, 62, 0),
-(69, 27, 0),
-(70, 25, 0),
-(71, 74, 1),
-(72, 25, 0);
+(65, 22, 0),
+(66, 18, 0),
+(67, 19, 0),
+(68, 71, 0),
+(69, 34, 0),
+(70, 30, 0),
+(71, 90, 5),
+(72, 28, 0);
 
 -- --------------------------------------------------------
 
@@ -22118,7 +22211,7 @@ CREATE TABLE IF NOT EXISTS `DownloadStatistics` (
   `rcID` int(10) unsigned NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`dsID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- Dumping data for table `DownloadStatistics`
@@ -22146,7 +22239,8 @@ INSERT INTO `DownloadStatistics` (`dsID`, `fID`, `fvID`, `uID`, `rcID`, `timesta
 (21, 69, 1, 1, 0, '2014-08-11 07:04:52'),
 (22, 101, 1, 4, 0, '2014-08-20 01:55:20'),
 (23, 189, 1, 1, 414, '2014-08-31 18:24:39'),
-(24, 24, 1, 33, 414, '2014-09-01 10:21:34');
+(24, 24, 1, 33, 414, '2014-09-01 10:21:34'),
+(25, 44, 1, 35, 0, '2014-09-09 13:06:22');
 
 -- --------------------------------------------------------
 
@@ -23982,7 +24076,7 @@ CREATE TABLE IF NOT EXISTS `Logs` (
   PRIMARY KEY (`logID`),
   KEY `logType` (`logType`),
   KEY `logIsInternal` (`logIsInternal`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=196 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=202 ;
 
 --
 -- Dumping data for table `Logs`
@@ -24184,7 +24278,13 @@ INSERT INTO `Logs` (`logID`, `logType`, `timestamp`, `logText`, `logIsInternal`,
 (192, 'sent_emails', '2014-09-01 13:45:42', '**EMAILS ARE ENABLED. THIS EMAIL WAS SENT TO mail()**\nTemplate Used: user_registered_approval_complete\nTo: Frazergrant@abvtraining.co.uk\nFrom: &quot;Website Registration Notification&quot; &lt;matt@botticreative.co.uk&gt;\nReply-To: \nSubject: Hospitality Entrepreneur Registration Approved\nBody: Welcome to Hospitality Entrepreneur\nYour registration has been approved. You can log into your new account here:\n\nhttp://hospitalityentrepreneur.com/login/\n', 1, 1),
 (193, 'exceptions', '2014-09-02 23:43:17', 'Exception Occurred: /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/controllers/single_pages/login.php:419 Invalid Key. Please visit the forgot password page again to have a new key generated. (0)\n\n#0 [internal function]: Concrete5_Controller_Login-&gt;change_password(''bTNFIM4MEw0ojcJ...'')\n#1 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/controller.php(267): call_user_func_array(Array, Array)\n#2 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/controller.php(237): Concrete5_Library_Controller-&gt;runTask(''change_password'', Array)\n#3 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/view.php(774): Concrete5_Library_Controller-&gt;setupAndRun()\n#4 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/dispatcher.php(264): Concrete5_Library_View-&gt;render(Object(Page))\n#5 /home/hospital/public_html/concrete/startup/updated_core_check.php(7): require(''/home/hospital/...'')\n#6 /home/hospital/public_html/concrete/dispatcher.php(25): require(''/home/hospital/...'')\n#7 /home/hospital/public_html/index.php(2): require(''/home/hospital/...'')\n#8 {main}\n', 1, NULL),
 (194, 'exceptions', '2014-09-04 00:47:04', 'Exception Occurred: /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/controllers/single_pages/login.php:419 Invalid Key. Please visit the forgot password page again to have a new key generated. (0)\n\n#0 [internal function]: Concrete5_Controller_Login-&gt;change_password(''bTNFIM4MEw0ojcJ...'')\n#1 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/controller.php(267): call_user_func_array(Array, Array)\n#2 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/controller.php(237): Concrete5_Library_Controller-&gt;runTask(''change_password'', Array)\n#3 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/view.php(774): Concrete5_Library_Controller-&gt;setupAndRun()\n#4 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/dispatcher.php(264): Concrete5_Library_View-&gt;render(Object(Page))\n#5 /home/hospital/public_html/concrete/startup/updated_core_check.php(7): require(''/home/hospital/...'')\n#6 /home/hospital/public_html/concrete/dispatcher.php(25): require(''/home/hospital/...'')\n#7 /home/hospital/public_html/index.php(2): require(''/home/hospital/...'')\n#8 {main}\n', 1, NULL),
-(195, 'exceptions', '2014-09-05 03:20:40', 'Exception Occurred: /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/controllers/single_pages/login.php:419 Invalid Key. Please visit the forgot password page again to have a new key generated. (0)\n\n#0 [internal function]: Concrete5_Controller_Login-&gt;change_password(''bTNFIM4MEw0ojcJ...'')\n#1 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/controller.php(267): call_user_func_array(Array, Array)\n#2 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/controller.php(237): Concrete5_Library_Controller-&gt;runTask(''change_password'', Array)\n#3 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/view.php(774): Concrete5_Library_Controller-&gt;setupAndRun()\n#4 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/dispatcher.php(264): Concrete5_Library_View-&gt;render(Object(Page))\n#5 /home/hospital/public_html/concrete/startup/updated_core_check.php(7): require(''/home/hospital/...'')\n#6 /home/hospital/public_html/concrete/dispatcher.php(25): require(''/home/hospital/...'')\n#7 /home/hospital/public_html/index.php(2): require(''/home/hospital/...'')\n#8 {main}\n', 1, NULL);
+(195, 'exceptions', '2014-09-05 03:20:40', 'Exception Occurred: /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/controllers/single_pages/login.php:419 Invalid Key. Please visit the forgot password page again to have a new key generated. (0)\n\n#0 [internal function]: Concrete5_Controller_Login-&gt;change_password(''bTNFIM4MEw0ojcJ...'')\n#1 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/controller.php(267): call_user_func_array(Array, Array)\n#2 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/controller.php(237): Concrete5_Library_Controller-&gt;runTask(''change_password'', Array)\n#3 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/view.php(774): Concrete5_Library_Controller-&gt;setupAndRun()\n#4 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/dispatcher.php(264): Concrete5_Library_View-&gt;render(Object(Page))\n#5 /home/hospital/public_html/concrete/startup/updated_core_check.php(7): require(''/home/hospital/...'')\n#6 /home/hospital/public_html/concrete/dispatcher.php(25): require(''/home/hospital/...'')\n#7 /home/hospital/public_html/index.php(2): require(''/home/hospital/...'')\n#8 {main}\n', 1, NULL),
+(196, 'sent_emails', '2014-09-08 08:14:40', '**EMAILS ARE ENABLED. THIS EMAIL WAS SENT TO mail()**\nTemplate Used: forgot_password\nTo: noregabbidon@gmail.com\nFrom: &quot;Forgot Password&quot; &lt;matt@botticreative.co.uk&gt;\nReply-To: \nSubject: Forgot Password\nBody: \n\nDear gabbidonn,\n\nYou have requested a new password for the site Hospitality Entrepreneur \n\nYour username is: gabbidonn\n\nYou may change your password at the following address:\n\nhttp://www.hospitalityentrepreneur.com/login/change_password/PzKjGUeL62VNTuQ9S3O0B4qA6UgSZCXY0kMSv2n5j9aXyQw9YqssFEl1x1sbBPX5/\n\nThanks for browsing the site!\n\n\n', 1, NULL),
+(197, 'sent_emails', '2014-09-09 07:41:59', '**EMAILS ARE ENABLED. THIS EMAIL WAS SENT TO mail()**\nTemplate Used: user_registered_approval_complete\nTo: Matt.Ferris@pelicanprocurement.co.uk\nFrom: &quot;Website Registration Notification&quot; &lt;matt@botticreative.co.uk&gt;\nReply-To: \nSubject: Hospitality Entrepreneur Registration Approved\nBody: Welcome to Hospitality Entrepreneur\nYour registration has been approved. You can log into your new account here:\n\nhttp://hospitalityentrepreneur.com/login/\n', 1, 1),
+(198, 'sent_emails', '2014-09-09 07:47:26', '**EMAILS ARE ENABLED. THIS EMAIL WAS SENT TO mail()**\nTemplate Used: user_registered_approval_complete\nTo: Matt.Ferris@pelicanprocurement.co.uk\nFrom: &quot;Website Registration Notification&quot; &lt;matt@botticreative.co.uk&gt;\nReply-To: \nSubject: Hospitality Entrepreneur Registration Approved\nBody: Welcome to Hospitality Entrepreneur\nYour registration has been approved. You can log into your new account here:\n\nhttp://hospitalityentrepreneur.com/login/\n', 1, 1),
+(199, 'exceptions', '2014-09-10 05:10:43', 'Exception Occurred: /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/libraries/3rdparty/adodb/adodb-exceptions.inc.php:78 mysqlt error: [1062: Duplicate entry ''142'' for key ''PRIMARY''] in EXECUTE(&quot;INSERT INTO CollectionSearchIndexAttributes ( CID, AK_META_TITLE, AK_META_DESCRIPTION, AK_EXCLUDE_NAV ) VALUES ( 142, ''Blog Search Tags - restaurant'', ''Blog tags search result for restaurant'', 1 )&quot;)\n (1062)\n\n#0 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/libraries/3rdparty/adodb/adodb.inc.php(1074): adodb_throw(''mysqlt'', ''EXECUTE'', 1062, ''Duplicate entry...'', ''INSERT INTO Col...'', false, Object(ADODB_mysqlt))\n#1 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/libraries/3rdparty/adodb/adodb.inc.php(1049): ADOConnection-&gt;_Execute(''INSERT INTO Col...'', false)\n#2 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/models/attribute/key.php(428): ADOConnection-&gt;Execute(''INSERT INTO Col...'')\n#3 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/models/collection.php(226): Concrete5_Model_AttributeKey-&gt;reindex(''CollectionSearc...'', Array, Object(AttributeValueList), Object(ADORecordSet_mysqlt))\n#4 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/models/collection.php(287): Concrete5_Model_Collection-&gt;reindex()\n#5 /home/hospital/public_html/packages/problog/controllers/blogsearch.php(52): Concrete5_Model_Collection-&gt;setAttribute(Object(CollectionAttributeKey), ''Blog tags searc...'')\n#6 /home/hospital/public_html/packages/problog/controllers/blogsearch.php(18): BlogsearchController-&gt;parseSearchPath(''restaurant'', NULL)\n#7 [internal function]: BlogsearchController-&gt;view(''restaurant'')\n#8 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/controller.php(267): call_user_func_array(Array, Array)\n#9 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/controller.php(237): Concrete5_Library_Controller-&gt;runTask(''view'', Array)\n#10 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/core/libraries/view.php(774): Concrete5_Library_Controller-&gt;setupAndRun()\n#11 /home/hospital/public_html/updates/concrete5.6.3.1_updater/concrete/dispatcher.php(264): Concrete5_Library_View-&gt;render(Object(Page))\n#12 /home/hospital/public_html/concrete/startup/updated_core_check.php(7): require(''/home/hospital/...'')\n#13 /home/hospital/public_html/concrete/dispatcher.php(25): require(''/home/hospital/...'')\n#14 /home/hospital/public_html/index.php(2): require(''/home/hospital/...'')\n#15 {main}\n', 1, NULL),
+(200, 'sent_emails', '2014-09-11 08:32:23', '**EMAILS ARE ENABLED. THIS EMAIL WAS SENT TO mail()**\nTemplate Used: forgot_password\nTo: noregabbidon@gmail.com\nFrom: &quot;Forgot Password&quot; &lt;matt@botticreative.co.uk&gt;\nReply-To: \nSubject: Forgot Password\nBody: \n\nDear gabbidonn,\n\nYou have requested a new password for the site Hospitality Entrepreneur \n\nYour username is: gabbidonn\n\nYou may change your password at the following address:\n\nhttp://www.hospitalityentrepreneur.com/login/change_password/Bv5cXjiMhvCuHmbPFZVKKyIIkrRixNPRP7f186g2e55wAS49QQL5Ks6yCu5p3AIt/\n\nThanks for browsing the site!\n\n\n', 1, NULL),
+(201, 'sent_emails', '2014-09-11 08:38:15', '**EMAILS ARE ENABLED. THIS EMAIL WAS SENT TO mail()**\nTemplate Used: forgot_password\nTo: noregabbidon@gmail.com\nFrom: &quot;Forgot Password&quot; &lt;matt@botticreative.co.uk&gt;\nReply-To: \nSubject: Forgot Password\nBody: \n\nDear gabbidonn,\n\nYou have requested a new password for the site Hospitality Entrepreneur \n\nYour username is: gabbidonn\n\nYou may change your password at the following address:\n\nhttp://www.hospitalityentrepreneur.com/login/change_password/pYma7MVfJx1opGRMuxHITM2ZJTcYjVOgNrc1GBqfjY8m9rXBz6aF27EbB7KS1EoI/\n\nThanks for browsing the site!\n\n\n', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -25130,7 +25230,7 @@ INSERT INTO `Pages` (`cID`, `cIsTemplate`, `uID`, `cIsCheckedOut`, `cCheckedOutU
 (200, 1, NULL, 0, NULL, NULL, NULL, 1, 0, 'PARENT', NULL, 0, NULL, 0, 1, 0, 0, 0, 0, -1, '0', 0, 0),
 (201, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 8, 5, 1, 0, -1, '0', 0, 0),
 (202, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 14, 1, 0, -1, '0', 0, 0),
-(203, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 7, 6, 1, 0, -1, '0', 0, 0),
+(203, 0, 1, 1, 1, '2014-09-09 15:00:52', '2014-09-09 15:00:52', 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 7, 6, 1, 0, -1, '0', 0, 0),
 (204, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 1, 1, 0, -1, '0', 0, 0),
 (205, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 16, 1, 0, -1, '0', 0, 0),
 (206, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 3, 99, 0, -1, '0', 0, 1),
@@ -25207,7 +25307,7 @@ INSERT INTO `Pages` (`cID`, `cIsTemplate`, `uID`, `cIsCheckedOut`, `cCheckedOutU
 (306, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 3, 203, 0, -1, '0', 0, 0),
 (307, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 4, 203, 0, -1, '0', 0, 0),
 (308, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 5, 203, 0, -1, '0', 0, 0),
-(309, 0, 1, 1, 1, '2014-09-01 14:24:49', '2014-09-01 14:24:49', 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 2, 203, 0, -1, '0', 0, 0),
+(309, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 2, 203, 0, -1, '0', 0, 0),
 (310, 0, 5, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 2, 220, 3, -1, '0', 0, 0),
 (311, 0, 5, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 7, 217, 3, -1, '0', 0, 0),
 (312, 0, 5, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 9, 218, 3, -1, '0', 0, 0),
@@ -25461,7 +25561,7 @@ INSERT INTO `PageSearchIndex` (`cID`, `content`, `cName`, `cDescription`, `cPath
 (139, '', 'Comments', NULL, '/dashboard/problog/comments', '2014-02-19 12:18:41', '2014-09-01 13:38:19', NULL, 0),
 (140, '', 'Settings', NULL, '/dashboard/problog/settings', '2014-02-19 12:18:41', '2014-09-01 13:38:19', NULL, 0),
 (141, '', 'Help', NULL, '/dashboard/problog/help', '2014-02-19 12:18:41', '2014-09-01 13:38:19', NULL, 0),
-(142, '', 'Blogsearch', NULL, '/blogsearch', '2014-02-19 12:18:41', '2014-09-07 17:37:37', NULL, 0),
+(142, '', 'Blogsearch', NULL, '/blogsearch', '2014-02-19 12:18:41', '2014-09-11 05:05:26', NULL, 0),
 (144, '', 'Problog', NULL, '/problog', '2014-02-19 12:18:42', '2014-09-01 13:38:19', NULL, 0),
 (145, '', 'Api', NULL, '/problog/api', '2014-02-19 12:18:42', '2014-09-01 13:38:19', NULL, 0),
 (146, '', '', NULL, NULL, '2014-02-19 12:18:42', '2014-09-01 13:38:19', NULL, 0),
@@ -25572,7 +25672,7 @@ INSERT INTO `PageSearchIndex` (`cID`, `content`, `cName`, `cDescription`, `cPath
 (285, 'Knowing your numbers\r\n Text to go here  ', 'Knowing your numbers', '', '/membership/knowing-yo', '2014-03-05 11:00:00', '2014-09-01 13:38:27', NULL, 0),
 (287, 'The 20 Marketing Mistakes That Can Be Fatal To Your Business, by Nigel Botterill  20-Marketing-Mistakes.pdf \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', '20 Marketing Mistakes, by Nigel Botterill', NULL, '/resources/marketing/20-marketing-mistakes-nigel-botterill', '2014-03-05 13:47:11', '2014-09-01 13:38:27', NULL, 0),
 (289, 'Your Marketing Plan  Your_Marketing_Plan.pdf \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'Your Marketing Plan', NULL, '/resources/marketing/your-marketing-plan', '2014-03-05 14:07:45', '2014-09-01 13:38:27', NULL, 0),
-(288, '\r\nShare This\r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', '100 Top Tips for Running a Successful Pub Business', NULL, '/resources/operations/100-top-tips-running-successful-pub-business', '2014-03-05 14:02:50', '2014-09-01 13:38:27', NULL, 0),
+(288, '\r\nShare This\r\n\r\n\r\n\r\n\r\n\r\n\r\n  abv Training''s 100 Top Tips for Running a Successful Pub Business  Content to go here about the resource ', '100 Top Tips for Running a Successful Pub Business', NULL, '/resources/operations/100-top-tips-running-successful-pub-business', '2014-03-05 14:02:50', '2014-09-08 15:10:27', NULL, 0),
 (290, '\r\n\r\n\r\n \r\nStart beating your competition\r\n\r\n Claim a FREE copy of ''Botty''s Rules'', the Sunday Times Bestseller, written by Nigel Botterill, founder of the Entrepreneur’s Circle. \r\n\r\n    \r\n\r\n    \r\n    \r\n    \r\n\r\n        \r\n\r\n        \r\n\r\n        \r\n\r\n\r\n\r\n \r\n             ', 'SignUp Side', NULL, '/!stacks/signup-side', '2014-03-05 14:48:16', '2014-09-01 13:38:27', NULL, 0),
 (292, 'Record your Food Allowances and Wastage  Is your Food Gross Profit a bit hit and miss? If there''s a difference between your Target Gross Profit % and your Actual Gross Profit %, it may well be that you and your chefs are not recording your kitchen allowances and wastage properly.\r\n \r\nThis Food Allowance and Wastage Sheet should help. Just make sure it''s used every single time you don''t sell an item at full Retail Price or produce and dishes are either thrown away or given as staff meals, owner''s meals or used as part of a price promotion.\r\n \r\nFood_Allowance__Wastage_Sheet.xls \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'Record your Food Allowances and Wastage', NULL, '/resources/profit/record-your-food-allowances-and-wastage', '2014-03-06 12:37:18', '2014-09-01 13:38:27', NULL, 0),
 (291, 'Beginner''s Bar Boosting 10 Point Checklist  Beginners_Bar_Boosting_10_Point_Checklist.pdf\r\nBeginner’s ‘Bar Booster’ 10 Point Checklist – HOW DO YOU SCORE TODAY?\r\nFor a lot of operators with bars, being efficient and avoiding mistakes is the key for securing profits and happy customers. Bars are often more chaotic than the restaurant floor due to layout, staff and customer pressure. It''s not just about ''up''selling!....instead, here are just ten out of the hundreds of tips we have from the best in the business: \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'Beginner''s Bar Boosting 10 Point Checklist', NULL, '/resources/food-drink/beginners-bar-boosting-10-point-checklist', '2014-03-06 12:21:27', '2014-09-01 13:38:27', NULL, 0),
@@ -25582,9 +25682,9 @@ INSERT INTO `PageSearchIndex` (`cID`, `content`, `cName`, `cDescription`, `cPath
 (296, 'How To: Store Your Food  How you store your food could make or break your kitchen, let alone your reputation if proper procedures aren''t followed. This easy to use checklist should pay dividends straight away.\r\nFood_storage_checklist.doc \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'How To: Store Your Food', NULL, '/resources/profit/how-store-your-food', '2014-03-06 13:12:22', '2014-09-01 13:38:28', NULL, 0),
 (297, 'How To: Prepare Food Cost-Effectively  Even the best and most creative chefs can be wasteful when preparing food. This simple to use checklist could put an end to all that.\r\nFood_preparation_checklist.doc \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'How To: Prepare Food Cost Effectively', NULL, '/resources/profit/how-prepare-food-cost-effectively', '2014-03-06 13:20:55', '2014-09-01 13:38:28', NULL, 0),
 (298, 'How To: Calculate Your Advertising Return On Investment (ROI)  Ever wondered where your advertising spend is really going? How do you know if a campaign has a really good ROI? This table is supplied by the Entrepreneur''s Circle, as used by super effective businesses.\r\nAd_Analysis_Form.pdf \r\nShare This\r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'How To: Calculate Your Advertising Return On Investment (ROI)', NULL, '/resources/marketing/how-calculate-your-advertising-return-investment-roi', '2014-03-06 13:39:49', '2014-09-01 13:38:28', NULL, 0),
-(299, '\r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'Test Products', '', '/test-products', '2014-03-07 16:40:00', '2014-09-01 13:38:28', NULL, 0),
-(300, '  \r\nInteresting Facts\r\nEstablished:  \r\n 1989 \r\nClients: \r\n Thousands of UK Hospitality outlets, including Pubs, Restaurants and Hotels. \r\nCompany Moto: \r\n Professional. Transparent.  Impartial. \r\n    Shabaz Mohammed - Managing Director - Pelican Procurement - Pelican are proud to support Hospitality Entrepreneur members - "Managing costs is key to the success of any hospitality business.  Pelican are proud to support Hospitality Entrepreneur members, improving their profits and driving operational efficiencies." Group purchasing power and efficiency through outsourced procurement and supplier invoice management\r\n  By using Pelican’s total collective purchasing volume of £140m, Hospitality Entrepreneur members are able to benefit from highly competitive trading arrangements with local and national suppliers, making substantial savings that would otherwise be unobtainable. \r\n Not just food and drink!\r\n  Pelican lead the way in negotiating utility bills, chemicals, disposable, janitorial, credit & debit card processing and catering equipment. In fact, Pelican can help reduce costs in most aspects of running a hospitality business!  They also offer a number of also offer a number of additional services, which will reduce your costs and improve efficiency: \r\n  * Impartial Professional Tendering Service\r\n  Facilitated by a dedicated CIPS qualified Procurement Manager, Pelican will manage the whole process on your behalf, enabling you to focus on running your business. \r\n  * Supplier Invoice Payment Management\r\n  Consolidate supplier payments into a single, convenient monthly direct debit, saving money on bank charges and time on unnecessary administration. \r\n  * Online, Purchasing Intelligence  TM\r\n  Gain full visibility of all purchases across your whole organisation.  Powerful yet easy to use, the cloud-based system enables you to analyse your purchasing wherever you are.      \r\nFREE members'' offer from Pelican Procurement Services\r\n Pelican will professionally review your current supplier prices and advise where savings can be made \r\n\r\n\r\n    \r\n    \r\n    \r\n\r\n        \r\n\r\n        \r\n\r\n        \r\n\r\n\r\n\r\n \r\n  \r\n\r\n           ', 'Pelican', '', '/partners/pelican', '2014-03-11 17:36:00', '2014-09-01 13:38:28', NULL, 0);
+(299, '\r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'Test Products', '', '/test-products', '2014-03-07 16:40:00', '2014-09-01 13:38:28', NULL, 0);
 INSERT INTO `PageSearchIndex` (`cID`, `content`, `cName`, `cDescription`, `cPath`, `cDatePublic`, `cDateLastIndexed`, `cDateLastSitemapped`, `cRequiresReindex`) VALUES
+(300, '  \r\nInteresting Facts\r\nEstablished:  \r\n 1989 \r\nClients: \r\n Thousands of UK Hospitality outlets, including Pubs, Restaurants and Hotels. \r\nCompany Moto: \r\n Professional. Transparent.  Impartial. \r\n    Shabaz Mohammed - Managing Director - Pelican Procurement - Pelican are proud to support Hospitality Entrepreneur members - "Managing costs is key to the success of any hospitality business.  Pelican are proud to support Hospitality Entrepreneur members, improving their profits and driving operational efficiencies." Group purchasing power and efficiency through outsourced procurement and supplier invoice management\r\n  By using Pelican’s total collective purchasing volume of £140m, Hospitality Entrepreneur members are able to benefit from highly competitive trading arrangements with local and national suppliers, making substantial savings that would otherwise be unobtainable. \r\n Not just food and drink!\r\n  Pelican lead the way in negotiating utility bills, chemicals, disposable, janitorial, credit & debit card processing and catering equipment. In fact, Pelican can help reduce costs in most aspects of running a hospitality business!  They also offer a number of also offer a number of additional services, which will reduce your costs and improve efficiency: \r\n  * Impartial Professional Tendering Service\r\n  Facilitated by a dedicated CIPS qualified Procurement Manager, Pelican will manage the whole process on your behalf, enabling you to focus on running your business. \r\n  * Supplier Invoice Payment Management\r\n  Consolidate supplier payments into a single, convenient monthly direct debit, saving money on bank charges and time on unnecessary administration. \r\n  * Online, Purchasing Intelligence  TM\r\n  Gain full visibility of all purchases across your whole organisation.  Powerful yet easy to use, the cloud-based system enables you to analyse your purchasing wherever you are.      \r\nFREE members'' offer from Pelican Procurement Services\r\n Pelican will professionally review your current supplier prices and advise where savings can be made \r\n\r\n\r\n    \r\n    \r\n    \r\n\r\n        \r\n\r\n        \r\n\r\n        \r\n\r\n\r\n\r\n \r\n  \r\n\r\n           ', 'Pelican', '', '/partners/pelican', '2014-03-11 17:36:00', '2014-09-01 13:38:28', NULL, 0),
 (301, ' ABV Training is an award winning company and leading provider of fun and effective personal license training (APLH (formerley NCPLH) & SCPLH ) and other BIIAB, HABC and CIEH qualifications at venues across the UK. Approved providers of the Apprenticeship in Licensed Hospitality for both Level 2 and 3, they also offer a wide range of affordable e-courses suitable for consistent induction and compliance training. \r\n Recognised as one of the very top training providers, they work for many of the UK''s leading operators in pubs, hotels and leisure offering bespoke courses tailored to meet business needs. David and Frazer and their team based across the country offer such a comprehensive training solution that it would have been crazy not to have teamed up with Hospitality Entrepreneur, to provide you and your staff team with all the back up and qualifications you need!  Nigel Botterill - Owner - Entrepreneur''s Circle - It''s time for a totally ''Done-For-You'' marketing service for the hospitality sector - "Having known and worked with Peter Austen for a couple of great years now, we decided it''s time for a totally ''Done-For-You'' marketing service for the hospitality sector. We''re really proud and excited to be part of HE, providing members with our world-class team of marketers driving a steady flow of new customers into your business." Year here - Business Info - Number of Members - Number of Members - Business Info Resources Supplied By ABV Training ', 'ABV Training', '', '/partners/abv-training', '2014-03-11 17:37:00', '2014-09-01 13:38:28', NULL, 0),
 (304, '', '', NULL, NULL, '2014-03-25 11:42:26', '2014-09-01 13:38:28', NULL, 0),
 (302, '', 'Partners Nav', NULL, '/!stacks/partners-nav', '2014-03-12 11:31:41', '2014-09-01 13:38:28', NULL, 0),
@@ -25608,11 +25708,11 @@ INSERT INTO `PageSearchIndex` (`cID`, `content`, `cName`, `cDescription`, `cPath
 (324, 'A ''Before You Start'' Guide to Writing a Great Hospitality Business Plan  Before_you_start_guide_to_writing_a_great_hospitality_business_plan.pdf\r\n \r\nA ‘BEFORE YOU START’ GUIDE TO WRITING A GREAT HOSPITALITY BUSINESS PLAN\r\nWhat is a business plan?\r\nYour business plan is first and foremost a roadmap, outlining plans for the whole of your enterprise. Providing direction, the business plan requires detailed consideration of pitfalls along with opportunities for your enterprise. Long before you open the doors, your business plan is the script of how the business should operate. \r\nThere are plenty of analogies, but without one, your restaurant, pub, café, bar or hotel will be a bit like climbing a mountain without a route or driving across Asia without a map. I’ve seen many business failures as well as successes over the last 25 years or so that I’ve been working in hospitality and I bet that a key denominator has been whether or not those operators have made and followed a thorough business plan. When was the last time you looked at or re-wrote yours? It’s never too late to adapt a plan and the most successful operators re-write and adapt their own script, depending on the stage of their business development.   \r\nYour business plan is almost certainly required also for funding purposes and without one, you will be unable to apply for mainstream funding. A sound, watertight, sophisticated business plan is required for scrutiny by decision-makers in funding applications. Your business plan requires meticulous and thorough. It will form the basis of the single most important ingredient in moving a business plan into reality. \r\nDo I really need one? \r\nYes, is the simple response.  Yet most hospitality business owners omit this vital stage of their business.  Without a business plan, you are unlikely to succeed at opening a market stall, never mind a thriving establishment with the dulcet tones of cash registers ringing. As tempting as it is to open doors straight away and get bums on seats, many entrepreneurs place too little importance on bullet proof financial analysis and often feel that a great location and, as hosts, charm and sales patter will win the day. Your business plan is vital and is indicative of planning as opposed to a “smash and grab” attitude. \r\nA general overview of a business plan for hospitality \r\nBy the time you are ready to move forward, secure an additional site or pitch your enterprise for funding applications, there are some important points that decision-makers will be looking for. Your establishment may be furnished to exceptional and sleek standards, your chef may well be acclaimed and you may well have thrown your heart and soul into your enterprise, but this is not enough.  These are some areas that so many miss: \r\n·         A thorough, BULLET PROOF, knowledge of the figures involved, analysis and projections\r\n·         Systems and procedures in all areas of operational management\r\n·         Recruitment, induction, training and appraisal strategies\r\n·         An analysis of your key team members, their relevant experience and future recruitment needs\r\n·         Risk assessments in all aspects of health and safety including food hygiene, environmental health and correct registration with relevant agencies for safeguarding the public (potential customers) \r\n·         Last but not least, a brilliant marketing plan and competitor analysis which will bring out your awareness of your rivals’ strengths and weaknesses\r\nThe above list is non-exhaustive but there are elements of a business plan that are deserving of a stand-alone article. \r\n \r\nSo, where do I start? \r\nNaturally, you will have ideas in your head and the thought of transcribing to paper is daunting. However, a business plan that is tailor-made for your establishment is key and your aim is to keep decision-makers’ eyes on the whole of the plan, not just the crystallised Executive Summary. \r\nOf course, research is important and many guides are available through the banks, online resources and books.  There is also a growing industry where consultants are willing to write up a business plan for a fee.  Yet, a business plan that has made many a grown person weep is not as daunting as one may initially think.  \r\nAlmost all business plans, regardless of the nature of the business, address the basic areas of any business. There are simply different ways to structure and format the plan.  Enabling your business and its plan to stand out from the rest is likely uppermost in your mind. Therefore, logical, simple and easy-to-understand plans are essential to a successful plan. The structure of your plan is also the structure of your business and reflects how you will operate, run and manage all areas.  The most important aspect of seeking funding/finance is to be clear about why you need the money.  The next is to design your business plan in accordance with who you are approaching for finance/funding. There is a country mile between asking those you have a personal relationship with and a venture capitalist for finance.  \r\nIn summary, before writing, address the following two key areas: \r\n·         Why you need the finance\r\n·         Who you will be approaching for finance\r\nOnce the above have been decided, you can then address how you structure your business plan. \r\n·         Operations - remember, you are selling food and drink to the public and you want them to enjoy your establishment. Each department is autonomous and what may be suitable for front desk requirements is not going to be identical to housekeeping. Make clear that departmental operations can run efficiently for the greater good. \r\n·         Recruitment – it’s no secret there is a high turnover of staff in the hospitality industry – be clear on recruitment processes, costs, wages and areas such as Tronc systems. The hospitality industry is constantly on the radar of HMRC due to the cash nature of the business. Be clear on your staff requirements and avoid expensive recruitment processes. \r\n·         Outline - have an adaptable table of contents so the reader has an outline of your business plan and you can amend depending on your stage of business growth or who you will need the plan for, including your own senior staff. \r\n·         Easy to read and accurate  - proofread, check and double-check. Be sure any written text is error-free and grammatically correct and that your figures add up. Even the smallest error can indicate to a potential investor a business mind that is not pin-sharp.  Any financing/funding or investment will not only be in your business but you also. Even the smallest error could cost you a positive outcome. Have a second set of eyes look over your figures. Many eyes make for less presentation problems. \r\n \r\nWriting your plan\r\nThere is a consensus that a business plan is difficult to write. For many the thought of endless pages looms before them and this can have the mildest of people worrying over the writing of their business plan. It is an important task and the importance must not be overlooked. Equally, you will need a period where you are relaxed, fresh and ready to use your notes to format your plan.  Ensure you have set aside time and have plenty of readable draft notes first to refer to when the documentation process begins. Staring at a blank piece of paper is cause for a head-scratching moment but even the most linguistic and literary people have writer’s block. Use a skeleton base for your outline and once you have the foundation, your plan will begin to take shape. \r\nHow many pages and what format?\r\nThe size of a business plan is a common question in any industry and one that throws people. If you are opening a bed and breakfast or a 40-cover restaurant then maybe a 50-page business plan is going to over-egg the omelette so to speak.  The size of your business plan could reflect the size of your business. If you are considering a city-centre hotel with three hundred bedrooms or a 100 cover restaurant, then your business plan will need to reflect this. \r\nThe bullet points below cover the format of a standard hospitality business plan: \r\n·         Executive Summary \r\n·         Company Description/ Legal Structure/Shareholders, accountants.\r\n·         Your unique Business Concept – what you will offer to guests in terms of food, drink and a brief description of surroundings and what a guest can expect when entering your premises, with sample menus and photos of inspirational case studies\r\n·         Location and Premises – lease/tenure type, building design and layout\r\n·         Management Team, experience and roles and responsibilities, contracts and ‘people’ strategy\r\n·         Competitor Analysis – both direct and indirect\r\n·         Marketing Plan – analysis of market, message and media\r\n·         Operations Plan – a brief overview of your systems and procedures that have been evaluated and selected\r\n·         Managing risks\r\n·         Financial projections and funding requirements (these can be in appendices also)\r\n·         Conclusions\r\n \r\nFinally… \r\nThe above may look like most people’s idea of hell, but this is not just an academic exercise and nor should it be treated like one. Your business plan needs constant attention and should reflect your plans and your vision.  This is an opportunity to display your flair and creativity in the thriving hospitality industry and achieve your ultimate goal, to be successful in your quest. Take it to the experts and constantly test your ideas and plans before you take the leap of faith. This will massively increase your chances of performing well and profitably and help you to be in the top 10% of the industry, which I believe is where you need to be in order to have any chance of longevity and financial success.\r\n \r\nPeter Austen\r\nApril 2014 \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'A ''Before You Start'' Guide to Writing a Great Hospitality Business Plan', NULL, '/resources/operations/you-start-guide-writing-great-hospitality-business-plan', '2014-04-19 12:59:57', '2014-09-01 13:38:30', NULL, 0),
 (323, 'Staff and Management Meetings - The Good, The Bad and The Ugly   \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'Staff and Management Meetings - The Good, The Bad and The Ugly', NULL, '/resources/operations/staff-and-management-meetings-good-bad-and-ugly', '2014-04-18 19:13:20', '2014-09-01 13:38:30', NULL, 0),
 (326, 'The 12 DAILY Habits of Super-Successful Hospitality Entrepreneurs  THE_12_DAILY_HABITS_OF_SUPER-SUCCESSFUL_HOSPITALITY_ENTREPRENEURS.pdf\r\n \r\nTHE 12 DAILY HABITS OF SUPER-SUCCESSFUL HOSPITALITY ENTREPRENEURS\r\nFor nearly 25 years I have wondered what makes some operators in hospitality more successful than others. Whether it’s a single site small hotel, a side-street café, a small group of pubs or a nationwide chain of restaurants, there are character traits and skills which are shared by the most successful.\r\nThere’s a saying that, “Success leaves clues” and the key factor that I believe separates the achievers that I’ve met from those who struggle (and I’ve worked with hundreds in this latter group also), is their adoption of daily habits. These habits are rarely gained at birth. Instead they are learned and adopted, then implemented ruthlessly each and every day. For some these habits are automatic and they’re but for most these are conscious actions which, applied over time, I can guarantee will have a massive impact and influence on ultimate success.\r\nThe habits listed below are reflections of my personal opinion and experience of workingwith and meeting some of the best operators in this industry. However, whilst they are comprehensive, they cannot be entirely complete and I would suggest you make note of lots more worthy character traits and habits whenever you see them. I will expand upon each of these 12 points in my book of the same name, but here’s a summary:\r\n1.       Start early\r\nIt sounds obvious, especially if you’re already an entrepreneur and reading this. However, follow the character traits and success secrets of the world’s wealthiest and very few of them (unless they’re a rock star on tour) get up late in the morning. Running, as well as owning, a restaurant or bar can mean late nights, but perhaps this is one of the many reasons why so few operators manage to control and grow their businesses. Delegation of the late night routine tasks is essential. Our motto is, “Control your business before it controls you” and unless essential controls and systems are in place to allow you to concentrate on working effectively and early, you’ll always be a slave to your business and it’s a downhill slope. Get the important things done early, recording all your essential creative ideas and implementing them, before all those distractions and operational interruptions.\r\n2.       Put marketing first\r\nPromoting your business rather than just carrying on working in it, is now probably the most crucial element of success in the highly competitive hospitality sector. You know (hopefully) that you’re brilliant at what you do already, so start telling everyone about it! The customer has more choices than ever, so it’s more difficult to get heard above your competitors. However, there are also more marketing channels than ever before, with tried and tested ways of getting your message out like never before. Marketing is now do-able and measurable, so get out there before everyone else. It’s no longer just the secret skill of experts and expensive consultants. With automated campaigns and systems, efficient marketing can now be achieved quickly and daily.\r\n3.       Exercise\r\nWhether running, walking, cycling or going down the gym, we all know exercise is just as good for the mind as for the muscles, heart and weight loss. Hospitality can be one of the most stressful careers, so the most successful people manage to control the effect it has on them by taking daily exercise, for increased blood flow, higher energy levels, relaxation and an immediate change of scenery as much as for the longer term health benefits.\r\n4.       Write a daily ‘To Do’ list\r\nBusiness goals are almost without exception written down and reviewed and shared regularly with the entire staff team. However, to facilitate this, effective hospitality entrepreneurs have a daily ‘To do’ list of priorities, written down and re-written before the end of each day. This focuses the mind on what’s important and urgent, separating these ‘must dos’ from the ‘nice to do’ which are usually unimportant and not in the slightest bit urgent. Time on planning is time well spent and the most successful are ruthless about how they manage each minute of their time, their most precious and shrinking resource.\r\n5.       Keep a journal\r\nTry recording what you do each day and match that to your ‘to do’ list. How are you succeeding as a parent, spouse or friend as well as an entrepreneur? Use this to work out what actions are taking you closer to your goals and to look back at as an essential reference guide.  Similarly, get key members in your organisation to ask each day what they did well, what didn’t they do well and, most importantly, how can they do something better next time?\r\n6.       Random acts of hospitality and kindness\r\nIt’s catching. Even if it’s one good deed of recognition, private time or just making someone’s  job easier each day, just because you’re no longer at the front of house or serving drinks and food to guests, doesn’t mean you have to lose the hospitality (‘H’)factor. You started in this business for a reason, so never underestimate how good you are at welcoming and looking after people, especially when they’re least expecting it. Lead by example if you want your staff team to be genuinely warm and hospitable to others.\r\n7.       Focus on what’s important\r\nA ‘To do’ list is fine, but how easy is it to get distracted by ‘the thick of small things’, by customers, emails, phone calls, staff questions and issues that can be either ‘delegated or relegated’? Unless your staff team take them on and grow their experience in sharing these tasks, progress is elusive. Distractions can be anything from a small maintenance issue to a potentially huge business opportunity. Sure, great entrepreneurs can multi-task, but they also know their goals and focus with formidable single mindedness on one task at a time, on the most important and the biggest first, the obstacles that most would run away from or procrastinate over. They realise that a mix of instinct and well thought out preparation, combined with all-out effort and determination, can overcome almost any obstacle, which in turn will make a difference and a lasting, massive, improvement.\r\n8.       Eat well and eat regularly\r\nPublicans and restaurateurs are amongst the unhealthiest business owners. Putting the customers first can take its toll on you. The most effective operators have regular meal times, usually with either their home family or their work family. Snacking and squeezing food in between shifts and meetings achieves little and is an invitation to all manner of health problems such as heart attacks, strokes and digestion troubles. Think of meal times as an opportunity to have either a working lunch or to check out the competition, always leaving time to eat a relaxed meal with potential partners, partners and family.\r\n9.       Get inspired and give inspiration to others\r\nWhether it’s visiting a business just across the road, travelling to another city or country, reading a book or watching an insightful video, we all need constant inspiration in order to be positive, creative and inspirational to others around us. The top operators and industry leaders haven’t just eaten well abroad, they’ve gone out of their way to constantly learn, find out what others do well and don’t do well and improve themselves and, ultimately, massively improve their own chances of success. In this fast changing and constantly developing sector of hospitality, to stand still is to fall way behind.\r\n10.    Take responsibility\r\nUnderstanding that you are ultimately 100% responsible for what happens in your business can be difficult. Whether it’s external factors such as the weather, politics or not having the right ‘internals’ such as people, suppliers, systems, buildings, location, equipment, strategies or customer relationships, ultimately these are all your responsibility and no one can be blamed for missing targets and making mistakes except, eventually, you. Yes, you are responsible and if you’re not careful, you are often the person who knows how to get it done and therefore will be prepared to get it done. But as time progresses and the real entrepreneur in you takes over, the actual running of the business is controlled, efficient, systemised and delegated, leaving you with a business that runs without you being there – the definition of a true business.\r\n \r\n11.   Set deadlines and get things finished\r\nIdeas are easy, putting them into action and turning them into reality is not. Great entrepreneurs are great finishers, for many of the reasons already mentioned. They have bullet-proof belief, resilience and obsessive determination to get things finished once they’ve started on them. Whether it’s securing a new site, developing a new food concept or reaching new targets, they’ll get it finished and then move onto the next goal.\r\n12. Knowing the numbers\r\nNumbers, in the form of vital management figures, information and accounts, are viewed and acted upon on a daily basis. This includes daily sales figures, break-evens, wage percentages, key performance indicators (KPIs), margins, budgets and balances. The best hospitality entrepreneurs set up systems and procedures that enable them to see what’s working and what isn’t working so well, right across their businesses. Planning, monitoring and implementing is only possible with access to accurate figures, enabling key decisions to be made.  \r\nIn summary, most or all of these habits can be accumulated, learned and implemented on an ongoing basis. But just remember that without adopting these habits, you’ll find success a lot slower to come by, if not completely elusive. Hospitality as a business is a blend of art and science, after all.\r\nPeter Austen \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'The 12 Habits of Super-successful Hospitality Entrepreneurs', NULL, '/resources/entrepreneur-skills/12-habits-super-successful-hospitality-entrepreneurs', '2014-04-22 11:12:33', '2014-09-01 13:38:30', NULL, 0),
-(325, 'ELEMENTARY MYSTERY REPORTING  Feedback is like gold dust. It’s not just about whether your staff can keep the toilets clean and loo rolls well stocked. All about the customer experience, ‘mystery’ reporting is an essential tool in gaining an impartial view on your business performance. If you’re passionate about service, maintaining standards and a consistent customer experience, then this is a tool which will pay huge dividends if used properly.\r\nMost chains and multiple operators have used hundreds of mystery reports as an integral part of their training and benchmarking regime and I would really urge our members to consider this as one of the essential and more ‘proactive’ systems and procedures that will enable and facilitate future growth. More often than not, ‘reactive’ operators wait for Tripadvisor reviews to come in before evaluating how their business is satisfying their customer base, which is usually misleading and always bonkers. A good report, carried out at regular intervals, preferably by a variety of mystery guests who are unknown to both you and your staff, will enable you to monitor your ability to consistently deliver great food, drink and accommodation. It’s not just your food or customer service that’s being examined, but the whole building, management presence, atmosphere, booking systems and efficiencies.\r\nOften one of the first procedures to be introduced by serious businesses, this enables you to have a ‘warts ‘n all’ view from the customers’ perspective. You can really adjust our own template to suit the style of your business. The attached is really for a bar and restaurant or food led pub. It covers the main areas, such as:\r\n\r\n Bookings and enquiries\r\n  First impressions building, atmosphere and environment\r\n  Reception and welcome\r\n  Food ordering\r\n  Food and drink service\r\n  Staff communication\r\n  Food and drink experience\r\n  Perceived value for money\r\n  Overall rating and likelihood of customer returning\r\n\r\nIn my businesses I always used mystery dining as a useful and impartial third party view on operations, over the long term, highlighting both the good and the bad. The short sighted will employ mystery dining reports as a tool for uncovering flaws and finger-pointing at weaknesses which need underlining. However, if used sensibly, they can be embraced by the entire staff team and make all the difference.  Even a bad report (low scoring) can result in the whole staff team learning from it.\r\nConsider the following:\r\n\r\nBuild mystery report results into senior manager (eg restaurant Manager and Head Chef) bonus calculations\r\nAlways reward staff who are mentioned positively in reports\r\nShare report results with the entire staff team\r\nRun competitions between departments, sections and managers dependent on report results\r\nGet an early ‘heads up’ on new menus and concept changes\r\nGet honest feedback on areas which are usually hard to evaluate, such as overall value for money, accuracy of bills, staff attitude and those staff going ‘the extra mile’\r\nBoost morale and celebrate where results are consistently good\r\nYour own mystery guests should be able to give thorough, in depth review, often over one or two hours (in return for a ‘free’ meal, of course), unlike those on Tripadvisor\r\nConsider inviting your mystery guests to a staff training session for more detailed and 1:1 feedback\r\nIt’s what you do with the findings of your mystery reports that really matters. Adopt a scoring system and evaluation process which has integrity and consistency, congratulating great performance where it is due and constructively acting upon criticism.\r\nUse mystery reports alongside Tripadvisor, customer emails, comment cards and other sources of customer feedback to illuminate trends and tendencies in your business.\r\nBusiness performance should never be evaluated by profits and (worst case) sales figures alone.\r\nConsider engaging a specialist mystery diner or customer feedback company or service. These companies will give you invaluable data, analysis and third party recommendations, a great return on your time and money invested.\r\n\r\nAny serious hospitality business will have mystery reports either weekly or monthly.\r\nYou can download a sample Mystery Report here and our Mystery Diner Guidelines, ready to be adjusted to your own business and sent out to your mystery guests.\r\nThis should keep you and your staff on your toes.\r\nPeter Austen\r\nHE_MYSTERY_CUSTOMER_REPORT_TEMPLATE.doc\r\nMystery_Diner_Guidelines.doc\r\nELEMENTARY_MYSTERY_REPORTING.pdf \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'ELEMENTARY MYSTERY REPORTING', NULL, '/resources/operations/elementary-mystery-reporting', '2014-04-21 17:45:36', '2014-09-01 13:38:30', NULL, 0),
+(325, 'ELEMENTARY MYSTERY REPORTING  Feedback is like gold dust. It’s not just about whether your staff can keep the toilets clean and loo rolls well stocked. All about the customer experience, ‘mystery’ reporting is an essential tool in gaining an impartial view on your business performance. If you’re passionate about service, maintaining standards and a consistent customer experience, then this is a tool which will pay huge dividends if used properly.\r\nMost chains and multiple operators have used hundreds of mystery reports as an integral part of their training and benchmarking regime and I would really urge our members to consider this as one of the essential and more ‘proactive’ systems and procedures that will enable and facilitate future growth. More often than not, ‘reactive’ operators wait for Tripadvisor reviews to come in before evaluating how their business is satisfying their customer base, which is usually misleading and always bonkers. A good report, carried out at regular intervals, preferably by a variety of mystery guests who are unknown to both you and your staff, will enable you to monitor your ability to consistently deliver great food, drink and accommodation. It’s not just your food or customer service that’s being examined, but the whole building, management presence, atmosphere, booking systems and efficiencies.\r\nOften one of the first procedures to be introduced by serious businesses, this enables you to have a ‘warts ‘n all’ view from the customers’ perspective. You can really adjust our own template to suit the style of your business. The attached is really for a bar and restaurant or food led pub. It covers the main areas, such as:\r\n\r\n Bookings and enquiries\r\n  First impressions building, atmosphere and environment\r\n  Reception and welcome\r\n  Food ordering\r\n  Food and drink service\r\n  Staff communication\r\n  Food and drink experience\r\n  Perceived value for money\r\n  Overall rating and likelihood of customer returning\r\n\r\nIn my businesses I always used mystery dining as a useful and impartial third party view on operations, over the long term, highlighting both the good and the bad. The short sighted will employ mystery dining reports as a tool for uncovering flaws and finger-pointing at weaknesses which need underlining. However, if used sensibly, they can be embraced by the entire staff team and make all the difference.  Even a bad report (low scoring) can result in the whole staff team learning from it.\r\nConsider the following:\r\n\r\nBuild mystery report results into senior manager (eg restaurant Manager and Head Chef) bonus calculations\r\nAlways reward staff who are mentioned positively in reports\r\nShare report results with the entire staff team\r\nRun competitions between departments, sections and managers dependent on report results\r\nGet an early ‘heads up’ on new menus and concept changes\r\nGet honest feedback on areas which are usually hard to evaluate, such as overall value for money, accuracy of bills, staff attitude and those staff going ‘the extra mile’\r\nBoost morale and celebrate where results are consistently good\r\nYour own mystery guests should be able to give thorough, in depth review, often over one or two hours (in return for a ‘free’ meal, of course), unlike those on Tripadvisor\r\nConsider inviting your mystery guests to a staff training session for more detailed and 1:1 feedback\r\nIt’s what you do with the findings of your mystery reports that really matters. Adopt a scoring system and evaluation process which has integrity and consistency, congratulating great performance where it is due and constructively acting upon criticism.\r\nUse mystery reports alongside Tripadvisor, customer emails, comment cards and other sources of customer feedback to illuminate trends and tendencies in your business.\r\nBusiness performance should never be evaluated by profits and (worst case) sales figures alone.\r\nConsider engaging a specialist mystery diner or customer feedback company or service. These companies will give you invaluable data, analysis and third party recommendations, a great return on your time and money invested.\r\n\r\nAny serious hospitality business will have mystery reports either weekly or monthly.\r\nYou can download a sample Mystery Report here and our Mystery Diner Guidelines, ready to be adjusted to your own business and sent out to your mystery guests.\r\nThis should keep you and your staff on your toes.\r\nPeter Austen\r\nHE_MYSTERY_CUSTOMER_REPORT_TEMPLATE.doc\r\nMystery_Diner_Guidelines.doc\r\nELEMENTARY_MYSTERY_REPORTING.pdf \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'ELEMENTARY MYSTERY REPORTING', NULL, '/resources/operations/elementary-mystery-reporting', '2014-04-21 17:45:36', '2014-09-01 13:38:30', NULL, 0);
+INSERT INTO `PageSearchIndex` (`cID`, `content`, `cName`, `cDescription`, `cPath`, `cDatePublic`, `cDateLastIndexed`, `cDateLastSitemapped`, `cRequiresReindex`) VALUES
 (327, 'The 7 Golden Rules of Profitable Restaurant Marketing, from the Entrepreneur''s Circle  Never think you can survive on word-of-mouth publicity – everything you do should be done with an eye on attracting more people into your restaurant.\r\nGuests are the lifeblood of your business and you need to understand their value to you before you work out how much to spend on attracting new diners. If you don’t know what the value of a customer is to your business, then you need to.\r\nIn the restaurant industry, you need to consider that some guests will only dine with you once, if they are passing through the town, say, or visiting friends. The money you spend advertising to these prospects is less important than the money you spend on your other regular guests or guest with potential to come back. The lifetime value of regular diners at your restaurant is huge. If you canconvince people to return to your restaurant every week for years, your investment in marketing can be much higher because of the immense value such guests bring to your business.\r\n \r\nContinues..\r\nDOWNLOAD PDF TO READ MORE:\r\n7_Golden_Rules.pdf \r\nShare This\r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'The 7 Golden Rules of Profitable Restaurant Marketing', NULL, '/resources/marketing/7-golden-rules-profitable-restaurant-marketing', '2014-04-22 12:31:31', '2014-09-01 13:38:30', NULL, 0),
 (329, 'Claim your exclusive gift\r\n a FREE copy of Nigel Botterill''s best selling ''Botty''s Rules''\r\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci est, convallis eget condimentum quis, blandit eget diam. Ut auctor lacus eu dictum convallis. \r\n  \r\n In volutpat placerat mollis. Nam molestie nulla arcu, a semper augue fringilla vitae. Suspendisse tristique tempor diam, in gravida felis faucibus in. In eleifend quam nulla, vel eleifend tellus viverra ac. Vestibulum eu arcu a odio pulvinar scelerisque. \r\n Nulla facilisi. Duis tincidunt consectetur metus, non imperdiet est fringilla in. Mauris dignissim fringilla est et posuere. Morbi ac blandit justo. Quisque sollicitudin rutrum egestas. Vivamus semper quam eu ipsum adipiscing, et rhoncus mauris tristique. \r\n    ', 'Free Book Botty''s Rules', '', '/partners/free-book', '2014-05-02 15:07:00', '2014-09-01 13:38:30', NULL, 0),
-(330, '', '', NULL, NULL, '2014-05-02 15:13:05', '2014-09-01 13:38:30', NULL, 0);
-INSERT INTO `PageSearchIndex` (`cID`, `content`, `cName`, `cDescription`, `cPath`, `cDatePublic`, `cDateLastIndexed`, `cDateLastSitemapped`, `cRequiresReindex`) VALUES
+(330, '', '', NULL, NULL, '2014-05-02 15:13:05', '2014-09-01 13:38:30', NULL, 0),
 (331, 'Year here - Business Info - Number of Members - Number of Members - Business Info Resources Supplied By Marvellous PR Lucy Matthews - Owner - Entrepreneur''s Circle - It''s time for a totally ''Done-For-You'' marketing service for the hospitality sector - "Having known and worked with Peter Austen for a couple of great years now, we decided it''s time for a totally ''Done-For-You'' marketing service for the hospitality sector. We''re really proud and excited to be part of HE, providing members with our world-class team of marketers driving a steady flow of new customers into your business." Marvellous PR from Lucy Matthews – The UK Entrepreneur’s PR Expert\r\n In a 30+ year career as a PR consultant, Lucy Matthews has worked with a huge range of clients in B2B and B2C markets, around the world, from industrial floor cleaning manufacturers, to football clubs; property developers to therapists; Pepsi to pasta ready meals; photographers to authors; big businesses to entrepreneurs and small start-ups; helping them to build their profile and get free editorial.  ', 'Marvellous PR', '', '/partners/marvellous-p', '2014-05-02 15:36:00', '2014-09-01 13:38:30', NULL, 0),
 (335, '', 'Membership Low', NULL, '/!stacks/membership-low', '2014-05-19 16:21:49', '2014-09-01 13:38:30', NULL, 0),
 (359, '', '', NULL, NULL, '2014-06-03 18:20:05', '2014-09-01 13:38:30', NULL, 0),
@@ -25641,13 +25741,13 @@ INSERT INTO `PageSearchIndex` (`cID`, `content`, `cName`, `cDescription`, `cPath
 (371, 'Unique Motel, APPALLING marketing! - video by Nigel Botterill in Arizona   \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'NBTV Wigwam Hotel', NULL, '/resources/video/nbtv-wigwam-hotel', '2014-06-06 14:35:08', '2014-09-01 13:38:32', NULL, 0),
 (438, '', 'Partner Ads - New', NULL, '/!stacks/partner-ads-new', '2014-08-11 07:07:33', '2014-09-01 13:38:33', NULL, 0),
 (398, 'Free   \r\n PAYMENT DETAILS: \r\n Note: You will be asked to provide payment details before your 30 day FREE trial starts. Once you register, you’ll have continuous access to the HE members’ website via the username and password you choose. We’ll also send you brief announcements when new content is posted. As always, we respect your privacy, and you can unsubscribe at any time. What’s more, if you are not entirely happy during your first 30 days, you can unsubscribe and you will not be charged a penny, dime, yen or whatever your chosen currency. \r\n You’ll also receive HUMAN induction and welcome calls from both Peter Austen (HE founder) and our partners at Nigel Botterill’s Entrepreneur’s Circle during your 30 day trial. \r\n In other words, by signing up right now, and putting into practice what you’ll learn, you’ll soon join the ranks of some of the smartest hospitality pros on the planet. \r\n  Test drive the Hospitality Entrepreneur members'' website - start your FREE* 30 day trial today \r\nKNOWLEDGE:\r\n\r\n24/7 access to at least 70% of downloadable HE website member advice and business resources\r\nMembers’ Only ''Success Secrets'' videos, business building blogs from our editors and Partners\r\n\r\nPEACE OF MIND:\r\n\r\nYour own Business Health Check questionnaire\r\nTemplates, checklists and systems to start using in your business today\r\n\r\nPROFIT:\r\n\r\nExclusive access and unique deals with our Partner business services\r\nReady-to-use profit boosting strategies\r\n\r\n  and instant access to a treasure chest of proven hospitality marketing and operations nuggets including: \r\n\r\nMarketing : the latest hospitality marketing tips, online and offline trends and best practices\r\nExclusive HE videos : hospitality how-to, in monthly released videos from industry top performers\r\nEntrepreneur skills : everything you need to start controlling and growing your business TODAY\r\n\r\n   \r\n *STARTER MEMBERSHIP is just £10 (plus VAT) per month. We''ll need your payment details (Paypal) today, but no payment is taken for 30 days.  \r\n  \r\nRegister Now (It''s FREE if you''re not serious or crafty enough to cancel!)\r\n   \r\n\r\nIn addition to receiving your FREE Hospitality Entrepreneur (HE) 30 day trial and exclusive members'' benefits, you''ll get a FREE GIFT copy of the Sunday Times bestseller ‘Botty’s Rules’ (RRP £12.99), from our marketing and business growth partner, Nigel Botterill, in the post:\r\n \r\n   ', 'FREE Trial video', '', '/membership/free-trial-21', '2014-03-25 11:50:00', '2014-09-01 13:38:33', NULL, 0),
-(393, '''No No''s'' in Press Releases - Lucy Matthews video   \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', '''No No''s'' in Press Releases - Lucy Matthews video', NULL, '/resources/video/no-nos-press-releases-lucy-matthews-video', '2014-06-24 16:54:32', '2014-09-01 13:38:33', NULL, 0),
+(393, '''No No''s'' in Press Releases - Lucy Matthews video   \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', '''No No''s'' in Press Releases - Lucy Matthews video', NULL, '/resources/video/no-nos-press-releases-lucy-matthews-video', '2014-06-24 16:54:32', '2014-09-08 08:21:32', NULL, 0),
 (390, 'The Secret of how PR can improve Your Sex Life..  The_Secret_of_how_PR_can_improve_your_sex_life.pdf \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'The Secret of how PR can improve Your Sex Life..', NULL, '/resources/marketing/secret-how-pr-can-improve-your-sex-life', '2014-06-24 14:39:42', '2014-09-01 13:38:33', NULL, 0),
 (391, 'Why do you need to have PR as part of your marketing mix? By Lucy Matthews  Why_do_you_need_to_have_PR_as_part_of_your_marketing_mix.pdf \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'Why do you need to have PR as part of your marketing mix? By Lucy Matthews', NULL, '/resources/marketing/why-do-you-need-have-pr-part-your-marketing-mix-lucy-matthews', '2014-06-24 14:50:57', '2014-09-01 13:38:33', NULL, 0),
 (392, 'How to create a winning PR Strategy for your business. By Lucy Matthews  How_to_create_a_winning_PR_Strategy_for_your_business.pdf\r\n \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'How to create a winning PR Strategy for your business. By Lucy Matthews', NULL, '/resources/marketing/how-create-winning-pr-strategy-your-business-lucy-matthews', '2014-06-24 14:57:50', '2014-09-01 13:38:33', NULL, 0),
 (394, 'Adverts v Editorial - video by Lucy Matthews   \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'Adverts v Editorial - video by Lucy Matthews', NULL, '/resources/video/adverts-v-editorial-video-lucy-matthews', '2014-06-24 17:11:10', '2014-09-01 13:38:33', NULL, 0),
 (395, 'Is it newsworthy?! - video by Lucy Matthews   \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'Is it newsworthy?! - video by Lucy Matthews', NULL, '/resources/video/it-newsworthy-video-lucy-matthews', '2014-06-24 17:16:16', '2014-09-01 13:38:33', NULL, 0),
-(396, '9 Secrets Journalists Love - video by Lucy Matthews   \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', '9 Secrets Journalists Love - video by Lucy Matthews', NULL, '/resources/video/9-secrets-journalists-love-video-lucy-matthews', '2014-06-24 17:19:09', '2014-09-01 13:38:33', NULL, 0),
+(396, '9 Secrets Journalists Love - video by Lucy Matthews   \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', '9 Secrets Journalists Love - video by Lucy Matthews', NULL, '/resources/video/9-secrets-journalists-love-video-lucy-matthews', '2014-06-24 17:19:09', '2014-09-11 08:35:17', NULL, 0),
 (397, 'Publicity Stunts - video by Lucy Matthews   \r\n \r\n Share This \r\n\r\n\r\n\r\n\r\n\r\n\r\n  ', 'Publicity Stunts - video by Lucy Matthews', NULL, '/resources/video/publicity-stunts-video-lucy-matthews', '2014-06-24 17:23:37', '2014-09-01 13:38:34', NULL, 0),
 (400, '', 'Members', NULL, '/dashboard/hospitality_entrepreneur/members', '2014-06-26 00:29:57', '2014-09-01 13:38:34', NULL, 0),
 (401, '', 'MembersProfile', '', '/membersprofile', '2014-08-05 08:17:00', '2014-09-01 13:38:34', NULL, 0),
@@ -29473,7 +29573,12 @@ INSERT INTO `UserAttributeValues` (`uID`, `akID`, `avID`) VALUES
 (34, 10, 1477),
 (34, 22, 1478),
 (34, 23, 1479),
-(34, 24, 1480);
+(34, 24, 1480),
+(35, 9, 1506),
+(35, 10, 1507),
+(35, 22, 1508),
+(35, 23, 1509),
+(35, 24, 1510);
 
 -- --------------------------------------------------------
 
@@ -29544,8 +29649,7 @@ INSERT INTO `UserGroups` (`uID`, `gID`, `ugEntered`, `type`) VALUES
 (28, 14, '2014-07-06 11:26:31', NULL),
 (29, 11, '2014-07-06 11:27:01', NULL),
 (29, 14, '2014-07-06 11:27:01', NULL),
-(30, 11, '2014-07-06 11:27:25', NULL),
-(30, 14, '2014-07-06 11:27:25', NULL),
+(35, 13, '2014-09-09 07:49:06', NULL),
 (31, 15, '2014-09-01 13:44:57', NULL),
 (32, 3, '2014-09-01 13:44:23', NULL);
 
@@ -29799,19 +29903,19 @@ CREATE TABLE IF NOT EXISTS `Users` (
   `uLastIP` bigint(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`uID`),
   UNIQUE KEY `uName` (`uName`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=36 ;
 
 --
 -- Dumping data for table `Users`
 --
 
 INSERT INTO `Users` (`uID`, `uName`, `uEmail`, `uPassword`, `uIsActive`, `uIsValidated`, `uIsFullRecord`, `uDateAdded`, `uHasAvatar`, `uLastOnline`, `uLastLogin`, `uPreviousLogin`, `uNumLogins`, `uTimezone`, `uDefaultLanguage`, `uLastIP`) VALUES
-(1, 'admin', 'matt@botticreative.co.uk', '$2a$12$8EmQie7uvpc2EsoowshWreL8CjUjhrBYiGcFLyK1n9EfzJ2cIPgji', '1', -1, 1, '2014-02-18 12:53:13', 1, 1409581475, 1409579009, 1409564753, 180, NULL, NULL, 1354843770),
+(1, 'admin', 'matt@botticreative.co.uk', '$2a$12$8EmQie7uvpc2EsoowshWreL8CjUjhrBYiGcFLyK1n9EfzJ2cIPgji', '1', -1, 1, '2014-02-18 12:53:13', 1, 1410274823, 1410274822, 1410248742, 185, NULL, NULL, 1354843770),
 (2, 'starter', 'starter@he.com', 'f0bc5280426fe3a0dd14554ff24616fc', '1', -1, 1, '2014-02-20 17:21:18', 0, 1403107607, 1403107606, 1396018636, 3, NULL, NULL, 1354843770),
-(4, 'gabbidonn', 'noregabbidon@gmail.com', '$2a$12$M9QhdtIO8AXYoCIK4UpbYeSTIPyFpXTMPR3TVeguMenTvsPrNhANS', '1', -1, 1, '2014-03-04 09:45:28', 0, 1409262774, 1409261959, 1408498783, 58, NULL, NULL, 1522583486),
+(4, 'gabbidonn', 'noregabbidon@gmail.com', '$2a$12$EBLpjd5KTaj38lNjlEsw.uy2i5Jyl3Cy4wdNoUVIfFdkDa7mWGI8S', '1', -1, 1, '2014-03-04 09:45:28', 0, 1410425352, 1410425351, 1410424710, 62, NULL, NULL, 1522586207),
 (5, 'Peter', 'peter@peter.com', '8eb74d44941e91ce8e1daf1b3d9ec524', '1', -1, 1, '2014-03-04 14:00:16', 1, 1403768074, 1403767607, 1403766020, 183, NULL, NULL, 1452012246),
 (6, 'free', 'free@he.com', '5c6ce2fc1bd2c27692de1fc7c1346462', '1', -1, 1, '2014-03-24 17:21:39', 0, 0, 0, 0, 0, NULL, NULL, 0),
-(7, 'PeterA', 'peter@hospitalityentrepreneur.com', '$2a$12$yxPaZVe7nbpP2jykNHlzJubeigK2EAd77zDwn6Kxil5aGWZROxy9u', '1', -1, 1, '2014-03-29 21:03:51', 1, 1410111912, 1410110976, 1409349192, 15, NULL, NULL, 1453626060),
+(7, 'PeterA', 'peter@hospitalityentrepreneur.com', '$2a$12$yxPaZVe7nbpP2jykNHlzJubeigK2EAd77zDwn6Kxil5aGWZROxy9u', '1', -1, 1, '2014-03-29 21:03:51', 1, 1410252694, 1410252694, 1410202510, 17, NULL, NULL, 1453626060),
 (13, 'noregabbidon@hotmail.com', 'noregabbidon@hotmail.com', 'c0889f3b551841d99d75279a6b85fcc1', '1', -1, 1, '2014-05-13 15:29:47', 0, 0, 0, 0, 0, NULL, NULL, 0),
 (16, 'matt@meltdesign.co.uk', 'matt@meltdesign.co.uk', '1663c5904bc1a3c4dcc383667562f2fc', '1', -1, 1, '2014-06-05 15:28:44', 1, 1401979799, 1407170191, 1407170148, 5, NULL, NULL, 1354843770),
 (15, 'noregabbidon@gabtech.co.uk', 'noregabbidon@gabtech.co.uk', 'f3c52240c96a3bda609fa28085dbb58f', '1', -1, 1, '2014-05-28 10:34:52', 0, 1401371215, 1401369995, 0, 1, NULL, NULL, 47784308),
@@ -29828,11 +29932,11 @@ INSERT INTO `Users` (`uID`, `uName`, `uEmail`, `uPassword`, `uIsActive`, `uIsVal
 (27, 'LucyMatthews', 'lucy@marvellouspr.co.uk', '43024b5ab988ad538edee42ead0e09c1', '1', -1, 1, '2014-07-06 11:25:48', 0, 0, 0, 0, 0, NULL, NULL, 0),
 (28, 'AliCarter', 'ali@catercost.com', '43024b5ab988ad538edee42ead0e09c1', '1', -1, 1, '2014-07-06 11:26:31', 0, 1406880070, 1406879912, 1405016556, 2, NULL, NULL, 523275132),
 (29, 'JuliaBramble', 'julia@bramblebuzz.co.uk', '43024b5ab988ad538edee42ead0e09c1', '1', -1, 1, '2014-07-06 11:27:01', 0, 0, 0, 0, 0, NULL, NULL, 0),
-(30, 'MattFerris', 'Matt.Ferris@pelicanprocurement.co.uk', '43024b5ab988ad538edee42ead0e09c1', '1', -1, 1, '2014-07-06 11:27:25', 0, 0, 0, 0, 0, NULL, NULL, 0),
 (31, 'FrazerGrant', 'Frazergrant@abvtraining.co.uk', '43024b5ab988ad538edee42ead0e09c1', '1', -1, 1, '2014-07-06 11:27:50', 0, 0, 0, 0, 0, NULL, NULL, 0),
 (32, 'nathanb', 'nbradley@me.com', '43024b5ab988ad538edee42ead0e09c1', '0', -1, 1, '2014-07-06 11:30:03', 0, 0, 1407166561, 0, 1, NULL, NULL, 1354843770),
 (33, 'tester', 'test@test.com', '$2a$12$sfrH2dozNuuJ.wIXzC8SmepJtzYdVZ1VuR8NsWyX7gNNhZAtwk61.', '1', -1, 1, '2014-08-04 15:42:35', 1, 1409578237, 1409578237, 1409564849, 14, NULL, NULL, 1354843770),
-(34, 'clubmember', 'club@club.com', '$2a$12$sCoLtw.npelsxQAnatM5tu0/fSjQO5R698OIdVG/rnJJsDy7LEZFu', '1', -1, 1, '2014-08-31 18:08:59', 1, 1409511143, 1409511143, 1409509581, 3, NULL, NULL, 1378126691);
+(34, 'clubmember', 'club@club.com', '$2a$12$sCoLtw.npelsxQAnatM5tu0/fSjQO5R698OIdVG/rnJJsDy7LEZFu', '1', -1, 1, '2014-08-31 18:08:59', 1, 1409511143, 1409511143, 1409509581, 3, NULL, NULL, 1378126691),
+(35, 'MattFerris', 'matt.ferris@pelicanprocurement.co.uk', '$2a$12$tBh7A2zEuGJ4drDVg2xW2OGAghICbw2iF0wG9gwte.1nFg6x2ck2i', '1', -1, 1, '2014-09-09 07:49:06', 0, 1410268991, 1410267694, 1410249009, 2, NULL, NULL, 93621810);
 
 -- --------------------------------------------------------
 
@@ -29888,7 +29992,8 @@ INSERT INTO `UserSearchIndexAttributes` (`uID`, `ak_profile_private_messages_ena
 (17, 1, 1, NULL, '', '', '', '0.0000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (18, 0, 0, NULL, NULL, NULL, NULL, '0.0000', 'nathan Test', '111 Test', 'Unit 5, Olton Bridge, 245 Warwick Road,', 'line 2', 'solihull', 'WARKS', 'GB', 'B92 7AH', '441212120000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (33, 0, 0, NULL, '', '', '', '0.0000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(34, 1, 1, NULL, '', '', '', '0.0000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(34, 1, 1, NULL, '', '', '', '0.0000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(35, 0, 0, NULL, '', '', '', '0.0000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -29921,7 +30026,7 @@ CREATE TABLE IF NOT EXISTS `UserValidationHashes` (
   `uDateGenerated` int(10) unsigned NOT NULL DEFAULT '0',
   `uDateRedeemed` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`uvhID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `UserValidationHashes`
@@ -29931,7 +30036,8 @@ INSERT INTO `UserValidationHashes` (`uvhID`, `uID`, `uHash`, `type`, `uDateGener
 (7, 23, '11hsnq9jTvOiAzIBQ1IqDEiHfxLjJVNKLD4otIS6ZshpMhOtwcxxALw16mHqqFZ3', 2, 1408523744, 0),
 (8, 7, '9Wni8IiquoHTLxcjEFA8oAo6U2U8ODeSmvgW5I8TBhESQnoPPY3qZIX12NijAS5G', 2, 1408697913, 0),
 (9, 7, 'rgMY6QIpzzBIOfj3HcGYkghtcP3OTnz1BKbIEExP5nDPVjkfQCoxNGzrasyf8M11', 2, 1408697913, 0),
-(11, 7, '6kVQ8BMP8ILCFW5rp0G11zwN4rpekW0iKj26JcBiVFEb7s5oDXKDPMEcZbY64CaQ', 2, 1410110977, 0);
+(11, 7, '6kVQ8BMP8ILCFW5rp0G11zwN4rpekW0iKj26JcBiVFEb7s5oDXKDPMEcZbY64CaQ', 2, 1410110977, 0),
+(14, 4, 'pYma7MVfJx1opGRMuxHITM2ZJTcYjVOgNrc1GBqfjY8m9rXBz6aF27EbB7KS1EoI', 1, 1410424694, 0);
 
 -- --------------------------------------------------------
 

@@ -3,7 +3,24 @@
 } 
 else
 {
-	header('Location: /checkout/billing');		
+		
+	Loader::model('product/model', 'core_commerce');
+	Loader::model('cart', 'core_commerce');
+	$pkg = Package::getByHandle('core_commerce');
+	
+	if (!isset($cart)) {
+	$cart = CoreCommerceCart::get();
+	}
+
+	Loader::library('price', 'core_commerce');
+	
+	$items = $cart->getProducts(); 	
+	
+	if(count($items) > 0)
+	{
+		header('Location: /checkout/billing');	
+	}	
+			
 		
 }
 ?>
